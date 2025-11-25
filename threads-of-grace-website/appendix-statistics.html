@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection Statistics | Threads of Grace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .index-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        .index-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+        .index-header h1 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+        .index-header p {
+            font-family: var(--font-body);
+            color: var(--color-text-muted);
+            font-size: 1.1rem;
+        }
+        .index-section {
+            margin-bottom: 2.5rem;
+        }
+        .index-section h2 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+        .index-section h3 {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            color: var(--color-secondary);
+            margin: 1.5rem 0 0.75rem 0;
+        }
+        .index-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .index-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(139, 115, 85, 0.1);
+        }
+        .index-list li:last-child {
+            border-bottom: none;
+        }
+        .index-list a {
+            color: var(--color-text);
+            text-decoration: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 1rem;
+        }
+        .index-list a:hover {
+            color: var(--color-primary);
+        }
+        .index-title {
+            font-family: var(--font-body);
+            flex: 1;
+        }
+        .index-date {
+            font-family: var(--font-body);
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+        .index-occasion {
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+            margin-left: 1rem;
+        }
+        .letter-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: var(--color-cream);
+            border-radius: 4px;
+        }
+        .letter-nav a {
+            padding: 0.25rem 0.5rem;
+            color: var(--color-primary);
+            text-decoration: none;
+            font-family: var(--font-display);
+        }
+        .letter-nav a:hover {
+            text-decoration: underline;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .stat-card {
+            background: var(--color-cream);
+            padding: 1.5rem;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .stat-number {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            display: block;
+        }
+        .stat-label {
+            font-family: var(--font-body);
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+        }
+        .reuse-group {
+            background: var(--color-cream);
+            padding: 1rem 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+        }
+        .reuse-title {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+        .reuse-dates {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .reuse-dates li {
+            padding: 0.25rem 0;
+            font-size: 0.95rem;
+        }
+        .reuse-dates a {
+            color: var(--color-text);
+            text-decoration: none;
+        }
+        .reuse-dates a:hover {
+            color: var(--color-primary);
+        }
+        .scripture-book {
+            margin-bottom: 2rem;
+        }
+        .scripture-ref {
+            font-style: italic;
+            color: var(--color-secondary);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="grain-overlay"></div>
+    
+    <header class="site-header">
+        <div class="container">
+            <h1 class="site-title"><a href="index.html">Threads of Grace</a></h1>
+            <p class="site-subtitle">Meditations on Scripture and the Spiritual Life</p>
+        </div>
+    </header>
+
+    <main class="index-container">
+
+        <div class="index-header">
+            <h1>Appendix A: Collection Statistics</h1>
+            <p>A detailed look at sixteen years of weekly meditations</p>
+        </div>
+        
+        <section class="index-section">
+            <h2>Overview</h2>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">848</span>
+                    <span class="stat-label">Total Meditations</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">814</span>
+                    <span class="stat-label">Unique Essays</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">34</span>
+                    <span class="stat-label">Thoughtful Reuses</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">16</span>
+                    <span class="stat-label">Years (2007–2024)</span>
+                </div>
+            </div>
+            
+            <p style="margin-top: 1.5rem; font-style: italic; color: var(--color-text-muted);">
+                The three-year lectionary cycle means the same liturgical occasions recur regularly. 
+                Pat thoughtfully reused 34 meditations when the same readings returned, 
+                while also writing fresh reflections for many recurring occasions. This intentional 
+                curation reflects her pastoral wisdom in knowing when a message bears repeating.
+            </p>
+        </section>
+        
+        <section class="index-section">
+            <h2>By Calendar Year</h2>
+            <ul class="index-list">
+                <li>
+                    <span class="index-title">2007</span>
+                    <span class="index-date">3 meditations</span>
+                </li>
+                <li>
+                    <span class="index-title">2008</span>
+                    <span class="index-date">52 meditations</span>
+                </li>
+                <li>
+                    <span class="index-title">2009</span>
+                    <span class="index-date">53 meditations</span>
+                </li>
+                <li>
+                    <span class="index-title">2010</span>
+                    <span class="index-date">51 meditations</span>
+                </li>
+                <li>
+                    <span class="index-title">2011</span>
+                    <span class="index-date">52 meditations</span>
+                </li>
+                <li>
+                    <span class="index-title">2012</span>
+                    <span class="index-date">53 meditations</span>
+                </li>
+                <li>
+                    <span class="index-title">2013</span>
+                    <span class="index-date">52 meditations</span>
+                </li>
+                <li>
+                    <span class="index-title">2014</span>
+                    <span class="index-date">52 meditations</span>
+                </li>
+                <li>
+                    <span class="index-title">2015</span>
+                    <span class="index-date">52 meditations</span>
+                </li>
+                <li>
+                    <span class="index-title">2016</span>
+                    <span class="index-date">52 meditations</span>
+                </li>
+                <li>
+                    <span class="index-title">2017</span>
+                    <span class="index-date">54 meditations</span>
+                </li>
+                <li>
+                    <span class="index-title">2018</span>
+                    <span class="index-date">51 meditations</span>
+                </li>
+                <li>
+                    <span class="index-title">2019</span>
+                    <span class="index-date">52 meditations</span>
+                </li>
+                <li>
+                    <span class="index-title">2020</span>
+                    <span class="index-date">52 meditations</span>
+                </li>
+                <li>
+                    <span class="index-title">2021</span>
+                    <span class="index-date">51 meditations</span>
+                </li>
+                <li>
+                    <span class="index-title">2022</span>
+                    <span class="index-date">50 meditations</span>
+                </li>
+                <li>
+                    <span class="index-title">2023</span>
+                    <span class="index-date">53 meditations</span>
+                </li>
+                <li>
+                    <span class="index-title">2024</span>
+                    <span class="index-date">13 meditations</span>
+                </li>
+            </ul>
+        </section>
+        
+        <section class="index-section">
+            <h2>By Liturgical Season</h2>
+            <ul class="index-list">
+                <li>
+                    <span class="index-title">Advent</span>
+                    <span class="index-date">66 meditations</span>
+                </li>
+                <li>
+                    <span class="index-title">Christmas</span>
+                    <span class="index-date">27 meditations</span>
+                </li>
+                <li>
+                    <span class="index-title">Epiphany</span>
+                    <span class="index-date">113 meditations</span>
+                </li>
+                <li>
+                    <span class="index-title">Lent</span>
+                    <span class="index-date">103 meditations</span>
+                </li>
+                <li>
+                    <span class="index-title">Easter</span>
+                    <span class="index-date">112 meditations</span>
+                </li>
+                <li>
+                    <span class="index-title">Pentecost</span>
+                    <span class="index-date">16 meditations</span>
+                </li>
+                <li>
+                    <span class="index-title">Ordinary Time</span>
+                    <span class="index-date">385 meditations</span>
+                </li>
+                <li>
+                    <span class="index-title">Special</span>
+                    <span class="index-date">19 meditations</span>
+                </li>
+                <li>
+                    <span class="index-title">Other</span>
+                    <span class="index-date">7 meditations</span>
+                </li>
+            </ul>
+        </section>
+        
+        <section class="index-section">
+            <h2>By Lectionary Year</h2>
+            <ul class="index-list">
+                <li>
+                    <span class="index-title">Year A</span>
+                    <span class="index-date">312 meditations</span>
+                </li>
+                <li>
+                    <span class="index-title">Year B</span>
+                    <span class="index-date">277 meditations</span>
+                </li>
+                <li>
+                    <span class="index-title">Year C</span>
+                    <span class="index-date">258 meditations</span>
+                </li>
+            </ul>
+        </section>
+        
+        <section class="index-section">
+            <h2>Repeated Essays</h2>
+            <p style="margin-bottom: 1.5rem; color: var(--color-text-muted);">
+                These 32 essays were used more than once across the collection, 
+                typically when the same liturgical occasion returned in the three-year lectionary cycle.
+            </p>
+            <div class="reuse-group">
+                <div class="reuse-title">GOD IS WITH US</div>
+                <ul class="reuse-dates">
+                    <li>
+                        <a href="meditations/2010-12-19.html">Dec 19, 2010</a>
+                        <span class="index-occasion">Fourth Sunday of Advent, Year A</span>
+                    </li>
+                    <li>
+                        <a href="meditations/2022-12-18.html">Dec 18, 2022</a>
+                        <span class="index-occasion">Fourth Sunday of Advent, Year A</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="reuse-group">
+                <div class="reuse-title">NEW THINGS</div>
+                <ul class="reuse-dates">
+                    <li>
+                        <a href="meditations/2011-01-09.html">Jan 09, 2011</a>
+                        <span class="index-occasion">First Sunday after the Epiphany The Baptism of Our Lord, Year A</span>
+                    </li>
+                    <li>
+                        <a href="meditations/2023-01-08.html">Jan 08, 2023</a>
+                        <span class="index-occasion">First Sunday after the Epiphany The Baptism of Our Lord, Year A</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="reuse-group">
+                <div class="reuse-title">A CUP OF COLD WATER</div>
+                <ul class="reuse-dates">
+                    <li>
+                        <a href="meditations/2011-06-26.html">Jun 26, 2011</a>
+                        <span class="index-occasion">Second Sunday after Pentecost Proper 8, Year A</span>
+                    </li>
+                    <li>
+                        <a href="meditations/2023-07-02.html">Jul 02, 2023</a>
+                        <span class="index-occasion">Fifth Sunday after Pentecost Proper 8, Year A</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="reuse-group">
+                <div class="reuse-title">THE GIFTING CIRCLE</div>
+                <ul class="reuse-dates">
+                    <li>
+                        <a href="meditations/2011-09-18.html">Sep 18, 2011</a>
+                        <span class="index-occasion">Fourteenth Sunday after Pentecost Proper 20, Year A</span>
+                    </li>
+                    <li>
+                        <a href="meditations/2023-09-24.html">Sep 24, 2023</a>
+                        <span class="index-occasion">Seventeenth Sunday after Pentecost Proper 20, Year A</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="reuse-group">
+                <div class="reuse-title">THE GIFTS OF GOD</div>
+                <ul class="reuse-dates">
+                    <li>
+                        <a href="meditations/2011-11-13.html">Nov 13, 2011</a>
+                        <span class="index-occasion">Twenty Second Sunday after Pentecost Proper 28, Year A</span>
+                    </li>
+                    <li>
+                        <a href="meditations/2019-11-17.html">Nov 17, 2019</a>
+                        <span class="index-occasion">Twenty-Third Sunday after Pentecost Proper 28, Year C</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="reuse-group">
+                <div class="reuse-title">THY WILL BE DONE</div>
+                <ul class="reuse-dates">
+                    <li>
+                        <a href="meditations/2011-12-18.html">Dec 18, 2011</a>
+                        <span class="index-occasion">Fourth Sunday of Advent, Year B</span>
+                    </li>
+                    <li>
+                        <a href="meditations/2017-12-24.html">Dec 24, 2017</a>
+                        <span class="index-occasion">Fourth Sunday of Advent Christmas Eve, Year B</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="reuse-group">
+                <div class="reuse-title">I WILL NOT KEEP SILENT</div>
+                <ul class="reuse-dates">
+                    <li>
+                        <a href="meditations/2012-01-01.html">Jan 01, 2012</a>
+                        <span class="index-occasion">The Holy Name, Year B</span>
+                    </li>
+                    <li>
+                        <a href="meditations/2017-12-31.html">Dec 31, 2017</a>
+                        <span class="index-occasion">First Sunday after Christmas, Year A</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="reuse-group">
+                <div class="reuse-title">PRAISE AND THANKSGIVING</div>
+                <ul class="reuse-dates">
+                    <li>
+                        <a href="meditations/2012-08-19.html">Aug 19, 2012</a>
+                        <span class="index-occasion">Twelfth Sunday after Pentecost Proper 15, Year B</span>
+                    </li>
+                    <li>
+                        <a href="meditations/2021-08-15.html">Aug 15, 2021</a>
+                        <span class="index-occasion">Twelfth Sunday after Pentecost Proper 15, Year B</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="reuse-group">
+                <div class="reuse-title">ARE YOU LISTENING?</div>
+                <ul class="reuse-dates">
+                    <li>
+                        <a href="meditations/2013-02-17.html">Feb 17, 2013</a>
+                        <span class="index-occasion">First Sunday in Lent, Year C</span>
+                    </li>
+                    <li>
+                        <a href="meditations/2019-03-10.html">Mar 10, 2019</a>
+                        <span class="index-occasion">First Sunday in Lent, Year C</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="reuse-group">
+                <div class="reuse-title">STANDING?</div>
+                <ul class="reuse-dates">
+                    <li>
+                        <a href="meditations/2013-03-03.html">Mar 03, 2013</a>
+                        <span class="index-occasion">Third Sunday in Lent, Year C</span>
+                    </li>
+                    <li>
+                        <a href="meditations/2019-03-24.html">Mar 24, 2019</a>
+                        <span class="index-occasion">Third Sunday in Lent, Year C</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="reuse-group">
+                <div class="reuse-title">COMING HOME</div>
+                <ul class="reuse-dates">
+                    <li>
+                        <a href="meditations/2013-03-10.html">Mar 10, 2013</a>
+                        <span class="index-occasion">Fourth Sunday in Lent, Year C</span>
+                    </li>
+                    <li>
+                        <a href="meditations/2019-03-31.html">Mar 31, 2019</a>
+                        <span class="index-occasion">Fourth Sunday in Lent, Year C</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="reuse-group">
+                <div class="reuse-title">ENCOUNTER</div>
+                <ul class="reuse-dates">
+                    <li>
+                        <a href="meditations/2013-05-26.html">May 26, 2013</a>
+                        <span class="index-occasion">Trinity Sunday, Year C</span>
+                    </li>
+                    <li>
+                        <a href="meditations/2019-06-16.html">Jun 16, 2019</a>
+                        <span class="index-occasion">Trinity Sunday, Year C</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="reuse-group">
+                <div class="reuse-title">MERCY</div>
+                <ul class="reuse-dates">
+                    <li>
+                        <a href="meditations/2013-09-15.html">Sep 15, 2013</a>
+                        <span class="index-occasion">Seventeenth Sunday after Pentecost Proper 19, Year C</span>
+                    </li>
+                    <li>
+                        <a href="meditations/2019-09-15.html">Sep 15, 2019</a>
+                        <span class="index-occasion">Fourteenth Sunday after Pentecost Proper 19, Year C</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="reuse-group">
+                <div class="reuse-title">SLOW OF HEART</div>
+                <ul class="reuse-dates">
+                    <li>
+                        <a href="meditations/2014-05-04.html">May 04, 2014</a>
+                        <span class="index-occasion">Third Sunday of Easter, Year A</span>
+                    </li>
+                    <li>
+                        <a href="meditations/2023-04-23.html">Apr 23, 2023</a>
+                        <span class="index-occasion">Third Sunday of Easter, Year A</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="reuse-group">
+                <div class="reuse-title">HOPE</div>
+                <ul class="reuse-dates">
+                    <li>
+                        <a href="meditations/2014-07-20.html">Jul 20, 2014</a>
+                        <span class="index-occasion">Sixth Sunday after Pentecost Proper 11, Year A</span>
+                    </li>
+                    <li>
+                        <a href="meditations/2023-07-23.html">Jul 23, 2023</a>
+                        <span class="index-occasion">Eighth Sunday after Pentecost Proper 11, Year A</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="reuse-group">
+                <div class="reuse-title">My Lord and My God</div>
+                <ul class="reuse-dates">
+                    <li>
+                        <a href="meditations/2016-04-03.html">Apr 03, 2016</a>
+                        <span class="index-occasion">Second Sunday of Easter, Year C</span>
+                    </li>
+                    <li>
+                        <a href="meditations/2016-04-10.html">Apr 10, 2016</a>
+                        <span class="index-occasion">Third Sunday of Easter, Year C</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="reuse-group">
+                <div class="reuse-title">Questions, Questions, Questions</div>
+                <ul class="reuse-dates">
+                    <li>
+                        <a href="meditations/2016-05-01.html">May 01, 2016</a>
+                        <span class="index-occasion">Sixth Sunday of Easter, Year C</span>
+                    </li>
+                    <li>
+                        <a href="meditations/2022-05-22.html">May 22, 2022</a>
+                        <span class="index-occasion">Sixth Sunday of Easter, Year C</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="reuse-group">
+                <div class="reuse-title">The Potter and the Clay</div>
+                <ul class="reuse-dates">
+                    <li>
+                        <a href="meditations/2016-09-04.html">Sep 04, 2016</a>
+                        <span class="index-occasion">Sixteenth Sunday after Pentecost Proper 18, Year C</span>
+                    </li>
+                    <li>
+                        <a href="meditations/2022-09-04.html">Sep 04, 2022</a>
+                        <span class="index-occasion">Thirteenth Sunday after Pentecost Proper 18, Year C</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="reuse-group">
+                <div class="reuse-title">Our Role Model?</div>
+                <ul class="reuse-dates">
+                    <li>
+                        <a href="meditations/2016-10-30.html">Oct 30, 2016</a>
+                        <span class="index-occasion">Twenty Fourth Sunday after Pentecost Proper 26, Year C</span>
+                    </li>
+                    <li>
+                        <a href="meditations/2022-10-30.html">Oct 30, 2022</a>
+                        <span class="index-occasion">Twenty-first Sunday after Pentecost Proper 26, Year C</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="reuse-group">
+                <div class="reuse-title">Weary?</div>
+                <ul class="reuse-dates">
+                    <li>
+                        <a href="meditations/2016-11-13.html">Nov 13, 2016</a>
+                        <span class="index-occasion">Twenty Sixth Sunday after Pentecost Proper 28, Year C</span>
+                    </li>
+                    <li>
+                        <a href="meditations/2022-11-13.html">Nov 13, 2022</a>
+                        <span class="index-occasion">Twenty-third Sunday after Pentecost Proper 28, Year C</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="reuse-group">
+                <div class="reuse-title">The Image of God</div>
+                <ul class="reuse-dates">
+                    <li>
+                        <a href="meditations/2016-11-20.html">Nov 20, 2016</a>
+                        <span class="index-occasion">Christ the King, Year C</span>
+                    </li>
+                    <li>
+                        <a href="meditations/2022-11-20.html">Nov 20, 2022</a>
+                        <span class="index-occasion">Christ the King Proper 29, Year C</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="reuse-group">
+                <div class="reuse-title">Encounter</div>
+                <ul class="reuse-dates">
+                    <li>
+                        <a href="meditations/2016-12-25.html">Dec 25, 2016</a>
+                        <span class="index-occasion">Christmas Day Christmas I Christmas II Christmas III, Year C</span>
+                    </li>
+                    <li>
+                        <a href="meditations/2022-12-25.html">Dec 25, 2022</a>
+                        <span class="index-occasion">Christmas Day Christmas I Christmas II Christmas III, Year C</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="reuse-group">
+                <div class="reuse-title">Upside-down</div>
+                <ul class="reuse-dates">
+                    <li>
+                        <a href="meditations/2017-01-29.html">Jan 29, 2017</a>
+                        <span class="index-occasion">Fourth Sunday after the Epiphany, Year A</span>
+                    </li>
+                    <li>
+                        <a href="meditations/2023-01-29.html">Jan 29, 2023</a>
+                        <span class="index-occasion">Fourth Sunday after the Epiphany, Year A</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="reuse-group">
+                <div class="reuse-title">Response</div>
+                <ul class="reuse-dates">
+                    <li>
+                        <a href="meditations/2017-02-26.html">Feb 26, 2017</a>
+                        <span class="index-occasion">Last Sunday after the Epiphany, Year A</span>
+                    </li>
+                    <li>
+                        <a href="meditations/2020-02-23.html">Feb 23, 2020</a>
+                        <span class="index-occasion">Last Sunday after the Epiphany, Year A</span>
+                    </li>
+                    <li>
+                        <a href="meditations/2023-02-19.html">Feb 19, 2023</a>
+                        <span class="index-occasion">Last Sunday after the Epiphany, Year A</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="reuse-group">
+                <div class="reuse-title">Witnesses</div>
+                <ul class="reuse-dates">
+                    <li>
+                        <a href="meditations/2017-04-23.html">Apr 23, 2017</a>
+                        <span class="index-occasion">Second Sunday of Easter, Year A</span>
+                    </li>
+                    <li>
+                        <a href="meditations/2023-04-16.html">Apr 16, 2023</a>
+                        <span class="index-occasion">Second Sunday of Easter, Year A</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="reuse-group">
+                <div class="reuse-title">Here</div>
+                <ul class="reuse-dates">
+                    <li>
+                        <a href="meditations/2018-02-11.html">Feb 11, 2018</a>
+                        <span class="index-occasion">Last Sunday after the Epiphany, Year B</span>
+                    </li>
+                    <li>
+                        <a href="meditations/2024-02-11.html">Feb 11, 2024</a>
+                        <span class="index-occasion">Last Sunday after the Epiphany, Year B</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="reuse-group">
+                <div class="reuse-title">Grace</div>
+                <ul class="reuse-dates">
+                    <li>
+                        <a href="meditations/2018-03-11.html">Mar 11, 2018</a>
+                        <span class="index-occasion">Fourth Sunday in Lent, Year B</span>
+                    </li>
+                    <li>
+                        <a href="meditations/2024-03-10.html">Mar 10, 2024</a>
+                        <span class="index-occasion">Fourth Sunday in Lent, Year B</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="reuse-group">
+                <div class="reuse-title">The Alpha and the Omega</div>
+                <ul class="reuse-dates">
+                    <li>
+                        <a href="meditations/2018-11-25.html">Nov 25, 2018</a>
+                        <span class="index-occasion">Christ the King, Year B</span>
+                    </li>
+                    <li>
+                        <a href="meditations/2021-11-21.html">Nov 21, 2021</a>
+                        <span class="index-occasion">Christ the King, Year B</span>
+                    </li>
+                    <li>
+                        <a href="meditations/2021-11-28.html">Nov 28, 2021</a>
+                        <span class="index-occasion">First Sunday of Advent, Year C</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="reuse-group">
+                <div class="reuse-title">Outwardly--inwardly</div>
+                <ul class="reuse-dates">
+                    <li>
+                        <a href="meditations/2021-03-07.html">Mar 07, 2021</a>
+                        <span class="index-occasion">Third Sunday in Lent, Year B</span>
+                    </li>
+                    <li>
+                        <a href="meditations/2024-03-03.html">Mar 03, 2024</a>
+                        <span class="index-occasion">Third Sunday in Lent, Year B</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="reuse-group">
+                <div class="reuse-title">Preparation</div>
+                <ul class="reuse-dates">
+                    <li>
+                        <a href="meditations/2021-03-28.html">Mar 28, 2021</a>
+                        <span class="index-occasion">Palm Sunday, Year B</span>
+                    </li>
+                    <li>
+                        <a href="meditations/2024-03-24.html">Mar 24, 2024</a>
+                        <span class="index-occasion">Palm Sunday, Year B</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="reuse-group">
+                <div class="reuse-title">Reconciliation</div>
+                <ul class="reuse-dates">
+                    <li>
+                        <a href="meditations/2022-03-20.html">Mar 20, 2022</a>
+                        <span class="index-occasion">Third Sunday in Lent, Year C</span>
+                    </li>
+                    <li>
+                        <a href="meditations/2022-03-27.html">Mar 27, 2022</a>
+                        <span class="index-occasion">Fourth Sunday in Lent, Year C</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="reuse-group">
+                <div class="reuse-title">The Plumb Line</div>
+                <ul class="reuse-dates">
+                    <li>
+                        <a href="meditations/2022-07-10.html">Jul 10, 2022</a>
+                        <span class="index-occasion">Fifth Sunday after Pentecost Proper 10, Year C</span>
+                    </li>
+                    <li>
+                        <a href="meditations/2022-07-17.html">Jul 17, 2022</a>
+                        <span class="index-occasion">Sixth Sunday after Pentecost Proper 11, Year C</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p><a href="index.html">Return to Home</a></p>
+            <p class="copyright">© 2007–2025 Pat Horn. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

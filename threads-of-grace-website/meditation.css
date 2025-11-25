@@ -1,0 +1,140 @@
+/* Individual Meditation Page Styles */
+
+.meditation-header {
+    text-align: center;
+    padding: var(--spacing-xl) 0;
+    border-bottom: 1px solid var(--soft-gray);
+}
+
+.meditation-date-display {
+    font-size: 1rem;
+    color: var(--accent-gold);
+    letter-spacing: 0.1em;
+    margin-bottom: var(--spacing-xs);
+}
+
+.meditation-title-display {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--deep-brown);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.2;
+}
+
+.meditation-occasion {
+    font-size: 1.125rem;
+    color: var(--medium-gray);
+    font-style: italic;
+    margin-bottom: var(--spacing-sm);
+}
+
+.meditation-readings {
+    font-size: 0.95rem;
+    color: var(--medium-gray);
+    max-width: 600px;
+    margin: var(--spacing-md) auto 0;
+    line-height: 1.6;
+}
+
+/* Meditation Content */
+.meditation-content {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: var(--spacing-2xl) 0;
+}
+
+.meditation-content p {
+    margin-bottom: var(--spacing-md);
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.meditation-content p:first-of-type::first-letter {
+    font-size: 4em;
+    line-height: 0.8;
+    float: left;
+    margin: 0.05em 0.15em 0 0;
+    font-family: var(--font-display);
+    font-weight: 400;
+    color: var(--accent-gold);
+}
+
+/* Author Attribution */
+.meditation-author {
+    text-align: center;
+    font-style: italic;
+    color: var(--medium-gray);
+    padding-top: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+    border-top: 1px solid var(--soft-gray);
+}
+
+/* Navigation between meditations */
+.meditation-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 650px;
+    margin: var(--spacing-xl) auto;
+    padding: var(--spacing-lg) 0;
+    border-top: 1px solid var(--soft-gray);
+    border-bottom: 1px solid var(--soft-gray);
+}
+
+.meditation-nav a {
+    color: var(--accent-sage);
+    text-decoration: none;
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.meditation-nav a:hover {
+    color: var(--deep-brown);
+    transform: translateX(4px);
+}
+
+.meditation-nav .prev:hover {
+    transform: translateX(-4px);
+}
+
+.meditation-nav .back-to-list {
+    color: var(--medium-gray);
+    font-size: 1rem;
+}
+
+.meditation-nav .back-to-list:hover {
+    color: var(--accent-sage);
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .meditation-title-display {
+        font-size: 2rem;
+    }
+    
+    .meditation-content p {
+        text-align: left;
+    }
+    
+    .meditation-nav {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        text-align: center;
+    }
+    
+    .meditation-nav a {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .meditation-title-display {
+        font-size: 1.75rem;
+    }
+}

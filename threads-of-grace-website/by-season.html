@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Meditations by Season | Threads of Grace
+  </title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;display=swap" rel="stylesheet"/>
+  <link href="styles.css" rel="stylesheet"/>
+  <style>
+   .page-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .page-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            color: var(--color-burgundy);
+            margin-bottom: 1rem;
+        }
+        .page-intro p {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.1rem;
+            color: var(--color-text-light);
+        }
+        .seasons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .season-card {
+            background: var(--color-cream);
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .season-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .season-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .season-card p {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1rem;
+            color: var(--color-text-light);
+            margin: 0;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="grain-overlay">
+  </div>
+  <header class="site-header">
+   <div class="container">
+    <h1 class="site-title">
+     <a href="index.html">
+      Threads of Grace
+     </a>
+    </h1>
+    <p class="site-subtitle">
+     Meditations on Scripture and the Spiritual Life
+    </p>
+   </div>
+  </header>
+  <main class="container">
+   <div class="page-intro">
+    <h2 class="page-title">
+     Meditations by Season
+    </h2>
+    <p>
+     Explore meditations organized by the liturgical seasons of the church year.
+    </p>
+   </div>
+   <div class="seasons-grid">
+    <a class="season-card" href="advent.html">
+     <h3 style="color: #4a2c4a">
+      Advent
+     </h3>
+     <p>
+      66 meditations
+     </p>
+    </a>
+    <a class="season-card" href="christmas.html">
+     <h3 style="color: #8B0000">
+      Christmas
+     </h3>
+     <p>
+      27 meditations
+     </p>
+    </a>
+    <a class="season-card" href="epiphany.html">
+     <h3 style="color: #DAA520">
+      Epiphany
+     </h3>
+     <p>
+      113 meditations
+     </p>
+    </a>
+    <a class="season-card" href="lent.html">
+     <h3 style="color: #4a2c4a">
+      Lent
+     </h3>
+     <p>
+      103 meditations
+     </p>
+    </a>
+    <a class="season-card" href="easter.html">
+     <h3 style="color: #DAA520">
+      Easter
+     </h3>
+     <p>
+      112 meditations
+     </p>
+    </a>
+    <a class="season-card" href="ordinary-time.html">
+     <h3 style="color: #228B22">
+      Ordinary Time
+     </h3>
+     <p>
+      401 meditations
+     </p>
+    </a>
+    <a class="season-card" href="special.html">
+     <h3 style="color: #8B0000">
+      Special Occasions
+     </h3>
+     <p>
+      26 meditations
+     </p>
+    </a>
+   </div>
+  </main>
+  <footer class="site-footer">
+   <div class="container">
+    <p>
+     <a href="index.html">
+      Return to Home
+     </a>
+     ·
+     <a href="chronological.html">
+      All Meditations
+     </a>
+    </p>
+    <p class="copyright">
+     © 2007–2025 Pat Horn. All rights reserved.
+    </p>
+   </div>
+  </footer>
+ </body>
+</html>
