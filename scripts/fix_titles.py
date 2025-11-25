@@ -21,38 +21,48 @@ import re
 from pathlib import Path
 from collections import defaultdict
 
-# Words that should remain lowercase in titles (unless first word)
+# Words that should remain lowercase in titles (unless first word or after colon)
 LOWERCASE_WORDS = {
-    'a', 'an', 'the', 'and', 'but', 'or', 'for', 'nor', 'on', 'at', 'to', 
-    'from', 'by', 'of', 'in', 'with', 'as', 'is', 'it', 'vs', 'yet', 'so'
+    'a', 'an', 'the', 'and', 'but', 'or', 'for', 'nor', 'on', 'at', 'to',
+    'from', 'by', 'of', 'in', 'with', 'as', 'vs', 'yet', 'so'
+}
+
+# Common acronyms that should stay uppercase
+ACRONYMS = {
+    'BCP', 'KJV', 'NIV', 'NRSV', 'ESV', 'RSV', 'USA', 'UK', 'AD', 'BC',
+    'BCE', 'CE', 'NT', 'OT', 'HIV', 'AIDS', 'DNA', 'RNA'
 }
 
 def smart_title_case(title):
     """
     Convert a title to proper Title Case with smart handling of:
-    - Lowercase words (a, an, the, etc.)
+    - Lowercase words (a, an, the, etc.) - but not at start or after colon
     - Roman numerals
-    - Words in quotes
+    - Words in quotes (first word after quote is capitalized)
     - Contractions and possessives
+    - Acronyms (BCP, etc.)
     """
     # First, handle the underscore separator issue
     if '_____' in title:
         title = re.sub(r'_+', ' / ', title)
-    
+
     # Remove space before punctuation
     title = re.sub(r'\s+!', '!', title)
     title = re.sub(r'\s+\?', '?', title)
-    
+
     # Fix multiple spaces
     title = re.sub(r'\s{2,}', ' ', title)
-    
+
     # Strip whitespace
     title = title.strip()
-    
+
     # Split into words while preserving punctuation
     words = title.split()
     result = []
-    
+
+    # Track if next word should be capitalized (start of title, after colon, after opening quote)
+    capitalize_next = True
+
     for i, word in enumerate(words):
         # Extract any leading punctuation
         leading_punct = ''
@@ -60,32 +70,36 @@ def smart_title_case(title):
         while core_word and core_word[0] in '"\'""''(':
             leading_punct += core_word[0]
             core_word = core_word[1:]
-        
+
         # Extract any trailing punctuation
         trailing_punct = ''
         while core_word and core_word[-1] in '"\'""'').,!?;:':
             trailing_punct = core_word[-1] + trailing_punct
             core_word = core_word[:-1]
-        
+
         if not core_word:
             result.append(word)
             continue
-        
+
+        # Check if this word should be capitalized due to position
+        is_first_word = (i == 0)
+        # Opening quote characters: straight ", ', curly " ' " ' and «
+        opening_quotes = set('"\'"\u2018\u201c\u201d\u2019«')
+        has_opening_quote = bool(leading_punct and any(c in opening_quotes for c in leading_punct))
+        should_capitalize = is_first_word or capitalize_next or has_opening_quote
+
+        # Check for acronyms - keep them uppercase
+        if core_word.upper() in ACRONYMS:
+            core_word = core_word.upper()
         # Check for Roman numerals
-        if core_word.upper() in ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X']:
-            # But "I" alone as pronoun should be capitalized, not treated as Roman numeral
-            # Context: if surrounded by other words, likely pronoun
-            if core_word.upper() == 'I' and len(words) > 1:
-                core_word = 'I'  # Pronoun
-            else:
-                core_word = core_word.upper()
-        # Check for lowercase words (not first word, not after colon/em-dash)
-        elif i > 0 and core_word.lower() in LOWERCASE_WORDS:
-            # Check if previous word ended with colon or em-dash
-            if result and not result[-1].rstrip().endswith((':','—', '–')):
-                core_word = core_word.lower()
-            else:
-                core_word = core_word.capitalize()
+        elif core_word.upper() in ['II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X']:
+            core_word = core_word.upper()
+        # Handle "I" - could be pronoun or Roman numeral, treat as pronoun in context
+        elif core_word.upper() == 'I':
+            core_word = 'I'
+        # Check for lowercase words (not first word, not after colon/em-dash, not after opening quote)
+        elif not should_capitalize and core_word.lower() in LOWERCASE_WORDS:
+            core_word = core_word.lower()
         # Check for contractions and possessives
         elif "'" in core_word or "'" in core_word:
             # Handle contractions like "God's", "Don't", "It's"
@@ -111,9 +125,12 @@ def smart_title_case(title):
         else:
             # Standard capitalization
             core_word = core_word.capitalize()
-        
+
         result.append(leading_punct + core_word + trailing_punct)
-    
+
+        # Check if next word should be capitalized (after colon or em-dash)
+        capitalize_next = bool(trailing_punct and any(c in trailing_punct for c in ':—–'))
+
     return ' '.join(result)
 
 def extract_title(html_content):
