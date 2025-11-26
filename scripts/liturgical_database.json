@@ -2,7 +2,7 @@
   "2007-01-07": {
     "date": "2007-01-07",
     "day": 7,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 1,
     "occasion": "First Sunday after the Epiphany",
     "proper": null,
@@ -12,7 +12,7 @@
   "2007-01-14": {
     "date": "2007-01-14",
     "day": 14,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 1,
     "occasion": "Second Sunday after the Epiphany",
     "proper": null,
@@ -22,7 +22,7 @@
   "2007-01-21": {
     "date": "2007-01-21",
     "day": 21,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 1,
     "occasion": "Third Sunday after the Epiphany",
     "proper": null,
@@ -32,7 +32,7 @@
   "2007-01-28": {
     "date": "2007-01-28",
     "day": 28,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 1,
     "occasion": "Fourth Sunday after the Epiphany",
     "proper": null,
@@ -42,7 +42,7 @@
   "2007-02-04": {
     "date": "2007-02-04",
     "day": 4,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 2,
     "occasion": "Fifth Sunday after the Epiphany",
     "proper": null,
@@ -52,7 +52,7 @@
   "2007-02-11": {
     "date": "2007-02-11",
     "day": 11,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 2,
     "occasion": "Sixth Sunday after the Epiphany",
     "proper": null,
@@ -62,7 +62,7 @@
   "2007-02-18": {
     "date": "2007-02-18",
     "day": 18,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 2,
     "occasion": "Last Sunday after Epiphany",
     "proper": null,
@@ -72,7 +72,7 @@
   "2007-02-25": {
     "date": "2007-02-25",
     "day": 25,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 2,
     "occasion": "First Sunday in Lent",
     "proper": null,
@@ -82,7 +82,7 @@
   "2007-03-04": {
     "date": "2007-03-04",
     "day": 4,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 3,
     "occasion": "Second Sunday in Lent",
     "proper": null,
@@ -92,7 +92,7 @@
   "2007-03-11": {
     "date": "2007-03-11",
     "day": 11,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 3,
     "occasion": "Third Sunday in Lent",
     "proper": null,
@@ -102,7 +102,7 @@
   "2007-03-18": {
     "date": "2007-03-18",
     "day": 18,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 3,
     "occasion": "Fourth Sunday in Lent",
     "proper": null,
@@ -112,7 +112,7 @@
   "2007-03-25": {
     "date": "2007-03-25",
     "day": 25,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 3,
     "occasion": "Fifth Sunday in Lent",
     "proper": null,
@@ -122,7 +122,7 @@
   "2007-04-01": {
     "date": "2007-04-01",
     "day": 1,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 4,
     "occasion": "Palm Sunday",
     "proper": null,
@@ -132,7 +132,7 @@
   "2007-04-08": {
     "date": "2007-04-08",
     "day": 8,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 4,
     "occasion": "Easter Day",
     "proper": null,
@@ -142,7 +142,7 @@
   "2007-04-15": {
     "date": "2007-04-15",
     "day": 15,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 4,
     "occasion": "Second Sunday of Easter",
     "proper": null,
@@ -152,7 +152,7 @@
   "2007-04-22": {
     "date": "2007-04-22",
     "day": 22,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 4,
     "occasion": "Third Sunday of Easter",
     "proper": null,
@@ -162,7 +162,7 @@
   "2007-04-29": {
     "date": "2007-04-29",
     "day": 29,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 4,
     "occasion": "Fourth Sunday of Easter",
     "proper": null,
@@ -172,7 +172,7 @@
   "2007-05-06": {
     "date": "2007-05-06",
     "day": 6,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 5,
     "occasion": "Fifth Sunday of Easter",
     "proper": null,
@@ -182,7 +182,7 @@
   "2007-05-13": {
     "date": "2007-05-13",
     "day": 13,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 5,
     "occasion": "Sixth Sunday of Easter",
     "proper": null,
@@ -192,7 +192,7 @@
   "2007-05-20": {
     "date": "2007-05-20",
     "day": 20,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 5,
     "occasion": "Seventh Sunday of Easter",
     "proper": null,
@@ -202,7 +202,7 @@
   "2007-05-27": {
     "date": "2007-05-27",
     "day": 27,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 5,
     "occasion": "Day of Pentecost",
     "proper": null,
@@ -212,7 +212,7 @@
   "2007-06-03": {
     "date": "2007-06-03",
     "day": 3,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 6,
     "occasion": "Trinity Sunday",
     "proper": null,
@@ -222,7 +222,7 @@
   "2007-06-10": {
     "date": "2007-06-10",
     "day": 10,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 6,
     "occasion": "Second Sunday after Pentecost Proper 5",
     "proper": 5,
@@ -232,7 +232,7 @@
   "2007-06-17": {
     "date": "2007-06-17",
     "day": 17,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 6,
     "occasion": "Third Sunday after Pentecost Proper 6",
     "proper": 6,
@@ -242,7 +242,7 @@
   "2007-06-24": {
     "date": "2007-06-24",
     "day": 24,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 6,
     "occasion": "Fourth Sunday after Pentecost Proper 7",
     "proper": 7,
@@ -252,7 +252,7 @@
   "2007-07-01": {
     "date": "2007-07-01",
     "day": 1,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 7,
     "occasion": "Fifth Sunday after Pentecost Proper 8",
     "proper": 8,
@@ -262,7 +262,7 @@
   "2007-07-08": {
     "date": "2007-07-08",
     "day": 8,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 7,
     "occasion": "Sixth Sunday after Pentecost Proper 9",
     "proper": 9,
@@ -272,7 +272,7 @@
   "2007-07-15": {
     "date": "2007-07-15",
     "day": 15,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 7,
     "occasion": "Seventh Sunday after Pentecost Proper 10",
     "proper": 10,
@@ -282,7 +282,7 @@
   "2007-07-22": {
     "date": "2007-07-22",
     "day": 22,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 7,
     "occasion": "Eighth Sunday after Pentecost Proper 11",
     "proper": 11,
@@ -292,7 +292,7 @@
   "2007-07-29": {
     "date": "2007-07-29",
     "day": 29,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 7,
     "occasion": "Ninth Sunday after Pentecost Proper 12",
     "proper": 12,
@@ -302,7 +302,7 @@
   "2007-08-05": {
     "date": "2007-08-05",
     "day": 5,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 8,
     "occasion": "Tenth Sunday after Pentecost Proper 13",
     "proper": 13,
@@ -312,7 +312,7 @@
   "2007-08-12": {
     "date": "2007-08-12",
     "day": 12,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 8,
     "occasion": "Eleventh Sunday after Pentecost Proper 14",
     "proper": 14,
@@ -322,7 +322,7 @@
   "2007-08-19": {
     "date": "2007-08-19",
     "day": 19,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 8,
     "occasion": "Twelfth Sunday after Pentecost Proper 15",
     "proper": 15,
@@ -332,7 +332,7 @@
   "2007-08-26": {
     "date": "2007-08-26",
     "day": 26,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 8,
     "occasion": "Thirteenth Sunday after Pentecost Proper 16",
     "proper": 16,
@@ -342,7 +342,7 @@
   "2007-09-02": {
     "date": "2007-09-02",
     "day": 2,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 9,
     "occasion": "Fourteenth Sunday after Pentecost Proper 17",
     "proper": 17,
@@ -352,7 +352,7 @@
   "2007-09-09": {
     "date": "2007-09-09",
     "day": 9,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 9,
     "occasion": "Fifteenth Sunday after Pentecost Proper 18",
     "proper": 18,
@@ -362,7 +362,7 @@
   "2007-09-16": {
     "date": "2007-09-16",
     "day": 16,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 9,
     "occasion": "Sixteenth Sunday after Pentecost Proper 19",
     "proper": 19,
@@ -372,7 +372,7 @@
   "2007-09-23": {
     "date": "2007-09-23",
     "day": 23,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 9,
     "occasion": "Seventeenth Sunday after Pentecost Proper 20",
     "proper": 20,
@@ -382,7 +382,7 @@
   "2007-09-30": {
     "date": "2007-09-30",
     "day": 30,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 9,
     "occasion": "Eighteenth Sunday after Pentecost Proper 21",
     "proper": 21,
@@ -392,7 +392,7 @@
   "2007-10-07": {
     "date": "2007-10-07",
     "day": 7,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 10,
     "occasion": "Nineteenth Sunday after Pentecost Proper 22",
     "proper": 22,
@@ -402,7 +402,7 @@
   "2007-10-14": {
     "date": "2007-10-14",
     "day": 14,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 10,
     "occasion": "Twentieth Sunday after Pentecost Proper 23",
     "proper": 23,
@@ -412,7 +412,7 @@
   "2007-10-21": {
     "date": "2007-10-21",
     "day": 21,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 10,
     "occasion": "Twenty First Sunday after Pentecost Proper 24",
     "proper": 24,
@@ -422,7 +422,7 @@
   "2007-10-28": {
     "date": "2007-10-28",
     "day": 28,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 10,
     "occasion": "Twenty Second Sunday after Pentecost Proper 25",
     "proper": 25,
@@ -432,7 +432,7 @@
   "2007-11-11": {
     "date": "2007-11-11",
     "day": 11,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 11,
     "occasion": "Twenty Fourth Sunday after Pentecost Proper 27",
     "proper": 27,
@@ -442,7 +442,7 @@
   "2007-11-18": {
     "date": "2007-11-18",
     "day": 18,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 11,
     "occasion": "Twenty Fifth Sunday after Pentecost Proper 28",
     "proper": 28,
@@ -452,7 +452,7 @@
   "2007-11-25": {
     "date": "2007-11-25",
     "day": 25,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "month": 11,
     "occasion": "Christ the King",
     "proper": null,
@@ -502,7 +502,7 @@
   "2007-12-30": {
     "date": "2007-12-30",
     "day": 30,
-    "lectionary_year": "?",
+    "lectionary_year": "A",
     "month": 12,
     "occasion": "First Sunday after Christmas",
     "proper": null,
@@ -1012,7 +1012,7 @@
   "2008-12-28": {
     "date": "2008-12-28",
     "day": 28,
-    "lectionary_year": "A",
+    "lectionary_year": "B",
     "month": 12,
     "occasion": "First Sunday after Christmas",
     "proper": null,
@@ -1522,7 +1522,7 @@
   "2009-12-27": {
     "date": "2009-12-27",
     "day": 27,
-    "lectionary_year": "B",
+    "lectionary_year": "C",
     "month": 12,
     "occasion": "First Sunday after Christmas",
     "proper": null,
@@ -2042,7 +2042,7 @@
   "2010-12-26": {
     "date": "2010-12-26",
     "day": 26,
-    "lectionary_year": "C",
+    "lectionary_year": "A",
     "month": 12,
     "occasion": "First Sunday after Christmas",
     "proper": null,
@@ -2562,7 +2562,7 @@
   "2011-12-25": {
     "date": "2011-12-25",
     "day": 25,
-    "lectionary_year": "A",
+    "lectionary_year": "B",
     "month": 12,
     "occasion": "Christmas Day Christmas I Christmas II Christmas III",
     "proper": null,
@@ -3092,7 +3092,7 @@
   "2012-12-30": {
     "date": "2012-12-30",
     "day": 30,
-    "lectionary_year": "B",
+    "lectionary_year": "C",
     "month": 12,
     "occasion": "First Sunday after Christmas",
     "proper": null,
@@ -3612,7 +3612,7 @@
   "2013-12-29": {
     "date": "2013-12-29",
     "day": 29,
-    "lectionary_year": "C",
+    "lectionary_year": "A",
     "month": 12,
     "occasion": "First Sunday after Christmas",
     "proper": null,
@@ -4132,7 +4132,7 @@
   "2014-12-28": {
     "date": "2014-12-28",
     "day": 28,
-    "lectionary_year": "A",
+    "lectionary_year": "B",
     "month": 12,
     "occasion": "First Sunday after Christmas",
     "proper": null,
@@ -4652,7 +4652,7 @@
   "2015-12-27": {
     "date": "2015-12-27",
     "day": 27,
-    "lectionary_year": "B",
+    "lectionary_year": "C",
     "month": 12,
     "occasion": "First Sunday after Christmas",
     "proper": null,
@@ -5162,7 +5162,7 @@
   "2016-12-25": {
     "date": "2016-12-25",
     "day": 25,
-    "lectionary_year": "C",
+    "lectionary_year": "A",
     "month": 12,
     "occasion": "Christmas Day Christmas I Christmas II Christmas III",
     "proper": null,
@@ -5692,7 +5692,7 @@
   "2017-12-31": {
     "date": "2017-12-31",
     "day": 31,
-    "lectionary_year": "A",
+    "lectionary_year": "B",
     "month": 12,
     "occasion": "First Sunday after Christmas",
     "proper": null,
@@ -6202,7 +6202,7 @@
   "2018-12-30": {
     "date": "2018-12-30",
     "day": 30,
-    "lectionary_year": "B",
+    "lectionary_year": "C",
     "month": 12,
     "occasion": "First Sunday after Christmas",
     "proper": null,
@@ -6712,7 +6712,7 @@
   "2019-12-29": {
     "date": "2019-12-29",
     "day": 29,
-    "lectionary_year": "C",
+    "lectionary_year": "A",
     "month": 12,
     "occasion": "First Sunday after Christmas",
     "proper": null,
@@ -7232,7 +7232,7 @@
   "2020-12-27": {
     "date": "2020-12-27",
     "day": 27,
-    "lectionary_year": "A",
+    "lectionary_year": "B",
     "month": 12,
     "occasion": "First Sunday after Christmas",
     "proper": null,
@@ -7742,7 +7742,7 @@
   "2021-12-26": {
     "date": "2021-12-26",
     "day": 26,
-    "lectionary_year": "B",
+    "lectionary_year": "C",
     "month": 12,
     "occasion": "First Sunday after Christmas",
     "proper": null,
@@ -8262,7 +8262,7 @@
   "2022-12-25": {
     "date": "2022-12-25",
     "day": 25,
-    "lectionary_year": "C",
+    "lectionary_year": "A",
     "month": 12,
     "occasion": "Christmas Day Christmas I Christmas II Christmas III",
     "proper": null,
@@ -8792,7 +8792,7 @@
   "2023-12-31": {
     "date": "2023-12-31",
     "day": 31,
-    "lectionary_year": "A",
+    "lectionary_year": "B",
     "month": 12,
     "occasion": "First Sunday after Christmas",
     "proper": null,
@@ -9302,7 +9302,7 @@
   "2024-12-29": {
     "date": "2024-12-29",
     "day": 29,
-    "lectionary_year": "B",
+    "lectionary_year": "C",
     "month": 12,
     "occasion": "First Sunday after Christmas Day",
     "proper": null,
@@ -9315,7 +9315,7 @@
     "year": 2007,
     "month": 11,
     "day": 4,
-    "lectionary_year": "?",
+    "lectionary_year": "C",
     "season": "Ordinary Time",
     "proper": 26
   },
