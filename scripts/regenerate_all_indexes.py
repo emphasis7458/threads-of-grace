@@ -543,14 +543,31 @@ def generate_lectionary_year_html(all_data):
         # Remove Year designation
         occ = re.sub(r',?\s*Year\s+[ABC]$', '', occasion).strip()
 
+        # Clean up common issues first
+        occ = occ.rstrip('\\').strip()  # Remove trailing backslash
+        occ = re.sub(r'\s+', ' ', occ)  # collapse whitespace
+        occ = re.sub(r'["""]', '', occ)  # remove quotes
+
         # Extract Proper number if present - this is the most reliable grouping
-        proper_match = re.search(r'Proper\s+(\d+)', occ)
+        # Handle both "Proper 26" and "Proper26" (no space)
+        proper_match = re.search(r'Proper\s*(\d+)', occ)
         if proper_match:
             return f"Proper {int(proper_match.group(1)):02d}"
 
+        # Remove parenthetical notes like "(Note: Episcopal readings...)"
+        # Handle both regular quotes and escaped quotes
+        occ = re.sub(r'\s*[\("]?\(?Note:.*$', '', occ).strip()
+
+        # Handle compound occasions - extract the primary occasion
+        # "First Sunday after the Epiphany The Baptism of Our Lord" -> "First Sunday after the Epiphany"
+        if 'The Baptism of Our Lord' in occ:
+            occ = re.sub(r'\s*The Baptism of Our Lord.*', '', occ).strip()
+
+        # "Fourth Sunday of Advent Christmas Eve" -> "Fourth Sunday of Advent"
+        if 'Christmas Eve' in occ and 'Advent' in occ:
+            occ = re.sub(r'\s*Christmas Eve.*', '', occ).strip()
+
         # Normalize common variations
-        occ = re.sub(r'\s+', ' ', occ)  # collapse whitespace
-        occ = re.sub(r'["""]', '', occ)  # remove quotes
         occ = occ.replace('after Epiphany', 'after the Epiphany')
         occ = occ.replace("All Saints'", 'All Saints')
         occ = occ.replace('Twenty First', 'Twenty-First')
@@ -561,19 +578,22 @@ def generate_lectionary_year_html(all_data):
         occ = occ.replace('Twenty Sixth', 'Twenty-Sixth')
         occ = occ.replace('Twenty Seventh', 'Twenty-Seventh')
 
+        # Handle Easter Day and Christmas Day variations first (they have many forms)
+        if occ.startswith('Easter Day'):
+            return 'Easter Day'
+        if occ.startswith('Christmas Day'):
+            return 'Christmas Day'
+
         # Map to canonical names
         canonical_map = {
             'Last Sunday after Epiphany': 'Last Sunday after the Epiphany',
             'The Epiphany': 'Epiphany',
             'The Holy Name': 'Holy Name',
-            'Easter Day Principal RCL': 'Easter Day',
-            'Easter Day Principal Evening': 'Easter Day',
-            'Easter Day Early Service Principal Service Evening Service': 'Easter Day',
-            'Easter Day Early Principal Evening': 'Easter Day',
-            'Christmas Day Christmas I Christmas II Christmas III': 'Christmas Day',
             'First Sunday after Christmas Day': 'First Sunday after Christmas',
             'The Transfiguration': 'Last Sunday after the Epiphany',
             'Presentation of Jesus in the Temple': 'Presentation',
+            'All Saints RCL All Saints BCP (1) All Saints BCP (2)': 'All Saints',
+            'All Saints Sunday': 'All Saints',
         }
 
         for old, new in canonical_map.items():
@@ -825,8 +845,27 @@ def generate_lectionary_year_html(all_data):
                 proper_num = int(proper_match.group(1))
                 occasion_display = f"Ordinary Time – Proper {proper_num}"
             else:
-                # Use the longest display name (most elegant/complete)
-                occasion_display = max(display_names, key=len) if display_names else normalized_occasion
+                # Clean up display names before choosing
+                def clean_display_name(name):
+                    # Remove notes, trailing backslashes, compound suffixes
+                    name = re.sub(r'\s*[\("]?\(?Note:.*$', '', name).strip()
+                    name = name.rstrip('\\').strip()
+                    name = re.sub(r'\s*The Baptism of Our Lord.*', '', name).strip()
+                    name = re.sub(r'\s*Christmas Eve.*', '', name).strip() if 'Advent' in name else name
+                    # Normalize All Saints variations
+                    if 'All Saints' in name:
+                        name = 'All Saints'
+                    # Normalize Christmas Day variations
+                    if name.startswith('Christmas Day'):
+                        name = 'Christmas Day'
+                    # Normalize Easter Day variations
+                    if name.startswith('Easter Day'):
+                        name = 'Easter Day'
+                    return name
+
+                cleaned_names = [clean_display_name(n) for n in display_names]
+                # Use the longest cleaned display name (most elegant/complete)
+                occasion_display = max(cleaned_names, key=len) if cleaned_names else normalized_occasion
 
             # Use the longest readings (most complete)
             readings = max(readings_set, key=len) if readings_set else ''
