@@ -125,8 +125,8 @@ def generate_chronological_html(all_data):
         .year-heading {{
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.8rem;
-            color: var(--color-burgundy);
-            border-bottom: 2px solid var(--color-gold);
+            color: var(--deep-brown);
+            border-bottom: 2px solid var(--accent-gold);
             padding-bottom: 0.5rem;
             margin-bottom: 1.5rem;
         }}
@@ -136,22 +136,22 @@ def generate_chronological_html(all_data):
         }}
         .meditation-list li {{
             padding: 1rem 0;
-            border-bottom: 1px solid var(--color-cream-dark);
+            border-bottom: 1px solid var(--soft-gray);
         }}
         .meditation-link {{
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.25rem;
             font-weight: 600;
-            color: var(--color-burgundy);
+            color: var(--deep-brown);
             text-decoration: none;
         }}
         .meditation-link:hover {{
-            color: var(--color-gold);
+            color: var(--accent-gold);
         }}
         .meditation-meta {{
             font-family: 'Crimson Pro', serif;
             font-size: 0.95rem;
-            color: var(--color-text-light);
+            color: var(--medium-gray);
             margin-top: 0.25rem;
         }}
         .meditation-occasion {{
@@ -164,18 +164,18 @@ def generate_chronological_html(all_data):
         .page-intro p {{
             font-family: 'Crimson Pro', serif;
             font-size: 1.1rem;
-            color: var(--color-text-light);
+            color: var(--medium-gray);
         }}
         .meditation-count {{
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.1rem;
-            color: var(--color-burgundy);
+            color: var(--deep-brown);
             margin-top: 1rem;
         }}
         .meditation-scripture {{
             font-family: 'Crimson Pro', serif;
             font-size: 0.9rem;
-            color: var(--color-text-light);
+            color: var(--medium-gray);
             font-style: italic;
             margin-top: 0.25rem;
         }}
@@ -193,7 +193,7 @@ def generate_chronological_html(all_data):
 
     <main class="container">
         <div class="page-intro">
-            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: var(--color-burgundy); margin-bottom: 1rem;">All Meditations</h2>
+            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: var(--deep-brown); margin-bottom: 1rem;">All Meditations</h2>
             <p>A chronological collection of weekly meditations following the rhythms of the church year.</p>
             <p class="meditation-count">{total} meditations from {date_range}</p>
         </div>
@@ -275,22 +275,22 @@ def generate_season_html(all_data, season, page_title):
         }}
         .meditation-list li {{
             padding: 1rem 0;
-            border-bottom: 1px solid var(--color-cream-dark);
+            border-bottom: 1px solid var(--soft-gray);
         }}
         .meditation-link {{
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.25rem;
             font-weight: 600;
-            color: var(--color-burgundy);
+            color: var(--deep-brown);
             text-decoration: none;
         }}
         .meditation-link:hover {{
-            color: var(--color-gold);
+            color: var(--accent-gold);
         }}
         .meditation-meta {{
             font-family: 'Crimson Pro', serif;
             font-size: 0.95rem;
-            color: var(--color-text-light);
+            color: var(--medium-gray);
             margin-top: 0.25rem;
         }}
         .meditation-occasion {{
@@ -303,18 +303,18 @@ def generate_season_html(all_data, season, page_title):
         .page-title {{
             font-family: 'Cormorant Garamond', serif;
             font-size: 2.2rem;
-            color: var(--color-burgundy);
+            color: var(--deep-brown);
             margin-bottom: 1rem;
         }}
         .meditation-count {{
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.1rem;
-            color: var(--color-burgundy);
+            color: var(--deep-brown);
         }}
         .meditation-scripture {{
             font-family: 'Crimson Pro', serif;
             font-size: 0.9rem;
-            color: var(--color-text-light);
+            color: var(--medium-gray);
             font-style: italic;
             margin-top: 0.25rem;
         }}
@@ -406,8 +406,8 @@ def generate_by_year_html(all_data):
         .year-heading {{
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.8rem;
-            color: var(--color-burgundy);
-            border-bottom: 2px solid var(--color-gold);
+            color: var(--deep-brown);
+            border-bottom: 2px solid var(--accent-gold);
             padding-bottom: 0.5rem;
             margin-bottom: 1.5rem;
         }}
@@ -417,22 +417,22 @@ def generate_by_year_html(all_data):
         }}
         .meditation-list li {{
             padding: 1rem 0;
-            border-bottom: 1px solid var(--color-cream-dark);
+            border-bottom: 1px solid var(--soft-gray);
         }}
         .meditation-link {{
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.25rem;
             font-weight: 600;
-            color: var(--color-burgundy);
+            color: var(--deep-brown);
             text-decoration: none;
         }}
         .meditation-link:hover {{
-            color: var(--color-gold);
+            color: var(--accent-gold);
         }}
         .meditation-meta {{
             font-family: 'Crimson Pro', serif;
             font-size: 0.95rem;
-            color: var(--color-text-light);
+            color: var(--medium-gray);
             margin-top: 0.25rem;
         }}
         .meditation-occasion {{
@@ -445,18 +445,18 @@ def generate_by_year_html(all_data):
         .page-title {{
             font-family: 'Cormorant Garamond', serif;
             font-size: 2.2rem;
-            color: var(--color-burgundy);
+            color: var(--deep-brown);
             margin-bottom: 1rem;
         }}
         .meditation-count {{
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.1rem;
-            color: var(--color-burgundy);
+            color: var(--deep-brown);
         }}
         .meditation-scripture {{
             font-family: 'Crimson Pro', serif;
             font-size: 0.9rem;
-            color: var(--color-text-light);
+            color: var(--medium-gray);
             font-style: italic;
             margin-top: 0.25rem;
         }}
@@ -637,25 +637,32 @@ def generate_lectionary_year_html(all_data):
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
+        main.container {{
+            padding-top: 2rem;
+        }}
+        main.container section {{
+            border-bottom: none;
+            padding: 0;
+        }}
         .year-nav {{
             display: flex;
             justify-content: center;
             gap: 2rem;
             margin-bottom: 2rem;
             padding: 1rem;
-            background: var(--color-cream);
+            background: var(--warm-white);
             border-radius: 4px;
         }}
         .year-nav a {{
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.5rem;
             font-weight: 600;
-            color: var(--color-burgundy);
+            color: var(--deep-brown);
             text-decoration: none;
             padding: 0.5rem 1.5rem;
         }}
         .year-nav a:hover {{
-            color: var(--color-gold);
+            color: var(--accent-gold);
         }}
         .year-section {{
             margin-bottom: 4rem;
@@ -663,28 +670,28 @@ def generate_lectionary_year_html(all_data):
         .year-heading {{
             font-family: 'Cormorant Garamond', serif;
             font-size: 2rem;
-            color: var(--color-burgundy);
-            border-bottom: 3px solid var(--color-gold);
+            color: var(--deep-brown);
+            border-bottom: 3px solid var(--accent-gold);
             padding-bottom: 0.5rem;
             margin-bottom: 2rem;
         }}
         .occasion-group {{
             margin-bottom: 2rem;
             padding: 1rem;
-            background: var(--color-cream);
+            background: var(--warm-white);
             border-radius: 4px;
         }}
         .occasion-heading {{
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.25rem;
             font-weight: 600;
-            color: var(--color-burgundy);
+            color: var(--deep-brown);
             margin-bottom: 0.25rem;
         }}
         .occasion-readings {{
             font-family: 'Crimson Pro', serif;
             font-size: 0.95rem;
-            color: var(--color-text-light);
+            color: var(--medium-gray);
             font-style: italic;
             margin-bottom: 0.75rem;
         }}
@@ -698,14 +705,14 @@ def generate_lectionary_year_html(all_data):
         }}
         .meditation-link {{
             font-family: 'Crimson Pro', serif;
-            color: var(--color-text);
+            color: var(--dark-gray);
             text-decoration: none;
         }}
         .meditation-link:hover {{
-            color: var(--color-burgundy);
+            color: var(--deep-brown);
         }}
         .meditation-date {{
-            color: var(--color-text-light);
+            color: var(--medium-gray);
             font-size: 0.9rem;
         }}
         .page-intro {{
@@ -715,13 +722,13 @@ def generate_lectionary_year_html(all_data):
         .page-title {{
             font-family: 'Cormorant Garamond', serif;
             font-size: 2.2rem;
-            color: var(--color-burgundy);
+            color: var(--deep-brown);
             margin-bottom: 0.5rem;
         }}
         .meditation-count {{
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.1rem;
-            color: var(--color-burgundy);
+            color: var(--deep-brown);
         }}
     </style>
 </head>
@@ -860,18 +867,18 @@ def generate_title_index_html(all_data):
             justify-content: center;
             margin-bottom: 2rem;
             padding: 1rem;
-            background: var(--color-cream);
+            background: var(--warm-white);
             border-radius: 4px;
         }}
         .letter-nav a {{
             padding: 0.25rem 0.5rem;
-            color: var(--color-burgundy);
+            color: var(--deep-brown);
             text-decoration: none;
             font-family: 'Cormorant Garamond', serif;
             font-weight: 600;
         }}
         .letter-nav a:hover {{
-            color: var(--color-gold);
+            color: var(--accent-gold);
         }}
         .letter-section {{
             margin-bottom: 2rem;
@@ -879,22 +886,22 @@ def generate_title_index_html(all_data):
         .letter-heading {{
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.8rem;
-            color: var(--color-burgundy);
-            border-bottom: 2px solid var(--color-gold);
+            color: var(--deep-brown);
+            border-bottom: 2px solid var(--accent-gold);
             padding-bottom: 0.5rem;
             margin-bottom: 1rem;
         }}
         .title-group {{
             margin-bottom: 1rem;
             padding: 0.75rem 1rem;
-            background: var(--color-cream);
+            background: var(--warm-white);
             border-radius: 4px;
         }}
         .title-heading {{
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.15rem;
             font-weight: 600;
-            color: var(--color-burgundy);
+            color: var(--deep-brown);
             margin-bottom: 0.5rem;
         }}
         .title-heading a {{
@@ -902,7 +909,7 @@ def generate_title_index_html(all_data):
             text-decoration: none;
         }}
         .title-heading a:hover {{
-            color: var(--color-gold);
+            color: var(--accent-gold);
         }}
         .meditation-entries {{
             list-style: none;
@@ -914,18 +921,18 @@ def generate_title_index_html(all_data):
         }}
         .meditation-entries a {{
             font-family: 'Crimson Pro', serif;
-            color: var(--color-text);
+            color: var(--dark-gray);
             text-decoration: none;
             font-size: 0.95rem;
         }}
         .meditation-entries a:hover {{
-            color: var(--color-burgundy);
+            color: var(--deep-brown);
         }}
         .entry-date {{
-            color: var(--color-text-light);
+            color: var(--medium-gray);
         }}
         .entry-occasion {{
-            color: var(--color-text-light);
+            color: var(--medium-gray);
             font-style: italic;
         }}
         .page-intro {{
@@ -935,13 +942,13 @@ def generate_title_index_html(all_data):
         .page-title {{
             font-family: 'Cormorant Garamond', serif;
             font-size: 2.2rem;
-            color: var(--color-burgundy);
+            color: var(--deep-brown);
             margin-bottom: 0.5rem;
         }}
         .meditation-count {{
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.1rem;
-            color: var(--color-burgundy);
+            color: var(--deep-brown);
         }}
     </style>
 </head>
@@ -1124,18 +1131,18 @@ def generate_scripture_index_html(all_data):
             justify-content: center;
             margin-bottom: 2rem;
             padding: 1rem;
-            background: var(--color-cream);
+            background: var(--warm-white);
             border-radius: 4px;
         }}
         .book-nav a {{
             padding: 0.25rem 0.5rem;
-            color: var(--color-burgundy);
+            color: var(--deep-brown);
             text-decoration: none;
             font-family: 'Crimson Pro', serif;
             font-size: 0.9rem;
         }}
         .book-nav a:hover {{
-            color: var(--color-gold);
+            color: var(--accent-gold);
         }}
         .book-section {{
             margin-bottom: 2rem;
@@ -1143,8 +1150,8 @@ def generate_scripture_index_html(all_data):
         .book-heading {{
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.5rem;
-            color: var(--color-burgundy);
-            border-bottom: 2px solid var(--color-gold);
+            color: var(--deep-brown);
+            border-bottom: 2px solid var(--accent-gold);
             padding-bottom: 0.5rem;
             margin-bottom: 1rem;
         }}
@@ -1160,16 +1167,16 @@ def generate_scripture_index_html(all_data):
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.1rem;
             font-weight: 600;
-            color: var(--color-burgundy);
+            color: var(--deep-brown);
             text-decoration: none;
         }}
         .scripture-link:hover {{
-            color: var(--color-gold);
+            color: var(--accent-gold);
         }}
         .scripture-meta {{
             font-family: 'Crimson Pro', serif;
             font-size: 0.9rem;
-            color: var(--color-text-light);
+            color: var(--medium-gray);
             margin-top: 0.25rem;
         }}
         .scripture-occasion {{
@@ -1182,13 +1189,13 @@ def generate_scripture_index_html(all_data):
         .page-title {{
             font-family: 'Cormorant Garamond', serif;
             font-size: 2.2rem;
-            color: var(--color-burgundy);
+            color: var(--deep-brown);
             margin-bottom: 0.5rem;
         }}
         .meditation-count {{
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.1rem;
-            color: var(--color-burgundy);
+            color: var(--deep-brown);
         }}
     </style>
 </head>
@@ -1344,17 +1351,17 @@ def generate_appendix_statistics_html(all_data):
             text-align: center;
             margin-bottom: 3rem;
             padding-bottom: 2rem;
-            border-bottom: 1px solid var(--color-cream-dark);
+            border-bottom: 1px solid var(--soft-gray);
         }}
         .index-header h1 {{
             font-family: 'Cormorant Garamond', serif;
             font-size: 2.5rem;
-            color: var(--color-burgundy);
+            color: var(--deep-brown);
             margin-bottom: 0.5rem;
         }}
         .index-header p {{
             font-family: 'Crimson Pro', serif;
-            color: var(--color-text-light);
+            color: var(--medium-gray);
             font-size: 1.1rem;
         }}
         .index-section {{
@@ -1363,10 +1370,10 @@ def generate_appendix_statistics_html(all_data):
         .index-section h2 {{
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.5rem;
-            color: var(--color-burgundy);
+            color: var(--deep-brown);
             margin-bottom: 1rem;
             padding-bottom: 0.5rem;
-            border-bottom: 1px solid var(--color-cream-dark);
+            border-bottom: 1px solid var(--soft-gray);
         }}
         .stats-grid {{
             display: grid;
@@ -1375,7 +1382,7 @@ def generate_appendix_statistics_html(all_data):
             margin: 2rem 0;
         }}
         .stat-card {{
-            background: var(--color-cream);
+            background: var(--warm-white);
             padding: 1.5rem;
             border-radius: 4px;
             text-align: center;
@@ -1383,12 +1390,12 @@ def generate_appendix_statistics_html(all_data):
         .stat-number {{
             font-family: 'Cormorant Garamond', serif;
             font-size: 2.5rem;
-            color: var(--color-burgundy);
+            color: var(--deep-brown);
             display: block;
         }}
         .stat-label {{
             font-family: 'Crimson Pro', serif;
-            color: var(--color-text-light);
+            color: var(--medium-gray);
             font-size: 0.9rem;
         }}
         .index-list {{
@@ -1404,7 +1411,7 @@ def generate_appendix_statistics_html(all_data):
             border-bottom: none;
         }}
         .index-list a {{
-            color: var(--color-burgundy);
+            color: var(--deep-brown);
             text-decoration: none;
             display: flex;
             justify-content: space-between;
@@ -1412,7 +1419,7 @@ def generate_appendix_statistics_html(all_data):
             gap: 1rem;
         }}
         .index-list a:hover {{
-            color: var(--color-gold);
+            color: var(--accent-gold);
         }}
         .index-title {{
             font-family: 'Crimson Pro', serif;
@@ -1420,12 +1427,12 @@ def generate_appendix_statistics_html(all_data):
         }}
         .index-date {{
             font-family: 'Crimson Pro', serif;
-            color: var(--color-text-light);
+            color: var(--medium-gray);
             font-size: 0.9rem;
             white-space: nowrap;
         }}
         .reuse-group {{
-            background: var(--color-cream);
+            background: var(--warm-white);
             padding: 1rem 1.5rem;
             margin-bottom: 1rem;
             border-radius: 4px;
@@ -1433,7 +1440,7 @@ def generate_appendix_statistics_html(all_data):
         .reuse-title {{
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.1rem;
-            color: var(--color-burgundy);
+            color: var(--deep-brown);
             margin-bottom: 0.5rem;
         }}
         .reuse-dates {{
@@ -1446,15 +1453,15 @@ def generate_appendix_statistics_html(all_data):
             font-size: 0.95rem;
         }}
         .reuse-dates a {{
-            color: var(--color-text);
+            color: var(--dark-gray);
             text-decoration: none;
         }}
         .reuse-dates a:hover {{
-            color: var(--color-burgundy);
+            color: var(--deep-brown);
         }}
         .index-occasion {{
             font-size: 0.85rem;
-            color: var(--color-text-light);
+            color: var(--medium-gray);
             margin-left: 1rem;
             font-style: italic;
         }}
@@ -1496,7 +1503,7 @@ def generate_appendix_statistics_html(all_data):
                     <span class="stat-label">Years ({years_list[0]}–{years_list[-1]})</span>
                 </div>
             </div>
-            <p style="margin-top: 1.5rem; font-style: italic; color: var(--color-text-light);">
+            <p style="margin-top: 1.5rem; font-style: italic; color: var(--medium-gray);">
                 The three-year lectionary cycle means the same liturgical occasions recur regularly.
                 Pat thoughtfully reused {len(repeated_titles)} meditations when the same readings returned,
                 while also writing fresh reflections for many recurring occasions. This intentional
@@ -1565,7 +1572,7 @@ def generate_appendix_statistics_html(all_data):
 
         <section class="index-section">
             <h2>Repeated Essays</h2>
-            <p style="margin-bottom: 1.5rem; color: var(--color-text-light);">
+            <p style="margin-bottom: 1.5rem; color: var(--medium-gray);">
                 These essays were used more than once across the collection,
                 typically when the same liturgical occasion returned in the three-year lectionary cycle.
             </p>

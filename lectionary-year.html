@@ -9,25 +9,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
+        main.container {
+            padding-top: 2rem;
+        }
+        main.container section {
+            border-bottom: none;
+            padding: 0;
+        }
         .year-nav {
             display: flex;
             justify-content: center;
             gap: 2rem;
             margin-bottom: 2rem;
             padding: 1rem;
-            background: var(--color-cream);
+            background: var(--warm-white);
             border-radius: 4px;
         }
         .year-nav a {
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.5rem;
             font-weight: 600;
-            color: var(--color-burgundy);
+            color: var(--deep-brown);
             text-decoration: none;
             padding: 0.5rem 1.5rem;
         }
         .year-nav a:hover {
-            color: var(--color-gold);
+            color: var(--accent-gold);
         }
         .year-section {
             margin-bottom: 4rem;
@@ -35,28 +42,28 @@
         .year-heading {
             font-family: 'Cormorant Garamond', serif;
             font-size: 2rem;
-            color: var(--color-burgundy);
-            border-bottom: 3px solid var(--color-gold);
+            color: var(--deep-brown);
+            border-bottom: 3px solid var(--accent-gold);
             padding-bottom: 0.5rem;
             margin-bottom: 2rem;
         }
         .occasion-group {
             margin-bottom: 2rem;
             padding: 1rem;
-            background: var(--color-cream);
+            background: var(--warm-white);
             border-radius: 4px;
         }
         .occasion-heading {
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.25rem;
             font-weight: 600;
-            color: var(--color-burgundy);
+            color: var(--deep-brown);
             margin-bottom: 0.25rem;
         }
         .occasion-readings {
             font-family: 'Crimson Pro', serif;
             font-size: 0.95rem;
-            color: var(--color-text-light);
+            color: var(--medium-gray);
             font-style: italic;
             margin-bottom: 0.75rem;
         }
@@ -70,14 +77,14 @@
         }
         .meditation-link {
             font-family: 'Crimson Pro', serif;
-            color: var(--color-text);
+            color: var(--dark-gray);
             text-decoration: none;
         }
         .meditation-link:hover {
-            color: var(--color-burgundy);
+            color: var(--deep-brown);
         }
         .meditation-date {
-            color: var(--color-text-light);
+            color: var(--medium-gray);
             font-size: 0.9rem;
         }
         .page-intro {
@@ -87,13 +94,13 @@
         .page-title {
             font-family: 'Cormorant Garamond', serif;
             font-size: 2.2rem;
-            color: var(--color-burgundy);
+            color: var(--deep-brown);
             margin-bottom: 0.5rem;
         }
         .meditation-count {
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.1rem;
-            color: var(--color-burgundy);
+            color: var(--deep-brown);
         }
     </style>
 </head>
