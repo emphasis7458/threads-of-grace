@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thematic Pathways | Threads of Grace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="listing.css">
+    <style>
+        .intro-text {
+            max-width: 650px;
+            margin: 0 auto var(--spacing-xl);
+        }
+        .intro-text p {
+            margin-bottom: var(--spacing-md);
+        }
+        .theme-group {
+            margin-bottom: var(--spacing-2xl);
+        }
+        .theme-group-title {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            font-weight: 400;
+            color: var(--accent-sage);
+            margin-bottom: var(--spacing-lg);
+            padding-bottom: var(--spacing-sm);
+            border-bottom: 2px solid var(--accent-sage);
+        }
+        .theme-card {
+            background: var(--warm-white);
+            border: 1px solid var(--soft-gray);
+            margin-bottom: var(--spacing-md);
+            transition: all 0.3s ease;
+        }
+        .theme-card:hover {
+            border-color: var(--accent-sage);
+        }
+        .theme-header {
+            padding: var(--spacing-lg);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .theme-header:hover {
+            background: var(--cream);
+        }
+        .theme-title {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--deep-brown);
+            margin: 0;
+        }
+        .theme-subtitle {
+            font-size: 1rem;
+            color: var(--medium-gray);
+            font-style: italic;
+            margin-top: var(--spacing-xs);
+        }
+        .theme-toggle {
+            font-size: 1.5rem;
+            color: var(--accent-sage);
+            transition: transform 0.3s ease;
+        }
+        .theme-card.open .theme-toggle {
+            transform: rotate(45deg);
+        }
+        .theme-content {
+            display: none;
+            padding: 0 var(--spacing-lg) var(--spacing-lg);
+            border-top: 1px solid var(--soft-gray);
+        }
+        .theme-card.open .theme-content {
+            display: block;
+        }
+        .theme-description {
+            padding: var(--spacing-md) 0;
+            color: var(--dark-gray);
+            line-height: 1.7;
+        }
+        .theme-quote {
+            font-style: italic;
+            color: var(--medium-gray);
+            padding-left: var(--spacing-md);
+            border-left: 2px solid var(--accent-gold);
+            margin: var(--spacing-md) 0;
+        }
+        .theme-quote-source {
+            font-size: 0.9rem;
+            margin-top: var(--spacing-xs);
+        }
+        .theme-meditations-label {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--accent-sage);
+            margin: var(--spacing-lg) 0 var(--spacing-sm);
+        }
+        .theme-meditation {
+            padding: var(--spacing-md) 0;
+            border-bottom: 1px solid var(--soft-gray);
+        }
+        .theme-meditation:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .theme-meditation-title {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 400;
+            margin-bottom: var(--spacing-xs);
+        }
+        .theme-meditation-title a {
+            color: var(--deep-brown);
+            text-decoration: none;
+        }
+        .theme-meditation-title a:hover {
+            color: var(--accent-sage);
+        }
+        .theme-meditation-date {
+            font-size: 0.9rem;
+            color: var(--accent-gold);
+            margin-bottom: var(--spacing-xs);
+        }
+        .theme-meditation-why {
+            font-size: 0.95rem;
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+        .content-area {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+        .expand-all {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+        .expand-all button {
+            background: none;
+            border: 1px solid var(--accent-sage);
+            color: var(--accent-sage);
+            padding: var(--spacing-sm) var(--spacing-md);
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .expand-all button:hover {
+            background: var(--accent-sage);
+            color: var(--cream);
+        }
+    </style>
+</head>
+<body>
+    <div class="grain-overlay"></div>
+
+    <header class="site-header">
+        <div class="container">
+            <h1 class="site-title"><a href="index.html">Threads of Grace</a></h1>
+            <p class="site-subtitle">Meditations on Scripture and the Spiritual Life</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-intro">
+            <h2 class="page-title">Thematic Pathways</h2>
+            <p class="meditation-count">Explore Pat's meditations by spiritual theme</p>
+        </div>
+
+        <div class="content-area">
+            <div class="intro-text">
+                <p>While Pat's meditations follow the liturgical calendar, certain themes weave through the entire collection—threads of grace that reappear across seasons and years. These thematic pathways offer another way to engage with her contemplative wisdom.</p>
+
+                <p>Each theme gathers meditations that address a particular aspect of the spiritual life. Click any theme to explore recommended readings.</p>
+            </div>
+
+            <div class="expand-all">
+                <button id="toggle-all">Expand All Themes</button>
+            </div>
+
+            <!-- GROUP 1: THE CONTEMPLATIVE LIFE -->
+            <div class="theme-group">
+                <h2 class="theme-group-title">The Contemplative Life</h2>
+
+                <!-- SILENCE & STILLNESS -->
+                <div class="theme-card">
+                    <div class="theme-header">
+                        <div>
+                            <h3 class="theme-title">Silence & Stillness</h3>
+                            <p class="theme-subtitle">Finding God in quiet</p>
+                        </div>
+                        <span class="theme-toggle">+</span>
+                    </div>
+                    <div class="theme-content">
+                        <p class="theme-description">Pat returns again and again to silence as the foundation of contemplative life. Drawing on Thomas Keating's insight that "silence is God's first language," she invites readers to discover the peace that comes from simply being still in God's presence.</p>
+
+                        <div class="theme-quote">
+                            "Be still and know that I am God." Try that for a minute and see what you notice. If that minute of silence whetted your appetite, try it tomorrow for two minutes, and the next day for three. Likely you'll be surprised by the peace that infuses you.
+                            <p class="theme-quote-source">— "Peace! Be Still!" (June 20, 2021)</p>
+                        </div>
+
+                        <p class="theme-meditations-label">Recommended Meditations</p>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">June 20, 2021</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2021-06-20.html">"Peace! Be Still!"</a></h4>
+                            <p class="theme-meditation-why">Pat's definitive meditation on stillness. Features Thomas Keating's insight about silence, the BCP prayer "For Quiet Confidence," and practical guidance for beginning a silence practice.</p>
+                        </div>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">September 2, 2012</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2012-09-02.html">"Arise, My Love... and Come Away"</a></h4>
+                            <p class="theme-meditation-why">On contemplative repose. Pat quotes Meister Eckhart: "God needs nothing more than for us to offer him a quiet heart."</p>
+                        </div>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">February 26, 2012</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2012-02-26.html">"Through the Wilderness of Lent"</a></h4>
+                            <p class="theme-meditation-why">On the still, small voice. Includes Rev. M. William Anger's Lenten prayer: "Help me, in Lent, to find islands of silence within my hours."</p>
+                        </div>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">July 19, 2009</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2009-07-19.html">"Come Away, Rest a While"</a></h4>
+                            <p class="theme-meditation-why">Pat's most extensive meditation on retreat and solitude, describing various forms: directed retreats, quiet days, and conducted retreats.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRESENCE & AWARENESS -->
+                <div class="theme-card">
+                    <div class="theme-header">
+                        <div>
+                            <h3 class="theme-title">Presence & Awareness</h3>
+                            <p class="theme-subtitle">Noticing God in the present moment</p>
+                        </div>
+                        <span class="theme-toggle">+</span>
+                    </div>
+                    <div class="theme-content">
+                        <p class="theme-description">God is always here, but we may not be—distracted by yesterday's regrets or tomorrow's worries. Pat draws on Brother Lawrence's "Practice of the Presence of God" to teach awareness of the Divine in ordinary moments. The contemplative life is not about adding more religious activities but about waking up to what is already true.</p>
+
+                        <div class="theme-quote">
+                            God is here right now. It is in the present moment where we may encounter the Holy One. Unfortunately, like Martha in today's gospel lesson, we are often so "distracted by our many tasks" that we don't notice the Divine Presence in our midst.
+                            <p class="theme-quote-source">— "Distracted" (July 21, 2019)</p>
+                        </div>
+
+                        <p class="theme-meditations-label">Recommended Meditations</p>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">July 21, 2019</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2019-07-21.html">"Distracted"</a></h4>
+                            <p class="theme-meditation-why">On presence in daily life. Pat writes that "acceptance of 'what is' in the present moment sets the stage for our awareness of the Divine Presence to arise in our hearts."</p>
+                        </div>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">February 11, 2018</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2018-02-11.html">"Here"</a></h4>
+                            <p class="theme-meditation-why">On the present moment as the place of encounter. "It is in the present moment that we may experience the Beloved's presence. God is always here, but we may not be."</p>
+                        </div>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">July 7, 2019</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2019-07-07.html">"Near"</a></h4>
+                            <p class="theme-meditation-why">On God's constant nearness—"nearer than our very breath." Pat asks: "How aware are we of that precious Presence?"</p>
+                        </div>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">June 30, 2019</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2019-06-30.html">"Remember"</a></h4>
+                            <p class="theme-meditation-why">On the daily examen for cultivating awareness. "The more we notice the more we likely will become conscious of the Divine Presence enfolding us in the minutiae of daily life."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRAYER -->
+                <div class="theme-card">
+                    <div class="theme-header">
+                        <div>
+                            <h3 class="theme-title">Prayer</h3>
+                            <p class="theme-subtitle">Conversation with the Beloved</p>
+                        </div>
+                        <span class="theme-toggle">+</span>
+                    </div>
+                    <div class="theme-content">
+                        <p class="theme-description">Pat approaches prayer not as performance but as relationship. Using the ACTS framework (Adoration, Confession, Thanksgiving, Supplication), she shows how prayer encompasses the full range of human experience. What matters is not the form but the intention—drawing near to the One who is already near.</p>
+
+                        <div class="theme-quote">
+                            A full prayer life is broad and varied and encompasses both prayers in community and personal prayers. It doesn't matter how you pray, what you bring to the conversation. The important thing is to commit time to strengthening your relationship with God through prayer.
+                            <p class="theme-quote-source">— "Prayers, Corporate and Individual" (September 19, 2010)</p>
+                        </div>
+
+                        <p class="theme-meditations-label">Recommended Meditations</p>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">September 19, 2010</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2010-09-19.html">"Prayers, Corporate and Individual"</a></h4>
+                            <p class="theme-meditation-why">Pat's comprehensive overview of prayer using the ACTS framework. "Centering prayer is the form of adoration I rely on most often."</p>
+                        </div>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">July 25, 2010</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2010-07-25.html">"A Certain Place"</a></h4>
+                            <p class="theme-meditation-why">On establishing a prayer space. "The place becomes bathed in our prayer over time, and just being there enables us to settle down more quickly and easily."</p>
+                        </div>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">July 6, 2008</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2008-07-06.html">"Speaking in My Heart"</a></h4>
+                            <p class="theme-meditation-why">On prayer as heart conversation—praise, thanksgiving, intercession, confession, meditation, contemplation.</p>
+                        </div>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">September 23, 2012</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2012-09-23.html">"Draw Near"</a></h4>
+                            <p class="theme-meditation-why">On intention in prayer. "If it's our intent to use the practices to enable us to draw near to God, God will indeed draw near."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LECTIO DIVINA & SCRIPTURE -->
+                <div class="theme-card">
+                    <div class="theme-header">
+                        <div>
+                            <h3 class="theme-title">Lectio Divina & Scripture</h3>
+                            <p class="theme-subtitle">Letting the Word seep into our being</p>
+                        </div>
+                        <span class="theme-toggle">+</span>
+                    </div>
+                    <div class="theme-content">
+                        <p class="theme-description">Pat teaches scripture engagement as more than reading—it's encounter. Through lectio divina (the Benedictine practice of sacred reading) and Ignatian imaginative prayer, we allow God's Word to become living and active in us. Like cows chewing their cud, we return to the text throughout the day, digesting its nutrients.</p>
+
+                        <div class="theme-quote">
+                            The Benedictine way, known as lectio divina, takes a word or phrase from the passage that gets our attention and uses it as a focus for meditation, contemplation, letting the word seep into our being.
+                            <p class="theme-quote-source">— "Are You Listening?" (February 17, 2013)</p>
+                        </div>
+
+                        <p class="theme-meditations-label">Recommended Meditations</p>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">February 17, 2013</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2013-02-17.html">"Are You Listening?"</a></h4>
+                            <p class="theme-meditation-why">Pat's most thorough treatment—both Ignatian imaginative prayer and Benedictine lectio divina, with practical guidance for each.</p>
+                        </div>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">October 9, 2016</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2016-10-09.html">"Unchained"</a></h4>
+                            <p class="theme-meditation-why">On scripture's living, dynamic power. "God's word comes to get our attention, to shake us up, to set us on fire with God's love."</p>
+                        </div>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">November 17, 2013</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2013-11-17.html">"Read, Mark, Learn, and Inwardly Digest"</a></h4>
+                            <p class="theme-meditation-why">The cud-chewing metaphor for scripture meditation. "Like manna in the wilderness, God's word for us is fresh and new each day."</p>
+                        </div>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">July 16, 2017</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2017-07-16.html">"Listen"</a></h4>
+                            <p class="theme-meditation-why">On receptive engagement with scripture. "The Word of God is not limited to scripture. We may hear it coming from the mouth of a friend or stranger."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GROUP 2: THE INNER JOURNEY -->
+            <div class="theme-group">
+                <h2 class="theme-group-title">The Inner Journey</h2>
+
+                <!-- TRUE SELF & FALSE SELF -->
+                <div class="theme-card">
+                    <div class="theme-header">
+                        <div>
+                            <h3 class="theme-title">True Self & False Self</h3>
+                            <p class="theme-subtitle">Discovering who we really are in God</p>
+                        </div>
+                        <span class="theme-toggle">+</span>
+                    </div>
+                    <div class="theme-content">
+                        <p class="theme-description">From birth, we construct a false self—a persona to protect us from life's wounds and win approval from the world. But deep within lies the true self, the imago dei planted by God, waiting to emerge. The spiritual journey involves the gradual dismantling of our protective walls so the true self can breathe and grow.</p>
+
+                        <div class="theme-quote">
+                            Our ego has been at work, since before we can remember, building this fortress to protect us from the slings and arrows of fortune... We come to realize that we are imprisoned in walls of our own making and that, to be free, we must let go of our stones one by one.
+                            <p class="theme-quote-source">— "Not One Stone" (November 14, 2021)</p>
+                        </div>
+
+                        <p class="theme-meditations-label">Recommended Meditations</p>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">June 14, 2009</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2009-06-14.html">"A New Creation"</a></h4>
+                            <p class="theme-meditation-why">The finest treatment of true self in the collection. Pat uses the image of a seed planted by God in our "deepest selves" growing into the imago dei.</p>
+                        </div>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">November 14, 2021</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2021-11-14.html">"Not One Stone"</a></h4>
+                            <p class="theme-meditation-why">Pat's most direct treatment of the ego/false self, reimagining Jesus's Temple prophecy as metaphor for "our persona that we present to the world."</p>
+                        </div>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">June 25, 2017</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2017-06-25.html">"Newness of Life"</a></h4>
+                            <p class="theme-meditation-why">On awakening to "the mystery of the Incarnation that we, each and all, are also both human and divine."</p>
+                        </div>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">February 10, 2013</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2013-02-10.html">"Unveiled Faces"</a></h4>
+                            <p class="theme-meditation-why">On the veils we accumulate to protect ourselves—and the call to stand before God with open hearts.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SURRENDER & LETTING GO -->
+                <div class="theme-card">
+                    <div class="theme-header">
+                        <div>
+                            <h3 class="theme-title">Surrender & Letting Go</h3>
+                            <p class="theme-subtitle">Releasing our grip into God's hands</p>
+                        </div>
+                        <span class="theme-toggle">+</span>
+                    </div>
+                    <div class="theme-content">
+                        <p class="theme-description">Surrender is not defeat but liberation. Pat speaks from personal experience—"surrender was certainly the first step for me on my spiritual journey"—and acknowledges that "surrender is never once and done." Using Mary's fiat as the model, she invites readers to release attachments, control, and self-protection into God's hands.</p>
+
+                        <div class="theme-quote">
+                            If we want to deepen our relationship with the Beloved, that's just what we are called to do—surrender ourselves into God's hands—Mary's "yes" to the Angel Gabriel is our model.
+                            <p class="theme-quote-source">— "Laid Bare" (October 10, 2021)</p>
+                        </div>
+
+                        <p class="theme-meditations-label">Recommended Meditations</p>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">October 10, 2021</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2021-10-10.html">"Laid Bare"</a></h4>
+                            <p class="theme-meditation-why">Pat's most direct treatment of surrender. Includes Charles de Foucauld's complete prayer of abandonment.</p>
+                        </div>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">October 14, 2012</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2012-10-14.html">"You Lack One Thing"</a></h4>
+                            <p class="theme-meditation-why">Pat's personal testimony on attachment and the difficulty of holding loosely "our possessions, our relationships, our prestige, our power."</p>
+                        </div>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">September 20, 2020</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2020-09-20.html">"Make Room"</a></h4>
+                            <p class="theme-meditation-why">On Henri Nouwen's concept of "holy indifference"—enjoying creation without letting temporal things become barriers to God.</p>
+                        </div>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">December 24, 2017</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2017-12-24.html">"Let It Be with Me"</a></h4>
+                            <p class="theme-meditation-why">Mary's fiat as the model of consent. "When we finally can join with Mary in saying, 'Let it be with me according to your word,' we find the 'power of the Most High' does visit us."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TRANSFORMATION -->
+                <div class="theme-card">
+                    <div class="theme-header">
+                        <div>
+                            <h3 class="theme-title">Transformation</h3>
+                            <p class="theme-subtitle">Being changed from the inside out</p>
+                        </div>
+                        <span class="theme-toggle">+</span>
+                    </div>
+                    <div class="theme-content">
+                        <p class="theme-description">Transformation is God's work within us—usually slow, often imperceptible, but real. Pat shares her own story of being brought to her knees at mid-life and the decade-long process of becoming someone new. Using Lazarus as a metaphor, she describes how the Holy Spirit removes our bindings "first one and then another, freeing us for an ever more spacious new life."</p>
+
+                        <div class="theme-quote">
+                            I wasn't a completely different person the next day or even the next year, but after ten years I could look back and see how different I had become.
+                            <p class="theme-quote-source">— "Transformation" (October 1, 2017)</p>
+                        </div>
+
+                        <p class="theme-meditations-label">Recommended Meditations</p>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">October 1, 2017</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2017-10-01.html">"Transformation"</a></h4>
+                            <p class="theme-meditation-why">Pat's most autobiographical meditation—her personal story of surrender and slow transformation.</p>
+                        </div>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">April 6, 2014</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2014-04-06.html">"'Come Out'"</a></h4>
+                            <p class="theme-meditation-why">The Lazarus story as transformation metaphor. "For most of us, the transformation into the wholeness of the imago dei takes a lifetime."</p>
+                        </div>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">July 7, 2013</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2013-07-07.html">"Restoration"</a></h4>
+                            <p class="theme-meditation-why">On God's lifelong work of restoring us to the imago dei. Uses Naaman's story of being washed clean "from the inside out."</p>
+                        </div>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">October 24, 2021</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2021-10-24.html">"Take Heart"</a></h4>
+                            <p class="theme-meditation-why">Using Bartimaeus's story to invite readers to imagine being called by Christ. "The Holy One longs for us... to hear with the ears of our hearts."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DARK NIGHT & WILDERNESS -->
+                <div class="theme-card">
+                    <div class="theme-header">
+                        <div>
+                            <h3 class="theme-title">Dark Night & Wilderness</h3>
+                            <p class="theme-subtitle">Finding God in absence and desolation</p>
+                        </div>
+                        <span class="theme-toggle">+</span>
+                    </div>
+                    <div class="theme-content">
+                        <p class="theme-description">Spiritual dryness, God's apparent absence, times of transition and loss—these are not signs of failure but part of the journey. Drawing on John of the Cross, Pat reframes the dark night as gift: "a time to come to know God in intangible absence as well as tangible presence." The wilderness is where transformation happens, where we move "from order through disorder to reorder."</p>
+
+                        <div class="theme-quote">
+                            Could this so-called outer darkness be what John of the Cross called the "Dark Night of the Soul"?... Might it be a time for being stretched to come to know God in intangible absence as well as tangible presence, a time to awaken to a new level of spiritual growth?
+                            <p class="theme-quote-source">— "Outer Darkness" (October 11, 2020)</p>
+                        </div>
+
+                        <p class="theme-meditations-label">Recommended Meditations</p>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">October 11, 2020</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2020-10-11.html">"Outer Darkness"</a></h4>
+                            <p class="theme-meditation-why">Pat's most direct treatment of the dark night, reframing it as "womb-time, where the seed planted in the darkness begins its slow journey to fruition."</p>
+                        </div>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">February 18, 2024</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2024-02-18.html">"Wilderness"</a></h4>
+                            <p class="theme-meditation-why">The most comprehensive wilderness meditation. Pat invites imaginative prayer: "What does that wilderness look like to you?"</p>
+                        </div>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">May 9, 2010</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2010-05-09.html">"Going and Coming"</a></h4>
+                            <p class="theme-meditation-why">On the rhythm of consolation and desolation. "God's comings and goings are two sides of the same coin, the gold of God's love."</p>
+                        </div>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">April 17, 2011</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2011-04-17.html">"From Exultation to Desolation"</a></h4>
+                            <p class="theme-meditation-why">Holy Week as desert experience. Henri Nouwen's comfort: "Crushed grapes can produce delicious wine."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GROUP 3: GOD AND WORLD -->
+            <div class="theme-group">
+                <h2 class="theme-group-title">God and World</h2>
+
+                <!-- DIVINE LOVE & MERCY -->
+                <div class="theme-card">
+                    <div class="theme-header">
+                        <div>
+                            <h3 class="theme-title">Divine Love & Mercy</h3>
+                            <p class="theme-subtitle">The heart of God revealed</p>
+                        </div>
+                        <span class="theme-toggle">+</span>
+                    </div>
+                    <div class="theme-content">
+                        <p class="theme-description">At the center of Pat's theology is the conviction that "God is utterly self-giving love." She cherishes the Hebrew word hesed—God's steadfast love and mercy—and traces how divine love flows through creation, redemption, and our daily lives. This love is not earned but given; grace is "a pure, undeserved gift from the Beloved."</p>
+
+                        <div class="theme-quote">
+                            God is utterly self-giving love. We come to know that in the perichoresis of the Trinity, the circular dance of love of the Father, Son, and Holy Spirit.
+                            <p class="theme-quote-source">— "Everything" (November 7, 2021)</p>
+                        </div>
+
+                        <p class="theme-meditations-label">Recommended Meditations</p>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">November 7, 2021</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2021-11-07.html">"Everything"</a></h4>
+                            <p class="theme-meditation-why">Pat's clearest statement on divine love as the Trinitarian dance of self-giving.</p>
+                        </div>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">March 10, 2024</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2024-03-10.html">"Grace"</a></h4>
+                            <p class="theme-meditation-why">The definitive meditation on grace. "Grace is a pure, undeserved gift from the Beloved." Includes the Lenten crucible ritual.</p>
+                        </div>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">December 13, 2020</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2020-12-13.html">"Bountiful Mercy"</a></h4>
+                            <p class="theme-meditation-why">Pat's meditation on hesed. "Hesed, God's steadfast love and mercy, still has a home in my heart."</p>
+                        </div>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">August 8, 2021</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2021-08-08.html">"Self-Giving Love"</a></h4>
+                            <p class="theme-meditation-why">On love as the heart of Christian vocation. "We were created in love, by love, for love."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UNION & INDWELLING -->
+                <div class="theme-card">
+                    <div class="theme-header">
+                        <div>
+                            <h3 class="theme-title">Union & Indwelling</h3>
+                            <p class="theme-subtitle">God's dwelling in us and we in God</p>
+                        </div>
+                        <span class="theme-toggle">+</span>
+                    </div>
+                    <div class="theme-content">
+                        <p class="theme-description">Union is God's desire—union with God, with one another, with all creation. Pat traces the biblical witness that we are temples of the Holy Spirit, that Christ lives in us, that we are rooted and grounded in divine love. This is not distant theology but intimate experience: "We are each and all... houses, dwellings, temples, abiding places for the Holy One."</p>
+
+                        <div class="theme-quote">
+                            Union is God's desire for us, union with God, union with one another throughout the world, union with all creation, all interconnected through the mystery of God's loving presence.
+                            <p class="theme-quote-source">— "Union or Separation" (October 4, 2009)</p>
+                        </div>
+
+                        <p class="theme-meditations-label">Recommended Meditations</p>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">October 4, 2009</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2009-10-04.html">"Union or Separation"</a></h4>
+                            <p class="theme-meditation-why">The definitive meditation on union. Pat identifies "hardness of heart" as what separates us from God's unifying love.</p>
+                        </div>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">July 19, 2020</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2020-07-19.html">"The House of God, the Gate of Heaven"</a></h4>
+                            <p class="theme-meditation-why">The most comprehensive treatment of divine indwelling. "We are each and all... abiding places for the Holy One."</p>
+                        </div>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">May 17, 2009</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2009-05-17.html">"Bear Fruit"</a></h4>
+                            <p class="theme-meditation-why">Union through Jesus's vine and branches metaphor. "When we abide in the Lord, we will bear fruit that will last."</p>
+                        </div>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">July 29, 2012</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2012-07-29.html">"Rooted and Grounded in Love"</a></h4>
+                            <p class="theme-meditation-why">On being "filled with all the fullness of God." References Paul Tillich's phrase "the ground of our being."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COMPASSION & JUSTICE -->
+                <div class="theme-card">
+                    <div class="theme-header">
+                        <div>
+                            <h3 class="theme-title">Compassion & Justice</h3>
+                            <p class="theme-subtitle">Love moving into the world</p>
+                        </div>
+                        <span class="theme-toggle">+</span>
+                    </div>
+                    <div class="theme-content">
+                        <p class="theme-description">Contemplation is not escape from the world but engagement with it. Pat traces how God's compassion flows through us to become "God's hands and feet in our world today." Jesus's mission statement—good news to the poor, release to captives, justice for the oppressed—remains our call. As we grow in awareness of divine love, we naturally become more other-centered.</p>
+
+                        <div class="theme-quote">
+                            May we be open and available to be God's compassionate hands and feet in our world today.
+                            <p class="theme-quote-source">— "Compassion" (June 9, 2013)</p>
+                        </div>
+
+                        <p class="theme-meditations-label">Recommended Meditations</p>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">June 9, 2013</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2013-06-09.html">"Compassion"</a></h4>
+                            <p class="theme-meditation-why">Pat's most comprehensive treatment of God's compassionate nature and our call to embody it.</p>
+                        </div>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">January 15, 2012</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2012-01-15.html">"Persistent"</a></h4>
+                            <p class="theme-meditation-why">On God's call to social action: "good news to the poor... freedom for the imprisoned... justice for the oppressed."</p>
+                        </div>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">January 30, 2011</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2011-01-30.html">"The Controversy of the Lord"</a></h4>
+                            <p class="theme-meditation-why">Using Micah's challenge: "to do justice, and to love kindness, and to walk humbly with your God."</p>
+                        </div>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">January 31, 2010</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2010-01-31.html">"He Went on His Way"</a></h4>
+                            <p class="theme-meditation-why">On compassion as gift: "When we experience compassion, it is the Love of God issuing through our hearts."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UNITY & PEACE -->
+                <div class="theme-card">
+                    <div class="theme-header">
+                        <div>
+                            <h3 class="theme-title">Unity & Peace</h3>
+                            <p class="theme-subtitle">The oneness of all in God</p>
+                        </div>
+                        <span class="theme-toggle">+</span>
+                    </div>
+                    <div class="theme-content">
+                        <p class="theme-description">Pat holds a cosmic vision: all creation interconnected in God's love, the blue marble of Earth seen from space, the mystical insight that "thou canst not stir a flower without troubling of a star." This unity is not rational but experiential. And from this awareness flows peace—not the world's peace (absence of conflict) but God's peace that remains unshaken in the midst of turmoil.</p>
+
+                        <div class="theme-quote">
+                            We are each and all mutually interdependent, part and parcel of the unity of our One creating, redeeming, sustaining God. God's unity is not rational, only experiential.
+                            <p class="theme-quote-source">— "Unity" (June 7, 2020)</p>
+                        </div>
+
+                        <p class="theme-meditations-label">Recommended Meditations</p>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">June 7, 2020</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2020-06-07.html">"Unity"</a></h4>
+                            <p class="theme-meditation-why">Pat's definitive meditation on cosmic unity. "Take some time to picture the earth from space... Let the unity of all creation speak to you."</p>
+                        </div>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">October 9, 2011</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2011-10-09.html">"The Peace of God"</a></h4>
+                            <p class="theme-meditation-why">Pat's personal testimony of conversion through encountering God's peace. "The peace of God is not disturbed by conflict."</p>
+                        </div>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">July 22, 2018</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2018-07-22.html">"The Dividing Wall"</a></h4>
+                            <p class="theme-meditation-why">On breaking down barriers. "Separation and hostility are not God's way!"</p>
+                        </div>
+
+                        <div class="theme-meditation">
+                            <p class="theme-meditation-date">October 7, 2012</p>
+                            <h4 class="theme-meditation-title"><a href="meditations/2012-10-07.html">"What God Has Joined Together"</a></h4>
+                            <p class="theme-meditation-why">On the oneness of all creation. "God has joined us all together on this planet, all the races and ethnicities, all the religions."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p><a href="index.html">Return to Home</a></p>
+            <p><a href="where-to-begin.html">Where to Begin</a> · <a href="practices.html">Practices & Prayers</a> · <a href="companions.html">Spiritual Companions</a></p>
+            <p class="copyright">© 2007–2025 Pat Horn. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle individual theme cards
+        document.querySelectorAll('.theme-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const card = header.parentElement;
+                card.classList.toggle('open');
+            });
+        });
+
+        // Toggle all themes
+        const toggleAllBtn = document.getElementById('toggle-all');
+        let allOpen = false;
+
+        toggleAllBtn.addEventListener('click', () => {
+            const allCards = document.querySelectorAll('.theme-card');
+            allOpen = !allOpen;
+
+            allCards.forEach(card => {
+                if (allOpen) {
+                    card.classList.add('open');
+                } else {
+                    card.classList.remove('open');
+                }
+            });
+
+            toggleAllBtn.textContent = allOpen ? 'Collapse All Themes' : 'Expand All Themes';
+        });
+    </script>
+</body>
+</html>
