@@ -150,6 +150,41 @@
     text-decoration: underline;
 }
 
+/* Starting Point sections for season pages */
+.starting-point {
+    background: var(--warm-white);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+    border-left: 3px solid var(--accent-sage);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.starting-point h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--accent-sage);
+    margin-bottom: var(--spacing-sm);
+}
+
+.starting-point p {
+    margin-bottom: 0;
+    line-height: 1.7;
+}
+
+.starting-point a {
+    color: var(--deep-brown);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-gold);
+}
+
+.starting-point a:hover {
+    color: var(--accent-sage);
+    border-bottom-color: var(--accent-sage);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .page-header h1 {
