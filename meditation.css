@@ -50,7 +50,18 @@
     text-justify: inter-word;
 }
 
-.meditation-content p:first-of-type::first-letter {
+/* Note paragraphs (editorial notes, not part of the meditation itself) */
+.meditation-content .meditation-note {
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--medium-gray);
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Drop cap for first paragraph - skip notes */
+.meditation-content p:first-of-type:not(.meditation-note)::first-letter,
+.meditation-content .meditation-note + p::first-letter {
     font-size: 4em;
     line-height: 0.8;
     float: left;
