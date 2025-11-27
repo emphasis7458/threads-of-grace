@@ -529,26 +529,74 @@ def generate_by_year_html(all_data):
 
 def generate_lectionary_year_html(all_data):
     """Generate lectionary-year.html organized by Year A/B/C with occasions."""
+    import json
 
-    # Extract lectionary year from occasion_full
-    def get_lectionary_year(occasion_full):
+    # Load liturgical database for canonical occasion names and ordering
+    script_dir = Path(__file__).parent
+    db_path = script_dir / 'liturgical_database.json'
+    with open(db_path, 'r', encoding='utf-8') as f:
+        liturgical_db = json.load(f)
+
+    def normalize_occasion(occasion):
+        """Normalize occasion name to a canonical key for grouping."""
         import re
-        match = re.search(r'Year ([ABC])', occasion_full)
-        return match.group(1) if match else None
+        # Remove Year designation
+        occ = re.sub(r',?\s*Year\s+[ABC]$', '', occasion).strip()
 
-    def get_occasion_key(occasion):
-        """Get a sortable key for the occasion based on liturgical calendar order."""
-        # Extract the base occasion (without Year X)
-        import re
-        base = re.sub(r',?\s*Year\s+[ABC]$', '', occasion).strip()
+        # Extract Proper number if present - this is the most reliable grouping
+        proper_match = re.search(r'Proper\s+(\d+)', occ)
+        if proper_match:
+            return f"Proper {int(proper_match.group(1)):02d}"
 
-        # Define liturgical order
+        # Normalize common variations
+        occ = re.sub(r'\s+', ' ', occ)  # collapse whitespace
+        occ = re.sub(r'["""]', '', occ)  # remove quotes
+        occ = occ.replace('after Epiphany', 'after the Epiphany')
+        occ = occ.replace("All Saints'", 'All Saints')
+        occ = occ.replace('Twenty First', 'Twenty-First')
+        occ = occ.replace('Twenty Second', 'Twenty-Second')
+        occ = occ.replace('Twenty Third', 'Twenty-Third')
+        occ = occ.replace('Twenty Fourth', 'Twenty-Fourth')
+        occ = occ.replace('Twenty Fifth', 'Twenty-Fifth')
+        occ = occ.replace('Twenty Sixth', 'Twenty-Sixth')
+        occ = occ.replace('Twenty Seventh', 'Twenty-Seventh')
+
+        # Map to canonical names
+        canonical_map = {
+            'Last Sunday after Epiphany': 'Last Sunday after the Epiphany',
+            'The Epiphany': 'Epiphany',
+            'The Holy Name': 'Holy Name',
+            'Easter Day Principal RCL': 'Easter Day',
+            'Easter Day Principal Evening': 'Easter Day',
+            'Easter Day Early Service Principal Service Evening Service': 'Easter Day',
+            'Easter Day Early Principal Evening': 'Easter Day',
+            'Christmas Day Christmas I Christmas II Christmas III': 'Christmas Day',
+            'First Sunday after Christmas Day': 'First Sunday after Christmas',
+            'The Transfiguration': 'Last Sunday after the Epiphany',
+            'Presentation of Jesus in the Temple': 'Presentation',
+        }
+
+        for old, new in canonical_map.items():
+            if old in occ:
+                occ = new
+                break
+
+        # Handle compound occasions - take first meaningful part
+        if ' All Saints' in occ and occ.startswith(('Twenty', 'Nineteenth', 'Eighteenth')):
+            # e.g., "All Saints (white) Twenty First Sunday after Pentecost Proper 26"
+            occ = 'All Saints'
+
+        return occ
+
+    def get_liturgical_order():
+        """Build liturgical order from database - each Year A cycle gives us the order."""
+        # Define the canonical liturgical year order
         order = [
             'First Sunday of Advent',
             'Second Sunday of Advent',
             'Third Sunday of Advent',
             'Fourth Sunday of Advent',
-            'Christmas',
+            'Christmas Day',
             'First Sunday after Christmas',
             'Second Sunday after Christmas',
             'Holy Name',
@@ -575,53 +623,47 @@ def generate_lectionary_year_html(all_data):
             'Fourth Sunday of Easter',
             'Fifth Sunday of Easter',
             'Sixth Sunday of Easter',
-            'Ascension Day',
             'Seventh Sunday of Easter',
             'Day of Pentecost',
             'Trinity Sunday',
         ]
+        # Add Propers 3-29
+        for i in range(3, 30):
+            order.append(f'Proper {i:02d}')
+        order.append('All Saints')
+        order.append('Christ the King')
+        return order
 
-        # Check for match
-        for i, o in enumerate(order):
-            if base.startswith(o) or o in base:
-                return (0, i, base)
+    def get_occasion_sort_key(normalized_occasion):
+        """Get sort index for a normalized occasion."""
+        order = get_liturgical_order()
+        try:
+            return order.index(normalized_occasion)
+        except ValueError:
+            # Not found - put at end
+            return 999
 
-        # Ordinary time / Proper Sundays - extract proper number
-        proper_match = re.search(r'Proper\s+(\d+)', base)
-        if proper_match:
-            return (1, int(proper_match.group(1)), base)
+    # Extract lectionary year from occasion_full
+    def get_lectionary_year(occasion_full):
+        match = re.search(r'Year ([ABC])', occasion_full)
+        return match.group(1) if match else None
 
-        # Pentecost Sundays
-        pent_match = re.search(r'(\w+)\s+Sunday\s+after\s+Pentecost', base)
-        if pent_match:
-            ordinals = ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh',
-                       'Eighth', 'Ninth', 'Tenth', 'Eleventh', 'Twelfth', 'Thirteenth',
-                       'Fourteenth', 'Fifteenth', 'Sixteenth', 'Seventeenth', 'Eighteenth',
-                       'Nineteenth', 'Twentieth', 'Twenty-first', 'Twenty-second', 'Twenty-third',
-                       'Twenty-fourth', 'Twenty-fifth', 'Twenty-sixth', 'Twenty-seventh']
-            try:
-                idx = ordinals.index(pent_match.group(1))
-                return (1, 50 + idx, base)
-            except ValueError:
-                pass
-
-        # Christ the King
-        if 'Christ the King' in base:
-            return (1, 100, base)
-
-        # Everything else at the end
-        return (2, 0, base)
-
-    # Group by lectionary year, then by occasion
-    by_year = {'A': defaultdict(list), 'B': defaultdict(list), 'C': defaultdict(list)}
+    # Group by lectionary year, then by normalized occasion
+    # Store: { 'A': { 'normalized_occ': {'entries': [...], 'display_names': set(), 'readings': set()} } }
+    by_year = {'A': defaultdict(lambda: {'entries': [], 'display_names': set(), 'readings': set()}),
+               'B': defaultdict(lambda: {'entries': [], 'display_names': set(), 'readings': set()}),
+               'C': defaultdict(lambda: {'entries': [], 'display_names': set(), 'readings': set()})}
     year_counts = {'A': 0, 'B': 0, 'C': 0}
 
     for entry in all_data:
         lect_year = get_lectionary_year(entry.get('occasion_full', ''))
         if lect_year:
-            # Use occasion without Year X for grouping
             occasion = entry.get('occasion', '')
-            by_year[lect_year][occasion].append(entry)
+            normalized = normalize_occasion(occasion)
+            by_year[lect_year][normalized]['entries'].append(entry)
+            by_year[lect_year][normalized]['display_names'].add(occasion)
+            if entry.get('readings'):
+                by_year[lect_year][normalized]['readings'].add(entry.get('readings'))
             year_counts[lect_year] += 1
 
     total = sum(year_counts.values())
@@ -759,23 +801,30 @@ def generate_lectionary_year_html(all_data):
     for year in ['A', 'B', 'C']:
         year_data = by_year[year]
 
-        # Sort occasions by liturgical order
-        sorted_occasions = sorted(year_data.keys(), key=get_occasion_key)
+        # Sort occasions by liturgical order using normalized keys
+        sorted_occasions = sorted(year_data.keys(), key=get_occasion_sort_key)
 
         html += f'''        <section class="year-section" id="year-{year.lower()}">
             <h2 class="year-heading">Year {year}</h2>
 
 '''
 
-        for occasion in sorted_occasions:
-            entries = year_data[occasion]
+        for normalized_occasion in sorted_occasions:
+            occasion_data = year_data[normalized_occasion]
+            entries = occasion_data['entries']
+            display_names = occasion_data['display_names']
+            readings_set = occasion_data['readings']
+
             # Sort entries by date descending (most recent first)
             entries = sorted(entries, key=lambda x: x['date'] or '', reverse=True)
 
-            # Get readings from the first entry (they should be the same for same occasion)
-            readings = entries[0].get('readings', '') if entries else ''
+            # Use the longest display name (most elegant/complete)
+            occasion_display = max(display_names, key=len) if display_names else normalized_occasion
 
-            occasion_display = escape_html(occasion)
+            # Use the longest readings (most complete)
+            readings = max(readings_set, key=len) if readings_set else ''
+
+            occasion_display = escape_html(occasion_display)
             readings_display = escape_html(readings)
 
             html += f'''            <div class="occasion-group">
