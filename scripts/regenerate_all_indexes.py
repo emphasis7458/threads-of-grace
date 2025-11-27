@@ -247,7 +247,7 @@ def generate_chronological_html(all_data):
 
 
 def generate_season_html(all_data, season, page_title):
-    """Generate a season index page."""
+    """Generate a season index page with full meditation details."""
 
     # Filter by season (case-insensitive)
     season_lower = season.lower()
@@ -268,7 +268,57 @@ def generate_season_html(all_data, season, page_title):
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="listing.css">
+    <style>
+        .meditation-list {{
+            list-style: none;
+            padding: 0;
+        }}
+        .meditation-list li {{
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--color-cream-dark);
+        }}
+        .meditation-link {{
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--color-burgundy);
+            text-decoration: none;
+        }}
+        .meditation-link:hover {{
+            color: var(--color-gold);
+        }}
+        .meditation-meta {{
+            font-family: 'Crimson Pro', serif;
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+            margin-top: 0.25rem;
+        }}
+        .meditation-occasion {{
+            font-style: italic;
+        }}
+        .page-intro {{
+            text-align: center;
+            margin-bottom: 3rem;
+        }}
+        .page-title {{
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            color: var(--color-burgundy);
+            margin-bottom: 1rem;
+        }}
+        .meditation-count {{
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            color: var(--color-burgundy);
+        }}
+        .meditation-scripture {{
+            font-family: 'Crimson Pro', serif;
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+            font-style: italic;
+            margin-top: 0.25rem;
+        }}
+    </style>
 </head>
 <body>
     <div class="grain-overlay"></div>
@@ -286,17 +336,26 @@ def generate_season_html(all_data, season, page_title):
             <p class="meditation-count">{total} meditations</p>
         </div>
 
-        <div class="meditation-listing">
+        <ul class="meditation-list">
 '''
 
     for entry in season_entries:
         title = escape_html(entry['title'])
-        html += f'''            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/{entry['filename']}">{title}</a>
-            </article>
+        occasion = escape_html(entry['occasion'])
+        readings = escape_html(entry['readings'])
+        date_display = entry['date_display']
+
+        html += f'''            <li>
+                <a href="meditations/{entry['filename']}" class="meditation-link">{title}</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">{date_display}</span> •
+                    <span class="meditation-occasion">{occasion}</span>
+                </div>
+                <div class="meditation-scripture">{readings}</div>
+            </li>
 '''
 
-    html += '''        </div>
+    html += '''        </ul>
     </main>
 
     <footer class="site-footer">
@@ -315,7 +374,7 @@ def generate_season_html(all_data, season, page_title):
 
 
 def generate_by_year_html(all_data):
-    """Generate by-year.html with meditations organized by year."""
+    """Generate by-year.html with meditations organized by year, with full details."""
 
     # Sort by date descending
     sorted_data = sorted(all_data, key=lambda x: x['date'] or '', reverse=True)
@@ -340,7 +399,68 @@ def generate_by_year_html(all_data):
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="listing.css">
+    <style>
+        .year-section {{
+            margin-bottom: 3rem;
+        }}
+        .year-heading {{
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--color-burgundy);
+            border-bottom: 2px solid var(--color-gold);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }}
+        .meditation-list {{
+            list-style: none;
+            padding: 0;
+        }}
+        .meditation-list li {{
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--color-cream-dark);
+        }}
+        .meditation-link {{
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--color-burgundy);
+            text-decoration: none;
+        }}
+        .meditation-link:hover {{
+            color: var(--color-gold);
+        }}
+        .meditation-meta {{
+            font-family: 'Crimson Pro', serif;
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+            margin-top: 0.25rem;
+        }}
+        .meditation-occasion {{
+            font-style: italic;
+        }}
+        .page-intro {{
+            text-align: center;
+            margin-bottom: 3rem;
+        }}
+        .page-title {{
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            color: var(--color-burgundy);
+            margin-bottom: 1rem;
+        }}
+        .meditation-count {{
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            color: var(--color-burgundy);
+        }}
+        .meditation-scripture {{
+            font-family: 'Crimson Pro', serif;
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+            font-style: italic;
+            margin-top: 0.25rem;
+        }}
+    </style>
 </head>
 <body>
     <div class="grain-overlay"></div>
@@ -366,17 +486,26 @@ def generate_by_year_html(all_data):
 
         html += f'''        <section class="year-section">
             <h3 class="year-heading">{year} ({count} meditations)</h3>
-            <div class="meditation-listing">
+            <ul class="meditation-list">
 '''
 
         for entry in entries:
             title = escape_html(entry['title'])
-            html += f'''                <article class="meditation-item">
-                    <a class="meditation-link" href="meditations/{entry['filename']}">{title}</a>
-                </article>
+            occasion = escape_html(entry['occasion'])
+            readings = escape_html(entry['readings'])
+            date_display = entry['date_display']
+
+            html += f'''                <li>
+                    <a href="meditations/{entry['filename']}" class="meditation-link">{title}</a>
+                    <div class="meditation-meta">
+                        <span class="meditation-date">{date_display}</span> •
+                        <span class="meditation-occasion">{occasion}</span>
+                    </div>
+                    <div class="meditation-scripture">{readings}</div>
+                </li>
 '''
 
-        html += '''            </div>
+        html += '''            </ul>
         </section>
 
 '''

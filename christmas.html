@@ -8,7 +8,57 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="listing.css">
+    <style>
+        .meditation-list {
+            list-style: none;
+            padding: 0;
+        }
+        .meditation-list li {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--color-cream-dark);
+        }
+        .meditation-link {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--color-burgundy);
+            text-decoration: none;
+        }
+        .meditation-link:hover {
+            color: var(--color-gold);
+        }
+        .meditation-meta {
+            font-family: 'Crimson Pro', serif;
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+            margin-top: 0.25rem;
+        }
+        .meditation-occasion {
+            font-style: italic;
+        }
+        .page-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .page-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            color: var(--color-burgundy);
+            margin-bottom: 1rem;
+        }
+        .meditation-count {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            color: var(--color-burgundy);
+        }
+        .meditation-scripture {
+            font-family: 'Crimson Pro', serif;
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+            font-style: italic;
+            margin-top: 0.25rem;
+        }
+    </style>
 </head>
 <body>
     <div class="grain-overlay"></div>
@@ -26,89 +76,224 @@
             <p class="meditation-count">27 meditations</p>
         </div>
 
-        <div class="meditation-listing">
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2023-12-31.html">I Will Not Keep Silent</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2022-12-25.html">Encounter</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2022-01-02.html">Satisfied?</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2021-12-26.html">The Fullness of Time</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2021-01-03.html">Then and Now</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2020-12-27.html">The Fullness of Time</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2020-01-05.html">Revelation</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2019-12-29.html">A Child of God</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2017-12-31.html">I Will Not Keep Silent</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2017-12-25.html">Out of the Darkness</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2016-12-25.html">Encounter</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2016-01-03.html">The Goodness of the Lord</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2015-12-27.html">In the Fullness of Time</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2015-12-25.html">The Inn of Our Hearts</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2015-01-04.html">The Eyes of Your Heart</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2014-12-28.html">Enkindled</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2014-01-05.html">Divine Life</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2013-12-29.html">The Season for Children</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2012-12-30.html">Fullness</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2011-12-25.html">Out of the Darkness</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2011-01-02.html">Revelation</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2010-12-26.html">Let It Shine!</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2010-01-03.html">The Holy Dream Maker</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2009-12-27.html">The Light of the World</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2009-01-04.html">The Pilgrims’ Way</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2008-12-28.html">Children of God</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2007-12-30.html">The Fullness of Time</a>
-            </article>
-        </div>
+        <ul class="meditation-list">
+            <li>
+                <a href="meditations/2023-12-31.html" class="meditation-link">I Will Not Keep Silent</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">December 31, 2023</span> •
+                    <span class="meditation-occasion">First Sunday after Christmas</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 61:10—62:3, Psalm 147, Galatians 3:23-25, John 1:1-18</div>
+            </li>
+            <li>
+                <a href="meditations/2022-12-25.html" class="meditation-link">Encounter</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">December 25, 2022</span> •
+                    <span class="meditation-occasion">Christmas Day Christmas I Christmas II Christmas III</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 9:2-7, Psalm 96, Titus 2:11-14, Luke 2:1-14 (15-20)</div>
+            </li>
+            <li>
+                <a href="meditations/2022-01-02.html" class="meditation-link">Satisfied?</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 02, 2022</span> •
+                    <span class="meditation-occasion">Second Sunday after Christmas &quot;(Note: Episcopal readings differ from the &quot;&quot;generic&quot;&quot; RCL readings)&quot;</span>
+                </div>
+                <div class="meditation-scripture">Jeremiah 31:7-14, Psalm 84, Ephesians 1:3-6, 15-19, Matthew 2:13-15, 19-23</div>
+            </li>
+            <li>
+                <a href="meditations/2021-12-26.html" class="meditation-link">The Fullness of Time</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">December 26, 2021</span> •
+                    <span class="meditation-occasion">First Sunday after Christmas</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 61:10--62:3. Psalm 147, Galatians 3:23-25; 4:4-7, John 1:1-18</div>
+            </li>
+            <li>
+                <a href="meditations/2021-01-03.html" class="meditation-link">Then and Now</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 03, 2021</span> •
+                    <span class="meditation-occasion">Second Sunday after Christmas</span>
+                </div>
+                <div class="meditation-scripture">Jeremiah 31:7-14, Psalm 84, Ephesians 1:3-6, 15-19a, Matthew 2:13-15, 19-23</div>
+            </li>
+            <li>
+                <a href="meditations/2020-12-27.html" class="meditation-link">The Fullness of Time</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">December 27, 2020</span> •
+                    <span class="meditation-occasion">First Sunday after Christmas</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 61:10--62:3, Psalm 147, Galatians 3:23-25; 4:4-7, John 1:1-18</div>
+            </li>
+            <li>
+                <a href="meditations/2020-01-05.html" class="meditation-link">Revelation</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 05, 2020</span> •
+                    <span class="meditation-occasion">Second Sunday after Christmas</span>
+                </div>
+                <div class="meditation-scripture">Jeremiah 31:7-14, Psalm 84, Ephesians 1:3-6, 15-19a, Matthew 2:13-15, 19-23</div>
+            </li>
+            <li>
+                <a href="meditations/2019-12-29.html" class="meditation-link">A Child of God</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">December 29, 2019</span> •
+                    <span class="meditation-occasion">First Sunday after Christmas</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 61:10--62:3, Psalm 147, Galatians 3:23-25; 4:4-7, John 1:1-18</div>
+            </li>
+            <li>
+                <a href="meditations/2017-12-31.html" class="meditation-link">I Will Not Keep Silent</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">December 31, 2017</span> •
+                    <span class="meditation-occasion">First Sunday after Christmas</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 61:10—62:3, Psalm 147, Galatians 3:23-25, John 1:1-18</div>
+            </li>
+            <li>
+                <a href="meditations/2017-12-25.html" class="meditation-link">Out of the Darkness</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">December 25, 2017</span> •
+                    <span class="meditation-occasion">Christmas Day</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 62:6-12, Psalm 97, Titus 3:4-7, Luke 2:(1-7) 8-20</div>
+            </li>
+            <li>
+                <a href="meditations/2016-12-25.html" class="meditation-link">Encounter</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">December 25, 2016</span> •
+                    <span class="meditation-occasion">Christmas Day Christmas I Christmas II Christmas III</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 9:2-7, Psalm 96, Titus 2:11-14, Luke 2:1-14 (15-20)</div>
+            </li>
+            <li>
+                <a href="meditations/2016-01-03.html" class="meditation-link">The Goodness of the Lord</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 03, 2016</span> •
+                    <span class="meditation-occasion">Second Sunday after Christmas &quot;(Note: Episcopal readings differ from the &quot;&quot;generic&quot;&quot; RCL readings)&quot;</span>
+                </div>
+                <div class="meditation-scripture">Jeremiah 31:7-14, Psalm 84, Ephesians 1:3-6, 15-19a, Matthew 2:13-15, 19-23</div>
+            </li>
+            <li>
+                <a href="meditations/2015-12-27.html" class="meditation-link">In the Fullness of Time</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">December 27, 2015</span> •
+                    <span class="meditation-occasion">First Sunday after Christmas</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 61:10—62:3, Psalm 147, Galatians 3:23-25, John 1:1-18</div>
+            </li>
+            <li>
+                <a href="meditations/2015-12-25.html" class="meditation-link">The Inn of Our Hearts</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">December 25, 2015</span> •
+                    <span class="meditation-occasion">Christmas Day</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 9:2-7, Psalm 96, Titus 2:11-14, Luke 2:1-14, (15-20)</div>
+            </li>
+            <li>
+                <a href="meditations/2015-01-04.html" class="meditation-link">The Eyes of Your Heart</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 04, 2015</span> •
+                    <span class="meditation-occasion">Second Sunday after Christmas &quot;(Note: Episcopal readings differ from the &quot;&quot;generic&quot;&quot; RCL readings)&quot;</span>
+                </div>
+                <div class="meditation-scripture">Jeremiah 31:7-14, Psalm 84, Ephesians 1:3-6, 15-19a, Luke 2:41-52</div>
+            </li>
+            <li>
+                <a href="meditations/2014-12-28.html" class="meditation-link">Enkindled</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">December 28, 2014</span> •
+                    <span class="meditation-occasion">First Sunday after Christmas</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 61:10—62:3, Psalm 147, Galatians 3:23-25, John 1:1-18</div>
+            </li>
+            <li>
+                <a href="meditations/2014-01-05.html" class="meditation-link">Divine Life</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 05, 2014</span> •
+                    <span class="meditation-occasion">Second Sunday after Christmas</span>
+                </div>
+                <div class="meditation-scripture">Jeremiah 31:7-14, Psalm 84, Ephesians 1:3-6, 15-19a, Matthew 2:13-14, 19-23</div>
+            </li>
+            <li>
+                <a href="meditations/2013-12-29.html" class="meditation-link">The Season for Children</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">December 29, 2013</span> •
+                    <span class="meditation-occasion">First Sunday after Christmas</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 61:10—62:3, Psalm 147, Galatians 3:23-25; 4:4-7, John 1:1-18</div>
+            </li>
+            <li>
+                <a href="meditations/2012-12-30.html" class="meditation-link">Fullness</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">December 30, 2012</span> •
+                    <span class="meditation-occasion">First Sunday after Christmas</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 61:10—62:3, Psalm 147, Galatians 3:23-25, 4:4-7, John 1:1-18</div>
+            </li>
+            <li>
+                <a href="meditations/2011-12-25.html" class="meditation-link">Out of the Darkness</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">December 25, 2011</span> •
+                    <span class="meditation-occasion">Christmas Day Christmas I Christmas II Christmas III</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 62:6-12, Psalm 97, Titus 3:4-7, Luke 2:(1-7) 8-20</div>
+            </li>
+            <li>
+                <a href="meditations/2011-01-02.html" class="meditation-link">Revelation</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 02, 2011</span> •
+                    <span class="meditation-occasion">Second Sunday after Christmas &quot;(Note: Episcopal readings differ from the &quot;&quot;generic&quot;&quot; RCL readings)&quot;</span>
+                </div>
+                <div class="meditation-scripture">Jeremiah 31:7-14, Psalm 84, Ephesians 1:3-6, 15-19a, Matthew 2:13-15, 19-23</div>
+            </li>
+            <li>
+                <a href="meditations/2010-12-26.html" class="meditation-link">Let It Shine!</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">December 26, 2010</span> •
+                    <span class="meditation-occasion">First Sunday after Christmas</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 61:10—62:3, Psalm 147, Galatians 3:23-25, John 1:1-18</div>
+            </li>
+            <li>
+                <a href="meditations/2010-01-03.html" class="meditation-link">The Holy Dream Maker</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 03, 2010</span> •
+                    <span class="meditation-occasion">Second Sunday after Christmas</span>
+                </div>
+                <div class="meditation-scripture">Jeremiah 31:7-14, Psalm 84, Ephesians 1:3-6, 15-19a, Matthew 2:13-15. 19-23</div>
+            </li>
+            <li>
+                <a href="meditations/2009-12-27.html" class="meditation-link">The Light of the World</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">December 27, 2009</span> •
+                    <span class="meditation-occasion">First Sunday after Christmas</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 61:10—62:3, Psalm 147, Galatians 3:23-25, John 1:1-18</div>
+            </li>
+            <li>
+                <a href="meditations/2009-01-04.html" class="meditation-link">The Pilgrims’ Way</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 04, 2009</span> •
+                    <span class="meditation-occasion">Second Sunday after Christmas</span>
+                </div>
+                <div class="meditation-scripture">Jeremiah 31:7-14, Psalm 84, Ephesians 1:3-6, 15-19a, Luke 2:41-52</div>
+            </li>
+            <li>
+                <a href="meditations/2008-12-28.html" class="meditation-link">Children of God</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">December 28, 2008</span> •
+                    <span class="meditation-occasion">First Sunday after Christmas</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 61:10—62:3, Psalm 147, Galatians 3:23-25, 4:4-7, John 1:1-18</div>
+            </li>
+            <li>
+                <a href="meditations/2007-12-30.html" class="meditation-link">The Fullness of Time</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">December 30, 2007</span> •
+                    <span class="meditation-occasion">First Sunday after Christmas</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 61:10—62:3, Psalm 147, Galatians 3:23-25, John 1:1-18</div>
+            </li>
+        </ul>
     </main>
 
     <footer class="site-footer">

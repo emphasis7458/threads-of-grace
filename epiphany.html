@@ -8,7 +8,57 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="listing.css">
+    <style>
+        .meditation-list {
+            list-style: none;
+            padding: 0;
+        }
+        .meditation-list li {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--color-cream-dark);
+        }
+        .meditation-link {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--color-burgundy);
+            text-decoration: none;
+        }
+        .meditation-link:hover {
+            color: var(--color-gold);
+        }
+        .meditation-meta {
+            font-family: 'Crimson Pro', serif;
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+            margin-top: 0.25rem;
+        }
+        .meditation-occasion {
+            font-style: italic;
+        }
+        .page-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .page-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            color: var(--color-burgundy);
+            margin-bottom: 1rem;
+        }
+        .meditation-count {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            color: var(--color-burgundy);
+        }
+        .meditation-scripture {
+            font-family: 'Crimson Pro', serif;
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+            font-style: italic;
+            margin-top: 0.25rem;
+        }
+    </style>
 </head>
 <body>
     <div class="grain-overlay"></div>
@@ -26,347 +76,912 @@
             <p class="meditation-count">113 meditations</p>
         </div>
 
-        <div class="meditation-listing">
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2024-02-11.html">Here</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2024-02-04.html">Awe and Wonder</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2024-01-28.html">Love Builds Up</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2024-01-21.html">Turning</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2024-01-14.html">Can Anything Good Come Out of Nazareth?</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2024-01-07.html">Ruach: Breath, Wind, Spirit</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2023-02-19.html">Response</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2023-02-12.html">Growth</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2023-02-05.html">Abundant Life</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2023-01-29.html">Upside-Down</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2023-01-22.html">The Message of the Cross</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2023-01-15.html">Faithful</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2023-01-08.html">New Things</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2022-02-27.html">Transformation</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2022-02-20.html">But God</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2022-02-13.html">Trust in the Lord</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2022-02-06.html">Call and Response</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2022-01-30.html">On the Way</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2022-01-23.html">The Spirit of the Lord Is Upon Us</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2022-01-16.html">&quot;The Shadow of Your Wings&quot;</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2022-01-09.html">Precious</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2021-02-14.html">Epiphanies Everyday</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2021-02-07.html">Awe and Wonder</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2021-01-31.html">Love Builds Up</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2021-01-24.html">Turning</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2021-01-17.html">Persistent</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2021-01-10.html">Ruach: Breath, Wind, Spirit</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2020-02-23.html">Response</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2020-02-16.html">Be Reconciled</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2020-02-09.html">Here I Am</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2020-01-26.html">Come</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2020-01-19.html">Chosen</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2020-01-12.html">New Things</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2019-03-03.html">Unveiled Faces</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2019-02-24.html">Give and Receive</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2019-02-17.html">Trust in the Lord</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2019-02-10.html">Send Me</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2019-02-03.html">Peace</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2019-01-27.html">This Day</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2019-01-20.html">A New Name</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2019-01-13.html">A Message</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2019-01-06.html">Epiphany</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2018-02-11.html">Here</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2018-02-04.html">A Deserted Place</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2018-01-28.html">Gracious and Full of Compassion</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2018-01-21.html">Get Up</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2018-01-14.html">The Light of the World</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2018-01-07.html">Look Around!</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2017-02-26.html">Response</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2017-02-19.html">Perfect</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2017-02-12.html">God’s Field</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2017-02-05.html">Here I Am</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2017-01-29.html">Upside-Down</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2017-01-22.html">Proclamation</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2017-01-15.html">Faithful</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2017-01-08.html">Anointed at Baptism</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2016-02-07.html">Transformation</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2016-01-31.html">“On His Way”</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2016-01-24.html">Calls</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2016-01-17.html">The Light of Christ</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2016-01-10.html">Listen to the Voice of the Lord</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2015-02-08.html">Abundant Life</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2015-02-01.html">Love Builds Up</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2015-01-25.html">A Second Time</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2015-01-18.html">Can Anything Good Come Out of Nazareth?</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2015-01-11.html">The Voice of God</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2014-03-02.html">Touch</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2014-02-23.html">God’s Temple</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2014-02-16.html">Growth</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2014-02-09.html">“Here I Am”</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2014-01-26.html">Divisions</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2014-01-19.html">Lamb of God</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2014-01-12.html">The Blessing of Peace</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2013-02-10.html">Unveiled Faces</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2013-02-03.html">On the Way</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2013-01-27.html">The Spirit of the Lord Is Upon Us</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2013-01-20.html">Reflections on the Shadow of God’s Wings</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2013-01-13.html">Precious</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2013-01-06.html">Intimate Epiphanies</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2012-02-19.html">Apart</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2012-02-12.html">The Touch of God</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2012-02-05.html">Wait for the Lord</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2012-01-29.html">Accountable</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2012-01-22.html">Icons, Images of Love</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2012-01-15.html">Persistent</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2012-01-08.html">The Voice of God</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2011-03-06.html">The Holy Mountain</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2011-02-27.html">What Wondrous Love Is This?</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2011-02-20.html">Indwelling</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2011-02-13.html">Love Is the Answer</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2011-02-06.html">Abundant Life</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2011-01-30.html">“The Controversy of the Lord”</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2011-01-23.html">The Message of the Cross</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2011-01-16.html">Illumined to Illumine</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2011-01-09.html">New Things</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2010-02-14.html">“Listen to Him!”</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2010-02-07.html">“A Nod from God”</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2010-01-31.html">He Went on His Way</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2010-01-24.html">The Gift of Love</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2010-01-17.html">Light / Process</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2010-01-10.html">Precious</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2009-02-22.html">Witnesses</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2009-02-15.html">God’s Healing Grace Then and Now</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2009-02-08.html">Prayer Time</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2009-02-01.html">Unclean Spirits</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2009-01-25.html">“Gone Fishin’ ”</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2009-01-18.html">Listening</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2009-01-11.html">Out of Darkness, Into Light</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2008-02-03.html">Awe</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2008-01-27.html">Christian Unity</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2008-01-20.html">Ears to Hear</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2008-01-13.html">New Things</a>
-            </article>
-            <article class="meditation-item">
-                <a class="meditation-link" href="meditations/2008-01-06.html">Gifts</a>
-            </article>
-        </div>
+        <ul class="meditation-list">
+            <li>
+                <a href="meditations/2024-02-11.html" class="meditation-link">Here</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 11, 2024</span> •
+                    <span class="meditation-occasion">Last Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">II Kings 2:1-12, Psalm 50:1-6, II Corinthians 4:3-6, Mark 9:2-9</div>
+            </li>
+            <li>
+                <a href="meditations/2024-02-04.html" class="meditation-link">Awe and Wonder</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 04, 2024</span> •
+                    <span class="meditation-occasion">Fifth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 40:21-31, Psalm 147:1-12, 21c, I Corinthians 9:16-23, Mark 1:29-39</div>
+            </li>
+            <li>
+                <a href="meditations/2024-01-28.html" class="meditation-link">Love Builds Up</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 28, 2024</span> •
+                    <span class="meditation-occasion">Fourth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Deuteronomy 18:15-20, Psalm 111, I Corinthians 8:1-13, Mark 1:21-28</div>
+            </li>
+            <li>
+                <a href="meditations/2024-01-21.html" class="meditation-link">Turning</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 21, 2024</span> •
+                    <span class="meditation-occasion">Third Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Jonah 3:1-5, 10, Psalm 62:6-14, I Corinthians 7:29-31, Mark 1: 14-20</div>
+            </li>
+            <li>
+                <a href="meditations/2024-01-14.html" class="meditation-link">Can Anything Good Come Out of Nazareth?</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 14, 2024</span> •
+                    <span class="meditation-occasion">Second Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">I Samuel 3:1-20, Psalm 139:1-5, 12-17, I Corinthians 6:12-20, John 1:43-51</div>
+            </li>
+            <li>
+                <a href="meditations/2024-01-07.html" class="meditation-link">Ruach: Breath, Wind, Spirit</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 07, 2024</span> •
+                    <span class="meditation-occasion">First Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Genesis 1:1-5, Psalm 29, Acts 19:1-7, Mark 1:4-11</div>
+            </li>
+            <li>
+                <a href="meditations/2023-02-19.html" class="meditation-link">Response</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 19, 2023</span> •
+                    <span class="meditation-occasion">Last Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Exodus 24:12-18, Psalm 2, II Peter 1:16-21, Matthew 17:1-9</div>
+            </li>
+            <li>
+                <a href="meditations/2023-02-12.html" class="meditation-link">Growth</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 12, 2023</span> •
+                    <span class="meditation-occasion">Sixth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Deuteronomy 30:15-20, Psalm 119:1-8, I Corinthians 3:1-9, Matthew 5:21-37</div>
+            </li>
+            <li>
+                <a href="meditations/2023-02-05.html" class="meditation-link">Abundant Life</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 05, 2023</span> •
+                    <span class="meditation-occasion">Fifth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 58:1-12, Psalm 112:1-9, I Corinthians 2:1-16, Matthew 5:13-20</div>
+            </li>
+            <li>
+                <a href="meditations/2023-01-29.html" class="meditation-link">Upside-Down</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 29, 2023</span> •
+                    <span class="meditation-occasion">Fourth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Micah 6:1-8, Psalm 15, I Corinthians 1:18-31, Matthew 5:1-12</div>
+            </li>
+            <li>
+                <a href="meditations/2023-01-22.html" class="meditation-link">The Message of the Cross</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 22, 2023</span> •
+                    <span class="meditation-occasion">Third Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 9:1-4, Psalm 27:1, 5-13, I Corinthians 1:10-18, Matthew 4:12-23</div>
+            </li>
+            <li>
+                <a href="meditations/2023-01-15.html" class="meditation-link">Faithful</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 15, 2023</span> •
+                    <span class="meditation-occasion">Second Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 49:1-7, Psalm 40:1-12, I Corinthians 1:1-9, John 1:29-42</div>
+            </li>
+            <li>
+                <a href="meditations/2023-01-08.html" class="meditation-link">New Things</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 08, 2023</span> •
+                    <span class="meditation-occasion">First Sunday after the Epiphany The Baptism of Our Lord</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 42:1-9, Psalm 29, Acts 10:34-43, Matthew 3:13-17</div>
+            </li>
+            <li>
+                <a href="meditations/2022-02-27.html" class="meditation-link">Transformation</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 27, 2022</span> •
+                    <span class="meditation-occasion">Last Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Exodus 34:29-35, Psalm 99, II Corinthians 3:12—4:2, Luke 9:28-36, (37-43)</div>
+            </li>
+            <li>
+                <a href="meditations/2022-02-20.html" class="meditation-link">But God</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 20, 2022</span> •
+                    <span class="meditation-occasion">Seventh Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Genesis 45:3-11, 15, Psalm 37:1-12, 41-42, I Corinthians 15:35-38, 42-50, Luke 6:27-38</div>
+            </li>
+            <li>
+                <a href="meditations/2022-02-13.html" class="meditation-link">Trust in the Lord</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 13, 2022</span> •
+                    <span class="meditation-occasion">Sixth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Jeremiah 17:5-10, Psalm 1, I Corinthians 15:12-20, Luke 6:17-26</div>
+            </li>
+            <li>
+                <a href="meditations/2022-02-06.html" class="meditation-link">Call and Response</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 06, 2022</span> •
+                    <span class="meditation-occasion">Fifth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 6:1-8, (9-13), Psalm 138, I Corinthians 15:1-11, Luke 5:1-11</div>
+            </li>
+            <li>
+                <a href="meditations/2022-01-30.html" class="meditation-link">On the Way</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 30, 2022</span> •
+                    <span class="meditation-occasion">Fourth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Jeremiah 1:4-10, Psalm 71:1-6, I Corinthians 13:1-13, Luke 4:21-30</div>
+            </li>
+            <li>
+                <a href="meditations/2022-01-23.html" class="meditation-link">The Spirit of the Lord Is Upon Us</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 23, 2022</span> •
+                    <span class="meditation-occasion">Third Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Nehemiah 8:1-3, 5-6, 8-10, Psalm 19, I Corinthians 12:12-31a, Luke 4:14-21</div>
+            </li>
+            <li>
+                <a href="meditations/2022-01-16.html" class="meditation-link">&quot;The Shadow of Your Wings&quot;</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 16, 2022</span> •
+                    <span class="meditation-occasion">Second Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 62:1-5, Psalm 36:5-10, I Corinthians 12:1-11, John 2:1-11</div>
+            </li>
+            <li>
+                <a href="meditations/2022-01-09.html" class="meditation-link">Precious</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 09, 2022</span> •
+                    <span class="meditation-occasion">First Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 43:1-7, Psalm 29, Acts 8:14-17, Luke 3:15-17, 21-22</div>
+            </li>
+            <li>
+                <a href="meditations/2021-02-14.html" class="meditation-link">Epiphanies Everyday</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 14, 2021</span> •
+                    <span class="meditation-occasion">Last Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">II Kings 2:1-12, Psalm 50:1-6, II Corinthians 4:3-6, Mark 9:2-9</div>
+            </li>
+            <li>
+                <a href="meditations/2021-02-07.html" class="meditation-link">Awe and Wonder</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 07, 2021</span> •
+                    <span class="meditation-occasion">Fifth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 40:21-31, Psalm 147:1-12, 21c, I Corinthians 9:16-23, Mark 1:29-39</div>
+            </li>
+            <li>
+                <a href="meditations/2021-01-31.html" class="meditation-link">Love Builds Up</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 31, 2021</span> •
+                    <span class="meditation-occasion">Fourth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Deuteronomy 18:15-20, Psalm 111, I Corinthians 8:1-13, Mark 1:21-28</div>
+            </li>
+            <li>
+                <a href="meditations/2021-01-24.html" class="meditation-link">Turning</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 24, 2021</span> •
+                    <span class="meditation-occasion">Third Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Jonah 3:1-25, 10, Psalm 62:6-14, I Corinthians 7:29-31, Mark 1:14-20</div>
+            </li>
+            <li>
+                <a href="meditations/2021-01-17.html" class="meditation-link">Persistent</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 17, 2021</span> •
+                    <span class="meditation-occasion">Second Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">I Samuel 3:1-10 (11-20), Psalm 139:1-5, 12-17, I Corinthians 6:12-20, John 1:43-51</div>
+            </li>
+            <li>
+                <a href="meditations/2021-01-10.html" class="meditation-link">Ruach: Breath, Wind, Spirit</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 10, 2021</span> •
+                    <span class="meditation-occasion">First Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Genesis 1:1-5, Psalm 29, Acts 19:1-7, Mark 1:4-11</div>
+            </li>
+            <li>
+                <a href="meditations/2020-02-23.html" class="meditation-link">Response</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 23, 2020</span> •
+                    <span class="meditation-occasion">Last Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Exodus 24:12-18, Psalm 2, II Peter 1:16-21, Matthew 17:1-9</div>
+            </li>
+            <li>
+                <a href="meditations/2020-02-16.html" class="meditation-link">Be Reconciled</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 16, 2020</span> •
+                    <span class="meditation-occasion">Sixth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Deuteronomy 30:15-20, Psalm 119:1-8, I Corinthians 3:1-4, Matthew 5:21-37</div>
+            </li>
+            <li>
+                <a href="meditations/2020-02-09.html" class="meditation-link">Here I Am</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 09, 2020</span> •
+                    <span class="meditation-occasion">Fifth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 58:1-9a, (9b-12), Psalm 112:1-9(10), I Corinthians 2:1-12, (13-16), Matthew 5:13-20</div>
+            </li>
+            <li>
+                <a href="meditations/2020-01-26.html" class="meditation-link">Come</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 26, 2020</span> •
+                    <span class="meditation-occasion">Third Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 4:1-4, Psalm 27:1, 5-13, I Corinthians 1:10-18, Matthew 4:12-23</div>
+            </li>
+            <li>
+                <a href="meditations/2020-01-19.html" class="meditation-link">Chosen</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 19, 2020</span> •
+                    <span class="meditation-occasion">Second Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 49:1-7, Psalm 40:1-12, I Corinthians 1:1-9, John 1:29-42</div>
+            </li>
+            <li>
+                <a href="meditations/2020-01-12.html" class="meditation-link">New Things</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 12, 2020</span> •
+                    <span class="meditation-occasion">First Sunday after the Epiphany The Baptism of Our Lord</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 42:1-9, Psalm 29, Acts 10:34-43, Matthew 3:13-17</div>
+            </li>
+            <li>
+                <a href="meditations/2019-03-03.html" class="meditation-link">Unveiled Faces</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">March 03, 2019</span> •
+                    <span class="meditation-occasion">Last Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Exodus 34:29-35, Psalm 99, II Corinthians 3:12—4:2, Luke 9:28-36 (37-43)</div>
+            </li>
+            <li>
+                <a href="meditations/2019-02-24.html" class="meditation-link">Give and Receive</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 24, 2019</span> •
+                    <span class="meditation-occasion">Seventh Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Genesis 45:3-11, 15, Psalm 37:1-12, 41-42, I Corinthians15:35-38, 42-50, Luke 6:27-38</div>
+            </li>
+            <li>
+                <a href="meditations/2019-02-17.html" class="meditation-link">Trust in the Lord</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 17, 2019</span> •
+                    <span class="meditation-occasion">Sixth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Jeremiah 17:5-10, Psalm 1, I Corinthians 15:12-20, Luke 6:17-26</div>
+            </li>
+            <li>
+                <a href="meditations/2019-02-10.html" class="meditation-link">Send Me</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 10, 2019</span> •
+                    <span class="meditation-occasion">Fifth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 6:1-8, (9-13), Psalm 138, I Corinthians 15:1-11, Luke 5:1-11</div>
+            </li>
+            <li>
+                <a href="meditations/2019-02-03.html" class="meditation-link">Peace</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 03, 2019</span> •
+                    <span class="meditation-occasion">Fourth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Jeremiah 4:1-10, Psalm 71:1-6, I Corinthians 13:1-13, Luke 4:21-30</div>
+            </li>
+            <li>
+                <a href="meditations/2019-01-27.html" class="meditation-link">This Day</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 27, 2019</span> •
+                    <span class="meditation-occasion">Third Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Nehemiah 8:1-3, 5-6, 8-10, Psalm 19, I Corinthians 12:12-31a, Luke 4:14-21</div>
+            </li>
+            <li>
+                <a href="meditations/2019-01-20.html" class="meditation-link">A New Name</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 20, 2019</span> •
+                    <span class="meditation-occasion">Second Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 62:1-5, Psalm 36:5-10 I Corinthians 12:1-11, John 2:1-11</div>
+            </li>
+            <li>
+                <a href="meditations/2019-01-13.html" class="meditation-link">A Message</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 13, 2019</span> •
+                    <span class="meditation-occasion">First Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 43:1-7, Psalm 29, Acts 8:14-17, Luke 3: 15-17, 21-22</div>
+            </li>
+            <li>
+                <a href="meditations/2019-01-06.html" class="meditation-link">Epiphany</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 06, 2019</span> •
+                    <span class="meditation-occasion">The Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 60:1-6, Psalm 72:1-7,10-14, Ephesians 3:1-12, Matthew 2:1-12</div>
+            </li>
+            <li>
+                <a href="meditations/2018-02-11.html" class="meditation-link">Here</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 11, 2018</span> •
+                    <span class="meditation-occasion">Last Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">II Kings 2:1-12, Psalm 50:1-6, II Corinthians 4:3-6, Mark 9:2-9</div>
+            </li>
+            <li>
+                <a href="meditations/2018-02-04.html" class="meditation-link">A Deserted Place</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 04, 2018</span> •
+                    <span class="meditation-occasion">Fifth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 40:21-31, Psalm 147:1-12, 21c, I Corinthians 9:16-23, Mark 1:29-39</div>
+            </li>
+            <li>
+                <a href="meditations/2018-01-28.html" class="meditation-link">Gracious and Full of Compassion</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 28, 2018</span> •
+                    <span class="meditation-occasion">Fourth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Deuteronomy 18:15-20, Psalm 111, I Corinthians 8:1-13, Mark 1:21-28</div>
+            </li>
+            <li>
+                <a href="meditations/2018-01-21.html" class="meditation-link">Get Up</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 21, 2018</span> •
+                    <span class="meditation-occasion">Third Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Jonah 3:1-5, 10, Psalm 62:6-14, I Corinthians 7:29-36, Mark 1:14-20</div>
+            </li>
+            <li>
+                <a href="meditations/2018-01-14.html" class="meditation-link">The Light of the World</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 14, 2018</span> •
+                    <span class="meditation-occasion">Second Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">I Samuel 3:1-10 (11-20), Psalm 139:1-5, 12-17, I Corinthians 6:12-20, John 1:43-51</div>
+            </li>
+            <li>
+                <a href="meditations/2018-01-07.html" class="meditation-link">Look Around!</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 07, 2018</span> •
+                    <span class="meditation-occasion">First Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 6:1-6, Psalm 72:1-7, 10-14, Ephesians 3:1-12, Matthew 2:1-12</div>
+            </li>
+            <li>
+                <a href="meditations/2017-02-26.html" class="meditation-link">Response</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 26, 2017</span> •
+                    <span class="meditation-occasion">Last Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Exodus 24:12-18, Psalm 2, II Peter 1:16-21, Matthew 17:1-9</div>
+            </li>
+            <li>
+                <a href="meditations/2017-02-19.html" class="meditation-link">Perfect</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 19, 2017</span> •
+                    <span class="meditation-occasion">Seventh Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Leviticus 19:1-2, 9-18, Psalm 119:33-40, I Corinthians 3:10-11, 16-23, Matthew 5:38-48</div>
+            </li>
+            <li>
+                <a href="meditations/2017-02-12.html" class="meditation-link">God’s Field</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 12, 2017</span> •
+                    <span class="meditation-occasion">Sixth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Deuteronomy 30:15-20, Psalm 119:1-8, I Corinthians 3:1-9, Matthew 5:21-37</div>
+            </li>
+            <li>
+                <a href="meditations/2017-02-05.html" class="meditation-link">Here I Am</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 05, 2017</span> •
+                    <span class="meditation-occasion">Fifth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 58:1-9a (9b-12), Psalm 112:1-9 (10), I Corinthians 2:1-12 (13-16), Matthew 5:13-20</div>
+            </li>
+            <li>
+                <a href="meditations/2017-01-29.html" class="meditation-link">Upside-Down</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 29, 2017</span> •
+                    <span class="meditation-occasion">Fourth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Micah 6:1-8, Psalm 15, I Corinthians 1:18-31, Matthew 5:1-12</div>
+            </li>
+            <li>
+                <a href="meditations/2017-01-22.html" class="meditation-link">Proclamation</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 22, 2017</span> •
+                    <span class="meditation-occasion">Third Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 9:1-4, Psalm 27:1, 5-13, I Corinthians 1:10-18, Matthew 4:12-23</div>
+            </li>
+            <li>
+                <a href="meditations/2017-01-15.html" class="meditation-link">Faithful</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 15, 2017</span> •
+                    <span class="meditation-occasion">Second Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 49:1-7, Psalm 40:1-12, I Corinthians 1:1-9, John 1:29-42</div>
+            </li>
+            <li>
+                <a href="meditations/2017-01-08.html" class="meditation-link">Anointed at Baptism</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 08, 2017</span> •
+                    <span class="meditation-occasion">First Sunday after the Epiphany The Baptism of Our Lord</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 42:1-9, Psalm 29, Acts 10:34-43, Matthew 3:13-17</div>
+            </li>
+            <li>
+                <a href="meditations/2016-02-07.html" class="meditation-link">Transformation</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 07, 2016</span> •
+                    <span class="meditation-occasion">Last Sunday after Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Exodus 34:29-35, Psalm 99, II Corinthians 3:12—4:2, Luke 9:28-36, (37-43)</div>
+            </li>
+            <li>
+                <a href="meditations/2016-01-31.html" class="meditation-link">“On His Way”</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 31, 2016</span> •
+                    <span class="meditation-occasion">Fourth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Jeremiah 1:4-10, Psalm 71:1-6, I Corinthians 13:1-13, Luke 4:21-30</div>
+            </li>
+            <li>
+                <a href="meditations/2016-01-24.html" class="meditation-link">Calls</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 24, 2016</span> •
+                    <span class="meditation-occasion">Third Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Nehemiah 8:1-3, 5-6, 8-10, Psalm 19, I Corinthians 12:12-31a, Luke 4:14-21</div>
+            </li>
+            <li>
+                <a href="meditations/2016-01-17.html" class="meditation-link">The Light of Christ</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 17, 2016</span> •
+                    <span class="meditation-occasion">Second Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 62:1-5, Psalm 36:5-10, I Corinthians 12:1-11, John 2:1-11</div>
+            </li>
+            <li>
+                <a href="meditations/2016-01-10.html" class="meditation-link">Listen to the Voice of the Lord</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 10, 2016</span> •
+                    <span class="meditation-occasion">First Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 43:1-7, Psalm 29, Acts 8:14-17, Luke 3:15-17, 21-22</div>
+            </li>
+            <li>
+                <a href="meditations/2015-02-08.html" class="meditation-link">Abundant Life</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 08, 2015</span> •
+                    <span class="meditation-occasion">Fifth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 40:21-31, Psalm 147:1-12, 21C, I Corinthians 9:16-23, Mark 1:29-39</div>
+            </li>
+            <li>
+                <a href="meditations/2015-02-01.html" class="meditation-link">Love Builds Up</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 01, 2015</span> •
+                    <span class="meditation-occasion">Fourth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Deuteronomy 18:15-20, Psalm 111, I Corinthians 8:1-13, Mark 1:21-28</div>
+            </li>
+            <li>
+                <a href="meditations/2015-01-25.html" class="meditation-link">A Second Time</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 25, 2015</span> •
+                    <span class="meditation-occasion">Third Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Jonah 3:1-5, 10, Psalm 62:6-14, I Corinthians 7:29-31, Mark 1:14-20</div>
+            </li>
+            <li>
+                <a href="meditations/2015-01-18.html" class="meditation-link">Can Anything Good Come Out of Nazareth?</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 18, 2015</span> •
+                    <span class="meditation-occasion">Second Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">I Samuel 3:1-20, Psalm 139:1-5, 12-17, I Corinthians 6:12-20, John 1:43-51</div>
+            </li>
+            <li>
+                <a href="meditations/2015-01-11.html" class="meditation-link">The Voice of God</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 11, 2015</span> •
+                    <span class="meditation-occasion">First Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Genesis 2:1-5, Psalm 29, Acts 19:1-7, Mark 1:4-11</div>
+            </li>
+            <li>
+                <a href="meditations/2014-03-02.html" class="meditation-link">Touch</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">March 02, 2014</span> •
+                    <span class="meditation-occasion">Last Sunday after Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Exodus 24:12-18, Psalm 2, II Peter 1:16-21, Matthew 17:1-9</div>
+            </li>
+            <li>
+                <a href="meditations/2014-02-23.html" class="meditation-link">God’s Temple</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 23, 2014</span> •
+                    <span class="meditation-occasion">Seventh Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Leviticus 19:1-2, 9-18, Psalm 119:33-40, I Corinthians 3:10-11, 16-23, Matthew 5:38-48</div>
+            </li>
+            <li>
+                <a href="meditations/2014-02-16.html" class="meditation-link">Growth</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 16, 2014</span> •
+                    <span class="meditation-occasion">Sixth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Deuteronomy 30:15-20, Psalm 119:1-8, I Corinthians 3:1-9, Matthew 5:21-37</div>
+            </li>
+            <li>
+                <a href="meditations/2014-02-09.html" class="meditation-link">“Here I Am”</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 09, 2014</span> •
+                    <span class="meditation-occasion">Fifth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 58:1-9a, (9b-12), Psalm 112:1-9 (10), I Corinthians 2:1-12, (13-16), Matthew 5:13-20</div>
+            </li>
+            <li>
+                <a href="meditations/2014-01-26.html" class="meditation-link">Divisions</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 26, 2014</span> •
+                    <span class="meditation-occasion">Third Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 9:1-4, Psalm 27:1, 5-13, I Corinthians 1:10-18, Matthew 4:12-23</div>
+            </li>
+            <li>
+                <a href="meditations/2014-01-19.html" class="meditation-link">Lamb of God</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 19, 2014</span> •
+                    <span class="meditation-occasion">Second Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 49:1-7, Psalm 40:1-12, I Corinthians 1:1-9, John 1:29-42</div>
+            </li>
+            <li>
+                <a href="meditations/2014-01-12.html" class="meditation-link">The Blessing of Peace</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 12, 2014</span> •
+                    <span class="meditation-occasion">First Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 42:1-9, Psalm 29, Acts 10:34-43, Matthew 3:13-17</div>
+            </li>
+            <li>
+                <a href="meditations/2013-02-10.html" class="meditation-link">Unveiled Faces</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 10, 2013</span> •
+                    <span class="meditation-occasion">Last Sunday after Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Exodus 34:29-35, Psalm 99, II Corinthians 3:12—4:2, Luke 9:28-36 (37-43)</div>
+            </li>
+            <li>
+                <a href="meditations/2013-02-03.html" class="meditation-link">On the Way</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 03, 2013</span> •
+                    <span class="meditation-occasion">Fourth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Jeremiah 1:4-10, Psalm 71:1-6, I Corinthians 13:1-13, Luke 4:21-30</div>
+            </li>
+            <li>
+                <a href="meditations/2013-01-27.html" class="meditation-link">The Spirit of the Lord Is Upon Us</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 27, 2013</span> •
+                    <span class="meditation-occasion">Third Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Nehemiah 8:1-3, 5-6, 8-10, Psalm 19, I Corinthians 12:12-31a, Luke 4:14-21</div>
+            </li>
+            <li>
+                <a href="meditations/2013-01-20.html" class="meditation-link">Reflections on the Shadow of God’s Wings</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 20, 2013</span> •
+                    <span class="meditation-occasion">Second Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 62:1-5, Psalm 36:5-10, I Corinthians 12:1-11, John 2:1-11</div>
+            </li>
+            <li>
+                <a href="meditations/2013-01-13.html" class="meditation-link">Precious</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 13, 2013</span> •
+                    <span class="meditation-occasion">First Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 43:1-7, Psalm 29, Acts 8:14-17, Luke 3:15-17, 21-22</div>
+            </li>
+            <li>
+                <a href="meditations/2013-01-06.html" class="meditation-link">Intimate Epiphanies</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 06, 2013</span> •
+                    <span class="meditation-occasion">The Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 60:1-6, Psalm 72:1-7, 10-14, Ephesians 3:1-12, Matthew 2:1-12</div>
+            </li>
+            <li>
+                <a href="meditations/2012-02-19.html" class="meditation-link">Apart</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 19, 2012</span> •
+                    <span class="meditation-occasion">Last Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">II Kings 2:1-12,  Psalm 50:1-6,  II Corinthians 4:3-6, Mark 9:2-9</div>
+            </li>
+            <li>
+                <a href="meditations/2012-02-12.html" class="meditation-link">The Touch of God</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 12, 2012</span> •
+                    <span class="meditation-occasion">Sixth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">II Kings 5:1-14, Psalm 30, I Corinthians 9:24-27, Mark 1:40-45</div>
+            </li>
+            <li>
+                <a href="meditations/2012-02-05.html" class="meditation-link">Wait for the Lord</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 05, 2012</span> •
+                    <span class="meditation-occasion">Fifth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 40:21-31, Psalm 147;!-12, 21c, I Corinthians 9:16-23, Mark 1:29-29</div>
+            </li>
+            <li>
+                <a href="meditations/2012-01-29.html" class="meditation-link">Accountable</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 29, 2012</span> •
+                    <span class="meditation-occasion">Fourth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Deuteronomy 18:15-20, Psalm 111, I Corinthians 8:1-13, Mark 1:21-28</div>
+            </li>
+            <li>
+                <a href="meditations/2012-01-22.html" class="meditation-link">Icons, Images of Love</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 22, 2012</span> •
+                    <span class="meditation-occasion">Third Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Jonah 3:1-5, 10, Psalm 62:6-14, I Corinthians 7:29-31, Mark 1:14-20</div>
+            </li>
+            <li>
+                <a href="meditations/2012-01-15.html" class="meditation-link">Persistent</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 15, 2012</span> •
+                    <span class="meditation-occasion">Second Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">I Samuel 3:1-10 (11-20), Psalm 139:1-5, 12-17, I Corinthians 6:12-20, John 1:43-51</div>
+            </li>
+            <li>
+                <a href="meditations/2012-01-08.html" class="meditation-link">The Voice of God</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 08, 2012</span> •
+                    <span class="meditation-occasion">First Sunday after the Epiphany The Baptism of Our Lord</span>
+                </div>
+                <div class="meditation-scripture">Genesis 1:1-5, Psalm 29, Acts 19:1-7, Mark 1:4-11</div>
+            </li>
+            <li>
+                <a href="meditations/2011-03-06.html" class="meditation-link">The Holy Mountain</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">March 06, 2011</span> •
+                    <span class="meditation-occasion">Last Sunday after Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Exodus 24:12-18, Psalm 2, II Peter 1:16-21, Matthew 17:1-9</div>
+            </li>
+            <li>
+                <a href="meditations/2011-02-27.html" class="meditation-link">What Wondrous Love Is This?</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 27, 2011</span> •
+                    <span class="meditation-occasion">Eighth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 49:8-16a, Psalm 131, I Corinthians 4:1-5, Matthew 6:24-34</div>
+            </li>
+            <li>
+                <a href="meditations/2011-02-20.html" class="meditation-link">Indwelling</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 20, 2011</span> •
+                    <span class="meditation-occasion">Seventh Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Leviticus 19:1-2, 9-18, Psalm 119:33-40, I Corinthians 3:10-11, 16-23, Matthew 5:38-48</div>
+            </li>
+            <li>
+                <a href="meditations/2011-02-13.html" class="meditation-link">Love Is the Answer</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 13, 2011</span> •
+                    <span class="meditation-occasion">Sixth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Deuteronomy 30:15-20, Psalm 119:1-8, I Corinthians 3:1-9, Matthew 5:21-37</div>
+            </li>
+            <li>
+                <a href="meditations/2011-02-06.html" class="meditation-link">Abundant Life</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 06, 2011</span> •
+                    <span class="meditation-occasion">Fifth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 58:1-12, Psalm 112:1-9, I Corinthians 2:1-16, Matthew 5:13-20</div>
+            </li>
+            <li>
+                <a href="meditations/2011-01-30.html" class="meditation-link">“The Controversy of the Lord”</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 30, 2011</span> •
+                    <span class="meditation-occasion">Fourth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Micah 6:1-8, Psalm 15, I Corinthians 1:18-31, Matthew 5:1-12</div>
+            </li>
+            <li>
+                <a href="meditations/2011-01-23.html" class="meditation-link">The Message of the Cross</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 23, 2011</span> •
+                    <span class="meditation-occasion">Third Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 9:1-4,  Psalm 27:1, 5-13,  I Corinthians 1:10-18,  Matthew 4:12-23</div>
+            </li>
+            <li>
+                <a href="meditations/2011-01-16.html" class="meditation-link">Illumined to Illumine</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 16, 2011</span> •
+                    <span class="meditation-occasion">Second Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 49:1-7. Psalm 40:1-12, I Corinthians 1:1-9, John 1:29-42</div>
+            </li>
+            <li>
+                <a href="meditations/2011-01-09.html" class="meditation-link">New Things</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 09, 2011</span> •
+                    <span class="meditation-occasion">First Sunday after the Epiphany The Baptism of Our Lord</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 42:1-9, Psalm 29, Acts 10:34-43, Matthew 3:13-17</div>
+            </li>
+            <li>
+                <a href="meditations/2010-02-14.html" class="meditation-link">“Listen to Him!”</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 14, 2010</span> •
+                    <span class="meditation-occasion">Last Sunday after Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Exodus 34:29-35, Psalm 99, II Corinthians 3:12—4:2, Luke 9:28-36, (37-43)</div>
+            </li>
+            <li>
+                <a href="meditations/2010-02-07.html" class="meditation-link">“A Nod from God”</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 07, 2010</span> •
+                    <span class="meditation-occasion">Fifth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 6:1-8, (9-13), Psalm 138, I Corinthians 15:1-11, Luke 5:1-11</div>
+            </li>
+            <li>
+                <a href="meditations/2010-01-31.html" class="meditation-link">He Went on His Way</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 31, 2010</span> •
+                    <span class="meditation-occasion">Fourth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Jeremiah 1:4-10, Psalm 71:1-6, I Corinthians 13:1-13, Luke 4:21-30</div>
+            </li>
+            <li>
+                <a href="meditations/2010-01-24.html" class="meditation-link">The Gift of Love</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 24, 2010</span> •
+                    <span class="meditation-occasion">Third Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Nehemiah 8:1-3, 5-6, 8-10, Psalm 19, I Corinthians 12:12-31a, Luke 4:14-21</div>
+            </li>
+            <li>
+                <a href="meditations/2010-01-17.html" class="meditation-link">Light / Process</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 17, 2010</span> •
+                    <span class="meditation-occasion">Second Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 62:1-5, Psalm 36:5-10, I Corinthians 12:1-11, John 2:1-11</div>
+            </li>
+            <li>
+                <a href="meditations/2010-01-10.html" class="meditation-link">Precious</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 10, 2010</span> •
+                    <span class="meditation-occasion">First Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 43:1-7, Psalm 29, Acts 8:14-17, Luke 3:15-17, 21-22</div>
+            </li>
+            <li>
+                <a href="meditations/2009-02-22.html" class="meditation-link">Witnesses</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 22, 2009</span> •
+                    <span class="meditation-occasion">Last Sunday after Epiphany</span>
+                </div>
+                <div class="meditation-scripture">II Kings 2:1-12, Psalm 50:1-6, II Corinthians 4:3-6, Mark 9:2-9</div>
+            </li>
+            <li>
+                <a href="meditations/2009-02-15.html" class="meditation-link">God’s Healing Grace Then and Now</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 15, 2009</span> •
+                    <span class="meditation-occasion">Sixth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">II Kings 5:1-14, Psalm 30, I Corinthians 9:24-27, Mark 1:40-45</div>
+            </li>
+            <li>
+                <a href="meditations/2009-02-08.html" class="meditation-link">Prayer Time</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 08, 2009</span> •
+                    <span class="meditation-occasion">Fifth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 40;21-31, Psalm 147:1-12, 21c, I Corinthians 9:16-23, Mark 1:29-39</div>
+            </li>
+            <li>
+                <a href="meditations/2009-02-01.html" class="meditation-link">Unclean Spirits</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 01, 2009</span> •
+                    <span class="meditation-occasion">Fourth Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Deuteronomy 18:15-20, Psalm 111, I Corinthians 8:1-13, Mark 1:21-28</div>
+            </li>
+            <li>
+                <a href="meditations/2009-01-25.html" class="meditation-link">“Gone Fishin’ ”</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 25, 2009</span> •
+                    <span class="meditation-occasion">Third Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Jonah 3:1-5, 10, Psalm 62:6-14, I Corinthians 7:29-31, Mark 1:14-20</div>
+            </li>
+            <li>
+                <a href="meditations/2009-01-18.html" class="meditation-link">Listening</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 18, 2009</span> •
+                    <span class="meditation-occasion">Second Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">I Samuel 3:1-20, Psalm 139:1-5, 12-17, I Corinthians 6:12-20, John 1:43-51</div>
+            </li>
+            <li>
+                <a href="meditations/2009-01-11.html" class="meditation-link">Out of Darkness, Into Light</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 11, 2009</span> •
+                    <span class="meditation-occasion">First Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Genesis 1:1-5, Psalm 29, Acts 19:1-7, Mark 1:4-11</div>
+            </li>
+            <li>
+                <a href="meditations/2008-02-03.html" class="meditation-link">Awe</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">February 03, 2008</span> •
+                    <span class="meditation-occasion">Last Sunday after Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Exodus 24:12-18, Psalm 99, II Peter 1:16-21, Matthew 17:1-9</div>
+            </li>
+            <li>
+                <a href="meditations/2008-01-27.html" class="meditation-link">Christian Unity</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 27, 2008</span> •
+                    <span class="meditation-occasion">Third Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 9:1-4, Psalm 27:1, 5-13, I Corinthians 1:10-18, Matthew 4:12-23</div>
+            </li>
+            <li>
+                <a href="meditations/2008-01-20.html" class="meditation-link">Ears to Hear</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 20, 2008</span> •
+                    <span class="meditation-occasion">Second Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 49:1-12, Psalm 40:1-12, I Corinthians 1:1-9, John 1:29-42</div>
+            </li>
+            <li>
+                <a href="meditations/2008-01-13.html" class="meditation-link">New Things</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 13, 2008</span> •
+                    <span class="meditation-occasion">First Sunday after the Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 42:1-9, Psalm 29, Acts 10:34-43, Matthew 3:13-17</div>
+            </li>
+            <li>
+                <a href="meditations/2008-01-06.html" class="meditation-link">Gifts</a>
+                <div class="meditation-meta">
+                    <span class="meditation-date">January 06, 2008</span> •
+                    <span class="meditation-occasion">The Epiphany</span>
+                </div>
+                <div class="meditation-scripture">Isaiah 60:1-6, Psalm 72:1-7, 10-14, Ephesians 3:1-12, Matthew 2:1-12</div>
+            </li>
+        </ul>
     </main>
 
     <footer class="site-footer">
