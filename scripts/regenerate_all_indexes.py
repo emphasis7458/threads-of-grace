@@ -813,8 +813,6 @@ def generate_lectionary_year_html(all_data):
             <p class="copyright">© 2007–2025 Pat Horn. All rights reserved.</p>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>'''
 
