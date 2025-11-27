@@ -818,8 +818,15 @@ def generate_lectionary_year_html(all_data):
             # Sort entries by date descending (most recent first)
             entries = sorted(entries, key=lambda x: x['date'] or '', reverse=True)
 
-            # Use the longest display name (most elegant/complete)
-            occasion_display = max(display_names, key=len) if display_names else normalized_occasion
+            # Determine display name
+            # For Proper occasions, use "Ordinary Time – Proper X" format
+            proper_match = re.match(r'Proper (\d+)', normalized_occasion)
+            if proper_match:
+                proper_num = int(proper_match.group(1))
+                occasion_display = f"Ordinary Time – Proper {proper_num}"
+            else:
+                # Use the longest display name (most elegant/complete)
+                occasion_display = max(display_names, key=len) if display_names else normalized_occasion
 
             # Use the longest readings (most complete)
             readings = max(readings_set, key=len) if readings_set else ''
