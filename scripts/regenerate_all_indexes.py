@@ -591,7 +591,7 @@ def generate_lectionary_year_html(all_data):
             'The Holy Name': 'Holy Name',
             'First Sunday after Christmas Day': 'First Sunday after Christmas',
             'The Transfiguration': 'Last Sunday after the Epiphany',
-            'Presentation of Jesus in the Temple': 'Presentation',
+            'Presentation of Jesus in the Temple': 'Fourth Sunday after the Epiphany',
             'All Saints RCL All Saints BCP (1) All Saints BCP (2)': 'All Saints',
             'All Saints Sunday': 'All Saints',
         }
@@ -773,6 +773,14 @@ def generate_lectionary_year_html(all_data):
         .meditation-link:hover {{
             color: var(--deep-brown);
         }}
+        .special-feast-note {{
+            font-family: 'Crimson Pro', serif;
+            font-size: 0.85rem;
+            color: var(--accent-sage);
+            font-style: italic;
+            margin-left: 1rem;
+            margin-top: 0.15rem;
+        }}
         .meditation-date {{
             color: var(--medium-gray);
             font-size: 0.9rem;
@@ -861,6 +869,9 @@ def generate_lectionary_year_html(all_data):
                     # Normalize Easter Day variations
                     if name.startswith('Easter Day'):
                         name = 'Easter Day'
+                    # Presentation should display as Fourth Sunday after the Epiphany
+                    if 'Presentation' in name:
+                        name = 'Fourth Sunday after the Epiphany'
                     return name
 
                 cleaned_names = [clean_display_name(n) for n in display_names]
@@ -882,11 +893,18 @@ def generate_lectionary_year_html(all_data):
             for entry in entries:
                 title = escape_html(entry['title'])
                 date_display = entry['date_display']
+                original_occasion = entry.get('occasion', '')
+
+                # Check if this entry has a special feast day note
+                special_note = ''
+                if 'Presentation' in original_occasion:
+                    special_note = '<div class="special-feast-note">Presentation of Jesus in the Temple</div>'
 
                 html += f'''                    <li>
                         <a href="meditations/{entry['filename']}" class="meditation-link">
                             {title} <span class="meditation-date">• {date_display}</span>
                         </a>
+                        {special_note}
                     </li>
 '''
 
