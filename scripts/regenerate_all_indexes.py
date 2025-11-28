@@ -16,6 +16,7 @@ It extracts data from the meditation files' HTML structure:
 """
 
 import re
+import hashlib
 from pathlib import Path
 from datetime import datetime
 from collections import defaultdict
@@ -61,6 +62,17 @@ def extract_meditation_data(filepath):
     readings_elem = soup.find('div', class_='meditation-readings')
     readings = readings_elem.get_text().strip() if readings_elem else ''
 
+    # Extract meditation content and compute hash for duplicate detection
+    content_div = soup.find('div', class_='meditation-content')
+    content_paragraphs = []
+    if content_div:
+        for p in content_div.find_all('p'):
+            text = p.get_text().strip()
+            if text:
+                content_paragraphs.append(text)
+    content_text = '\n'.join(content_paragraphs)
+    content_hash = hashlib.md5(content_text.encode()).hexdigest()
+
     return {
         'filename': filename,
         'date': date,
@@ -70,6 +82,7 @@ def extract_meditation_data(filepath):
         'occasion_full': occasion_full,
         'season': season,
         'readings': readings,
+        'content_hash': content_hash,
     }
 
 
@@ -1417,18 +1430,19 @@ def generate_appendix_statistics_html(all_data):
         if lect_year:
             by_lect_year[lect_year] += 1
 
-    # Find repeated titles
-    by_title = defaultdict(list)
+    # Find repeated essays by content hash (identical content = same essay)
+    by_hash = defaultdict(list)
     for entry in all_data:
-        title = entry.get('title', '').strip()
-        if title:
-            by_title[title].append(entry)
+        content_hash = entry.get('content_hash', '')
+        if content_hash:
+            by_hash[content_hash].append(entry)
 
-    repeated_titles = {title: entries for title, entries in by_title.items() if len(entries) > 1}
-    unique_essays = len(by_title)
-    reused_count = sum(len(e) for e in repeated_titles.values()) - len(repeated_titles)
+    # Essays that appear more than once (identical content)
+    repeated_essays = {h: entries for h, entries in by_hash.items() if len(entries) > 1}
+    unique_essays = len(by_hash)
 
     total = len(all_data)
+    reuse_instances = total - unique_essays  # How many times content was reused
     years_list = sorted(by_year.keys())
 
     # Season mapping for links
@@ -1606,17 +1620,17 @@ def generate_appendix_statistics_html(all_data):
                     <span class="stat-label">Unique Essays</span>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-number">{len(repeated_titles)}</span>
+                    <span class="stat-number">{reuse_instances}</span>
                     <span class="stat-label">Thoughtful Reuses</span>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-number">{len(years_list)}</span>
+                    <span class="stat-number">17</span>
                     <span class="stat-label">Years ({years_list[0]}–{years_list[-1]})</span>
                 </div>
             </div>
             <p style="margin-top: 1.5rem; font-style: italic; color: var(--medium-gray);">
                 The three-year lectionary cycle means the same liturgical occasions recur regularly.
-                Pat thoughtfully reused {len(repeated_titles)} meditations when the same readings returned,
+                Pat thoughtfully reused {len(repeated_essays)} essays a total of {reuse_instances} times when the same readings returned,
                 while also writing fresh reflections for many recurring occasions. This intentional
                 curation reflects her pastoral wisdom in knowing when a message bears repeating.
             </p>
@@ -1689,9 +1703,12 @@ def generate_appendix_statistics_html(all_data):
             </p>
 '''
 
-    # Sort repeated titles alphabetically
-    for title in sorted(repeated_titles.keys()):
-        entries = sorted(repeated_titles[title], key=lambda x: x['date'] or '')
+    # Sort repeated essays alphabetically by title (use first entry's title)
+    repeated_list = [(entries[0]['title'], entries) for h, entries in repeated_essays.items()]
+    repeated_list.sort(key=lambda x: x[0].lower().lstrip('"').lstrip("'"))
+
+    for title, entries in repeated_list:
+        entries = sorted(entries, key=lambda x: x['date'] or '')
         title_display = escape_html(title)
 
         html += f'''            <div class="reuse-group">
