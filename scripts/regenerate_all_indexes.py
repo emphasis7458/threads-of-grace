@@ -386,6 +386,184 @@ def generate_season_html(all_data, season, page_title):
     return html
 
 
+def generate_special_html(all_data):
+    """Generate special.html organized by occasion in a specific order, then by date within each."""
+
+    # Filter by Special season
+    special_entries = [e for e in all_data if e.get('season', '').lower() == 'special']
+
+    # Define the occasion order
+    occasion_order = [
+        'The Holy Name',
+        'Presentation of Jesus in the Temple',
+        'The Transfiguration',
+        'All Saints',
+        'Christ the King',
+    ]
+
+    # Normalize occasion names for matching
+    def normalize_occasion(occ):
+        """Normalize occasion for grouping - handle variations like 'All Saints Sunday'."""
+        occ_lower = occ.lower().strip()
+        if 'holy name' in occ_lower:
+            return 'The Holy Name'
+        if 'presentation' in occ_lower:
+            return 'Presentation of Jesus in the Temple'
+        if 'transfiguration' in occ_lower:
+            return 'The Transfiguration'
+        if 'all saints' in occ_lower:
+            return 'All Saints'
+        if 'christ the king' in occ_lower:
+            return 'Christ the King'
+        return occ  # Return original if no match
+
+    # Group by normalized occasion
+    by_occasion = defaultdict(list)
+    for entry in special_entries:
+        normalized = normalize_occasion(entry.get('occasion', ''))
+        by_occasion[normalized].append(entry)
+
+    # Sort entries within each occasion by date (ascending - oldest first)
+    for occ in by_occasion:
+        by_occasion[occ].sort(key=lambda x: x['date'] or '')
+
+    total = len(special_entries)
+
+    html = f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Meditations | Threads of Grace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .occasion-section {{
+            margin-bottom: 3rem;
+        }}
+        .occasion-heading {{
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            color: var(--deep-brown);
+            border-bottom: 2px solid var(--accent-gold);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }}
+        .meditation-list {{
+            list-style: none;
+            padding: 0;
+        }}
+        .meditation-list li {{
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--soft-gray);
+        }}
+        .meditation-link {{
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--deep-brown);
+            text-decoration: none;
+        }}
+        .meditation-link:hover {{
+            color: var(--accent-gold);
+        }}
+        .meditation-meta {{
+            font-family: 'Crimson Pro', serif;
+            font-size: 0.95rem;
+            color: var(--medium-gray);
+            margin-top: 0.25rem;
+        }}
+        .page-intro {{
+            text-align: center;
+            margin-bottom: 3rem;
+        }}
+        .page-title {{
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            color: var(--deep-brown);
+            margin-bottom: 1rem;
+        }}
+        .meditation-count {{
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            color: var(--deep-brown);
+        }}
+        .meditation-scripture {{
+            font-family: 'Crimson Pro', serif;
+            font-size: 0.9rem;
+            color: var(--medium-gray);
+            font-style: italic;
+            margin-top: 0.25rem;
+        }}
+    </style>
+</head>
+<body>
+    <div class="grain-overlay"></div>
+
+    <header class="site-header">
+        <div class="container">
+            <h1 class="site-title"><a href="index.html">Threads of Grace</a></h1>
+            <p class="site-subtitle">Meditations on Scripture and the Spiritual Life</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-intro">
+            <h2 class="page-title">Special Meditations</h2>
+            <p class="meditation-count">{total} meditations</p>
+        </div>
+
+'''
+
+    # Generate sections in the specified order
+    for occasion in occasion_order:
+        entries = by_occasion.get(occasion, [])
+        if not entries:
+            continue
+
+        html += f'''        <section class="occasion-section">
+            <h3 class="occasion-heading">{escape_html(occasion)}</h3>
+            <ul class="meditation-list">
+'''
+
+        for entry in entries:
+            title = escape_html(entry['title'])
+            readings = escape_html(entry['readings'])
+            date_display = entry['date_display']
+
+            html += f'''                <li>
+                    <a href="meditations/{entry['filename']}" class="meditation-link">{title}</a>
+                    <div class="meditation-meta">
+                        <span class="meditation-date">{date_display}</span>
+                    </div>
+                    <div class="meditation-scripture">{readings}</div>
+                </li>
+'''
+
+        html += '''            </ul>
+        </section>
+
+'''
+
+    html += '''    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p><a href="index.html">Return to Home</a></p>
+            <p><a href="by-season.html">Browse by Season</a></p>
+            <p class="copyright">© 2007–2025 Pat Horn. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>'''
+
+    return html
+
+
 def generate_by_year_html(all_data):
     """Generate by-year.html with meditations organized by year, with full details."""
 
@@ -1933,7 +2111,7 @@ def main():
         ('lent.html', generate_season_html(all_data, 'Lent', 'Lent Meditations')),
         ('easter.html', generate_season_html(all_data, 'Easter', 'Easter Meditations')),
         ('ordinary-time.html', generate_season_html(all_data, 'Ordinary Time', 'Ordinary Time Meditations')),
-        ('special.html', generate_season_html(all_data, 'Special', 'Special Meditations')),
+        ('special.html', generate_special_html(all_data)),
         ('by-year.html', generate_by_year_html(all_data)),
         ('by-season.html', generate_by_season_html(all_data)),
         ('lectionary-year.html', generate_lectionary_year_html(all_data)),
