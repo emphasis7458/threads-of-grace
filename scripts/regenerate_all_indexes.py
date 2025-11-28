@@ -1244,6 +1244,12 @@ def generate_scripture_index_html(all_data):
                     match = re.match(r'^([1-3I]*\s*[A-Za-z]+(?:\s+of\s+[A-Za-z]+)?)', ref)
                     if match:
                         book = match.group(1).strip()
+                        # Skip non-book entries (liturgical labels, verse numbers, abbreviations)
+                        skip_patterns = ['Liturgy of the', 'Proper', 'Year', 'Col', 'Lk', 'Ps', 'Psalms']
+                        # Also skip entries that are just numbers/verse refs (like "21c", "11b")
+                        if (any(book.lower() == skip.lower() or book == skip for skip in skip_patterns)
+                            or re.match(r'^\d+[a-z]?$', book)):
+                            continue
                         by_book[book].append({
                             'ref': ref,
                             'entry': entry
