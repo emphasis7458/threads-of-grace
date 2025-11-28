@@ -27,13 +27,25 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
+// Check if element is in viewport
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return rect.top < window.innerHeight && rect.bottom > 0;
+}
+
 // Observe sections for fade-in on scroll
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('section');
     sections.forEach((section) => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(20px)';
-        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(section);
+        // If section is already in viewport, show it immediately
+        if (isInViewport(section)) {
+            section.style.opacity = '1';
+            section.style.transform = 'translateY(0)';
+        } else {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        }
     });
 });
