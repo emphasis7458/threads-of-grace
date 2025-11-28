@@ -961,16 +961,16 @@ def generate_title_index_html(all_data):
     def get_sort_key(title):
         """Get sort key that ignores leading quotes/punctuation."""
         # Strip leading quotes and punctuation for sorting
-        # Include straight quotes, curly quotes, and other common punctuation
-        quote_chars = '"\'\u201c\u201d\u2018\u2019'  # " ' " " ' '
-        stripped = title.lstrip(quote_chars)
+        # Include straight quotes, curly quotes, ellipsis, spaces, and other common punctuation
+        strip_chars = '"\'\u201c\u201d\u2018\u2019.\u2026 '  # " ' " " ' ' . … and space
+        stripped = title.lstrip(strip_chars)
         return stripped.lower()
 
     def get_first_letter(title):
         """Get first alphabetic letter for grouping."""
         # Strip leading quotes and punctuation
-        quote_chars = '"\'\u201c\u201d\u2018\u2019'  # " ' " " ' '
-        stripped = title.lstrip(quote_chars)
+        strip_chars = '"\'\u201c\u201d\u2018\u2019.\u2026 '  # " ' " " ' ' . … and space
+        stripped = title.lstrip(strip_chars)
         if stripped and stripped[0].isalpha():
             return stripped[0].upper()
         return '#'
@@ -1103,7 +1103,7 @@ def generate_title_index_html(all_data):
     <main class="container">
         <div class="page-intro">
             <h2 class="page-title">Index by Title</h2>
-            <p class="meditation-count">{unique_titles} unique titles across {total_meditations} meditations</p>
+            <p class="meditation-count">{total_meditations} meditations</p>
         </div>
 
         <nav class="letter-nav">
