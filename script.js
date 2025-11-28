@@ -15,7 +15,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Add fade-in animation on scroll for elements
 const observerOptions = {
     threshold: 0,
-    rootMargin: '0px 0px 100px 0px'  // Trigger 100px before element enters viewport
+    rootMargin: '0px 0px 500px 0px'  // Trigger 500px before element enters viewport
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -27,10 +27,10 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Check if element is in or near viewport (with buffer for upcoming sections)
+// Check if element is in or near viewport (with large buffer for upcoming sections)
 function isNearViewport(element) {
     const rect = element.getBoundingClientRect();
-    const buffer = 200;  // Show sections that are within 200px of viewport
+    const buffer = 800;  // Show sections that are within 800px of viewport
     return rect.top < window.innerHeight + buffer && rect.bottom > -buffer;
 }
 
