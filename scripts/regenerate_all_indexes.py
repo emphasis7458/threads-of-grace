@@ -958,13 +958,27 @@ def generate_title_index_html(all_data):
         if title:
             by_title[title].append(entry)
 
+    def get_sort_key(title):
+        """Get sort key that ignores leading quotes/punctuation."""
+        # Strip leading quotes and punctuation for sorting
+        # Include straight quotes, curly quotes, and other common punctuation
+        quote_chars = '"\'\u201c\u201d\u2018\u2019'  # " ' " " ' '
+        stripped = title.lstrip(quote_chars)
+        return stripped.lower()
+
+    def get_first_letter(title):
+        """Get first alphabetic letter for grouping."""
+        # Strip leading quotes and punctuation
+        quote_chars = '"\'\u201c\u201d\u2018\u2019'  # " ' " " ' '
+        stripped = title.lstrip(quote_chars)
+        if stripped and stripped[0].isalpha():
+            return stripped[0].upper()
+        return '#'
+
     # Group titles by first letter
     by_letter = defaultdict(list)
-    for title in sorted(by_title.keys(), key=lambda t: t.lower()):
-        # Get first letter, handling quotes and special chars
-        first_char = title[0].upper()
-        if not first_char.isalpha():
-            first_char = '#'
+    for title in sorted(by_title.keys(), key=get_sort_key):
+        first_char = get_first_letter(title)
         by_letter[first_char].append((title, by_title[title]))
 
     # Get all letters present
