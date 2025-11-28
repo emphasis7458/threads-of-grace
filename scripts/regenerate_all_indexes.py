@@ -1930,11 +1930,16 @@ def generate_scripture_index_html(all_data):
 '''
                 current_ref = ref
 
+            # Extract lectionary year from occasion_full
+            occasion_full = entry.get('occasion_full', '')
+            year_match = re.search(r'Year ([ABC])', occasion_full)
+            year_suffix = f" Year {year_match.group(1)}" if year_match else ""
+
             html += f'''                <li>
                     <a href="meditations/{entry['filename']}" class="scripture-link">{title}</a>
                     <div class="scripture-meta">
                         <span class="scripture-date">{date_display}</span> •
-                        <span class="scripture-occasion">{occasion}</span>
+                        <span class="scripture-occasion">{occasion}{year_suffix}</span>
                     </div>
                 </li>
 '''
