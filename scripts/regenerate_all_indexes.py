@@ -1212,6 +1212,22 @@ def generate_scripture_index_html(all_data):
                 return (0, i)
         return (1, book.lower())
 
+    def parse_chapter_verse(ref, book):
+        """Extract chapter and verse from a reference for sorting."""
+        # Remove the book name from the reference
+        rest = ref[len(book):].strip()
+        # Remove leading colon or period if present
+        rest = rest.lstrip(':.')
+
+        # Try to extract chapter and verse numbers
+        # Handles formats like "1:1-10", "15:1-12, 17-18", "3:1-7", etc.
+        match = re.match(r'(\d+)(?::(\d+))?', rest)
+        if match:
+            chapter = int(match.group(1))
+            verse = int(match.group(2)) if match.group(2) else 0
+            return (chapter, verse, rest)
+        return (999, 999, rest)  # Put unparseable refs at the end
+
     # Parse readings and group by book
     by_book = defaultdict(list)
     total_refs = 0
@@ -1306,6 +1322,18 @@ def generate_scripture_index_html(all_data):
         .scripture-occasion {{
             font-style: italic;
         }}
+        .chapter-verse-heading {{
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15rem;
+            color: var(--accent-sage);
+            margin-top: 1.25rem;
+            margin-bottom: 0.5rem;
+            padding-left: 0.5rem;
+            border-left: 3px solid var(--accent-gold);
+        }}
+        .chapter-verse-heading:first-of-type {{
+            margin-top: 0;
+        }}
         .page-intro {{
             text-align: center;
             margin-bottom: 2rem;
@@ -1356,17 +1384,34 @@ def generate_scripture_index_html(all_data):
 
         html += f'''        <section class="book-section" id="book-{book_id}">
             <h2 class="book-heading">{escape_html(book)}</h2>
-            <ul class="scripture-list">
 '''
 
-        # Sort by reference and date
-        items.sort(key=lambda x: (x['ref'], x['entry'].get('date', '')))
+        # Sort by chapter:verse, then by date
+        items.sort(key=lambda x: (
+            parse_chapter_verse(x['ref'], book),
+            x['entry'].get('date', '')
+        ))
 
+        # Group by reference (chapter:verse)
+        current_ref = None
         for item in items:
+            ref = item['ref']
             entry = item['entry']
             title = escape_html(entry['title'])
             date_display = entry['date_display']
             occasion = escape_html(entry['occasion'])
+
+            # Add chapter:verse heading when reference changes
+            if ref != current_ref:
+                if current_ref is not None:
+                    html += '''            </ul>
+'''
+                # Extract the chapter:verse part (everything after the book name)
+                cv_part = ref[len(book):].strip()
+                html += f'''            <h3 class="chapter-verse-heading">{escape_html(book)} {escape_html(cv_part)}</h3>
+            <ul class="scripture-list">
+'''
+                current_ref = ref
 
             html += f'''                <li>
                     <a href="meditations/{entry['filename']}" class="scripture-link">{title}</a>
@@ -1377,8 +1422,10 @@ def generate_scripture_index_html(all_data):
                 </li>
 '''
 
-        html += '''            </ul>
-        </section>
+        if current_ref is not None:
+            html += '''            </ul>
+'''
+        html += '''        </section>
 
 '''
 
