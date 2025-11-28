@@ -14,8 +14,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Add fade-in animation on scroll for elements
 const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    threshold: 0,
+    rootMargin: '0px 0px 100px 0px'  // Trigger 100px before element enters viewport
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -27,24 +27,25 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Check if element is in viewport
-function isInViewport(element) {
+// Check if element is in or near viewport (with buffer for upcoming sections)
+function isNearViewport(element) {
     const rect = element.getBoundingClientRect();
-    return rect.top < window.innerHeight && rect.bottom > 0;
+    const buffer = 200;  // Show sections that are within 200px of viewport
+    return rect.top < window.innerHeight + buffer && rect.bottom > -buffer;
 }
 
 // Observe sections for fade-in on scroll
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('section');
     sections.forEach((section) => {
-        // If section is already in viewport, show it immediately
-        if (isInViewport(section)) {
+        // If section is already in or near viewport, show it immediately
+        if (isNearViewport(section)) {
             section.style.opacity = '1';
             section.style.transform = 'translateY(0)';
         } else {
             section.style.opacity = '0';
             section.style.transform = 'translateY(20px)';
-            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            section.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
             observer.observe(section);
         }
     });
