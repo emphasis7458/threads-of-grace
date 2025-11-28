@@ -260,16 +260,148 @@ def generate_chronological_html(all_data):
 
 
 def generate_season_html(all_data, season, page_title):
-    """Generate a season index page with full meditation details."""
+    """Generate a season index page organized by lectionary year, occasion, and date."""
+    import json
 
     # Filter by season (case-insensitive)
     season_lower = season.lower()
     season_entries = [e for e in all_data if e.get('season', '').lower() == season_lower]
 
-    # Sort by date descending
-    season_entries.sort(key=lambda x: x['date'] or '', reverse=True)
-
     total = len(season_entries)
+
+    def normalize_occasion(occasion):
+        """Normalize occasion name to a canonical key for grouping."""
+        # Remove Year designation
+        occ = re.sub(r',?\s*Year\s+[ABC]$', '', occasion).strip()
+
+        # Clean up common issues first
+        occ = occ.rstrip('\\').strip()
+        occ = re.sub(r'\s+', ' ', occ)
+        occ = re.sub(r'["""]', '', occ)
+
+        # Extract Proper number if present
+        proper_match = re.search(r'Proper\s*(\d+)', occ)
+        if proper_match:
+            return f"Proper {int(proper_match.group(1)):02d}"
+
+        # Remove parenthetical notes
+        occ = re.sub(r'\s*[\("]?\(?Note:.*$', '', occ).strip()
+
+        # Handle compound occasions
+        if 'The Baptism of Our Lord' in occ:
+            occ = re.sub(r'\s*The Baptism of Our Lord.*', '', occ).strip()
+        if 'Christmas Eve' in occ and 'Advent' in occ:
+            occ = re.sub(r'\s*Christmas Eve.*', '', occ).strip()
+
+        # Normalize common variations
+        occ = occ.replace('after Epiphany', 'after the Epiphany')
+        occ = occ.replace("All Saints'", 'All Saints')
+        occ = occ.replace('Twenty First', 'Twenty-First')
+        occ = occ.replace('Twenty Second', 'Twenty-Second')
+        occ = occ.replace('Twenty Third', 'Twenty-Third')
+        occ = occ.replace('Twenty Fourth', 'Twenty-Fourth')
+        occ = occ.replace('Twenty Fifth', 'Twenty-Fifth')
+        occ = occ.replace('Twenty Sixth', 'Twenty-Sixth')
+        occ = occ.replace('Twenty Seventh', 'Twenty-Seventh')
+
+        if occ.startswith('Easter Day'):
+            return 'Easter Day'
+        if occ.startswith('Christmas Day'):
+            return 'Christmas Day'
+
+        canonical_map = {
+            'Last Sunday after Epiphany': 'Last Sunday after the Epiphany',
+            'The Epiphany': 'Epiphany',
+            'The Holy Name': 'Holy Name',
+            'First Sunday after Christmas Day': 'First Sunday after Christmas',
+            'The Transfiguration': 'Last Sunday after the Epiphany',
+            'Presentation of Jesus in the Temple': 'Fourth Sunday after the Epiphany',
+            'All Saints RCL All Saints BCP (1) All Saints BCP (2)': 'All Saints',
+            'All Saints Sunday': 'All Saints',
+        }
+
+        for old, new in canonical_map.items():
+            if old in occ:
+                occ = new
+                break
+
+        if ' All Saints' in occ and occ.startswith(('Twenty', 'Nineteenth', 'Eighteenth')):
+            occ = 'All Saints'
+
+        return occ
+
+    def get_liturgical_order():
+        """Build liturgical order from database."""
+        order = [
+            'First Sunday of Advent',
+            'Second Sunday of Advent',
+            'Third Sunday of Advent',
+            'Fourth Sunday of Advent',
+            'Christmas Day',
+            'First Sunday after Christmas',
+            'Second Sunday after Christmas',
+            'Holy Name',
+            'Epiphany',
+            'First Sunday after the Epiphany',
+            'Second Sunday after the Epiphany',
+            'Third Sunday after the Epiphany',
+            'Fourth Sunday after the Epiphany',
+            'Fifth Sunday after the Epiphany',
+            'Sixth Sunday after the Epiphany',
+            'Seventh Sunday after the Epiphany',
+            'Eighth Sunday after the Epiphany',
+            'Last Sunday after the Epiphany',
+            'Ash Wednesday',
+            'First Sunday in Lent',
+            'Second Sunday in Lent',
+            'Third Sunday in Lent',
+            'Fourth Sunday in Lent',
+            'Fifth Sunday in Lent',
+            'Palm Sunday',
+            'Easter Day',
+            'Second Sunday of Easter',
+            'Third Sunday of Easter',
+            'Fourth Sunday of Easter',
+            'Fifth Sunday of Easter',
+            'Sixth Sunday of Easter',
+            'Seventh Sunday of Easter',
+            'Day of Pentecost',
+            'Trinity Sunday',
+        ]
+        for i in range(3, 30):
+            order.append(f'Proper {i:02d}')
+        order.append('All Saints')
+        order.append('Christ the King')
+        return order
+
+    def get_occasion_sort_key(normalized_occasion):
+        """Get sort index for a normalized occasion."""
+        order = get_liturgical_order()
+        try:
+            return order.index(normalized_occasion)
+        except ValueError:
+            return 999
+
+    def get_lectionary_year(occasion_full):
+        match = re.search(r'Year ([ABC])', occasion_full)
+        return match.group(1) if match else None
+
+    # Group by lectionary year, then by normalized occasion
+    by_year = {'A': defaultdict(lambda: {'entries': [], 'display_names': set(), 'readings': set()}),
+               'B': defaultdict(lambda: {'entries': [], 'display_names': set(), 'readings': set()}),
+               'C': defaultdict(lambda: {'entries': [], 'display_names': set(), 'readings': set()})}
+    year_counts = {'A': 0, 'B': 0, 'C': 0}
+
+    for entry in season_entries:
+        lect_year = get_lectionary_year(entry.get('occasion_full', ''))
+        if lect_year:
+            occasion = entry.get('occasion', '')
+            normalized = normalize_occasion(occasion)
+            by_year[lect_year][normalized]['entries'].append(entry)
+            by_year[lect_year][normalized]['display_names'].add(occasion)
+            if entry.get('readings'):
+                by_year[lect_year][normalized]['readings'].add(entry.get('readings'))
+            year_counts[lect_year] += 1
 
     html = f'''<!DOCTYPE html>
 <html lang="en">
@@ -282,54 +414,98 @@ def generate_season_html(all_data, season, page_title):
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
-        .meditation-list {{
-            list-style: none;
+        main.container {{
+            padding-top: 2rem;
+        }}
+        main.container section {{
+            border-bottom: none;
             padding: 0;
         }}
-        .meditation-list li {{
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--soft-gray);
+        .year-nav {{
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: var(--warm-white);
+            border-radius: 4px;
         }}
-        .meditation-link {{
+        .year-nav a {{
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--deep-brown);
+            text-decoration: none;
+            padding: 0.5rem 1.5rem;
+        }}
+        .year-nav a:hover {{
+            color: var(--accent-gold);
+        }}
+        .year-section {{
+            margin-bottom: 4rem;
+        }}
+        .year-heading {{
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: var(--deep-brown);
+            border-bottom: 3px solid var(--accent-gold);
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }}
+        .occasion-group {{
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: var(--warm-white);
+            border-radius: 4px;
+        }}
+        .occasion-heading {{
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.25rem;
             font-weight: 600;
             color: var(--deep-brown);
-            text-decoration: none;
+            margin-bottom: 0.25rem;
         }}
-        .meditation-link:hover {{
-            color: var(--accent-gold);
-        }}
-        .meditation-meta {{
+        .occasion-readings {{
             font-family: 'Crimson Pro', serif;
             font-size: 0.95rem;
             color: var(--medium-gray);
-            margin-top: 0.25rem;
-        }}
-        .meditation-occasion {{
             font-style: italic;
+            margin-bottom: 0.75rem;
+        }}
+        .meditation-list {{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }}
+        .meditation-list li {{
+            padding: 0.35rem 0;
+        }}
+        .meditation-link {{
+            font-family: 'Crimson Pro', serif;
+            color: var(--dark-gray);
+            text-decoration: none;
+        }}
+        .meditation-link:hover {{
+            color: var(--deep-brown);
+        }}
+        .meditation-date {{
+            color: var(--medium-gray);
+            font-size: 0.9rem;
         }}
         .page-intro {{
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }}
         .page-title {{
             font-family: 'Cormorant Garamond', serif;
             font-size: 2.2rem;
             color: var(--deep-brown);
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }}
         .meditation-count {{
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.1rem;
             color: var(--deep-brown);
-        }}
-        .meditation-scripture {{
-            font-family: 'Crimson Pro', serif;
-            font-size: 0.9rem;
-            color: var(--medium-gray);
-            font-style: italic;
-            margin-top: 0.25rem;
         }}
     </style>
 </head>
@@ -349,27 +525,91 @@ def generate_season_html(all_data, season, page_title):
             <p class="meditation-count">{total} meditations</p>
         </div>
 
-        <ul class="meditation-list">
+        <nav class="year-nav">
+            <a href="#year-a">Year A ({year_counts['A']})</a>
+            <a href="#year-b">Year B ({year_counts['B']})</a>
+            <a href="#year-c">Year C ({year_counts['C']})</a>
+        </nav>
+
 '''
 
-    for entry in season_entries:
-        title = escape_html(entry['title'])
-        occasion = escape_html(entry['occasion'])
-        readings = escape_html(entry['readings'])
-        date_display = entry['date_display']
+    for year in ['A', 'B', 'C']:
+        year_data = by_year[year]
 
-        html += f'''            <li>
-                <a href="meditations/{entry['filename']}" class="meditation-link">{title}</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">{date_display}</span> •
-                    <span class="meditation-occasion">{occasion}</span>
-                </div>
-                <div class="meditation-scripture">{readings}</div>
-            </li>
+        # Sort occasions by liturgical order
+        sorted_occasions = sorted(year_data.keys(), key=get_occasion_sort_key)
+
+        html += f'''        <section class="year-section" id="year-{year.lower()}">
+            <h2 class="year-heading">Year {year}</h2>
+
 '''
 
-    html += '''        </ul>
-    </main>
+        for normalized_occasion in sorted_occasions:
+            occasion_data = year_data[normalized_occasion]
+            entries = occasion_data['entries']
+            display_names = occasion_data['display_names']
+            readings_set = occasion_data['readings']
+
+            # Sort entries by date descending (most recent first)
+            entries = sorted(entries, key=lambda x: x['date'] or '', reverse=True)
+
+            # Determine display name
+            proper_match = re.match(r'Proper (\d+)', normalized_occasion)
+            if proper_match:
+                proper_num = int(proper_match.group(1))
+                occasion_display = f"Ordinary Time – Proper {proper_num}"
+            else:
+                def clean_display_name(name):
+                    name = re.sub(r'\s*[\("]?\(?Note:.*$', '', name).strip()
+                    name = name.rstrip('\\').strip()
+                    name = re.sub(r'\s*The Baptism of Our Lord.*', '', name).strip()
+                    name = re.sub(r'\s*Christmas Eve.*', '', name).strip() if 'Advent' in name else name
+                    if 'All Saints' in name:
+                        name = 'All Saints'
+                    if name.startswith('Christmas Day'):
+                        name = 'Christmas Day'
+                    if name.startswith('Easter Day'):
+                        name = 'Easter Day'
+                    if 'Presentation' in name:
+                        name = 'Fourth Sunday after the Epiphany'
+                    return name
+
+                cleaned_names = [clean_display_name(n) for n in display_names]
+                occasion_display = max(cleaned_names, key=len) if cleaned_names else normalized_occasion
+
+            # Use the longest readings (most complete)
+            readings = max(readings_set, key=len) if readings_set else ''
+
+            occasion_display = escape_html(occasion_display)
+            readings_display = escape_html(readings)
+
+            html += f'''            <div class="occasion-group">
+                <div class="occasion-heading">{occasion_display}</div>
+                <div class="occasion-readings">{readings_display}</div>
+                <ul class="meditation-list">
+'''
+
+            for entry in entries:
+                title = escape_html(entry['title'])
+                date_display = entry['date_display']
+
+                html += f'''                    <li>
+                        <a href="meditations/{entry['filename']}" class="meditation-link">
+                            {title} <span class="meditation-date">• {date_display}</span>
+                        </a>
+                    </li>
+'''
+
+            html += '''                </ul>
+            </div>
+
+'''
+
+        html += '''        </section>
+
+'''
+
+    html += '''    </main>
 
     <footer class="site-footer">
         <div class="container">
@@ -387,12 +627,14 @@ def generate_season_html(all_data, season, page_title):
 
 
 def generate_special_html(all_data):
-    """Generate special.html organized by occasion in a specific order, then by date within each."""
+    """Generate special.html organized by lectionary year, occasion, and date."""
 
     # Filter by Special season
     special_entries = [e for e in all_data if e.get('season', '').lower() == 'special']
 
-    # Define the occasion order
+    total = len(special_entries)
+
+    # Define the occasion order for Special meditations
     occasion_order = [
         'The Holy Name',
         'Presentation of Jesus in the Temple',
@@ -401,9 +643,8 @@ def generate_special_html(all_data):
         'Christ the King',
     ]
 
-    # Normalize occasion names for matching
     def normalize_occasion(occ):
-        """Normalize occasion for grouping - handle variations like 'All Saints Sunday'."""
+        """Normalize occasion for grouping."""
         occ_lower = occ.lower().strip()
         if 'holy name' in occ_lower:
             return 'The Holy Name'
@@ -415,19 +656,34 @@ def generate_special_html(all_data):
             return 'All Saints'
         if 'christ the king' in occ_lower:
             return 'Christ the King'
-        return occ  # Return original if no match
+        return occ
 
-    # Group by normalized occasion
-    by_occasion = defaultdict(list)
+    def get_occasion_sort_key(normalized_occasion):
+        """Get sort index for a normalized occasion."""
+        try:
+            return occasion_order.index(normalized_occasion)
+        except ValueError:
+            return 999
+
+    def get_lectionary_year(occasion_full):
+        match = re.search(r'Year ([ABC])', occasion_full)
+        return match.group(1) if match else None
+
+    # Group by lectionary year, then by normalized occasion
+    by_year = {'A': defaultdict(lambda: {'entries': [], 'readings': set()}),
+               'B': defaultdict(lambda: {'entries': [], 'readings': set()}),
+               'C': defaultdict(lambda: {'entries': [], 'readings': set()})}
+    year_counts = {'A': 0, 'B': 0, 'C': 0}
+
     for entry in special_entries:
-        normalized = normalize_occasion(entry.get('occasion', ''))
-        by_occasion[normalized].append(entry)
-
-    # Sort entries within each occasion by date (ascending - oldest first)
-    for occ in by_occasion:
-        by_occasion[occ].sort(key=lambda x: x['date'] or '')
-
-    total = len(special_entries)
+        lect_year = get_lectionary_year(entry.get('occasion_full', ''))
+        if lect_year:
+            occasion = entry.get('occasion', '')
+            normalized = normalize_occasion(occasion)
+            by_year[lect_year][normalized]['entries'].append(entry)
+            if entry.get('readings'):
+                by_year[lect_year][normalized]['readings'].add(entry.get('readings'))
+            year_counts[lect_year] += 1
 
     html = f'''<!DOCTYPE html>
 <html lang="en">
@@ -440,62 +696,98 @@ def generate_special_html(all_data):
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
-        .occasion-section {{
-            margin-bottom: 3rem;
+        main.container {{
+            padding-top: 2rem;
         }}
-        .occasion-heading {{
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.6rem;
-            color: var(--deep-brown);
-            border-bottom: 2px solid var(--accent-gold);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-        }}
-        .meditation-list {{
-            list-style: none;
+        main.container section {{
+            border-bottom: none;
             padding: 0;
         }}
-        .meditation-list li {{
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--soft-gray);
+        .year-nav {{
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: var(--warm-white);
+            border-radius: 4px;
         }}
-        .meditation-link {{
+        .year-nav a {{
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--deep-brown);
+            text-decoration: none;
+            padding: 0.5rem 1.5rem;
+        }}
+        .year-nav a:hover {{
+            color: var(--accent-gold);
+        }}
+        .year-section {{
+            margin-bottom: 4rem;
+        }}
+        .year-heading {{
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: var(--deep-brown);
+            border-bottom: 3px solid var(--accent-gold);
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }}
+        .occasion-group {{
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: var(--warm-white);
+            border-radius: 4px;
+        }}
+        .occasion-heading {{
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.25rem;
             font-weight: 600;
             color: var(--deep-brown);
-            text-decoration: none;
+            margin-bottom: 0.25rem;
         }}
-        .meditation-link:hover {{
-            color: var(--accent-gold);
-        }}
-        .meditation-meta {{
+        .occasion-readings {{
             font-family: 'Crimson Pro', serif;
             font-size: 0.95rem;
             color: var(--medium-gray);
-            margin-top: 0.25rem;
+            font-style: italic;
+            margin-bottom: 0.75rem;
+        }}
+        .meditation-list {{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }}
+        .meditation-list li {{
+            padding: 0.35rem 0;
+        }}
+        .meditation-link {{
+            font-family: 'Crimson Pro', serif;
+            color: var(--dark-gray);
+            text-decoration: none;
+        }}
+        .meditation-link:hover {{
+            color: var(--deep-brown);
+        }}
+        .meditation-date {{
+            color: var(--medium-gray);
+            font-size: 0.9rem;
         }}
         .page-intro {{
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }}
         .page-title {{
             font-family: 'Cormorant Garamond', serif;
             font-size: 2.2rem;
             color: var(--deep-brown);
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }}
         .meditation-count {{
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.1rem;
             color: var(--deep-brown);
-        }}
-        .meditation-scripture {{
-            font-family: 'Crimson Pro', serif;
-            font-size: 0.9rem;
-            color: var(--medium-gray);
-            font-style: italic;
-            margin-top: 0.25rem;
         }}
     </style>
 </head>
@@ -515,35 +807,62 @@ def generate_special_html(all_data):
             <p class="meditation-count">{total} meditations</p>
         </div>
 
+        <nav class="year-nav">
+            <a href="#year-a">Year A ({year_counts['A']})</a>
+            <a href="#year-b">Year B ({year_counts['B']})</a>
+            <a href="#year-c">Year C ({year_counts['C']})</a>
+        </nav>
+
 '''
 
-    # Generate sections in the specified order
-    for occasion in occasion_order:
-        entries = by_occasion.get(occasion, [])
-        if not entries:
-            continue
+    for year in ['A', 'B', 'C']:
+        year_data = by_year[year]
 
-        html += f'''        <section class="occasion-section">
-            <h3 class="occasion-heading">{escape_html(occasion)}</h3>
-            <ul class="meditation-list">
+        # Sort occasions by the special occasion order
+        sorted_occasions = sorted(year_data.keys(), key=get_occasion_sort_key)
+
+        html += f'''        <section class="year-section" id="year-{year.lower()}">
+            <h2 class="year-heading">Year {year}</h2>
+
 '''
 
-        for entry in entries:
-            title = escape_html(entry['title'])
-            readings = escape_html(entry['readings'])
-            date_display = entry['date_display']
+        for normalized_occasion in sorted_occasions:
+            occasion_data = year_data[normalized_occasion]
+            entries = occasion_data['entries']
+            readings_set = occasion_data['readings']
 
-            html += f'''                <li>
-                    <a href="meditations/{entry['filename']}" class="meditation-link">{title}</a>
-                    <div class="meditation-meta">
-                        <span class="meditation-date">{date_display}</span>
-                    </div>
-                    <div class="meditation-scripture">{readings}</div>
-                </li>
+            # Sort entries by date descending (most recent first)
+            entries = sorted(entries, key=lambda x: x['date'] or '', reverse=True)
+
+            # Use the longest readings (most complete)
+            readings = max(readings_set, key=len) if readings_set else ''
+
+            occasion_display = escape_html(normalized_occasion)
+            readings_display = escape_html(readings)
+
+            html += f'''            <div class="occasion-group">
+                <div class="occasion-heading">{occasion_display}</div>
+                <div class="occasion-readings">{readings_display}</div>
+                <ul class="meditation-list">
 '''
 
-        html += '''            </ul>
-        </section>
+            for entry in entries:
+                title = escape_html(entry['title'])
+                date_display = entry['date_display']
+
+                html += f'''                    <li>
+                        <a href="meditations/{entry['filename']}" class="meditation-link">
+                            {title} <span class="meditation-date">• {date_display}</span>
+                        </a>
+                    </li>
+'''
+
+            html += '''                </ul>
+            </div>
+
+'''
+
+        html += '''        </section>
 
 '''
 

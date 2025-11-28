@@ -9,62 +9,98 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
-        .occasion-section {
-            margin-bottom: 3rem;
+        main.container {
+            padding-top: 2rem;
         }
-        .occasion-heading {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.6rem;
-            color: var(--deep-brown);
-            border-bottom: 2px solid var(--accent-gold);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        .meditation-list {
-            list-style: none;
+        main.container section {
+            border-bottom: none;
             padding: 0;
         }
-        .meditation-list li {
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--soft-gray);
+        .year-nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: var(--warm-white);
+            border-radius: 4px;
         }
-        .meditation-link {
+        .year-nav a {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--deep-brown);
+            text-decoration: none;
+            padding: 0.5rem 1.5rem;
+        }
+        .year-nav a:hover {
+            color: var(--accent-gold);
+        }
+        .year-section {
+            margin-bottom: 4rem;
+        }
+        .year-heading {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: var(--deep-brown);
+            border-bottom: 3px solid var(--accent-gold);
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        .occasion-group {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: var(--warm-white);
+            border-radius: 4px;
+        }
+        .occasion-heading {
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.25rem;
             font-weight: 600;
             color: var(--deep-brown);
-            text-decoration: none;
+            margin-bottom: 0.25rem;
         }
-        .meditation-link:hover {
-            color: var(--accent-gold);
-        }
-        .meditation-meta {
+        .occasion-readings {
             font-family: 'Crimson Pro', serif;
             font-size: 0.95rem;
             color: var(--medium-gray);
-            margin-top: 0.25rem;
+            font-style: italic;
+            margin-bottom: 0.75rem;
+        }
+        .meditation-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .meditation-list li {
+            padding: 0.35rem 0;
+        }
+        .meditation-link {
+            font-family: 'Crimson Pro', serif;
+            color: var(--dark-gray);
+            text-decoration: none;
+        }
+        .meditation-link:hover {
+            color: var(--deep-brown);
+        }
+        .meditation-date {
+            color: var(--medium-gray);
+            font-size: 0.9rem;
         }
         .page-intro {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
         .page-title {
             font-family: 'Cormorant Garamond', serif;
             font-size: 2.2rem;
             color: var(--deep-brown);
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
         .meditation-count {
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.1rem;
             color: var(--deep-brown);
-        }
-        .meditation-scripture {
-            font-family: 'Crimson Pro', serif;
-            font-size: 0.9rem;
-            color: var(--medium-gray);
-            font-style: italic;
-            margin-top: 0.25rem;
         }
     </style>
 </head>
@@ -84,216 +120,225 @@
             <p class="meditation-count">26 meditations</p>
         </div>
 
-        <section class="occasion-section">
-            <h3 class="occasion-heading">The Holy Name</h3>
-            <ul class="meditation-list">
-                <li>
-                    <a href="meditations/2012-01-01.html" class="meditation-link">I Will Not Keep Silent</a>
-                    <div class="meditation-meta">
-                        <span class="meditation-date">January 01, 2012</span>
-                    </div>
-                    <div class="meditation-scripture">Isaiah 61:10—62:3, Psalm 147, Galatians 3:23-25, John 1:1-18</div>
-                </li>
-                <li>
-                    <a href="meditations/2017-01-01.html" class="meditation-link">The Aaronic Blessing</a>
-                    <div class="meditation-meta">
-                        <span class="meditation-date">January 01, 2017</span>
-                    </div>
-                    <div class="meditation-scripture">Numbers 6:22-27, Psalm 8, Galatians 4:4-7, Luke 2:15-21</div>
-                </li>
-                <li>
-                    <a href="meditations/2023-01-01.html" class="meditation-link">A Child of God</a>
-                    <div class="meditation-meta">
-                        <span class="meditation-date">January 01, 2023</span>
-                    </div>
-                    <div class="meditation-scripture"></div>
-                </li>
-            </ul>
+        <nav class="year-nav">
+            <a href="#year-a">Year A (13)</a>
+            <a href="#year-b">Year B (8)</a>
+            <a href="#year-c">Year C (5)</a>
+        </nav>
+
+        <section class="year-section" id="year-a">
+            <h2 class="year-heading">Year A</h2>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">The Holy Name</div>
+                <div class="occasion-readings">Numbers 6:22-27, Psalm 8, Galatians 4:4-7, Luke 2:15-21</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2023-01-01.html" class="meditation-link">
+                            A Child of God <span class="meditation-date">• January 01, 2023</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2017-01-01.html" class="meditation-link">
+                            The Aaronic Blessing <span class="meditation-date">• January 01, 2017</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Presentation of Jesus in the Temple</div>
+                <div class="occasion-readings">Micah 6:1-8, Psalm 15, I Corinthians 1:18-31, Matthew 5:1-12</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2020-02-02.html" class="meditation-link">
+                            “The Controversy of the Lord” <span class="meditation-date">• February 02, 2020</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2014-02-02.html" class="meditation-link">
+                            In Every Respect <span class="meditation-date">• February 02, 2014</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">The Transfiguration</div>
+                <div class="occasion-readings">Exodus 34:29-35, Psalm 99, II Peter:1:13-21, Luke 9:28-36</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2023-08-06.html" class="meditation-link">
+                            The Holy Mount <span class="meditation-date">• August 06, 2023</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2017-08-06.html" class="meditation-link">
+                            The Holy Mount <span class="meditation-date">• August 06, 2017</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">All Saints</div>
+                <div class="occasion-readings">Revelation 7:9-17, Psalm 34:1-10, 22, I John 3:1-3, Matthew 5:1-12</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2020-11-01.html" class="meditation-link">
+                            The Saints of God <span class="meditation-date">• November 01, 2020</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Christ the King</div>
+                <div class="occasion-readings">Ezekiel 34:11-16, 20-24, Psalm 100, Ephesians 1:15-23, Matthew 25:31-46</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2023-11-26.html" class="meditation-link">
+                            The King of Love <span class="meditation-date">• November 26, 2023</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2020-11-22.html" class="meditation-link">
+                            Incarnation <span class="meditation-date">• November 22, 2020</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2017-11-26.html" class="meditation-link">
+                            The King of Love <span class="meditation-date">• November 26, 2017</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2014-11-23.html" class="meditation-link">
+                            Incarnation <span class="meditation-date">• November 23, 2014</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2011-11-20.html" class="meditation-link">
+                            “Count Your Many Blessings” <span class="meditation-date">• November 20, 2011</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2008-11-23.html" class="meditation-link">
+                            Justice / Mercy <span class="meditation-date">• November 23, 2008</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
         </section>
 
-        <section class="occasion-section">
-            <h3 class="occasion-heading">Presentation of Jesus in the Temple</h3>
-            <ul class="meditation-list">
-                <li>
-                    <a href="meditations/2014-02-02.html" class="meditation-link">In Every Respect</a>
-                    <div class="meditation-meta">
-                        <span class="meditation-date">February 02, 2014</span>
-                    </div>
-                    <div class="meditation-scripture">Malachi 3:1-4, Psalm 84, Hebrews 2:14-18, Luke 2:22-40</div>
-                </li>
-                <li>
-                    <a href="meditations/2020-02-02.html" class="meditation-link">“The Controversy of the Lord”</a>
-                    <div class="meditation-meta">
-                        <span class="meditation-date">February 02, 2020</span>
-                    </div>
-                    <div class="meditation-scripture">Micah 6:1-8, Psalm 15, I Corinthians 1:18-31, Matthew 5:1-12</div>
-                </li>
-            </ul>
+        <section class="year-section" id="year-b">
+            <h2 class="year-heading">Year B</h2>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">The Holy Name</div>
+                <div class="occasion-readings">Isaiah 61:10—62:3, Psalm 147, Galatians 3:23-25, John 1:1-18</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2012-01-01.html" class="meditation-link">
+                            I Will Not Keep Silent <span class="meditation-date">• January 01, 2012</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">All Saints</div>
+                <div class="occasion-readings">Wisdom of Solomon 3:1-9, Psalm 24, Revelation 21:1-6a, John 11:32-44</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2015-11-01.html" class="meditation-link">
+                            In the Hand of God <span class="meditation-date">• November 01, 2015</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2009-11-01.html" class="meditation-link">
+                            All Things New <span class="meditation-date">• November 01, 2009</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Christ the King</div>
+                <div class="occasion-readings">II Samuel 23:1-7, Psalm 132:1-13, (14-19), Revelation 1:4b-8, John 18:33-37</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2021-11-21.html" class="meditation-link">
+                            The Alpha and the Omega <span class="meditation-date">• November 21, 2021</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2018-11-25.html" class="meditation-link">
+                            The Alpha and the Omega <span class="meditation-date">• November 25, 2018</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2015-11-22.html" class="meditation-link">
+                            The Faithful Witness <span class="meditation-date">• November 22, 2015</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2012-11-25.html" class="meditation-link">
+                            The Alpha and the Omega <span class="meditation-date">• November 25, 2012</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2009-11-22.html" class="meditation-link">
+                            Thanksgiving <span class="meditation-date">• November 22, 2009</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
         </section>
 
-        <section class="occasion-section">
-            <h3 class="occasion-heading">The Transfiguration</h3>
-            <ul class="meditation-list">
-                <li>
-                    <a href="meditations/2017-08-06.html" class="meditation-link">The Holy Mount</a>
-                    <div class="meditation-meta">
-                        <span class="meditation-date">August 06, 2017</span>
-                    </div>
-                    <div class="meditation-scripture">Exodus 34:29-35, Psalm 99, II Peter:1:13-21, Luke 9:28-36</div>
-                </li>
-                <li>
-                    <a href="meditations/2023-08-06.html" class="meditation-link">The Holy Mount</a>
-                    <div class="meditation-meta">
-                        <span class="meditation-date">August 06, 2023</span>
-                    </div>
-                    <div class="meditation-scripture">Exodus 34:29-35, Psalm 99, II Peter:1:13-21, Luke 9:28-36</div>
-                </li>
-            </ul>
-        </section>
+        <section class="year-section" id="year-c">
+            <h2 class="year-heading">Year C</h2>
 
-        <section class="occasion-section">
-            <h3 class="occasion-heading">All Saints</h3>
-            <ul class="meditation-list">
-                <li>
-                    <a href="meditations/2009-11-01.html" class="meditation-link">All Things New</a>
-                    <div class="meditation-meta">
-                        <span class="meditation-date">November 01, 2009</span>
-                    </div>
-                    <div class="meditation-scripture">Wisdom 3:1-9, Psalm 24, Revelation 21:1-6a, John 11:32-44</div>
-                </li>
-                <li>
-                    <a href="meditations/2015-11-01.html" class="meditation-link">In the Hand of God</a>
-                    <div class="meditation-meta">
-                        <span class="meditation-date">November 01, 2015</span>
-                    </div>
-                    <div class="meditation-scripture">Wisdom of Solomon 3:1-9, Psalm 24, Revelation 21:1-6a, John 11:32-44</div>
-                </li>
-                <li>
-                    <a href="meditations/2019-11-03.html" class="meditation-link">The Golden Rule</a>
-                    <div class="meditation-meta">
-                        <span class="meditation-date">November 03, 2019</span>
-                    </div>
-                    <div class="meditation-scripture">Daniel 7:1-3, 15-18, Psalm 149, Ephesians 1:11-23, Luke 6:20-31</div>
-                </li>
-                <li>
-                    <a href="meditations/2020-11-01.html" class="meditation-link">The Saints of God</a>
-                    <div class="meditation-meta">
-                        <span class="meditation-date">November 01, 2020</span>
-                    </div>
-                    <div class="meditation-scripture">Revelation 7:9-17, Psalm 34:1-10, 22, I John 3:1-3, Matthew 5:1-12</div>
-                </li>
-            </ul>
-        </section>
+            <div class="occasion-group">
+                <div class="occasion-heading">All Saints</div>
+                <div class="occasion-readings">Daniel 7:1-3, 15-18, Psalm 149, Ephesians 1:11-23, Luke 6:20-31</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2019-11-03.html" class="meditation-link">
+                            The Golden Rule <span class="meditation-date">• November 03, 2019</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
-        <section class="occasion-section">
-            <h3 class="occasion-heading">Christ the King</h3>
-            <ul class="meditation-list">
-                <li>
-                    <a href="meditations/2008-11-23.html" class="meditation-link">Justice / Mercy</a>
-                    <div class="meditation-meta">
-                        <span class="meditation-date">November 23, 2008</span>
-                    </div>
-                    <div class="meditation-scripture">Ezekiel 34:11-16, 20-24, Psalm 100, Ephesians 1:15-23, Matthew 25:31-46</div>
-                </li>
-                <li>
-                    <a href="meditations/2009-11-22.html" class="meditation-link">Thanksgiving</a>
-                    <div class="meditation-meta">
-                        <span class="meditation-date">November 22, 2009</span>
-                    </div>
-                    <div class="meditation-scripture">Joel 2:21-27, Psalm 126, I Timothy 2:1-7, Matthew 6:25-33</div>
-                </li>
-                <li>
-                    <a href="meditations/2010-11-21.html" class="meditation-link">Christ the King</a>
-                    <div class="meditation-meta">
-                        <span class="meditation-date">November 21, 2010</span>
-                    </div>
-                    <div class="meditation-scripture">Jeremiah 23:1-6, Canticle 16, Colossians 1:11-20, Luke 23:33-43</div>
-                </li>
-                <li>
-                    <a href="meditations/2011-11-20.html" class="meditation-link">“Count Your Many Blessings”</a>
-                    <div class="meditation-meta">
-                        <span class="meditation-date">November 20, 2011</span>
-                    </div>
-                    <div class="meditation-scripture">Deuteronomy 8:7-18, Psalm 65, II Corinthians 9:6-15, Luke 17:11-19</div>
-                </li>
-                <li>
-                    <a href="meditations/2012-11-25.html" class="meditation-link">The Alpha and the Omega</a>
-                    <div class="meditation-meta">
-                        <span class="meditation-date">November 25, 2012</span>
-                    </div>
-                    <div class="meditation-scripture">II Samuel 23:1-7, Psalm 132, Revelation 1:4b-8, John 18:33-37</div>
-                </li>
-                <li>
-                    <a href="meditations/2013-11-24.html" class="meditation-link">Christ the King</a>
-                    <div class="meditation-meta">
-                        <span class="meditation-date">November 24, 2013</span>
-                    </div>
-                    <div class="meditation-scripture">Jeremiah 23:1-6, Canticle 16, Colossians 1:11-20, Luke 23:33-43</div>
-                </li>
-                <li>
-                    <a href="meditations/2014-11-23.html" class="meditation-link">Incarnation</a>
-                    <div class="meditation-meta">
-                        <span class="meditation-date">November 23, 2014</span>
-                    </div>
-                    <div class="meditation-scripture">Ezekiel 4:11-16, 20-24, Psalm 100, Ephesians 1:15-23, Matthew 25:31-46</div>
-                </li>
-                <li>
-                    <a href="meditations/2015-11-22.html" class="meditation-link">The Faithful Witness</a>
-                    <div class="meditation-meta">
-                        <span class="meditation-date">November 22, 2015</span>
-                    </div>
-                    <div class="meditation-scripture">II Samuel 23:1-7, Psalm 132:1-13, (14-19), Revelation 1:4b-8, John 18:33-37</div>
-                </li>
-                <li>
-                    <a href="meditations/2016-11-20.html" class="meditation-link">The Image of God</a>
-                    <div class="meditation-meta">
-                        <span class="meditation-date">November 20, 2016</span>
-                    </div>
-                    <div class="meditation-scripture">Jeremiah 23:1-6, Canticle 16 (Lk.1:68-79), Colossians 1:11-20, Luke 23:33-43</div>
-                </li>
-                <li>
-                    <a href="meditations/2017-11-26.html" class="meditation-link">The King of Love</a>
-                    <div class="meditation-meta">
-                        <span class="meditation-date">November 26, 2017</span>
-                    </div>
-                    <div class="meditation-scripture">Ezekiel 34:1-16,20-24, Psalm 100, Ephesians 1:15-23, Matthew 25:31-46</div>
-                </li>
-                <li>
-                    <a href="meditations/2018-11-25.html" class="meditation-link">The Alpha and the Omega</a>
-                    <div class="meditation-meta">
-                        <span class="meditation-date">November 25, 2018</span>
-                    </div>
-                    <div class="meditation-scripture">II Samuel 23:1-7, Psalm 132, Revelation 1:4b-8, John 18:33-37</div>
-                </li>
-                <li>
-                    <a href="meditations/2019-11-24.html" class="meditation-link">Restoration</a>
-                    <div class="meditation-meta">
-                        <span class="meditation-date">November 24, 2019</span>
-                    </div>
-                    <div class="meditation-scripture">Jeremiah 23:1-6, Canticle 6 (BCP), Colossians 1:11-20, Luke 23:33-43</div>
-                </li>
-                <li>
-                    <a href="meditations/2020-11-22.html" class="meditation-link">Incarnation</a>
-                    <div class="meditation-meta">
-                        <span class="meditation-date">November 22, 2020</span>
-                    </div>
-                    <div class="meditation-scripture">Ezekiel 4:11-16, 20-24, Psalm 100, Ephesians 1:15-23, Matthew 25:31-46</div>
-                </li>
-                <li>
-                    <a href="meditations/2021-11-21.html" class="meditation-link">The Alpha and the Omega</a>
-                    <div class="meditation-meta">
-                        <span class="meditation-date">November 21, 2021</span>
-                    </div>
-                    <div class="meditation-scripture">II Samuel 23:1-7, Psalm 132, Revelation 1:4b-8, John 18:33-37</div>
-                </li>
-                <li>
-                    <a href="meditations/2023-11-26.html" class="meditation-link">The King of Love</a>
-                    <div class="meditation-meta">
-                        <span class="meditation-date">November 26, 2023</span>
-                    </div>
-                    <div class="meditation-scripture">Ezekiel 34:1-16,20-24, Psalm 100, Ephesians 1:15-23, Matthew 25:31-46</div>
-                </li>
-            </ul>
+            <div class="occasion-group">
+                <div class="occasion-heading">Christ the King</div>
+                <div class="occasion-readings">Jeremiah 23:1-6, Canticle 16 (Lk.1:68-79), Colossians 1:11-20, Luke 23:33-43</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2019-11-24.html" class="meditation-link">
+                            Restoration <span class="meditation-date">• November 24, 2019</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2016-11-20.html" class="meditation-link">
+                            The Image of God <span class="meditation-date">• November 20, 2016</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2013-11-24.html" class="meditation-link">
+                            Christ the King <span class="meditation-date">• November 24, 2013</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2010-11-21.html" class="meditation-link">
+                            Christ the King <span class="meditation-date">• November 21, 2010</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
         </section>
 
     </main>

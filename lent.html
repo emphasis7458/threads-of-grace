@@ -9,54 +9,98 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
-        .meditation-list {
-            list-style: none;
+        main.container {
+            padding-top: 2rem;
+        }
+        main.container section {
+            border-bottom: none;
             padding: 0;
         }
-        .meditation-list li {
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--soft-gray);
+        .year-nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: var(--warm-white);
+            border-radius: 4px;
         }
-        .meditation-link {
+        .year-nav a {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--deep-brown);
+            text-decoration: none;
+            padding: 0.5rem 1.5rem;
+        }
+        .year-nav a:hover {
+            color: var(--accent-gold);
+        }
+        .year-section {
+            margin-bottom: 4rem;
+        }
+        .year-heading {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: var(--deep-brown);
+            border-bottom: 3px solid var(--accent-gold);
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        .occasion-group {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: var(--warm-white);
+            border-radius: 4px;
+        }
+        .occasion-heading {
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.25rem;
             font-weight: 600;
             color: var(--deep-brown);
-            text-decoration: none;
+            margin-bottom: 0.25rem;
         }
-        .meditation-link:hover {
-            color: var(--accent-gold);
-        }
-        .meditation-meta {
+        .occasion-readings {
             font-family: 'Crimson Pro', serif;
             font-size: 0.95rem;
             color: var(--medium-gray);
-            margin-top: 0.25rem;
-        }
-        .meditation-occasion {
             font-style: italic;
+            margin-bottom: 0.75rem;
+        }
+        .meditation-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .meditation-list li {
+            padding: 0.35rem 0;
+        }
+        .meditation-link {
+            font-family: 'Crimson Pro', serif;
+            color: var(--dark-gray);
+            text-decoration: none;
+        }
+        .meditation-link:hover {
+            color: var(--deep-brown);
+        }
+        .meditation-date {
+            color: var(--medium-gray);
+            font-size: 0.9rem;
         }
         .page-intro {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
         .page-title {
             font-family: 'Cormorant Garamond', serif;
             font-size: 2.2rem;
             color: var(--deep-brown);
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
         .meditation-count {
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.1rem;
             color: var(--deep-brown);
-        }
-        .meditation-scripture {
-            font-family: 'Crimson Pro', serif;
-            font-size: 0.9rem;
-            color: var(--medium-gray);
-            font-style: italic;
-            margin-top: 0.25rem;
         }
     </style>
 </head>
@@ -76,832 +120,675 @@
             <p class="meditation-count">103 meditations</p>
         </div>
 
-        <ul class="meditation-list">
-            <li>
-                <a href="meditations/2024-03-24.html" class="meditation-link">Preparation</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 24, 2024</span> •
-                    <span class="meditation-occasion">Palm Sunday</span>
-                </div>
-                <div class="meditation-scripture">Mark 11:1-11, Psalm 118:1-2, 19-29</div>
-            </li>
-            <li>
-                <a href="meditations/2024-03-17.html" class="meditation-link">Troubled</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 17, 2024</span> •
-                    <span class="meditation-occasion">Fifth Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Jeremiah 31:31-34, Psalm 51:1-13, Hebrews 5:5-10, John 12:20-33</div>
-            </li>
-            <li>
-                <a href="meditations/2024-03-10.html" class="meditation-link">Grace</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 10, 2024</span> •
-                    <span class="meditation-occasion">Fourth Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Numbers 21:4-9, Psalm 107:1-3, 17-22, Ephesians 2:1-10, John 3:14-21</div>
-            </li>
-            <li>
-                <a href="meditations/2024-03-03.html" class="meditation-link">Outwardly--Inwardly</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 03, 2024</span> •
-                    <span class="meditation-occasion">Third Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Exodus 20:1-17, Psalm 19, I Corinthians 1:18-25, John 2:13-22</div>
-            </li>
-            <li>
-                <a href="meditations/2024-02-25.html" class="meditation-link">“Exceedingly Fruitful”</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">February 25, 2024</span> •
-                    <span class="meditation-occasion">Second Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Genesis 17:1-7,15-16, Psalm 22:22-30, Romans 4:13-25, Mark 8:31-38</div>
-            </li>
-            <li>
-                <a href="meditations/2024-02-18.html" class="meditation-link">Wilderness</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">February 18, 2024</span> •
-                    <span class="meditation-occasion">First Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Genesis 9:8-17, Psalm 25:1-9, I Peter 3:18-22, Mark 1:9-15</div>
-            </li>
-            <li>
-                <a href="meditations/2023-04-02.html" class="meditation-link">From Exultation to Desolation to?</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 02, 2023</span> •
-                    <span class="meditation-occasion">Palm Sunday</span>
-                </div>
-                <div class="meditation-scripture">Matthew 21:1-11, Psalm 118:1-2, 19-29</div>
-            </li>
-            <li>
-                <a href="meditations/2023-03-26.html" class="meditation-link">From Death to Life</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 26, 2023</span> •
-                    <span class="meditation-occasion">Fifth Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Ezekiel 37:1-14, Psalm 130, Romans 8:6-11, John 11:1-45</div>
-            </li>
-            <li>
-                <a href="meditations/2023-03-19.html" class="meditation-link">Divided</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 19, 2023</span> •
-                    <span class="meditation-occasion">Fourth Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">I Samuel 16:1-13, Psalm 23, Ephesians 5:8-14, John 9:1-41</div>
-            </li>
-            <li>
-                <a href="meditations/2023-03-12.html" class="meditation-link">Hearken to His Voice</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 12, 2023</span> •
-                    <span class="meditation-occasion">Third Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Exodus 17:1-7. Psalm 95, Romans 5:1-11, John 4:5-42</div>
-            </li>
-            <li>
-                <a href="meditations/2023-03-05.html" class="meditation-link">Presence</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 05, 2023</span> •
-                    <span class="meditation-occasion">Second Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Genesis 12:1-4a, Psalm 121, Romans 4:1-5, 13-17, John 3:1-17</div>
-            </li>
-            <li>
-                <a href="meditations/2023-02-26.html" class="meditation-link">Angels Come</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">February 26, 2023</span> •
-                    <span class="meditation-occasion">First Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Genesis 2:15-19, 3:1-7, Psalm 32, Romans 5:12-19, Matthew 4:1-11</div>
-            </li>
-            <li>
-                <a href="meditations/2022-04-10.html" class="meditation-link">&quot;The Lord Needs It&quot;</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 10, 2022</span> •
-                    <span class="meditation-occasion">Palm Sunday</span>
-                </div>
-                <div class="meditation-scripture">Luke 19:28-40, Psalm 118:1-2, 19-29</div>
-            </li>
-            <li>
-                <a href="meditations/2022-04-03.html" class="meditation-link">Anticipation</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 03, 2022</span> •
-                    <span class="meditation-occasion">Fifth Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Isaiah 43:16-21, Psalm 126, Philippians 3:4b-14, John, 12:1-8</div>
-            </li>
-            <li>
-                <a href="meditations/2022-03-27.html" class="meditation-link">Reconciliation</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 27, 2022</span> •
-                    <span class="meditation-occasion">Fourth Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Joshua 5:9-12, Psalm 32, II Corinthians 5:16-21, Luke 15:1-3; 11b-32</div>
-            </li>
-            <li>
-                <a href="meditations/2022-03-20.html" class="meditation-link">Reconciliation</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 20, 2022</span> •
-                    <span class="meditation-occasion">Third Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Joshua 5:9-12, Psalm 32, II Corinthians 5:16-21, Luke 15:1-3; 11b-32</div>
-            </li>
-            <li>
-                <a href="meditations/2022-03-13.html" class="meditation-link">Willing or Unwilling?</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 13, 2022</span> •
-                    <span class="meditation-occasion">Second Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Genesis 15:1-12, 17-18, Psalm 27, Philippians 3:17--4:1, Luke 13:31-35</div>
-            </li>
-            <li>
-                <a href="meditations/2022-03-06.html" class="meditation-link">An Opportune Time</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 06, 2022</span> •
-                    <span class="meditation-occasion">First Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Deuteronomy 26:1-11, Psalm 91:1-2, 9-16, Romans 10:8b-13, Luke 4:1-13</div>
-            </li>
-            <li>
-                <a href="meditations/2021-03-28.html" class="meditation-link">Preparation</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 28, 2021</span> •
-                    <span class="meditation-occasion">Palm Sunday</span>
-                </div>
-                <div class="meditation-scripture">Mark 11:1-11, Psalm 118:1-2, 19-29</div>
-            </li>
-            <li>
-                <a href="meditations/2021-03-21.html" class="meditation-link">The Hour Has Come</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 21, 2021</span> •
-                    <span class="meditation-occasion">Fifth Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Jeremiah 31:31-34, Psalm 51:1-13, Hebrews 5:5-10, John 12:20-33</div>
-            </li>
-            <li>
-                <a href="meditations/2021-03-14.html" class="meditation-link">The Gift of God</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 14, 2021</span> •
-                    <span class="meditation-occasion">Fourth Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Numbers 21:4-9, Psalm 107:1-3, 17-22, Ephesians 2:1-10, John 3:14-21</div>
-            </li>
-            <li>
-                <a href="meditations/2021-03-07.html" class="meditation-link">Outwardly--Inwardly</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 07, 2021</span> •
-                    <span class="meditation-occasion">Third Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Exodus 20:1-17, Psalm 19, I Corinthians 1:18-25, John 2:13-22</div>
-            </li>
-            <li>
-                <a href="meditations/2021-02-28.html" class="meditation-link">Unchangeable Truth</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">February 28, 2021</span> •
-                    <span class="meditation-occasion">Second Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Genesis 17:1-7, 15-16, Psalm 22:22-30, Romans 4:13-25, Mark 8:31-38</div>
-            </li>
-            <li>
-                <a href="meditations/2021-02-21.html" class="meditation-link">Wilderness</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">February 21, 2021</span> •
-                    <span class="meditation-occasion">First Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Genesis 9:8-17, Psalm 25:1-9, I Peter 3:18-22, Mark 1:9-15</div>
-            </li>
-            <li>
-                <a href="meditations/2020-04-05.html" class="meditation-link">Hosanna!</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 05, 2020</span> •
-                    <span class="meditation-occasion">Palm Sunday</span>
-                </div>
-                <div class="meditation-scripture">Matthew 21:1-11, Psalm 118:1-2, 19-29</div>
-            </li>
-            <li>
-                <a href="meditations/2020-03-29.html" class="meditation-link">&quot;Unbind Him&quot;</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 29, 2020</span> •
-                    <span class="meditation-occasion">Fifth Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Ezekiel 37:1-14, Psalm 130, Romans 8:6-11, John.11:1-45</div>
-            </li>
-            <li>
-                <a href="meditations/2020-03-22.html" class="meditation-link">Sleepers, Awake!</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 22, 2020</span> •
-                    <span class="meditation-occasion">Fourth Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">I Samuel 16:1-13, Psalm 23, Ephesians 5:8-14, John 9:1-41</div>
-            </li>
-            <li>
-                <a href="meditations/2020-03-15.html" class="meditation-link">Outwardly and Inwardly</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 15, 2020</span> •
-                    <span class="meditation-occasion">Third Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Exodus 17:1-7, Psalm 95, Romans 5:1-11, John 4:5-42</div>
-            </li>
-            <li>
-                <a href="meditations/2020-03-08.html" class="meditation-link">Astray</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 08, 2020</span> •
-                    <span class="meditation-occasion">Second Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Genesis 12:1-4a, Psalm 121, Romans 4: 1-5, 13-17, John 3:1-17</div>
-            </li>
-            <li>
-                <a href="meditations/2020-03-01.html" class="meditation-link">Fig Leaves</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 01, 2020</span> •
-                    <span class="meditation-occasion">First Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Genesis 2:15-17, 3:1-7, Psalm 32, Romans 5:12-19, Matthew 4:1-11</div>
-            </li>
-            <li>
-                <a href="meditations/2019-04-14.html" class="meditation-link">Our Times Are in God’s Hands</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 14, 2019</span> •
-                    <span class="meditation-occasion">Palm Sunday</span>
-                </div>
-                <div class="meditation-scripture">Isaiah 50:4-9a, Psalm 31:9-16, Philippians 2:11, Luke 22:14—23:56</div>
-            </li>
-            <li>
-                <a href="meditations/2019-04-07.html" class="meditation-link">A New Thing</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 07, 2019</span> •
-                    <span class="meditation-occasion">Fifth Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Isaiah 43:16-21, Psalm 126, Philippians 3:4b-14, John 12:1-8</div>
-            </li>
-            <li>
-                <a href="meditations/2019-03-31.html" class="meditation-link">Coming Home</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 31, 2019</span> •
-                    <span class="meditation-occasion">Fourth Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Joshua 5:9-12, Psalm 32, II Corinthians 5:16-21, Luke 15:1-3; 11b-32</div>
-            </li>
-            <li>
-                <a href="meditations/2019-03-24.html" class="meditation-link">Standing?</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 24, 2019</span> •
-                    <span class="meditation-occasion">Third Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Exodus 3:1-15, Psalm 63:1-8, I Corinthians 10:1-13, Luke 13:1-9</div>
-            </li>
-            <li>
-                <a href="meditations/2019-03-17.html" class="meditation-link">Waiting</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 17, 2019</span> •
-                    <span class="meditation-occasion">Second Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Genesis 15:1-12, 17-18, Psalm 27, Philippians 3:17—4:1, Luke 13:31-35</div>
-            </li>
-            <li>
-                <a href="meditations/2019-03-10.html" class="meditation-link">Are You Listening?</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 10, 2019</span> •
-                    <span class="meditation-occasion">First Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Deuteronomy 26:1-11, Psalm 91:1-2, 9-16, Romans 10:8b-13, Luke 4:1-13</div>
-            </li>
-            <li>
-                <a href="meditations/2018-03-25.html" class="meditation-link">Turning from, Turning to</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 25, 2018</span> •
-                    <span class="meditation-occasion">Palm Sunday</span>
-                </div>
-                <div class="meditation-scripture">Mark 11:1-11, Psalm 118:1-2, 19-29</div>
-            </li>
-            <li>
-                <a href="meditations/2018-03-18.html" class="meditation-link">Reverent Submission</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 18, 2018</span> •
-                    <span class="meditation-occasion">Fifth Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Jeremiah 31:31-34, Psalm 51:1-13, Hebrews 5:5-10, John 12:20-33</div>
-            </li>
-            <li>
-                <a href="meditations/2018-03-11.html" class="meditation-link">Grace</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 11, 2018</span> •
-                    <span class="meditation-occasion">Fourth Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Numbers 21:4-9, Psalm 107:1-3, 17-22, Ephesians 2:1-10, John 3:14-21</div>
-            </li>
-            <li>
-                <a href="meditations/2018-03-04.html" class="meditation-link">Idols</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 04, 2018</span> •
-                    <span class="meditation-occasion">Third Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Exodus 20:1-17, Psalm 19, I Corinthians 1:18-25, John 2:13-22</div>
-            </li>
-            <li>
-                <a href="meditations/2018-02-25.html" class="meditation-link">Unchangeable Truth</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">February 25, 2018</span> •
-                    <span class="meditation-occasion">Second Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Genesis 17:1-7, 15-16, Psalm 22:22-30, Romans 4:13-25, Mark 8:31-38</div>
-            </li>
-            <li>
-                <a href="meditations/2018-02-18.html" class="meditation-link">Wilderness</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">February 18, 2018</span> •
-                    <span class="meditation-occasion">First Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Genesis 9:8-17, Psalm 25:1-9, I Peter 3:18-22, Mark 1:9-15</div>
-            </li>
-            <li>
-                <a href="meditations/2017-04-09.html" class="meditation-link">Sealing the Stone</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 09, 2017</span> •
-                    <span class="meditation-occasion">Palm Sunday</span>
-                </div>
-                <div class="meditation-scripture">Isaiah 50:4-9a, Psalm 31:9-16, Philippians 2:5-11, Matthew 26:14—27:66</div>
-            </li>
-            <li>
-                <a href="meditations/2017-04-02.html" class="meditation-link">A Rattling Noise</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 02, 2017</span> •
-                    <span class="meditation-occasion">Fifth Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Ezekiel 37:1-14, Psalm 130, Romans 8:6-11, John 11:1-45</div>
-            </li>
-            <li>
-                <a href="meditations/2017-03-26.html" class="meditation-link">Divided</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 26, 2017</span> •
-                    <span class="meditation-occasion">Fourth Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">II Samuel 16:1-13, Psalm 23, Ephesians 5:8-14, John 9:1-41</div>
-            </li>
-            <li>
-                <a href="meditations/2017-03-19.html" class="meditation-link">The Water Jar</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 19, 2017</span> •
-                    <span class="meditation-occasion">Third Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Exodus 17:1-7, Psalm 95, Romans 5:1-11, John 4:5-42</div>
-            </li>
-            <li>
-                <a href="meditations/2017-03-12.html" class="meditation-link">Darkness</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 12, 2017</span> •
-                    <span class="meditation-occasion">Second Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Genesis 12:1-4a, Psalm 121, Romans 4:1-5, 13-17, John 3:1-17</div>
-            </li>
-            <li>
-                <a href="meditations/2017-03-05.html" class="meditation-link">Naked</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 05, 2017</span> •
-                    <span class="meditation-occasion">First Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Genesis 2:15-17, 3:1-7, Psalm 32, Romans 5:12-19, Matthew 4:1-11</div>
-            </li>
-            <li>
-                <a href="meditations/2016-03-20.html" class="meditation-link">“The Lord Needs It”</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 20, 2016</span> •
-                    <span class="meditation-occasion">Palm Sunday</span>
-                </div>
-                <div class="meditation-scripture">Luke 19:28-40, Psalm 118:1-2, 19-29</div>
-            </li>
-            <li>
-                <a href="meditations/2016-03-13.html" class="meditation-link">A New Thing</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 13, 2016</span> •
-                    <span class="meditation-occasion">Fifth Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Isaiah 43:16-21, Psalm 126, Philippians 3:4b-14, John 12:1-8</div>
-            </li>
-            <li>
-                <a href="meditations/2016-03-06.html" class="meditation-link">Grumbling</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 06, 2016</span> •
-                    <span class="meditation-occasion">Fourth Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Joshua 5:9-12, Psalm 32, II Corinthians 5:16-21, Luke 15:1-3; 11b-32</div>
-            </li>
-            <li>
-                <a href="meditations/2016-02-28.html" class="meditation-link">Holy Ground</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">February 28, 2016</span> •
-                    <span class="meditation-occasion">Third Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Exodus 3:1-15, Psalm 63:1-8, I Corinthians 10:1-13, Luke 13:1-9</div>
-            </li>
-            <li>
-                <a href="meditations/2016-02-21.html" class="meditation-link">Willing?</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">February 21, 2016</span> •
-                    <span class="meditation-occasion">Second Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Genesis 15:1-12, 17-18, Psalm 27, Philippians 3:17—4:1, Luke 13:31-35</div>
-            </li>
-            <li>
-                <a href="meditations/2016-02-14.html" class="meditation-link">Attention</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">February 14, 2016</span> •
-                    <span class="meditation-occasion">First Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Deuteronomy 26:1-11, Psalm 91:1-2, 9-16, Romans 10:8b-13, Luke 4:1-13</div>
-            </li>
-            <li>
-                <a href="meditations/2015-03-29.html" class="meditation-link">Blessed</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 29, 2015</span> •
-                    <span class="meditation-occasion">Palm Sunday</span>
-                </div>
-                <div class="meditation-scripture">Mark 11:1-11, Psalm 118:1-2, 19-23</div>
-            </li>
-            <li>
-                <a href="meditations/2015-03-22.html" class="meditation-link">Appointed</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 22, 2015</span> •
-                    <span class="meditation-occasion">Fifth Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Jeremiah 31:31-34, Psalm 51:1-13, Hebrews 5:5-10, John 12:20-33</div>
-            </li>
-            <li>
-                <a href="meditations/2015-03-15.html" class="meditation-link">Grace—The Gift of God</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 15, 2015</span> •
-                    <span class="meditation-occasion">Fourth Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Numbers 21:4-9, Psalm 107:1-3, 17-22, Ephesians 2:1-10, John 3:14-21</div>
-            </li>
-            <li>
-                <a href="meditations/2015-03-08.html" class="meditation-link">Sabbath</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 08, 2015</span> •
-                    <span class="meditation-occasion">Third Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Exodus 20:1-17, Psalm 19, I Corinthians 1:18-25, John 2:13-22</div>
-            </li>
-            <li>
-                <a href="meditations/2015-03-01.html" class="meditation-link">“Exceedingly Fruitful”</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 01, 2015</span> •
-                    <span class="meditation-occasion">Second Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Genesis 17:1-7,15-16, Psalm 22:22-30, Romans 4:13-25, Mark 8:31-38</div>
-            </li>
-            <li>
-                <a href="meditations/2015-02-22.html" class="meditation-link">“The Angels Waited on Him”</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">February 22, 2015</span> •
-                    <span class="meditation-occasion">First Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Genesis 9:8-17, Psalm 25:1-7, I Peter 3:18-22, Mark 1:9-15</div>
-            </li>
-            <li>
-                <a href="meditations/2014-04-13.html" class="meditation-link">The Cup of Life</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 13, 2014</span> •
-                    <span class="meditation-occasion">Palm Sunday</span>
-                </div>
-                <div class="meditation-scripture">Isaiah 50:4-9a, Psalm 31:9-16, Philippians 2:5-11, Matthew 26:14—27:66</div>
-            </li>
-            <li>
-                <a href="meditations/2014-04-06.html" class="meditation-link">“Come Out”</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 06, 2014</span> •
-                    <span class="meditation-occasion">Fifth Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Ezekiel 37:1-14, Psalm 130, Romans 8:6-11, John 11:1-45</div>
-            </li>
-            <li>
-                <a href="meditations/2014-03-30.html" class="meditation-link">Divided</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 30, 2014</span> •
-                    <span class="meditation-occasion">Fourth Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">I Samuel 16:1-13, Psalm 23, Ephesians 5:8:1-4, John 9:1-41</div>
-            </li>
-            <li>
-                <a href="meditations/2014-03-23.html" class="meditation-link">Hearken to God’s Voice</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 23, 2014</span> •
-                    <span class="meditation-occasion">Third Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Exodus 17:1-7, Psalm 95, Romans 5:1-11, John 4:5-42</div>
-            </li>
-            <li>
-                <a href="meditations/2014-03-16.html" class="meditation-link">Trust</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 16, 2014</span> •
-                    <span class="meditation-occasion">Second Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Genesis 12:1-4a, Psalm 121, Romans 4:1-5, 13-17, John 3:1-17</div>
-            </li>
-            <li>
-                <a href="meditations/2014-03-09.html" class="meditation-link">Abundance of Grace</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 09, 2014</span> •
-                    <span class="meditation-occasion">First Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Genesis 2:15-17, 3:1-7, Psalm 32, Romans 5:12-19, Matthew 4:1-11</div>
-            </li>
-            <li>
-                <a href="meditations/2013-03-24.html" class="meditation-link">God’s Hands</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 24, 2013</span> •
-                    <span class="meditation-occasion">Palm Sunday</span>
-                </div>
-                <div class="meditation-scripture">Isaiah 50:4-9a, Psalm 31:9-16, Philippians 2:5-11, Luke 22:14—23:56</div>
-            </li>
-            <li>
-                <a href="meditations/2013-03-17.html" class="meditation-link">A Way in the Wilderness</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 17, 2013</span> •
-                    <span class="meditation-occasion">Fifth Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Isaiah 43:16-21, Psalm 126, Philippians 3:4b-14, John 12:1-8</div>
-            </li>
-            <li>
-                <a href="meditations/2013-03-10.html" class="meditation-link">Coming Home</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 10, 2013</span> •
-                    <span class="meditation-occasion">Fourth Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Joshua 5:9-12, Psalm 32, II Corinthians 5:16-21, Luke 15:1-3; 11b-32</div>
-            </li>
-            <li>
-                <a href="meditations/2013-03-03.html" class="meditation-link">Standing?</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 03, 2013</span> •
-                    <span class="meditation-occasion">Third Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Exodus 3:1-15, Psalm 63:1-8, I Corinthians 10:1-13, Luke 13:1-9</div>
-            </li>
-            <li>
-                <a href="meditations/2013-02-24.html" class="meditation-link">Waiting</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">February 24, 2013</span> •
-                    <span class="meditation-occasion">Second Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Genesis 15:1-12, 17-18, Psalm 27, Philippians 3:17—4:1, Luke 13:31-35</div>
-            </li>
-            <li>
-                <a href="meditations/2013-02-17.html" class="meditation-link">Are You Listening?</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">February 17, 2013</span> •
-                    <span class="meditation-occasion">First Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Deuteronomy 26:1-11, Psalm 91:1-2, 9-16, Romans 10:8b-13, Luke 4:1-13</div>
-            </li>
-            <li>
-                <a href="meditations/2012-04-01.html" class="meditation-link">The Weight of Passion Images</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 01, 2012</span> •
-                    <span class="meditation-occasion">Palm Sunday</span>
-                </div>
-                <div class="meditation-scripture">Isaiah 50:4-9a, Psalm 31:9-16, Philippians 2:5-11, Mark 14:1—15:47</div>
-            </li>
-            <li>
-                <a href="meditations/2012-03-25.html" class="meditation-link">Troubled</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 25, 2012</span> •
-                    <span class="meditation-occasion">Fifth Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Jeremiah 31:31-34, Psalm 51:1-13, Hebrews 5:5-10, John 12:20-33</div>
-            </li>
-            <li>
-                <a href="meditations/2012-03-18.html" class="meditation-link">Light</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 18, 2012</span> •
-                    <span class="meditation-occasion">Fourth Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Numbers 21:4-9, Psalm 107:1-3, 17-22, Ephesians 2:1-10, John 3:14-21</div>
-            </li>
-            <li>
-                <a href="meditations/2012-03-11.html" class="meditation-link">Perception</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 11, 2012</span> •
-                    <span class="meditation-occasion">Third Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Exodus 20:1-17, Psalm 19, I Corinthians 1:18-25, John 2:13-22</div>
-            </li>
-            <li>
-                <a href="meditations/2012-03-04.html" class="meditation-link">Unchangeable Truth</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 04, 2012</span> •
-                    <span class="meditation-occasion">Second Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Genesis 17:1-7, 15-16, Psalm 22:22-30, Romans 4:13-25, Mark 8:31-38</div>
-            </li>
-            <li>
-                <a href="meditations/2012-02-26.html" class="meditation-link">Through the Wilderness of Lent</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">February 26, 2012</span> •
-                    <span class="meditation-occasion">First Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Genesis 9:8-17, Psalm 25:1-9, I Peter 3:18-22, Mark 1:9-15</div>
-            </li>
-            <li>
-                <a href="meditations/2011-04-17.html" class="meditation-link">From Exultation to Desolation to?</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 17, 2011</span> •
-                    <span class="meditation-occasion">Palm Sunday</span>
-                </div>
-                <div class="meditation-scripture">Liturgy of the Palms: Matthew 21:1-11, Psalm 118:1-2, 19-29 | Liturgy of the Word: Isaiah 50:4-9a, Psalm 31:9-16, Philippians 2:5-11, Matthew 26:14—27:66</div>
-            </li>
-            <li>
-                <a href="meditations/2011-04-10.html" class="meditation-link">The Hand of the Lord</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 10, 2011</span> •
-                    <span class="meditation-occasion">Fifth Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Ezekiel 37:1-14, Psalm 130, Romans 8:6-11, John 11:1-45</div>
-            </li>
-            <li>
-                <a href="meditations/2011-04-03.html" class="meditation-link">One Thing I Do Know</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 03, 2011</span> •
-                    <span class="meditation-occasion">Fourth Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">I Samuel 16:1-13, Psalm 23, Ephesians 5:8-14, John 9:1-41</div>
-            </li>
-            <li>
-                <a href="meditations/2011-03-27.html" class="meditation-link">Venite—Come</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 27, 2011</span> •
-                    <span class="meditation-occasion">Third Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Exodus 17:1-7, Psalm 95, Romans 5:1-11, John 4:5-42</div>
-            </li>
-            <li>
-                <a href="meditations/2011-03-20.html" class="meditation-link">Go and Come</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 20, 2011</span> •
-                    <span class="meditation-occasion">Second Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Genesis 12:1-4a, Psalm 121, Romans 4:1-5, 13-17, John 3:1-17</div>
-            </li>
-            <li>
-                <a href="meditations/2011-03-13.html" class="meditation-link">Confessions</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 13, 2011</span> •
-                    <span class="meditation-occasion">First Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Genesis 2:15-17, 3:1-7, Psalm 32, Romans 5:12-19, Matthew 4:1-11</div>
-            </li>
-            <li>
-                <a href="meditations/2010-03-28.html" class="meditation-link">Hosanna, Lord, Hosanna</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 28, 2010</span> •
-                    <span class="meditation-occasion">Palm Sunday</span>
-                </div>
-                <div class="meditation-scripture">Liturgy of the Palms: Luke 19:28-40, Psalm 118:1-2, 19-29 | Liturgy of the Word: Isaiah 50:4-9a, Psalm 31:9-16, Philippians 2:5-11, Luke 22:14—23:56</div>
-            </li>
-            <li>
-                <a href="meditations/2010-03-21.html" class="meditation-link">Not Much Time</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 21, 2010</span> •
-                    <span class="meditation-occasion">Fifth Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Isaiah 43:16-21, Psalm 126, Philippians 3:4b-14, John 12:1-8</div>
-            </li>
-            <li>
-                <a href="meditations/2010-03-14.html" class="meditation-link">A New Creation</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 14, 2010</span> •
-                    <span class="meditation-occasion">Fourth Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Joshua 5:9-12,  Psalm 32,  II Corinthians 5:16-21,  Luke 15:1-3; 11b-32</div>
-            </li>
-            <li>
-                <a href="meditations/2010-03-07.html" class="meditation-link">Holy Ground</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 07, 2010</span> •
-                    <span class="meditation-occasion">Third Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Exodus 3:1-15, Psalm 63:1-8, I Corinthians 10:1-13, Luke 13:1-9</div>
-            </li>
-            <li>
-                <a href="meditations/2010-02-28.html" class="meditation-link">A Prayer-Answering God</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">February 28, 2010</span> •
-                    <span class="meditation-occasion">Second Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Genesis 15:1-12, 17-18, Psalm 27, Philippians 3:17—4:1, Luke 13:31-35</div>
-            </li>
-            <li>
-                <a href="meditations/2010-02-21.html" class="meditation-link">Lord of All</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">February 21, 2010</span> •
-                    <span class="meditation-occasion">First Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Deuteronomy 26:1-11, Psalm 91:1-2, 9-16, Romans 10:8b-13, Luke 4:1-13</div>
-            </li>
-            <li>
-                <a href="meditations/2009-04-05.html" class="meditation-link">Were You There?</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 05, 2009</span> •
-                    <span class="meditation-occasion">Palm Sunday</span>
-                </div>
-                <div class="meditation-scripture">Liturgy of the Palms: Mark 11:1-11, Psalm 118:1-2, 19-29; Liturgy of the Word: Isaiah 50:4-9a, Psalm 31:9-16, Philippians 2:5-11, Mark 14:1-15:47</div>
-            </li>
-            <li>
-                <a href="meditations/2009-03-29.html" class="meditation-link">Good News</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 29, 2009</span> •
-                    <span class="meditation-occasion">Fifth Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Jeremiah 31:31-34, Psalm 51:1-13, Hebrews 5:5-10, John 12:20-33</div>
-            </li>
-            <li>
-                <a href="meditations/2009-03-22.html" class="meditation-link">Grace</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 22, 2009</span> •
-                    <span class="meditation-occasion">Fourth Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Numbers 21:4-9, Psalm 107:1-3, 17-22, Ephesians 2:1-10, John 3:14-21</div>
-            </li>
-            <li>
-                <a href="meditations/2009-03-15.html" class="meditation-link">Outwardly / Inwardly</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 15, 2009</span> •
-                    <span class="meditation-occasion">Third Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Exodus 20:1-17, Psalm 19, I Corinthians 1:18-25, John 2:13-22</div>
-            </li>
-            <li>
-                <a href="meditations/2009-03-08.html" class="meditation-link">Divine Things / Human Things</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 08, 2009</span> •
-                    <span class="meditation-occasion">Second Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Genesis 17:1-7, 15-16, Psalm 22:22-30, Romans 4:13-25, Mark 8:31-38</div>
-            </li>
-            <li>
-                <a href="meditations/2009-03-01.html" class="meditation-link">Wild Beasts</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 01, 2009</span> •
-                    <span class="meditation-occasion">First Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Genesis 9:8-17, Psalm 25:1-9, I Peter 3:18-22, Mark 1:9-15</div>
-            </li>
-            <li>
-                <a href="meditations/2009-02-25.html" class="meditation-link">The Trumpet Sounds</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">February 25, 2009</span> •
-                    <span class="meditation-occasion">Ash Wednesday</span>
-                </div>
-                <div class="meditation-scripture">Joel 2:1-2, 12-17, Psalm 103, II Corinthians 5:20b—6:10, Matthew 6:1-6, 16-21</div>
-            </li>
-            <li>
-                <a href="meditations/2008-03-16.html" class="meditation-link">“Eli, Eli, Lema Sabachthani?”</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 16, 2008</span> •
-                    <span class="meditation-occasion">Palm Sunday</span>
-                </div>
-                <div class="meditation-scripture">Isaiah 50:4-9a, Ps.31:9-16, Philippians 2:5-11, Matthew 26:14--27:66</div>
-            </li>
-            <li>
-                <a href="meditations/2008-03-09.html" class="meditation-link">Rattling?</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 09, 2008</span> •
-                    <span class="meditation-occasion">Fifth Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Ezekiel 37:1-14, Psalm 130, Romans 8:6-11, John 11:1-45</div>
-            </li>
-            <li>
-                <a href="meditations/2008-03-02.html" class="meditation-link">Who’s Blind Now?</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 02, 2008</span> •
-                    <span class="meditation-occasion">Fourth Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">I Samuel 16:1-13, Psalm 23, Ephesians 5:8-14, John 9:1-41</div>
-            </li>
-            <li>
-                <a href="meditations/2008-02-24.html" class="meditation-link">The Right Place at the Right Time</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">February 24, 2008</span> •
-                    <span class="meditation-occasion">Third Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Exodus 17:1-7, Psalm 95, Romans 5:1-11, John 4:5-42</div>
-            </li>
-            <li>
-                <a href="meditations/2008-02-17.html" class="meditation-link">Return to Me with All Your Heart</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">February 17, 2008</span> •
-                    <span class="meditation-occasion">Second Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Genesis 12:1-4a, Psalm 121, Romans 4:1-4, 13-17, John 3:1-17</div>
-            </li>
-            <li>
-                <a href="meditations/2008-02-10.html" class="meditation-link">A Holy Lent</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">February 10, 2008</span> •
-                    <span class="meditation-occasion">First Sunday in Lent</span>
-                </div>
-                <div class="meditation-scripture">Genesis 2:15-17; 3:1-7, Psalm 32, Romans 5:12-19, Matthew 4:1-11</div>
-            </li>
-        </ul>
+        <nav class="year-nav">
+            <a href="#year-a">Year A (36)</a>
+            <a href="#year-b">Year B (37)</a>
+            <a href="#year-c">Year C (30)</a>
+        </nav>
+
+        <section class="year-section" id="year-a">
+            <h2 class="year-heading">Year A</h2>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">First Sunday in Lent</div>
+                <div class="occasion-readings">Genesis 2:15-17, 3:1-7, Psalm 32, Romans 5:12-19, Matthew 4:1-11</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2023-02-26.html" class="meditation-link">
+                            Angels Come <span class="meditation-date">• February 26, 2023</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2020-03-01.html" class="meditation-link">
+                            Fig Leaves <span class="meditation-date">• March 01, 2020</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2017-03-05.html" class="meditation-link">
+                            Naked <span class="meditation-date">• March 05, 2017</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2014-03-09.html" class="meditation-link">
+                            Abundance of Grace <span class="meditation-date">• March 09, 2014</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2011-03-13.html" class="meditation-link">
+                            Confessions <span class="meditation-date">• March 13, 2011</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2008-02-10.html" class="meditation-link">
+                            A Holy Lent <span class="meditation-date">• February 10, 2008</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Second Sunday in Lent</div>
+                <div class="occasion-readings">Genesis 12:1-4a, Psalm 121, Romans 4: 1-5, 13-17, John 3:1-17</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2023-03-05.html" class="meditation-link">
+                            Presence <span class="meditation-date">• March 05, 2023</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2020-03-08.html" class="meditation-link">
+                            Astray <span class="meditation-date">• March 08, 2020</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2017-03-12.html" class="meditation-link">
+                            Darkness <span class="meditation-date">• March 12, 2017</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2014-03-16.html" class="meditation-link">
+                            Trust <span class="meditation-date">• March 16, 2014</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2011-03-20.html" class="meditation-link">
+                            Go and Come <span class="meditation-date">• March 20, 2011</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2008-02-17.html" class="meditation-link">
+                            Return to Me with All Your Heart <span class="meditation-date">• February 17, 2008</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Third Sunday in Lent</div>
+                <div class="occasion-readings">Exodus 17:1-7, Psalm 95, Romans 5:1-11, John 4:5-42</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2023-03-12.html" class="meditation-link">
+                            Hearken to His Voice <span class="meditation-date">• March 12, 2023</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2020-03-15.html" class="meditation-link">
+                            Outwardly and Inwardly <span class="meditation-date">• March 15, 2020</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2017-03-19.html" class="meditation-link">
+                            The Water Jar <span class="meditation-date">• March 19, 2017</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2014-03-23.html" class="meditation-link">
+                            Hearken to God’s Voice <span class="meditation-date">• March 23, 2014</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2011-03-27.html" class="meditation-link">
+                            Venite—Come <span class="meditation-date">• March 27, 2011</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2008-02-24.html" class="meditation-link">
+                            The Right Place at the Right Time <span class="meditation-date">• February 24, 2008</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Fourth Sunday in Lent</div>
+                <div class="occasion-readings">I Samuel 16:1-13, Psalm 23, Ephesians 5:8:1-4, John 9:1-41</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2023-03-19.html" class="meditation-link">
+                            Divided <span class="meditation-date">• March 19, 2023</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2020-03-22.html" class="meditation-link">
+                            Sleepers, Awake! <span class="meditation-date">• March 22, 2020</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2017-03-26.html" class="meditation-link">
+                            Divided <span class="meditation-date">• March 26, 2017</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2014-03-30.html" class="meditation-link">
+                            Divided <span class="meditation-date">• March 30, 2014</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2011-04-03.html" class="meditation-link">
+                            One Thing I Do Know <span class="meditation-date">• April 03, 2011</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2008-03-02.html" class="meditation-link">
+                            Who’s Blind Now? <span class="meditation-date">• March 02, 2008</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Fifth Sunday in Lent</div>
+                <div class="occasion-readings">Ezekiel 37:1-14, Psalm 130, Romans 8:6-11, John 11:1-45</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2023-03-26.html" class="meditation-link">
+                            From Death to Life <span class="meditation-date">• March 26, 2023</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2020-03-29.html" class="meditation-link">
+                            &quot;Unbind Him&quot; <span class="meditation-date">• March 29, 2020</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2017-04-02.html" class="meditation-link">
+                            A Rattling Noise <span class="meditation-date">• April 02, 2017</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2014-04-06.html" class="meditation-link">
+                            “Come Out” <span class="meditation-date">• April 06, 2014</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2011-04-10.html" class="meditation-link">
+                            The Hand of the Lord <span class="meditation-date">• April 10, 2011</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2008-03-09.html" class="meditation-link">
+                            Rattling? <span class="meditation-date">• March 09, 2008</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Palm Sunday</div>
+                <div class="occasion-readings">Liturgy of the Palms: Matthew 21:1-11, Psalm 118:1-2, 19-29 | Liturgy of the Word: Isaiah 50:4-9a, Psalm 31:9-16, Philippians 2:5-11, Matthew 26:14—27:66</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2023-04-02.html" class="meditation-link">
+                            From Exultation to Desolation to? <span class="meditation-date">• April 02, 2023</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2020-04-05.html" class="meditation-link">
+                            Hosanna! <span class="meditation-date">• April 05, 2020</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2017-04-09.html" class="meditation-link">
+                            Sealing the Stone <span class="meditation-date">• April 09, 2017</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2014-04-13.html" class="meditation-link">
+                            The Cup of Life <span class="meditation-date">• April 13, 2014</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2011-04-17.html" class="meditation-link">
+                            From Exultation to Desolation to? <span class="meditation-date">• April 17, 2011</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2008-03-16.html" class="meditation-link">
+                            “Eli, Eli, Lema Sabachthani?” <span class="meditation-date">• March 16, 2008</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section class="year-section" id="year-b">
+            <h2 class="year-heading">Year B</h2>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Ash Wednesday</div>
+                <div class="occasion-readings">Joel 2:1-2, 12-17, Psalm 103, II Corinthians 5:20b—6:10, Matthew 6:1-6, 16-21</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2009-02-25.html" class="meditation-link">
+                            The Trumpet Sounds <span class="meditation-date">• February 25, 2009</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">First Sunday in Lent</div>
+                <div class="occasion-readings">Genesis 9:8-17, Psalm 25:1-7, I Peter 3:18-22, Mark 1:9-15</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2024-02-18.html" class="meditation-link">
+                            Wilderness <span class="meditation-date">• February 18, 2024</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2021-02-21.html" class="meditation-link">
+                            Wilderness <span class="meditation-date">• February 21, 2021</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2018-02-18.html" class="meditation-link">
+                            Wilderness <span class="meditation-date">• February 18, 2018</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2015-02-22.html" class="meditation-link">
+                            “The Angels Waited on Him” <span class="meditation-date">• February 22, 2015</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2012-02-26.html" class="meditation-link">
+                            Through the Wilderness of Lent <span class="meditation-date">• February 26, 2012</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2009-03-01.html" class="meditation-link">
+                            Wild Beasts <span class="meditation-date">• March 01, 2009</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Second Sunday in Lent</div>
+                <div class="occasion-readings">Genesis 17:1-7, 15-16, Psalm 22:22-30, Romans 4:13-25, Mark 8:31-38</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2024-02-25.html" class="meditation-link">
+                            “Exceedingly Fruitful” <span class="meditation-date">• February 25, 2024</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2021-02-28.html" class="meditation-link">
+                            Unchangeable Truth <span class="meditation-date">• February 28, 2021</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2018-02-25.html" class="meditation-link">
+                            Unchangeable Truth <span class="meditation-date">• February 25, 2018</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2015-03-01.html" class="meditation-link">
+                            “Exceedingly Fruitful” <span class="meditation-date">• March 01, 2015</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2012-03-04.html" class="meditation-link">
+                            Unchangeable Truth <span class="meditation-date">• March 04, 2012</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2009-03-08.html" class="meditation-link">
+                            Divine Things / Human Things <span class="meditation-date">• March 08, 2009</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Third Sunday in Lent</div>
+                <div class="occasion-readings">Exodus 20:1-17, Psalm 19, I Corinthians 1:18-25, John 2:13-22</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2024-03-03.html" class="meditation-link">
+                            Outwardly--Inwardly <span class="meditation-date">• March 03, 2024</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2021-03-07.html" class="meditation-link">
+                            Outwardly--Inwardly <span class="meditation-date">• March 07, 2021</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2018-03-04.html" class="meditation-link">
+                            Idols <span class="meditation-date">• March 04, 2018</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2015-03-08.html" class="meditation-link">
+                            Sabbath <span class="meditation-date">• March 08, 2015</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2012-03-11.html" class="meditation-link">
+                            Perception <span class="meditation-date">• March 11, 2012</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2009-03-15.html" class="meditation-link">
+                            Outwardly / Inwardly <span class="meditation-date">• March 15, 2009</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Fourth Sunday in Lent</div>
+                <div class="occasion-readings">Numbers 21:4-9, Psalm 107:1-3, 17-22, Ephesians 2:1-10, John 3:14-21</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2024-03-10.html" class="meditation-link">
+                            Grace <span class="meditation-date">• March 10, 2024</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2021-03-14.html" class="meditation-link">
+                            The Gift of God <span class="meditation-date">• March 14, 2021</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2018-03-11.html" class="meditation-link">
+                            Grace <span class="meditation-date">• March 11, 2018</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2015-03-15.html" class="meditation-link">
+                            Grace—The Gift of God <span class="meditation-date">• March 15, 2015</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2012-03-18.html" class="meditation-link">
+                            Light <span class="meditation-date">• March 18, 2012</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2009-03-22.html" class="meditation-link">
+                            Grace <span class="meditation-date">• March 22, 2009</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Fifth Sunday in Lent</div>
+                <div class="occasion-readings">Jeremiah 31:31-34, Psalm 51:1-13, Hebrews 5:5-10, John 12:20-33</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2024-03-17.html" class="meditation-link">
+                            Troubled <span class="meditation-date">• March 17, 2024</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2021-03-21.html" class="meditation-link">
+                            The Hour Has Come <span class="meditation-date">• March 21, 2021</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2018-03-18.html" class="meditation-link">
+                            Reverent Submission <span class="meditation-date">• March 18, 2018</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2015-03-22.html" class="meditation-link">
+                            Appointed <span class="meditation-date">• March 22, 2015</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2012-03-25.html" class="meditation-link">
+                            Troubled <span class="meditation-date">• March 25, 2012</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2009-03-29.html" class="meditation-link">
+                            Good News <span class="meditation-date">• March 29, 2009</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Palm Sunday</div>
+                <div class="occasion-readings">Liturgy of the Palms: Mark 11:1-11, Psalm 118:1-2, 19-29; Liturgy of the Word: Isaiah 50:4-9a, Psalm 31:9-16, Philippians 2:5-11, Mark 14:1-15:47</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2024-03-24.html" class="meditation-link">
+                            Preparation <span class="meditation-date">• March 24, 2024</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2021-03-28.html" class="meditation-link">
+                            Preparation <span class="meditation-date">• March 28, 2021</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2018-03-25.html" class="meditation-link">
+                            Turning from, Turning to <span class="meditation-date">• March 25, 2018</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2015-03-29.html" class="meditation-link">
+                            Blessed <span class="meditation-date">• March 29, 2015</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2012-04-01.html" class="meditation-link">
+                            The Weight of Passion Images <span class="meditation-date">• April 01, 2012</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2009-04-05.html" class="meditation-link">
+                            Were You There? <span class="meditation-date">• April 05, 2009</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section class="year-section" id="year-c">
+            <h2 class="year-heading">Year C</h2>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">First Sunday in Lent</div>
+                <div class="occasion-readings">Deuteronomy 26:1-11, Psalm 91:1-2, 9-16, Romans 10:8b-13, Luke 4:1-13</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2022-03-06.html" class="meditation-link">
+                            An Opportune Time <span class="meditation-date">• March 06, 2022</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2019-03-10.html" class="meditation-link">
+                            Are You Listening? <span class="meditation-date">• March 10, 2019</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2016-02-14.html" class="meditation-link">
+                            Attention <span class="meditation-date">• February 14, 2016</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2013-02-17.html" class="meditation-link">
+                            Are You Listening? <span class="meditation-date">• February 17, 2013</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2010-02-21.html" class="meditation-link">
+                            Lord of All <span class="meditation-date">• February 21, 2010</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Second Sunday in Lent</div>
+                <div class="occasion-readings">Genesis 15:1-12, 17-18, Psalm 27, Philippians 3:17--4:1, Luke 13:31-35</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2022-03-13.html" class="meditation-link">
+                            Willing or Unwilling? <span class="meditation-date">• March 13, 2022</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2019-03-17.html" class="meditation-link">
+                            Waiting <span class="meditation-date">• March 17, 2019</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2016-02-21.html" class="meditation-link">
+                            Willing? <span class="meditation-date">• February 21, 2016</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2013-02-24.html" class="meditation-link">
+                            Waiting <span class="meditation-date">• February 24, 2013</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2010-02-28.html" class="meditation-link">
+                            A Prayer-Answering God <span class="meditation-date">• February 28, 2010</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Third Sunday in Lent</div>
+                <div class="occasion-readings">Joshua 5:9-12, Psalm 32, II Corinthians 5:16-21, Luke 15:1-3; 11b-32</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2022-03-20.html" class="meditation-link">
+                            Reconciliation <span class="meditation-date">• March 20, 2022</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2019-03-24.html" class="meditation-link">
+                            Standing? <span class="meditation-date">• March 24, 2019</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2016-02-28.html" class="meditation-link">
+                            Holy Ground <span class="meditation-date">• February 28, 2016</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2013-03-03.html" class="meditation-link">
+                            Standing? <span class="meditation-date">• March 03, 2013</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2010-03-07.html" class="meditation-link">
+                            Holy Ground <span class="meditation-date">• March 07, 2010</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Fourth Sunday in Lent</div>
+                <div class="occasion-readings">Joshua 5:9-12,  Psalm 32,  II Corinthians 5:16-21,  Luke 15:1-3; 11b-32</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2022-03-27.html" class="meditation-link">
+                            Reconciliation <span class="meditation-date">• March 27, 2022</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2019-03-31.html" class="meditation-link">
+                            Coming Home <span class="meditation-date">• March 31, 2019</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2016-03-06.html" class="meditation-link">
+                            Grumbling <span class="meditation-date">• March 06, 2016</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2013-03-10.html" class="meditation-link">
+                            Coming Home <span class="meditation-date">• March 10, 2013</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2010-03-14.html" class="meditation-link">
+                            A New Creation <span class="meditation-date">• March 14, 2010</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Fifth Sunday in Lent</div>
+                <div class="occasion-readings">Isaiah 43:16-21, Psalm 126, Philippians 3:4b-14, John, 12:1-8</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2022-04-03.html" class="meditation-link">
+                            Anticipation <span class="meditation-date">• April 03, 2022</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2019-04-07.html" class="meditation-link">
+                            A New Thing <span class="meditation-date">• April 07, 2019</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2016-03-13.html" class="meditation-link">
+                            A New Thing <span class="meditation-date">• March 13, 2016</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2013-03-17.html" class="meditation-link">
+                            A Way in the Wilderness <span class="meditation-date">• March 17, 2013</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2010-03-21.html" class="meditation-link">
+                            Not Much Time <span class="meditation-date">• March 21, 2010</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Palm Sunday</div>
+                <div class="occasion-readings">Liturgy of the Palms: Luke 19:28-40, Psalm 118:1-2, 19-29 | Liturgy of the Word: Isaiah 50:4-9a, Psalm 31:9-16, Philippians 2:5-11, Luke 22:14—23:56</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2022-04-10.html" class="meditation-link">
+                            &quot;The Lord Needs It&quot; <span class="meditation-date">• April 10, 2022</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2019-04-14.html" class="meditation-link">
+                            Our Times Are in God’s Hands <span class="meditation-date">• April 14, 2019</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2016-03-20.html" class="meditation-link">
+                            “The Lord Needs It” <span class="meditation-date">• March 20, 2016</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2013-03-24.html" class="meditation-link">
+                            God’s Hands <span class="meditation-date">• March 24, 2013</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2010-03-28.html" class="meditation-link">
+                            Hosanna, Lord, Hosanna <span class="meditation-date">• March 28, 2010</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
     </main>
 
     <footer class="site-footer">

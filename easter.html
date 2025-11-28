@@ -9,54 +9,98 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
-        .meditation-list {
-            list-style: none;
+        main.container {
+            padding-top: 2rem;
+        }
+        main.container section {
+            border-bottom: none;
             padding: 0;
         }
-        .meditation-list li {
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--soft-gray);
+        .year-nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: var(--warm-white);
+            border-radius: 4px;
         }
-        .meditation-link {
+        .year-nav a {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--deep-brown);
+            text-decoration: none;
+            padding: 0.5rem 1.5rem;
+        }
+        .year-nav a:hover {
+            color: var(--accent-gold);
+        }
+        .year-section {
+            margin-bottom: 4rem;
+        }
+        .year-heading {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: var(--deep-brown);
+            border-bottom: 3px solid var(--accent-gold);
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        .occasion-group {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: var(--warm-white);
+            border-radius: 4px;
+        }
+        .occasion-heading {
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.25rem;
             font-weight: 600;
             color: var(--deep-brown);
-            text-decoration: none;
+            margin-bottom: 0.25rem;
         }
-        .meditation-link:hover {
-            color: var(--accent-gold);
-        }
-        .meditation-meta {
+        .occasion-readings {
             font-family: 'Crimson Pro', serif;
             font-size: 0.95rem;
             color: var(--medium-gray);
-            margin-top: 0.25rem;
-        }
-        .meditation-occasion {
             font-style: italic;
+            margin-bottom: 0.75rem;
+        }
+        .meditation-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .meditation-list li {
+            padding: 0.35rem 0;
+        }
+        .meditation-link {
+            font-family: 'Crimson Pro', serif;
+            color: var(--dark-gray);
+            text-decoration: none;
+        }
+        .meditation-link:hover {
+            color: var(--deep-brown);
+        }
+        .meditation-date {
+            color: var(--medium-gray);
+            font-size: 0.9rem;
         }
         .page-intro {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
         .page-title {
             font-family: 'Cormorant Garamond', serif;
             font-size: 2.2rem;
             color: var(--deep-brown);
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
         .meditation-count {
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.1rem;
             color: var(--deep-brown);
-        }
-        .meditation-scripture {
-            font-family: 'Crimson Pro', serif;
-            font-size: 0.9rem;
-            color: var(--medium-gray);
-            font-style: italic;
-            margin-top: 0.25rem;
         }
     </style>
 </head>
@@ -76,904 +120,734 @@
             <p class="meditation-count">112 meditations</p>
         </div>
 
-        <ul class="meditation-list">
-            <li>
-                <a href="meditations/2024-03-31.html" class="meditation-link">Resurrection Grace</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 31, 2024</span> •
-                    <span class="meditation-occasion">Easter Day Early Principal Evening</span>
-                </div>
-                <div class="meditation-scripture">Acts 10:34-43, Psalm 118:1-2, 14-24, I Corinthians15:1-11, John 20:1-18</div>
-            </li>
-            <li>
-                <a href="meditations/2023-05-21.html" class="meditation-link">The God of All Grace</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 21, 2023</span> •
-                    <span class="meditation-occasion">Seventh Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 1:6-14, Psalm 86:1-10, 33-36, I Peter 4:12-14, 5:6-11, John 17:1-11</div>
-            </li>
-            <li>
-                <a href="meditations/2023-05-14.html" class="meditation-link">An Unknown God?</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 14, 2023</span> •
-                    <span class="meditation-occasion">Sixth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 17:22-31, Psalm 66:7-18, I Peter 3:13-22, John 14:15-21</div>
-            </li>
-            <li>
-                <a href="meditations/2023-05-07.html" class="meditation-link">Look!</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 07, 2023</span> •
-                    <span class="meditation-occasion">Fifth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 7:55-60, Psalm 31:1-5, 15-16, I Peter 2:2-10, John 4:1-4</div>
-            </li>
-            <li>
-                <a href="meditations/2023-04-30.html" class="meditation-link">Aware of God</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 30, 2023</span> •
-                    <span class="meditation-occasion">Fourth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 2:42-42, Psalm23, I Peter 2:19-25, John 10:1-10</div>
-            </li>
-            <li>
-                <a href="meditations/2023-04-23.html" class="meditation-link">Slow of Heart</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 23, 2023</span> •
-                    <span class="meditation-occasion">Third Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 2:14a, 36-41, Psalm 116:1-3, 10-17, I Peter 1:17-23, Luke 24:13-35</div>
-            </li>
-            <li>
-                <a href="meditations/2023-04-16.html" class="meditation-link">Witnesses</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 16, 2023</span> •
-                    <span class="meditation-occasion">Second Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 2:14a, 22-32, Psalm 16, I Peter 1:3-9, John 20:19-32</div>
-            </li>
-            <li>
-                <a href="meditations/2023-04-09.html" class="meditation-link">The Lord’s Doing</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 09, 2023</span> •
-                    <span class="meditation-occasion">Easter Day Early Service Principal Service Evening Service</span>
-                </div>
-                <div class="meditation-scripture">Acts 10:34-43, Psalm 118:1-2, 14-24, Colossians 3:1-4, John 20:1-18</div>
-            </li>
-            <li>
-                <a href="meditations/2022-05-29.html" class="meditation-link">Unfastened</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 29, 2022</span> •
-                    <span class="meditation-occasion">Seventh Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 16:16-34, Psalm 97, Revelation 22:12-14,16-17, 20-21, John 17:20-26</div>
-            </li>
-            <li>
-                <a href="meditations/2022-05-22.html" class="meditation-link">Questions, Questions, Questions</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 22, 2022</span> •
-                    <span class="meditation-occasion">Sixth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 16:9-15, Psalm 67, Revelation 21:10, 22—22:5, John 14:23-29</div>
-            </li>
-            <li>
-                <a href="meditations/2022-05-15.html" class="meditation-link">New</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 15, 2022</span> •
-                    <span class="meditation-occasion">Fifth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 11:1-18, Psalm 148, Revelation 21:1-6, John 13:31-35</div>
-            </li>
-            <li>
-                <a href="meditations/2022-05-08.html" class="meditation-link">Tabitha / Dorcas</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 08, 2022</span> •
-                    <span class="meditation-occasion">Fourth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 9:36-43, Psalm 23, Revelation 7:9-17, John 16:22-30</div>
-            </li>
-            <li>
-                <a href="meditations/2022-05-01.html" class="meditation-link">Two Others?</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 01, 2022</span> •
-                    <span class="meditation-occasion">Third Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 9:1-6, (7-20), Psalm 30, Revelation 5:11-14, John 21:1-19</div>
-            </li>
-            <li>
-                <a href="meditations/2022-04-24.html" class="meditation-link">The Alpha and the Omega</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 24, 2022</span> •
-                    <span class="meditation-occasion">Second Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 5:27-32, Psalm 118:14-29, Revelation 1:4-8, John 20:19-31</div>
-            </li>
-            <li>
-                <a href="meditations/2022-04-17.html" class="meditation-link">Rejoice and Be Glad</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 17, 2022</span> •
-                    <span class="meditation-occasion">Easter Day Principal Evening</span>
-                </div>
-                <div class="meditation-scripture">Acts 10: 34-43, Psalm 118:1-2, 14-24, I Corinthians 15:19-26, John 20:1-18</div>
-            </li>
-            <li>
-                <a href="meditations/2021-05-16.html" class="meditation-link">Ready?</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 16, 2021</span> •
-                    <span class="meditation-occasion">Seventh Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 1:15-17, 21-26, Psalm 1, I John 5:9-13, John 17:6-19</div>
-            </li>
-            <li>
-                <a href="meditations/2021-05-09.html" class="meditation-link">“I Chose You”</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 09, 2021</span> •
-                    <span class="meditation-occasion">Sixth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 10:44-48, Psalm 98, I John 5:1-6, John 15:9-17</div>
-            </li>
-            <li>
-                <a href="meditations/2021-05-02.html" class="meditation-link">Get Up and Go</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 02, 2021</span> •
-                    <span class="meditation-occasion">Fifth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 8:26-40, Psalm 22:24-30, I John 4:7-21, John 15:1-8</div>
-            </li>
-            <li>
-                <a href="meditations/2021-04-25.html" class="meditation-link">Presence</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 25, 2021</span> •
-                    <span class="meditation-occasion">Fourth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 4:5-12, Psalm 23, I John 3:16-24, John 10:11-18</div>
-            </li>
-            <li>
-                <a href="meditations/2021-04-18.html" class="meditation-link">Encounters with Christ</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 18, 2021</span> •
-                    <span class="meditation-occasion">Third Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 3: 12-19, Psalm 4, I John 3:1-7, Luke 24:36b-48</div>
-            </li>
-            <li>
-                <a href="meditations/2021-04-04.html" class="meditation-link">I Have Seen the Lord</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 04, 2021</span> •
-                    <span class="meditation-occasion">Easter Day Early Principal Evening</span>
-                </div>
-                <div class="meditation-scripture">Acts 10:34-43, Psalm 118:1-2, 14-24, I Corinthians 15:1-11, John 20:1-18</div>
-            </li>
-            <li>
-                <a href="meditations/2020-05-24.html" class="meditation-link">Is This the Time?</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 24, 2020</span> •
-                    <span class="meditation-occasion">Seventh Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 1:6-14, Psalm 68:1-10, 33-36, I Peter 4:12-14; 5: 6-11, John 17:1-11</div>
-            </li>
-            <li>
-                <a href="meditations/2020-05-17.html" class="meditation-link">An Unknown God?</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 17, 2020</span> •
-                    <span class="meditation-occasion">Sixth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 17:22-31, Psalm 66:7-18, I Peter 3:13-22, John 14:15-21</div>
-            </li>
-            <li>
-                <a href="meditations/2020-05-10.html" class="meditation-link">God, the Father</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 10, 2020</span> •
-                    <span class="meditation-occasion">Fifth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 7;55-60, Psalm 31:1-5, 15-16, I Peter 2:2-10, John 14:1-14</div>
-            </li>
-            <li>
-                <a href="meditations/2020-05-03.html" class="meditation-link">Jesus' Example</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 03, 2020</span> •
-                    <span class="meditation-occasion">Fourth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 2:42-47, Psalm 23, I Peter 2:19-25, John 10:1-10</div>
-            </li>
-            <li>
-                <a href="meditations/2020-04-26.html" class="meditation-link">A Spiritual Pattern</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 26, 2020</span> •
-                    <span class="meditation-occasion">Third Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 2:14a, 36-41, Psalm 116:11-3, 10-17, I Peter 1:17-23, Luke 24:13-35</div>
-            </li>
-            <li>
-                <a href="meditations/2020-04-19.html" class="meditation-link">Easter Hope</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 19, 2020</span> •
-                    <span class="meditation-occasion">Second Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 2:14a, 22-30, Psalm 16, I Peter 1:3-9, John 20:19-30</div>
-            </li>
-            <li>
-                <a href="meditations/2020-04-12.html" class="meditation-link">Life After Death</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 12, 2020</span> •
-                    <span class="meditation-occasion">Easter Day Early Service Principal Service Evening Service</span>
-                </div>
-                <div class="meditation-scripture">Acts 10:34-43, Psalm 118:1-2, 14-24, Colossians 3:1-4, John 20:1-18</div>
-            </li>
-            <li>
-                <a href="meditations/2019-06-02.html" class="meditation-link">Maranatha</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">June 02, 2019</span> •
-                    <span class="meditation-occasion">Seventh Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 16:16-34, Psalm 97, Revelation 22:12-14, 16-17, 20-21, John 20-26</div>
-            </li>
-            <li>
-                <a href="meditations/2019-05-26.html" class="meditation-link">Come to Us</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 26, 2019</span> •
-                    <span class="meditation-occasion">Sixth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 16:9-15, Psalm67, Revelation 21:10, 22—22:5, John 14:23-29</div>
-            </li>
-            <li>
-                <a href="meditations/2019-05-19.html" class="meditation-link">No Distinction Among God’s Children</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 19, 2019</span> •
-                    <span class="meditation-occasion">Fifth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 11:1-18, Psalm 148, Revelation 21:1-6, John 13:31-35</div>
-            </li>
-            <li>
-                <a href="meditations/2019-05-12.html" class="meditation-link">Get Up</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 12, 2019</span> •
-                    <span class="meditation-occasion">Fourth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 9:36-43, Psalm 23, Revelation 7:9-17, John 10:22-30</div>
-            </li>
-            <li>
-                <a href="meditations/2019-05-05.html" class="meditation-link">It Is the Lord!</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 05, 2019</span> •
-                    <span class="meditation-occasion">Third Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 9:1-6, (7-20), Psalm 30, Revelation 5: 11-14, John 21:1-19</div>
-            </li>
-            <li>
-                <a href="meditations/2019-04-28.html" class="meditation-link">God Meets Us Where We Are, as We Are</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 28, 2019</span> •
-                    <span class="meditation-occasion">Second Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 5:27-32, Psalm 118:14-29, Revelation 1:4-8, John 20:19-31</div>
-            </li>
-            <li>
-                <a href="meditations/2019-04-21.html" class="meditation-link">Witnesses</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 21, 2019</span> •
-                    <span class="meditation-occasion">Easter Day Early Principal Evening</span>
-                </div>
-                <div class="meditation-scripture">Acts 10:34-43, Psalm 118:1-2, 14-24, I Corinthians 15:19-26, John 20:1-18</div>
-            </li>
-            <li>
-                <a href="meditations/2018-05-13.html" class="meditation-link">Source and Destination</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 13, 2018</span> •
-                    <span class="meditation-occasion">Seventh Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 1:15-17, 21-26, Psalm 1, I John 5:9-13, John 17:6-19</div>
-            </li>
-            <li>
-                <a href="meditations/2018-05-06.html" class="meditation-link">Chosen</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 06, 2018</span> •
-                    <span class="meditation-occasion">Sixth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 10:44-48, Psalm 98, I John 5:1-6, John 15:9-17</div>
-            </li>
-            <li>
-                <a href="meditations/2018-04-29.html" class="meditation-link">Rejoicing</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 29, 2018</span> •
-                    <span class="meditation-occasion">Fifth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 8:26-40, Psalm 22:24-30, I John 4:7-21, John 15:1-8</div>
-            </li>
-            <li>
-                <a href="meditations/2018-04-22.html" class="meditation-link">Other Sheep</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 22, 2018</span> •
-                    <span class="meditation-occasion">Fourth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 4:5-12, Psalm 23, I John 3:16-24, John 10:11-18</div>
-            </li>
-            <li>
-                <a href="meditations/2018-04-15.html" class="meditation-link">Open Our Eyes</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 15, 2018</span> •
-                    <span class="meditation-occasion">Third Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 3: 12-19, Psalm 4, I John 3:1-7, Luke 24:36b-48</div>
-            </li>
-            <li>
-                <a href="meditations/2018-04-08.html" class="meditation-link">God Meets Us Where We Are</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 08, 2018</span> •
-                    <span class="meditation-occasion">Second Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 4:32-35, Psalm 133, I John 1:1—2:2, John 20:19-31</div>
-            </li>
-            <li>
-                <a href="meditations/2018-04-01.html" class="meditation-link">The Lord’s Doing</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 01, 2018</span> •
-                    <span class="meditation-occasion">Easter Day Early Principal Evening</span>
-                </div>
-                <div class="meditation-scripture">Acts 10:34-43, Psalm 118:1-2, 14-24, I Corinthians 15:1-11, John 20:1-18</div>
-            </li>
-            <li>
-                <a href="meditations/2017-05-28.html" class="meditation-link">The God of All Grace</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 28, 2017</span> •
-                    <span class="meditation-occasion">Seventh Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 1:6-14, Psalm 86:1-10, 33-36, I Peter 4:12-14, 5:6-11, John 17:1-11</div>
-            </li>
-            <li>
-                <a href="meditations/2017-05-21.html" class="meditation-link">“To an Unknown God”</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 21, 2017</span> •
-                    <span class="meditation-occasion">Sixth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 17:22-31, Psalm 66:7-18, I Peter 3:13-22, John 14:15-21</div>
-            </li>
-            <li>
-                <a href="meditations/2017-05-14.html" class="meditation-link">Look!</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 14, 2017</span> •
-                    <span class="meditation-occasion">Fifth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 7:55-60, Psalm 31:1-5, 15-16, I Peter 2:2-10, John 4:1-4</div>
-            </li>
-            <li>
-                <a href="meditations/2017-05-07.html" class="meditation-link">Abundant Life</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 07, 2017</span> •
-                    <span class="meditation-occasion">Fourth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 2:42-47, Psalm 23, I Peter 2:19-25, John 10:1-10</div>
-            </li>
-            <li>
-                <a href="meditations/2017-04-30.html" class="meditation-link">The Living and Endurng Word of God</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 30, 2017</span> •
-                    <span class="meditation-occasion">Third Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 2:14a, 36-41, Psalm 116:1-3, 10-17, I Peter 1:17-23, Luke 24:13-35</div>
-            </li>
-            <li>
-                <a href="meditations/2017-04-23.html" class="meditation-link">Witnesses</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 23, 2017</span> •
-                    <span class="meditation-occasion">Second Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 2:14a, 22-32, Psalm 16, I Peter 1:3-9, John 20:19-32</div>
-            </li>
-            <li>
-                <a href="meditations/2017-04-16.html" class="meditation-link">Alleluia!</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 16, 2017</span> •
-                    <span class="meditation-occasion">Easter Day Early Service Principal Service Evening Service</span>
-                </div>
-                <div class="meditation-scripture">Acts 10:34-43, Ps 118:1-2, 14-24, Colossians 3:1-4, John 20:1-18</div>
-            </li>
-            <li>
-                <a href="meditations/2016-05-08.html" class="meditation-link">Unfastened</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 08, 2016</span> •
-                    <span class="meditation-occasion">Seventh Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 16:16-34, Psalm 97, Revelation 22:12-14, 16-17, 20-21, John 17:20-26</div>
-            </li>
-            <li>
-                <a href="meditations/2016-05-01.html" class="meditation-link">Questions, Questions, Questions</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 01, 2016</span> •
-                    <span class="meditation-occasion">Sixth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 16:9-15, Psalm 67, Revelation 21:10, 22—22:5, John 14:23-29</div>
-            </li>
-            <li>
-                <a href="meditations/2016-04-24.html" class="meditation-link">Thirsty?</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 24, 2016</span> •
-                    <span class="meditation-occasion">Fifth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 11:1-18, Psalm 148, Revelation 21:1-6, John 13:31-35</div>
-            </li>
-            <li>
-                <a href="meditations/2016-04-17.html" class="meditation-link">One</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 17, 2016</span> •
-                    <span class="meditation-occasion">Fourth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 9:36-43, Psalm 23, Revelation 7:9-17, John 10:22-30</div>
-            </li>
-            <li>
-                <a href="meditations/2016-04-10.html" class="meditation-link">My Lord and My God</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 10, 2016</span> •
-                    <span class="meditation-occasion">Third Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 5:27-32, Psalm 118:14-29, Revelation 1:4-8, John 20:19-31</div>
-            </li>
-            <li>
-                <a href="meditations/2016-04-03.html" class="meditation-link">My Lord and My God</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 03, 2016</span> •
-                    <span class="meditation-occasion">Second Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 5:27-32, Psalm 118:14-29, Revelation 1:4-8, John 20:19-31</div>
-            </li>
-            <li>
-                <a href="meditations/2016-03-27.html" class="meditation-link">The First Day</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 27, 2016</span> •
-                    <span class="meditation-occasion">Easter Day Principal Evening</span>
-                </div>
-                <div class="meditation-scripture">Acts 10:34-43, Psalm 118:1-2, 14-24, I Corinthians 15:19-26, John 20:1-18</div>
-            </li>
-            <li>
-                <a href="meditations/2015-05-17.html" class="meditation-link">Ready?</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 17, 2015</span> •
-                    <span class="meditation-occasion">Seventh Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 1:15-17, 21-26, Psalm 1, I John 5:9-13, John 17:6-19</div>
-            </li>
-            <li>
-                <a href="meditations/2015-05-10.html" class="meditation-link">Joy</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 10, 2015</span> •
-                    <span class="meditation-occasion">Sixth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 10:44-48, Psalm 98, I John 5:1-6, John 15:9-17</div>
-            </li>
-            <li>
-                <a href="meditations/2015-05-03.html" class="meditation-link">Two Sides of the Same Coin</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 03, 2015</span> •
-                    <span class="meditation-occasion">Fifth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 8:26-40, Psalm 22:24-30, I John 4:7-21, John 15:1-8</div>
-            </li>
-            <li>
-                <a href="meditations/2015-04-26.html" class="meditation-link">The House of the Lord</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 26, 2015</span> •
-                    <span class="meditation-occasion">Fourth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 4:5-12, Psalm 23, I John 3:16-24, John 10:11-18</div>
-            </li>
-            <li>
-                <a href="meditations/2015-04-19.html" class="meditation-link">Can You Feel It?</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 19, 2015</span> •
-                    <span class="meditation-occasion">Third Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 3:12-19, Psalm 4, I John 3:1-7, Luke 24:36b - 48</div>
-            </li>
-            <li>
-                <a href="meditations/2015-04-12.html" class="meditation-link">The Breath of Life</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 12, 2015</span> •
-                    <span class="meditation-occasion">Second Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 4:32-35, Psalm 133, I John 1:1—2:22, John 20:19-31</div>
-            </li>
-            <li>
-                <a href="meditations/2015-04-05.html" class="meditation-link">I Have Seen the Lord</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 05, 2015</span> •
-                    <span class="meditation-occasion">Easter Day Principal Evening</span>
-                </div>
-                <div class="meditation-scripture">Acts 10:34-43, Psalm 118:1-2, 14-24, I Corinthians 15:1-11, John 20:1-18</div>
-            </li>
-            <li>
-                <a href="meditations/2014-06-01.html" class="meditation-link">Looking Up to Heaven</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">June 01, 2014</span> •
-                    <span class="meditation-occasion">Seventh Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 1:6-14, Psalm 68:1-10,33-36, I Peter 4:12-14, 5:6-11, John 17:1-11</div>
-            </li>
-            <li>
-                <a href="meditations/2014-05-25.html" class="meditation-link">The Nearness of God</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 25, 2014</span> •
-                    <span class="meditation-occasion">Sixth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 17:22-31, Psalm 66:7-18, I Peter 3:13-22, John 14:15-21</div>
-            </li>
-            <li>
-                <a href="meditations/2014-05-18.html" class="meditation-link">Incarnation, Then and Now</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 18, 2014</span> •
-                    <span class="meditation-occasion">Fifth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 7:55-60, Psalm 31:1-5, 15-16, I Peter 2:2-10, John 14:1-14</div>
-            </li>
-            <li>
-                <a href="meditations/2014-05-11.html" class="meditation-link">“Follow in His Steps”</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 11, 2014</span> •
-                    <span class="meditation-occasion">Fourth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 2:42-47, Psalm 23, I Peter 2:19-25, John 1-:1-10</div>
-            </li>
-            <li>
-                <a href="meditations/2014-05-04.html" class="meditation-link">Slow of Heart</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 04, 2014</span> •
-                    <span class="meditation-occasion">Third Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 2:14a, 36-41, Psalm 116:1-3, 10-17, I Peter 1:17-23, Luke 24:13-35</div>
-            </li>
-            <li>
-                <a href="meditations/2014-04-27.html" class="meditation-link">Witnesses</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 27, 2014</span> •
-                    <span class="meditation-occasion">Second Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 2:14a, 22-32, Psalm 16, I Peter 1:3-9, John 20:19-31</div>
-            </li>
-            <li>
-                <a href="meditations/2014-04-20.html" class="meditation-link">Rejoice and Be Glad</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 20, 2014</span> •
-                    <span class="meditation-occasion">Easter Day Principal Evening</span>
-                </div>
-                <div class="meditation-scripture">Acts 10:34-43, Psalm 118:1-2, 14-24, Colossians 3:1-4, John 20:1-18</div>
-            </li>
-            <li>
-                <a href="meditations/2013-05-12.html" class="meditation-link">Maranatha</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 12, 2013</span> •
-                    <span class="meditation-occasion">Seventh Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 16:16-34, Psalm 97, Revelation 22:12-14, 16-17, 20-21, John 20-26</div>
-            </li>
-            <li>
-                <a href="meditations/2013-05-05.html" class="meditation-link">Outside the Gate</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 05, 2013</span> •
-                    <span class="meditation-occasion">Sixth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 16:9-15, Psalm 67, Revelation 21:10, 22—22:5, John 14:23-29</div>
-            </li>
-            <li>
-                <a href="meditations/2013-04-28.html" class="meditation-link">New</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 28, 2013</span> •
-                    <span class="meditation-occasion">Fifth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 11:1-18, Psalm 148, Revelation 21:1-6, John 13:31-35</div>
-            </li>
-            <li>
-                <a href="meditations/2013-04-21.html" class="meditation-link">Get Up</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 21, 2013</span> •
-                    <span class="meditation-occasion">Fourth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 9:36-43, Psalm 23, Revelation 7:9-17, John 10:22-30</div>
-            </li>
-            <li>
-                <a href="meditations/2013-04-14.html" class="meditation-link">“It Is the Lord!”</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 14, 2013</span> •
-                    <span class="meditation-occasion">Third Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 9:1-6, (7-20), Psalm 30, Revelation 5:11-14, John 21:1-19</div>
-            </li>
-            <li>
-                <a href="meditations/2013-04-07.html" class="meditation-link">Peace Be with You</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 07, 2013</span> •
-                    <span class="meditation-occasion">Second Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 5:27-32, Ps.118:14-29, Revelation 1:4-8, John 20:19-31</div>
-            </li>
-            <li>
-                <a href="meditations/2013-03-31.html" class="meditation-link">Witnesses</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 31, 2013</span> •
-                    <span class="meditation-occasion">Easter Day Principal Evening</span>
-                </div>
-                <div class="meditation-scripture">Acts 10:34-43, Psalm 118:1-2, 14-24, I Corinthians 15:19-26, John 20:1-18</div>
-            </li>
-            <li>
-                <a href="meditations/2012-05-20.html" class="meditation-link">Sanctification</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 20, 2012</span> •
-                    <span class="meditation-occasion">Seventh Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 1:15-17, 21-26, Psalm 1, I John 5:9-13, John 17:6-19</div>
-            </li>
-            <li>
-                <a href="meditations/2012-05-13.html" class="meditation-link">“I Chose You”</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 13, 2012</span> •
-                    <span class="meditation-occasion">Sixth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 10:44-48, Psalm 98, I John 5:1-6, John 15:9-17</div>
-            </li>
-            <li>
-                <a href="meditations/2012-05-06.html" class="meditation-link">God Is Love</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 06, 2012</span> •
-                    <span class="meditation-occasion">Fifth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 8:26-40, Psalm 22:24-30, I John 4:7-21, John 15:1-8</div>
-            </li>
-            <li>
-                <a href="meditations/2012-04-29.html" class="meditation-link">Other Sheep</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 29, 2012</span> •
-                    <span class="meditation-occasion">Fourth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 4:5-12, Psalm 23, I John 3:16-24, John 10:11-18</div>
-            </li>
-            <li>
-                <a href="meditations/2012-04-22.html" class="meditation-link">Revelation Then and Now</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 22, 2012</span> •
-                    <span class="meditation-occasion">Third Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 3:12-19, Psalm 4, I John 3:1-7, Luke 24:36b-48</div>
-            </li>
-            <li>
-                <a href="meditations/2012-04-15.html" class="meditation-link">One Heart and Soul</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 15, 2012</span> •
-                    <span class="meditation-occasion">Second Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 4:32-35, Psalm 133, I John 1:1—2:2, John 20:19-31</div>
-            </li>
-            <li>
-                <a href="meditations/2012-04-08.html" class="meditation-link">Resurrection Grace</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 08, 2012</span> •
-                    <span class="meditation-occasion">Easter Day Principal Evening</span>
-                </div>
-                <div class="meditation-scripture">Acts 10:34-43, Psalm 118:1-2, 14-24, I Corinthians15:1-11, John 20:1-18</div>
-            </li>
-            <li>
-                <a href="meditations/2011-06-05.html" class="meditation-link">Is This the Time?</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">June 05, 2011</span> •
-                    <span class="meditation-occasion">Seventh Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 1:6-14, Ps. 68:1-10, 33-36, I Peter 4:12-14, 5:6-11, John 17:1-11</div>
-            </li>
-            <li>
-                <a href="meditations/2011-05-29.html" class="meditation-link">“To an Unknown God”</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 29, 2011</span> •
-                    <span class="meditation-occasion">Sixth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 17:22-31, Psalm 66:7-18, I Peter 3:13-22, John 14:15-21</div>
-            </li>
-            <li>
-                <a href="meditations/2011-05-22.html" class="meditation-link">God, the Father</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 22, 2011</span> •
-                    <span class="meditation-occasion">Fifth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 7;55-60, Psalm 31:1-5, 15-16, I Peter 2:2-10, John 14:1-14</div>
-            </li>
-            <li>
-                <a href="meditations/2011-05-15.html" class="meditation-link">Aware of God</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 15, 2011</span> •
-                    <span class="meditation-occasion">Fourth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 2:42-42, Psalm23, I Peter 2:19-25, John 10:1-10</div>
-            </li>
-            <li>
-                <a href="meditations/2011-05-08.html" class="meditation-link">A Scriptural Pattern</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 08, 2011</span> •
-                    <span class="meditation-occasion">Third Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 2:14a, 36-41, Psalm 116:1-3, 10-17, I Peter 1:17-23, Luke 24:13-35</div>
-            </li>
-            <li>
-                <a href="meditations/2011-05-01.html" class="meditation-link">Reconciliation</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 01, 2011</span> •
-                    <span class="meditation-occasion">Second Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 2;14a, 22-32, Psalm 16, I Peter 1:3-9, John 20:19-31</div>
-            </li>
-            <li>
-                <a href="meditations/2011-04-24.html" class="meditation-link">I Have Seen the Lord</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 24, 2011</span> •
-                    <span class="meditation-occasion">Easter Day Principal Evening</span>
-                </div>
-                <div class="meditation-scripture">Acts 10:34-43,  Psalm 118:1-2, 14-24,  Colossians 3:1-4,  John 20:1-18</div>
-            </li>
-            <li>
-                <a href="meditations/2010-05-16.html" class="meditation-link">Maranatha!</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 16, 2010</span> •
-                    <span class="meditation-occasion">Seventh Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 16:16-34, Psalm 97, Revelation 22;12-14, 16-17, 20-21, John 17:20-26</div>
-            </li>
-            <li>
-                <a href="meditations/2010-05-09.html" class="meditation-link">Going and Coming</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 09, 2010</span> •
-                    <span class="meditation-occasion">Sixth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 16:9-15, Psalm 67, Revelation 21:10, 21—22:5, John 14:23-29</div>
-            </li>
-            <li>
-                <a href="meditations/2010-05-02.html" class="meditation-link">“They’ll Know We Are Christians by Our Love”</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 02, 2010</span> •
-                    <span class="meditation-occasion">Fifth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 11:1-18, Psalm 148, Revelation 21:1-6, John 13:31-35</div>
-            </li>
-            <li>
-                <a href="meditations/2010-04-25.html" class="meditation-link">Scripture Musings</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 25, 2010</span> •
-                    <span class="meditation-occasion">Fourth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 9:36-43, Psalm 23, Revelation 7:9-17, John 10:22-30</div>
-            </li>
-            <li>
-                <a href="meditations/2010-04-18.html" class="meditation-link">Annanais, Where Are You?</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 18, 2010</span> •
-                    <span class="meditation-occasion">Third Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 9:1-20, Psalm 30, Revelation 5:11-14, John 21:1-19</div>
-            </li>
-            <li>
-                <a href="meditations/2010-04-11.html" class="meditation-link">The Breath of God</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 11, 2010</span> •
-                    <span class="meditation-occasion">Second Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 5:27-32, Psalm 118:14-29, Revelation 1:4-8, John 20:19-31</div>
-            </li>
-            <li>
-                <a href="meditations/2010-04-04.html" class="meditation-link">I Have Seen the Lord</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 04, 2010</span> •
-                    <span class="meditation-occasion">Easter Day Principal RCL</span>
-                </div>
-                <div class="meditation-scripture">Acts 10:34-43, Psalm 118:1-2, 14-24, I Corinthians 15:19-26, John 20:1-18</div>
-            </li>
-            <li>
-                <a href="meditations/2009-05-24.html" class="meditation-link">Witness</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 24, 2009</span> •
-                    <span class="meditation-occasion">Seventh Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 1:15-17, 21-26, Psalm 1, I John 5:9-13, John 17:6-19</div>
-            </li>
-            <li>
-                <a href="meditations/2009-05-17.html" class="meditation-link">Bear Fruit</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 17, 2009</span> •
-                    <span class="meditation-occasion">Sixth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 10:44-48, Psalm 98, I John 5:1-6, John 15:9-17</div>
-            </li>
-            <li>
-                <a href="meditations/2009-05-10.html" class="meditation-link">A Wilderness Road</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 10, 2009</span> •
-                    <span class="meditation-occasion">Fifth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 8:26-40, Psalm 22:24-30, I John 4:7-21, John 15:1-8</div>
-            </li>
-            <li>
-                <a href="meditations/2009-05-03.html" class="meditation-link">In Truth and Action</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 03, 2009</span> •
-                    <span class="meditation-occasion">Fourth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 4:5-12, Psalm 23, I John 3:16-24, John 10:11-18</div>
-            </li>
-            <li>
-                <a href="meditations/2009-04-26.html" class="meditation-link">Revelation</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 26, 2009</span> •
-                    <span class="meditation-occasion">Third Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts3:12-19, Psalm 4, I John 3:1-7, Luke 24:36b-38</div>
-            </li>
-            <li>
-                <a href="meditations/2009-04-19.html" class="meditation-link">Locked Doors</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 19, 2009</span> •
-                    <span class="meditation-occasion">Second Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 4:32-35, Psalm 133, I John 1:1—2:2, John 20:19-31</div>
-            </li>
-            <li>
-                <a href="meditations/2009-04-12.html" class="meditation-link">I Have Seen the Lord</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 12, 2009</span> •
-                    <span class="meditation-occasion">Easter Day Principal RCL</span>
-                </div>
-                <div class="meditation-scripture">Acts 10:34-43, Psalm 118:1-2, 14-24, I Corinthians 15:1-11, John 20:1-18</div>
-            </li>
-            <li>
-                <a href="meditations/2008-05-04.html" class="meditation-link">Homecoming</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">May 04, 2008</span> •
-                    <span class="meditation-occasion">Seventh Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 1:6-14, Psalm 68:1-10, 33-36, I Peter 4:12-14, 5:6-11, John 17:1-11</div>
-            </li>
-            <li>
-                <a href="meditations/2008-04-27.html" class="meditation-link">Revelation</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 27, 2008</span> •
-                    <span class="meditation-occasion">Sixth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 17:22-31, Psalm 66:7-18, I Peter 3:13-22, John 14:15-21</div>
-            </li>
-            <li>
-                <a href="meditations/2008-04-20.html" class="meditation-link">Out of Darkness</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 20, 2008</span> •
-                    <span class="meditation-occasion">Fifth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 7:55-60, Psalm 31:1-5, 15-16, I Peter 2:2-10, John 14:1-14</div>
-            </li>
-            <li>
-                <a href="meditations/2008-04-13.html" class="meditation-link">Follow Where He Leads</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 13, 2008</span> •
-                    <span class="meditation-occasion">Fourth Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 2:42-47, Psalm 23, I Peter 2:19-25, John 10:1-10</div>
-            </li>
-            <li>
-                <a href="meditations/2008-04-06.html" class="meditation-link">“All His Redeeming Work”</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">April 06, 2008</span> •
-                    <span class="meditation-occasion">Third Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 2:14a, 36-41, Psalm 116:1-3, 10-17, I Peter 1:17-23, Luke 24:13-35</div>
-            </li>
-            <li>
-                <a href="meditations/2008-03-30.html" class="meditation-link">“Imperishable, Undefiled, and Unfading”</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 30, 2008</span> •
-                    <span class="meditation-occasion">Second Sunday of Easter</span>
-                </div>
-                <div class="meditation-scripture">Acts 2:14a, 22-32, Psalm 16, I Peter 1:3-9, John 20:19-31</div>
-            </li>
-            <li>
-                <a href="meditations/2008-03-23.html" class="meditation-link">A Sound of Exultation and Victory</a>
-                <div class="meditation-meta">
-                    <span class="meditation-date">March 23, 2008</span> •
-                    <span class="meditation-occasion">Easter Day</span>
-                </div>
-                <div class="meditation-scripture">Acts 10:34-43,  Psalm 118:1-2, 14-24, Colossians 3:1-4,  John 20:1-18</div>
-            </li>
-        </ul>
+        <nav class="year-nav">
+            <a href="#year-a">Year A (42)</a>
+            <a href="#year-b">Year B (35)</a>
+            <a href="#year-c">Year C (35)</a>
+        </nav>
+
+        <section class="year-section" id="year-a">
+            <h2 class="year-heading">Year A</h2>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Easter Day</div>
+                <div class="occasion-readings">Acts 10:34-43,  Psalm 118:1-2, 14-24,  Colossians 3:1-4,  John 20:1-18</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2023-04-09.html" class="meditation-link">
+                            The Lord’s Doing <span class="meditation-date">• April 09, 2023</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2020-04-12.html" class="meditation-link">
+                            Life After Death <span class="meditation-date">• April 12, 2020</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2017-04-16.html" class="meditation-link">
+                            Alleluia! <span class="meditation-date">• April 16, 2017</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2014-04-20.html" class="meditation-link">
+                            Rejoice and Be Glad <span class="meditation-date">• April 20, 2014</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2011-04-24.html" class="meditation-link">
+                            I Have Seen the Lord <span class="meditation-date">• April 24, 2011</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2008-03-23.html" class="meditation-link">
+                            A Sound of Exultation and Victory <span class="meditation-date">• March 23, 2008</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Second Sunday of Easter</div>
+                <div class="occasion-readings">Acts 2:14a, 22-30, Psalm 16, I Peter 1:3-9, John 20:19-30</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2023-04-16.html" class="meditation-link">
+                            Witnesses <span class="meditation-date">• April 16, 2023</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2020-04-19.html" class="meditation-link">
+                            Easter Hope <span class="meditation-date">• April 19, 2020</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2017-04-23.html" class="meditation-link">
+                            Witnesses <span class="meditation-date">• April 23, 2017</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2014-04-27.html" class="meditation-link">
+                            Witnesses <span class="meditation-date">• April 27, 2014</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2011-05-01.html" class="meditation-link">
+                            Reconciliation <span class="meditation-date">• May 01, 2011</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2008-03-30.html" class="meditation-link">
+                            “Imperishable, Undefiled, and Unfading” <span class="meditation-date">• March 30, 2008</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Third Sunday of Easter</div>
+                <div class="occasion-readings">Acts 2:14a, 36-41, Psalm 116:11-3, 10-17, I Peter 1:17-23, Luke 24:13-35</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2023-04-23.html" class="meditation-link">
+                            Slow of Heart <span class="meditation-date">• April 23, 2023</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2020-04-26.html" class="meditation-link">
+                            A Spiritual Pattern <span class="meditation-date">• April 26, 2020</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2017-04-30.html" class="meditation-link">
+                            The Living and Endurng Word of God <span class="meditation-date">• April 30, 2017</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2014-05-04.html" class="meditation-link">
+                            Slow of Heart <span class="meditation-date">• May 04, 2014</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2011-05-08.html" class="meditation-link">
+                            A Scriptural Pattern <span class="meditation-date">• May 08, 2011</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2008-04-06.html" class="meditation-link">
+                            “All His Redeeming Work” <span class="meditation-date">• April 06, 2008</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Fourth Sunday of Easter</div>
+                <div class="occasion-readings">Acts 2:42-47, Psalm 23, I Peter 2:19-25, John 1-:1-10</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2023-04-30.html" class="meditation-link">
+                            Aware of God <span class="meditation-date">• April 30, 2023</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2020-05-03.html" class="meditation-link">
+                            Jesus' Example <span class="meditation-date">• May 03, 2020</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2017-05-07.html" class="meditation-link">
+                            Abundant Life <span class="meditation-date">• May 07, 2017</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2014-05-11.html" class="meditation-link">
+                            “Follow in His Steps” <span class="meditation-date">• May 11, 2014</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2011-05-15.html" class="meditation-link">
+                            Aware of God <span class="meditation-date">• May 15, 2011</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2008-04-13.html" class="meditation-link">
+                            Follow Where He Leads <span class="meditation-date">• April 13, 2008</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Fifth Sunday of Easter</div>
+                <div class="occasion-readings">Acts 7;55-60, Psalm 31:1-5, 15-16, I Peter 2:2-10, John 14:1-14</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2023-05-07.html" class="meditation-link">
+                            Look! <span class="meditation-date">• May 07, 2023</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2020-05-10.html" class="meditation-link">
+                            God, the Father <span class="meditation-date">• May 10, 2020</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2017-05-14.html" class="meditation-link">
+                            Look! <span class="meditation-date">• May 14, 2017</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2014-05-18.html" class="meditation-link">
+                            Incarnation, Then and Now <span class="meditation-date">• May 18, 2014</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2011-05-22.html" class="meditation-link">
+                            God, the Father <span class="meditation-date">• May 22, 2011</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2008-04-20.html" class="meditation-link">
+                            Out of Darkness <span class="meditation-date">• April 20, 2008</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Sixth Sunday of Easter</div>
+                <div class="occasion-readings">Acts 17:22-31, Psalm 66:7-18, I Peter 3:13-22, John 14:15-21</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2023-05-14.html" class="meditation-link">
+                            An Unknown God? <span class="meditation-date">• May 14, 2023</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2020-05-17.html" class="meditation-link">
+                            An Unknown God? <span class="meditation-date">• May 17, 2020</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2017-05-21.html" class="meditation-link">
+                            “To an Unknown God” <span class="meditation-date">• May 21, 2017</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2014-05-25.html" class="meditation-link">
+                            The Nearness of God <span class="meditation-date">• May 25, 2014</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2011-05-29.html" class="meditation-link">
+                            “To an Unknown God” <span class="meditation-date">• May 29, 2011</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2008-04-27.html" class="meditation-link">
+                            Revelation <span class="meditation-date">• April 27, 2008</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Seventh Sunday of Easter</div>
+                <div class="occasion-readings">Acts 1:6-14, Psalm 68:1-10, 33-36, I Peter 4:12-14; 5: 6-11, John 17:1-11</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2023-05-21.html" class="meditation-link">
+                            The God of All Grace <span class="meditation-date">• May 21, 2023</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2020-05-24.html" class="meditation-link">
+                            Is This the Time? <span class="meditation-date">• May 24, 2020</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2017-05-28.html" class="meditation-link">
+                            The God of All Grace <span class="meditation-date">• May 28, 2017</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2014-06-01.html" class="meditation-link">
+                            Looking Up to Heaven <span class="meditation-date">• June 01, 2014</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2011-06-05.html" class="meditation-link">
+                            Is This the Time? <span class="meditation-date">• June 05, 2011</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2008-05-04.html" class="meditation-link">
+                            Homecoming <span class="meditation-date">• May 04, 2008</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section class="year-section" id="year-b">
+            <h2 class="year-heading">Year B</h2>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Easter Day</div>
+                <div class="occasion-readings">Acts 10:34-43, Psalm 118:1-2, 14-24, I Corinthians 15:1-11, John 20:1-18</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2024-03-31.html" class="meditation-link">
+                            Resurrection Grace <span class="meditation-date">• March 31, 2024</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2021-04-04.html" class="meditation-link">
+                            I Have Seen the Lord <span class="meditation-date">• April 04, 2021</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2018-04-01.html" class="meditation-link">
+                            The Lord’s Doing <span class="meditation-date">• April 01, 2018</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2015-04-05.html" class="meditation-link">
+                            I Have Seen the Lord <span class="meditation-date">• April 05, 2015</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2012-04-08.html" class="meditation-link">
+                            Resurrection Grace <span class="meditation-date">• April 08, 2012</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2009-04-12.html" class="meditation-link">
+                            I Have Seen the Lord <span class="meditation-date">• April 12, 2009</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Second Sunday of Easter</div>
+                <div class="occasion-readings">Acts 4:32-35, Psalm 133, I John 1:1—2:22, John 20:19-31</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2018-04-08.html" class="meditation-link">
+                            God Meets Us Where We Are <span class="meditation-date">• April 08, 2018</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2015-04-12.html" class="meditation-link">
+                            The Breath of Life <span class="meditation-date">• April 12, 2015</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2012-04-15.html" class="meditation-link">
+                            One Heart and Soul <span class="meditation-date">• April 15, 2012</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2009-04-19.html" class="meditation-link">
+                            Locked Doors <span class="meditation-date">• April 19, 2009</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Third Sunday of Easter</div>
+                <div class="occasion-readings">Acts 3:12-19, Psalm 4, I John 3:1-7, Luke 24:36b - 48</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2021-04-18.html" class="meditation-link">
+                            Encounters with Christ <span class="meditation-date">• April 18, 2021</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2018-04-15.html" class="meditation-link">
+                            Open Our Eyes <span class="meditation-date">• April 15, 2018</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2015-04-19.html" class="meditation-link">
+                            Can You Feel It? <span class="meditation-date">• April 19, 2015</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2012-04-22.html" class="meditation-link">
+                            Revelation Then and Now <span class="meditation-date">• April 22, 2012</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2009-04-26.html" class="meditation-link">
+                            Revelation <span class="meditation-date">• April 26, 2009</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Fourth Sunday of Easter</div>
+                <div class="occasion-readings">Acts 4:5-12, Psalm 23, I John 3:16-24, John 10:11-18</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2021-04-25.html" class="meditation-link">
+                            Presence <span class="meditation-date">• April 25, 2021</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2018-04-22.html" class="meditation-link">
+                            Other Sheep <span class="meditation-date">• April 22, 2018</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2015-04-26.html" class="meditation-link">
+                            The House of the Lord <span class="meditation-date">• April 26, 2015</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2012-04-29.html" class="meditation-link">
+                            Other Sheep <span class="meditation-date">• April 29, 2012</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2009-05-03.html" class="meditation-link">
+                            In Truth and Action <span class="meditation-date">• May 03, 2009</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Fifth Sunday of Easter</div>
+                <div class="occasion-readings">Acts 8:26-40, Psalm 22:24-30, I John 4:7-21, John 15:1-8</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2021-05-02.html" class="meditation-link">
+                            Get Up and Go <span class="meditation-date">• May 02, 2021</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2018-04-29.html" class="meditation-link">
+                            Rejoicing <span class="meditation-date">• April 29, 2018</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2015-05-03.html" class="meditation-link">
+                            Two Sides of the Same Coin <span class="meditation-date">• May 03, 2015</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2012-05-06.html" class="meditation-link">
+                            God Is Love <span class="meditation-date">• May 06, 2012</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2009-05-10.html" class="meditation-link">
+                            A Wilderness Road <span class="meditation-date">• May 10, 2009</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Sixth Sunday of Easter</div>
+                <div class="occasion-readings">Acts 10:44-48, Psalm 98, I John 5:1-6, John 15:9-17</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2021-05-09.html" class="meditation-link">
+                            “I Chose You” <span class="meditation-date">• May 09, 2021</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2018-05-06.html" class="meditation-link">
+                            Chosen <span class="meditation-date">• May 06, 2018</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2015-05-10.html" class="meditation-link">
+                            Joy <span class="meditation-date">• May 10, 2015</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2012-05-13.html" class="meditation-link">
+                            “I Chose You” <span class="meditation-date">• May 13, 2012</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2009-05-17.html" class="meditation-link">
+                            Bear Fruit <span class="meditation-date">• May 17, 2009</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Seventh Sunday of Easter</div>
+                <div class="occasion-readings">Acts 1:15-17, 21-26, Psalm 1, I John 5:9-13, John 17:6-19</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2021-05-16.html" class="meditation-link">
+                            Ready? <span class="meditation-date">• May 16, 2021</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2018-05-13.html" class="meditation-link">
+                            Source and Destination <span class="meditation-date">• May 13, 2018</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2015-05-17.html" class="meditation-link">
+                            Ready? <span class="meditation-date">• May 17, 2015</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2012-05-20.html" class="meditation-link">
+                            Sanctification <span class="meditation-date">• May 20, 2012</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2009-05-24.html" class="meditation-link">
+                            Witness <span class="meditation-date">• May 24, 2009</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section class="year-section" id="year-c">
+            <h2 class="year-heading">Year C</h2>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Easter Day</div>
+                <div class="occasion-readings">Acts 10: 34-43, Psalm 118:1-2, 14-24, I Corinthians 15:19-26, John 20:1-18</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2022-04-17.html" class="meditation-link">
+                            Rejoice and Be Glad <span class="meditation-date">• April 17, 2022</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2019-04-21.html" class="meditation-link">
+                            Witnesses <span class="meditation-date">• April 21, 2019</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2016-03-27.html" class="meditation-link">
+                            The First Day <span class="meditation-date">• March 27, 2016</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2013-03-31.html" class="meditation-link">
+                            Witnesses <span class="meditation-date">• March 31, 2013</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2010-04-04.html" class="meditation-link">
+                            I Have Seen the Lord <span class="meditation-date">• April 04, 2010</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Second Sunday of Easter</div>
+                <div class="occasion-readings">Acts 5:27-32, Psalm 118:14-29, Revelation 1:4-8, John 20:19-31</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2022-04-24.html" class="meditation-link">
+                            The Alpha and the Omega <span class="meditation-date">• April 24, 2022</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2019-04-28.html" class="meditation-link">
+                            God Meets Us Where We Are, as We Are <span class="meditation-date">• April 28, 2019</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2016-04-03.html" class="meditation-link">
+                            My Lord and My God <span class="meditation-date">• April 03, 2016</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2013-04-07.html" class="meditation-link">
+                            Peace Be with You <span class="meditation-date">• April 07, 2013</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2010-04-11.html" class="meditation-link">
+                            The Breath of God <span class="meditation-date">• April 11, 2010</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Third Sunday of Easter</div>
+                <div class="occasion-readings">Acts 9:1-6, (7-20), Psalm 30, Revelation 5: 11-14, John 21:1-19</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2022-05-01.html" class="meditation-link">
+                            Two Others? <span class="meditation-date">• May 01, 2022</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2019-05-05.html" class="meditation-link">
+                            It Is the Lord! <span class="meditation-date">• May 05, 2019</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2016-04-10.html" class="meditation-link">
+                            My Lord and My God <span class="meditation-date">• April 10, 2016</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2013-04-14.html" class="meditation-link">
+                            “It Is the Lord!” <span class="meditation-date">• April 14, 2013</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2010-04-18.html" class="meditation-link">
+                            Annanais, Where Are You? <span class="meditation-date">• April 18, 2010</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Fourth Sunday of Easter</div>
+                <div class="occasion-readings">Acts 9:36-43, Psalm 23, Revelation 7:9-17, John 10:22-30</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2022-05-08.html" class="meditation-link">
+                            Tabitha / Dorcas <span class="meditation-date">• May 08, 2022</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2019-05-12.html" class="meditation-link">
+                            Get Up <span class="meditation-date">• May 12, 2019</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2016-04-17.html" class="meditation-link">
+                            One <span class="meditation-date">• April 17, 2016</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2013-04-21.html" class="meditation-link">
+                            Get Up <span class="meditation-date">• April 21, 2013</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2010-04-25.html" class="meditation-link">
+                            Scripture Musings <span class="meditation-date">• April 25, 2010</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Fifth Sunday of Easter</div>
+                <div class="occasion-readings">Acts 11:1-18, Psalm 148, Revelation 21:1-6, John 13:31-35</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2022-05-15.html" class="meditation-link">
+                            New <span class="meditation-date">• May 15, 2022</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2019-05-19.html" class="meditation-link">
+                            No Distinction Among God’s Children <span class="meditation-date">• May 19, 2019</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2016-04-24.html" class="meditation-link">
+                            Thirsty? <span class="meditation-date">• April 24, 2016</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2013-04-28.html" class="meditation-link">
+                            New <span class="meditation-date">• April 28, 2013</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2010-05-02.html" class="meditation-link">
+                            “They’ll Know We Are Christians by Our Love” <span class="meditation-date">• May 02, 2010</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Sixth Sunday of Easter</div>
+                <div class="occasion-readings">Acts 16:9-15, Psalm 67, Revelation 21:10, 21—22:5, John 14:23-29</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2022-05-22.html" class="meditation-link">
+                            Questions, Questions, Questions <span class="meditation-date">• May 22, 2022</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2019-05-26.html" class="meditation-link">
+                            Come to Us <span class="meditation-date">• May 26, 2019</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2016-05-01.html" class="meditation-link">
+                            Questions, Questions, Questions <span class="meditation-date">• May 01, 2016</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2013-05-05.html" class="meditation-link">
+                            Outside the Gate <span class="meditation-date">• May 05, 2013</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2010-05-09.html" class="meditation-link">
+                            Going and Coming <span class="meditation-date">• May 09, 2010</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="occasion-group">
+                <div class="occasion-heading">Seventh Sunday of Easter</div>
+                <div class="occasion-readings">Acts 16:16-34, Psalm 97, Revelation 22:12-14, 16-17, 20-21, John 17:20-26</div>
+                <ul class="meditation-list">
+                    <li>
+                        <a href="meditations/2022-05-29.html" class="meditation-link">
+                            Unfastened <span class="meditation-date">• May 29, 2022</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2019-06-02.html" class="meditation-link">
+                            Maranatha <span class="meditation-date">• June 02, 2019</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2016-05-08.html" class="meditation-link">
+                            Unfastened <span class="meditation-date">• May 08, 2016</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2013-05-12.html" class="meditation-link">
+                            Maranatha <span class="meditation-date">• May 12, 2013</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/2010-05-16.html" class="meditation-link">
+                            Maranatha! <span class="meditation-date">• May 16, 2010</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
     </main>
 
     <footer class="site-footer">
