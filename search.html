@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Meditations | Threads of Grace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="listing.css">
+    <link rel="stylesheet" href="meditation.css">
+    <style>
+        /* Override container max-width for split view */
+        .search-page .container {
+            max-width: 1400px;
+        }
+
+        /* Search header */
+        .search-header {
+            text-align: center;
+            padding: var(--spacing-lg) 0;
+            border-bottom: 1px solid var(--soft-gray);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .search-header h1 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 400;
+            color: var(--deep-brown);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .search-header p {
+            color: var(--medium-gray);
+            font-style: italic;
+            margin-bottom: 0;
+        }
+
+        /* Search controls */
+        .search-controls {
+            max-width: 800px;
+            margin: 0 auto var(--spacing-lg);
+        }
+
+        .search-input-wrapper {
+            display: flex;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-md);
+        }
+
+        #search-input {
+            flex: 1;
+            padding: var(--spacing-sm) var(--spacing-md);
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+            border: 1px solid var(--soft-gray);
+            background: var(--warm-white);
+            color: var(--dark-gray);
+            transition: border-color 0.3s ease;
+        }
+
+        #search-input:focus {
+            outline: none;
+            border-color: var(--accent-sage);
+        }
+
+        #search-input::placeholder {
+            color: var(--medium-gray);
+            font-style: italic;
+        }
+
+        .search-button {
+            padding: var(--spacing-sm) var(--spacing-lg);
+            background: var(--accent-sage);
+            color: white;
+            border: none;
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .search-button:hover {
+            background: var(--dark-gray);
+        }
+
+        .filter-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+        }
+
+        .filter-label {
+            font-size: 0.95rem;
+            color: var(--medium-gray);
+        }
+
+        .filter-select {
+            padding: 0.4rem 0.75rem;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            border: 1px solid var(--soft-gray);
+            background: var(--warm-white);
+            color: var(--dark-gray);
+        }
+
+        /* Split view layout */
+        .split-view {
+            display: grid;
+            grid-template-columns: 400px 1fr;
+            gap: var(--spacing-lg);
+            min-height: 600px;
+        }
+
+        /* Results panel */
+        .results-panel {
+            border-right: 1px solid var(--soft-gray);
+            padding-right: var(--spacing-lg);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .results-header {
+            padding-bottom: var(--spacing-sm);
+            margin-bottom: var(--spacing-md);
+            border-bottom: 1px solid var(--soft-gray);
+            position: sticky;
+            top: 0;
+            background: var(--cream);
+            z-index: 10;
+        }
+
+        .results-count {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            color: var(--medium-gray);
+        }
+
+        .result-item {
+            padding: var(--spacing-md) var(--spacing-sm);
+            border-bottom: 1px solid var(--soft-gray);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .result-item:hover {
+            background: var(--warm-white);
+        }
+
+        .result-item.active {
+            background: var(--warm-white);
+            border-left: 3px solid var(--accent-sage);
+            margin-left: -3px;
+        }
+
+        .result-date {
+            font-size: 0.85rem;
+            color: var(--accent-gold);
+            letter-spacing: 0.05em;
+            margin-bottom: 0.25rem;
+        }
+
+        .result-title {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: var(--deep-brown);
+            margin-bottom: 0.25rem;
+            line-height: 1.3;
+        }
+
+        .result-meta {
+            font-size: 0.9rem;
+            color: var(--medium-gray);
+            font-style: italic;
+        }
+
+        .result-excerpt {
+            font-size: 0.9rem;
+            color: var(--dark-gray);
+            line-height: 1.5;
+            margin-top: var(--spacing-xs);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .result-excerpt mark {
+            background: rgba(184, 149, 106, 0.3);
+            color: inherit;
+        }
+
+        .result-tags {
+            margin-top: var(--spacing-xs);
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            color: var(--accent-sage);
+            background: rgba(122, 130, 112, 0.1);
+            padding: 0.15rem 0.5rem;
+            margin-right: 0.3rem;
+            margin-top: 0.2rem;
+        }
+
+        /* Reading panel */
+        .reading-panel {
+            max-height: 80vh;
+            overflow-y: auto;
+            padding-right: var(--spacing-md);
+        }
+
+        .reading-panel-empty {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 400px;
+            text-align: center;
+            color: var(--medium-gray);
+        }
+
+        .reading-panel-empty h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--deep-brown);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .reading-panel-empty p {
+            font-style: italic;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .reading-panel .meditation-header {
+            padding: 0 0 var(--spacing-md);
+            border-bottom: 1px solid var(--soft-gray);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .reading-panel .meditation-date-display {
+            font-size: 1rem;
+            color: var(--accent-gold);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .reading-panel .meditation-title-display {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 400;
+            color: var(--deep-brown);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .reading-panel .meditation-occasion {
+            font-size: 1rem;
+            color: var(--medium-gray);
+            font-style: italic;
+        }
+
+        .reading-panel .meditation-readings {
+            font-size: 0.95rem;
+            color: var(--medium-gray);
+            margin-top: var(--spacing-xs);
+        }
+
+        .reading-panel .meditation-content {
+            line-height: 1.8;
+        }
+
+        .reading-panel .meditation-content p {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .reading-panel .open-full-link {
+            display: inline-block;
+            margin-top: var(--spacing-md);
+            padding: var(--spacing-sm) var(--spacing-md);
+            background: var(--warm-white);
+            border: 1px solid var(--soft-gray);
+            color: var(--accent-sage);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .reading-panel .open-full-link:hover {
+            background: var(--accent-sage);
+            color: white;
+            border-color: var(--accent-sage);
+        }
+
+        /* Initial/empty states */
+        .initial-message {
+            text-align: center;
+            padding: var(--spacing-xl) var(--spacing-md);
+            background: var(--warm-white);
+        }
+
+        .initial-message h3 {
+            font-family: var(--font-display);
+            color: var(--deep-brown);
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .initial-message p {
+            color: var(--medium-gray);
+            font-size: 1rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .search-suggestions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: var(--spacing-xs);
+            margin-top: var(--spacing-md);
+        }
+
+        .suggestion-chip {
+            background: var(--cream);
+            border: 1px solid var(--soft-gray);
+            padding: 0.4rem 0.8rem;
+            font-size: 0.9rem;
+            color: var(--accent-sage);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .suggestion-chip:hover {
+            background: var(--accent-sage);
+            color: white;
+            border-color: var(--accent-sage);
+        }
+
+        .no-results {
+            text-align: center;
+            padding: var(--spacing-xl) var(--spacing-md);
+            color: var(--medium-gray);
+            font-style: italic;
+        }
+
+        .loading-spinner {
+            text-align: center;
+            padding: var(--spacing-lg);
+            color: var(--medium-gray);
+            font-style: italic;
+        }
+
+        /* Mobile view */
+        @media (max-width: 900px) {
+            .split-view {
+                grid-template-columns: 1fr;
+            }
+
+            .results-panel {
+                border-right: none;
+                border-bottom: 1px solid var(--soft-gray);
+                padding-right: 0;
+                padding-bottom: var(--spacing-lg);
+                max-height: none;
+                overflow-y: visible;
+            }
+
+            .reading-panel {
+                max-height: none;
+                overflow-y: visible;
+                padding-right: 0;
+            }
+
+            .mobile-back-btn {
+                display: inline-block;
+                margin-bottom: var(--spacing-md);
+                padding: var(--spacing-xs) var(--spacing-sm);
+                background: var(--warm-white);
+                border: 1px solid var(--soft-gray);
+                color: var(--accent-sage);
+                text-decoration: none;
+                font-size: 0.9rem;
+                cursor: pointer;
+            }
+
+            .hide-on-mobile {
+                display: none;
+            }
+
+            .show-on-mobile {
+                display: block;
+            }
+        }
+
+        @media (min-width: 901px) {
+            .mobile-back-btn {
+                display: none;
+            }
+
+            .show-on-mobile {
+                display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .search-input-wrapper {
+                flex-direction: column;
+            }
+
+            .filter-section {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .filter-group {
+                justify-content: space-between;
+            }
+        }
+    </style>
+</head>
+<body class="search-page">
+    <div class="grain-overlay"></div>
+
+    <header class="site-header">
+        <div class="container">
+            <h1 class="site-title"><a href="index.html">Threads of Grace</a></h1>
+            <p class="site-subtitle">Meditations on Scripture and the Spiritual Life</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="search-header">
+            <h1>Search Meditations</h1>
+            <p>Find meditations by keyword, theme, scripture, or spiritual teacher</p>
+        </div>
+
+        <div class="search-controls">
+            <div class="search-input-wrapper">
+                <input type="text" id="search-input" placeholder="Search for surrender, Julian of Norwich, Centering Prayer..." autofocus>
+                <button class="search-button" id="search-button">Search</button>
+            </div>
+
+            <div class="filter-section">
+                <div class="filter-group">
+                    <label class="filter-label" for="season-filter">Season:</label>
+                    <select id="season-filter" class="filter-select">
+                        <option value="">All Seasons</option>
+                        <option value="Advent">Advent</option>
+                        <option value="Christmas">Christmas</option>
+                        <option value="Epiphany">Epiphany</option>
+                        <option value="Lent">Lent</option>
+                        <option value="Easter">Easter</option>
+                        <option value="Pentecost">Pentecost</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label class="filter-label" for="year-filter">Year:</label>
+                    <select id="year-filter" class="filter-select">
+                        <option value="">All Years</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="split-view">
+            <div class="results-panel" id="results-panel">
+                <div class="initial-message">
+                    <h3>Explore Pat's Meditations</h3>
+                    <p>Search across 848 weekly meditations spanning December 2007 through March 2024.</p>
+                    <p>Try searching for contemplative themes, scripture passages, or spiritual teachers.</p>
+
+                    <div class="search-suggestions">
+                        <span class="suggestion-chip" data-query="surrender">surrender</span>
+                        <span class="suggestion-chip" data-query="Centering Prayer">Centering Prayer</span>
+                        <span class="suggestion-chip" data-query="Julian of Norwich">Julian of Norwich</span>
+                        <span class="suggestion-chip" data-query="transformation">transformation</span>
+                        <span class="suggestion-chip" data-query="presence">presence</span>
+                        <span class="suggestion-chip" data-query="silence">silence</span>
+                        <span class="suggestion-chip" data-query="lectio divina">lectio divina</span>
+                        <span class="suggestion-chip" data-query="Richard Rohr">Richard Rohr</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reading-panel" id="reading-panel">
+                <div class="reading-panel-empty">
+                    <h3>Select a meditation to read</h3>
+                    <p>Click on any search result to view the full meditation here.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p><a href="index.html">Return to Home</a></p>
+            <p class="copyright">© 2007–2025 Pat Horn. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Search functionality
+        let searchIndex = [];
+        let isLoaded = false;
+        let currentMeditationDate = null;
+
+        // Load the search index
+        async function loadSearchIndex() {
+            try {
+                const response = await fetch('search-index.json');
+                searchIndex = await response.json();
+                isLoaded = true;
+                populateYearFilter();
+                console.log(`Loaded ${searchIndex.length} meditations into search index`);
+            } catch (error) {
+                console.error('Error loading search index:', error);
+                document.getElementById('results-panel').innerHTML =
+                    '<p class="no-results">Unable to load search index. Please try refreshing the page.</p>';
+            }
+        }
+
+        // Populate year filter dropdown
+        function populateYearFilter() {
+            const years = [...new Set(searchIndex.map(m => m.year))].sort((a, b) => b - a);
+            const yearFilter = document.getElementById('year-filter');
+            years.forEach(year => {
+                const option = document.createElement('option');
+                option.value = year;
+                option.textContent = year;
+                yearFilter.appendChild(option);
+            });
+        }
+
+        // Perform search
+        function performSearch() {
+            if (!isLoaded) return;
+
+            const query = document.getElementById('search-input').value.trim().toLowerCase();
+            const seasonFilter = document.getElementById('season-filter').value;
+            const yearFilter = document.getElementById('year-filter').value;
+
+            if (!query && !seasonFilter && !yearFilter) {
+                showInitialMessage();
+                return;
+            }
+
+            let results = searchIndex;
+
+            // Apply filters
+            if (seasonFilter) {
+                results = results.filter(m => m.season === seasonFilter);
+            }
+
+            if (yearFilter) {
+                results = results.filter(m => m.year === parseInt(yearFilter));
+            }
+
+            // Apply text search
+            if (query) {
+                const queryTerms = query.split(/\s+/).filter(t => t.length > 0);
+
+                results = results.map(meditation => {
+                    let score = 0;
+
+                    const searchFields = [
+                        { field: 'title', weight: 10, value: meditation.title || '' },
+                        { field: 'occasion', weight: 5, value: meditation.occasion || '' },
+                        { field: 'scripture', weight: 5, value: meditation.scripture || '' },
+                        { field: 'excerpt', weight: 3, value: meditation.excerpt || '' },
+                        { field: 'keywords', weight: 8, value: (meditation.keywords || []).join(' ') },
+                        { field: 'teachers', weight: 7, value: (meditation.teachers || []).join(' ') }
+                    ];
+
+                    queryTerms.forEach(term => {
+                        searchFields.forEach(({ weight, value }) => {
+                            const lowerValue = value.toLowerCase();
+                            if (lowerValue.includes(term)) {
+                                score += weight;
+                                const occurrences = (lowerValue.match(new RegExp(escapeRegex(term), 'g')) || []).length;
+                                score += (occurrences - 1) * (weight / 2);
+                            }
+                        });
+                    });
+
+                    return { ...meditation, score };
+                })
+                .filter(m => m.score > 0)
+                .sort((a, b) => b.score - a.score);
+            }
+
+            displayResults(results, query);
+        }
+
+        // Display search results
+        function displayResults(results, query) {
+            const container = document.getElementById('results-panel');
+
+            if (results.length === 0) {
+                container.innerHTML = `
+                    <div class="no-results">
+                        <p>No meditations found matching your search.</p>
+                        <p>Try different keywords or broaden your filters.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            const queryTerms = query ? query.split(/\s+/).filter(t => t.length > 0) : [];
+
+            let html = `
+                <div class="results-header">
+                    <span class="results-count">${results.length} meditation${results.length !== 1 ? 's' : ''} found</span>
+                </div>
+                <div class="results-list">
+            `;
+
+            results.slice(0, 100).forEach(meditation => {
+                const excerpt = highlightTerms(meditation.excerpt || '', queryTerms);
+                const tags = [...(meditation.keywords || []).slice(0, 2), ...(meditation.teachers || []).slice(0, 1)];
+                const isActive = meditation.date === currentMeditationDate;
+
+                html += `
+                    <div class="result-item ${isActive ? 'active' : ''}" data-date="${meditation.date}" onclick="loadMeditation('${meditation.date}')">
+                        <div class="result-date">${meditation.displayDate}</div>
+                        <div class="result-title">${meditation.title || 'Untitled'}</div>
+                        <div class="result-meta">${meditation.occasion}</div>
+                        <p class="result-excerpt">${excerpt}</p>
+                        ${tags.length > 0 ? `
+                            <div class="result-tags">
+                                ${tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                            </div>
+                        ` : ''}
+                    </div>
+                `;
+            });
+
+            html += '</div>';
+
+            if (results.length > 100) {
+                html += `<p style="text-align: center; padding: var(--spacing-md); color: var(--medium-gray); font-size: 0.9rem;">Showing first 100 of ${results.length} results</p>`;
+            }
+
+            container.innerHTML = html;
+        }
+
+        // Load meditation into reading panel
+        async function loadMeditation(date) {
+            const readingPanel = document.getElementById('reading-panel');
+            currentMeditationDate = date;
+
+            // Update active state in results
+            document.querySelectorAll('.result-item').forEach(item => {
+                item.classList.toggle('active', item.dataset.date === date);
+            });
+
+            // Show loading state
+            readingPanel.innerHTML = '<div class="loading-spinner">Loading meditation...</div>';
+
+            try {
+                const response = await fetch(`meditations/${date}.html`);
+                const html = await response.text();
+
+                // Parse the HTML to extract content
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+
+                const header = doc.querySelector('.meditation-header');
+                const content = doc.querySelector('.meditation-content');
+
+                if (header && content) {
+                    // Remove the author div from content if present
+                    const authorDiv = content.querySelector('.meditation-author');
+                    if (authorDiv) authorDiv.remove();
+
+                    readingPanel.innerHTML = `
+                        <button class="mobile-back-btn" onclick="showResultsOnMobile()">← Back to results</button>
+                        <article class="meditation-header">
+                            ${header.innerHTML}
+                        </article>
+                        <div class="meditation-content">
+                            ${content.innerHTML}
+                        </div>
+                        <a href="meditations/${date}.html" class="open-full-link">Open full page →</a>
+                    `;
+
+                    // On mobile, scroll to reading panel
+                    if (window.innerWidth <= 900) {
+                        readingPanel.scrollIntoView({ behavior: 'smooth' });
+                    }
+                } else {
+                    throw new Error('Could not parse meditation content');
+                }
+            } catch (error) {
+                console.error('Error loading meditation:', error);
+                readingPanel.innerHTML = `
+                    <div class="reading-panel-empty">
+                        <h3>Unable to load meditation</h3>
+                        <p>Try <a href="meditations/${date}.html">opening it directly</a>.</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Mobile: show results panel
+        function showResultsOnMobile() {
+            document.getElementById('results-panel').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Highlight search terms in text
+        function highlightTerms(text, terms) {
+            if (!terms.length) return text;
+
+            let highlighted = text;
+            terms.forEach(term => {
+                const regex = new RegExp(`(${escapeRegex(term)})`, 'gi');
+                highlighted = highlighted.replace(regex, '<mark>$1</mark>');
+            });
+            return highlighted;
+        }
+
+        function escapeRegex(string) {
+            return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        }
+
+        function showInitialMessage() {
+            document.getElementById('results-panel').innerHTML = `
+                <div class="initial-message">
+                    <h3>Explore Pat's Meditations</h3>
+                    <p>Search across 848 weekly meditations spanning December 2007 through March 2024.</p>
+                    <p>Try searching for contemplative themes, scripture passages, or spiritual teachers.</p>
+
+                    <div class="search-suggestions">
+                        <span class="suggestion-chip" data-query="surrender">surrender</span>
+                        <span class="suggestion-chip" data-query="Centering Prayer">Centering Prayer</span>
+                        <span class="suggestion-chip" data-query="Julian of Norwich">Julian of Norwich</span>
+                        <span class="suggestion-chip" data-query="transformation">transformation</span>
+                        <span class="suggestion-chip" data-query="presence">presence</span>
+                        <span class="suggestion-chip" data-query="silence">silence</span>
+                        <span class="suggestion-chip" data-query="lectio divina">lectio divina</span>
+                        <span class="suggestion-chip" data-query="Richard Rohr">Richard Rohr</span>
+                    </div>
+                </div>
+            `;
+            attachSuggestionListeners();
+        }
+
+        // Attach click handlers to suggestion chips
+        function attachSuggestionListeners() {
+            document.querySelectorAll('.suggestion-chip').forEach(chip => {
+                chip.addEventListener('click', () => {
+                    document.getElementById('search-input').value = chip.dataset.query;
+                    performSearch();
+                });
+            });
+        }
+
+        // Event listeners
+        document.getElementById('search-button').addEventListener('click', performSearch);
+
+        document.getElementById('search-input').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') performSearch();
+        });
+
+        document.getElementById('season-filter').addEventListener('change', performSearch);
+        document.getElementById('year-filter').addEventListener('change', performSearch);
+
+        // Initialize
+        loadSearchIndex();
+        attachSuggestionListeners();
+    </script>
+</body>
+</html>
