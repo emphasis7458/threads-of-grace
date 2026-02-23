@@ -1,0 +1,5989 @@
+{
+  "2007-12-02": {
+    "date": "2007-12-02",
+    "occasion": "First Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2007-12-09": {
+    "date": "2007-12-09",
+    "occasion": "Second Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2007-12-16": {
+    "date": "2007-12-16",
+    "occasion": "Third Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2007-12-23": {
+    "date": "2007-12-23",
+    "occasion": "Fourth Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2007-12-30": {
+    "date": "2007-12-30",
+    "occasion": "First Sunday after Christmas",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-01-06": {
+    "date": "2008-01-06",
+    "occasion": "The Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-01-13": {
+    "date": "2008-01-13",
+    "occasion": "First Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-01-20": {
+    "date": "2008-01-20",
+    "occasion": "Second Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-02-03": {
+    "date": "2008-02-03",
+    "occasion": "Last Sunday after Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-02-10": {
+    "date": "2008-02-10",
+    "occasion": "First Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-02-17": {
+    "date": "2008-02-17",
+    "occasion": "Second Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-02-27": {
+    "date": "2008-02-27",
+    "occasion": "Third Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-03-02": {
+    "date": "2008-03-02",
+    "occasion": "Fourth Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-03-09": {
+    "date": "2008-03-09",
+    "occasion": "Fifth Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-03-16": {
+    "date": "2008-03-16",
+    "occasion": "Sunday of the Passion:: Palm Sunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-03-23": {
+    "date": "2008-03-23",
+    "occasion": "Easter Day: Primary: Primary",
+    "proper": null,
+    "service_types": [
+      "Early",
+      "Evening",
+      "Evening"
+    ],
+    "lectionary_year": "A"
+  },
+  "2008-03-24": {
+    "date": "2008-03-24",
+    "occasion": "Third Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-04-06": {
+    "date": "2008-04-06",
+    "occasion": "Third Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-04-13": {
+    "date": "2008-04-13",
+    "occasion": "Fourth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-04-20": {
+    "date": "2008-04-20",
+    "occasion": "Fifth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-04-30": {
+    "date": "2008-04-30",
+    "occasion": "Second Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-05-04": {
+    "date": "2008-05-04",
+    "occasion": "Seventh Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-05-11": {
+    "date": "2008-05-11",
+    "occasion": "Day of Pentecost: Whitsunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-05-18": {
+    "date": "2008-05-18",
+    "occasion": "First Sunday after Pentecost: Trinity Sunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-05-27": {
+    "date": "2008-05-27",
+    "occasion": "Sixth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-06-01": {
+    "date": "2008-06-01",
+    "occasion": "Third Sunday after Pentecost",
+    "proper": 4,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-06-08": {
+    "date": "2008-06-08",
+    "occasion": "Fourth Sunday after Pentecost",
+    "proper": 5,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-06-15": {
+    "date": "2008-06-15",
+    "occasion": "Fifth Sunday after Pentecost",
+    "proper": 6,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-06-22": {
+    "date": "2008-06-22",
+    "occasion": "Sixth Sunday after Pentecost",
+    "proper": 7,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-06-25": {
+    "date": "2008-06-25",
+    "occasion": "Second Sunday after Pentecost",
+    "proper": 3,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-07-06": {
+    "date": "2008-07-06",
+    "occasion": "Eighth Sunday after Pentecost",
+    "proper": 9,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-07-13": {
+    "date": "2008-07-13",
+    "occasion": "Ninth Sunday after Pentecost",
+    "proper": 10,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-07-20": {
+    "date": "2008-07-20",
+    "occasion": "Tenth Sunday after Pentecost",
+    "proper": 11,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-07-29": {
+    "date": "2008-07-29",
+    "occasion": "Seventh Sunday after Pentecost",
+    "proper": 8,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-08-03": {
+    "date": "2008-08-03",
+    "occasion": "Twelfth Sunday after Pentecost",
+    "proper": 13,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-08-10": {
+    "date": "2008-08-10",
+    "occasion": "Thirteenth Sunday after Pentecost",
+    "proper": 14,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-08-17": {
+    "date": "2008-08-17",
+    "occasion": "Fourteenth Sunday after Pentecost",
+    "proper": 15,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-08-24": {
+    "date": "2008-08-24",
+    "occasion": "Fifteenth Sunday after Pentecost",
+    "proper": 16,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-08-27": {
+    "date": "2008-08-27",
+    "occasion": "Eleventh Sunday after Pentecost",
+    "proper": 12,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-09-07": {
+    "date": "2008-09-07",
+    "occasion": "Seventeenth Sunday after Pentecost",
+    "proper": 18,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-09-14": {
+    "date": "2008-09-14",
+    "occasion": "Eighteenth Sunday after Pentecost",
+    "proper": 19,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-09-21": {
+    "date": "2008-09-21",
+    "occasion": "Nineteenth Sunday after Pentecost",
+    "proper": 20,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-09-31": {
+    "date": "2008-09-31",
+    "occasion": "Sixteenth Sunday after Pentecost",
+    "proper": 17,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-10-05": {
+    "date": "2008-10-05",
+    "occasion": "Twenty First Sunday after Pentecost",
+    "proper": 22,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-10-12": {
+    "date": "2008-10-12",
+    "occasion": "Twenty Second Sunday after Pentecost",
+    "proper": 23,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-10-19": {
+    "date": "2008-10-19",
+    "occasion": "Twenty Third Sunday after Pentecost",
+    "proper": 24,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-10-28": {
+    "date": "2008-10-28",
+    "occasion": "Twentieth Sunday after Pentecost",
+    "proper": 21,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-11-02": {
+    "date": "2008-11-02",
+    "occasion": "Twenty Fifth Sunday after Pentecost",
+    "proper": 26,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-11-09": {
+    "date": "2008-11-09",
+    "occasion": "Twenty Sixth Sunday after Pentecost",
+    "proper": 27,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-11-16": {
+    "date": "2008-11-16",
+    "occasion": "Twenty Seventh Sunday after Pentecost",
+    "proper": 28,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-11-23": {
+    "date": "2008-11-23",
+    "occasion": "Last Sunday after Pentecost:: Christ the King",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-11-26": {
+    "date": "2008-11-26",
+    "occasion": "Twenty Fourth Sunday after Pentecost",
+    "proper": 25,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2008-12-07": {
+    "date": "2008-12-07",
+    "occasion": "Second Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2008-12-14": {
+    "date": "2008-12-14",
+    "occasion": "Third Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2008-12-21": {
+    "date": "2008-12-21",
+    "occasion": "Fourth Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2008-12-28": {
+    "date": "2008-12-28",
+    "occasion": "First Sunday after Christmas",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2008-12-30": {
+    "date": "2008-12-30",
+    "occasion": "First Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-01-04": {
+    "date": "2009-01-04",
+    "occasion": "Second Sunday after Christmas",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-01-11": {
+    "date": "2009-01-11",
+    "occasion": "First Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-01-18": {
+    "date": "2009-01-18",
+    "occasion": "Second Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-02-01": {
+    "date": "2009-02-01",
+    "occasion": "Fourth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-02-08": {
+    "date": "2009-02-08",
+    "occasion": "Fifth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-02-15": {
+    "date": "2009-02-15",
+    "occasion": "Sixth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-02-25": {
+    "date": "2009-02-25",
+    "occasion": "Third Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-03-01": {
+    "date": "2009-03-01",
+    "occasion": "First Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-03-08": {
+    "date": "2009-03-08",
+    "occasion": "Second Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-03-15": {
+    "date": "2009-03-15",
+    "occasion": "Third Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-03-22": {
+    "date": "2009-03-22",
+    "occasion": "Fourth Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-04-05": {
+    "date": "2009-04-05",
+    "occasion": "Sunday of the Passion:: Palm Sunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-04-12": {
+    "date": "2009-04-12",
+    "occasion": "Easter Day",
+    "proper": null,
+    "service_types": [
+      "Early",
+      "Principal",
+      "Principal",
+      "Evening",
+      "Evening"
+    ],
+    "lectionary_year": "B"
+  },
+  "2009-04-19": {
+    "date": "2009-04-19",
+    "occasion": "Second Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-04-29": {
+    "date": "2009-04-29",
+    "occasion": "Fifth Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-05-10": {
+    "date": "2009-05-10",
+    "occasion": "Fifth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-05-17": {
+    "date": "2009-05-17",
+    "occasion": "Sixth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-05-24": {
+    "date": "2009-05-24",
+    "occasion": "Seventh Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-05-26": {
+    "date": "2009-05-26",
+    "occasion": "Third Sunday of Easter: 3Fourth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-06-07": {
+    "date": "2009-06-07",
+    "occasion": "First Sunday after Pentecost: Trinity Sunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-06-14": {
+    "date": "2009-06-14",
+    "occasion": "Second Sunday after Pentecost",
+    "proper": 6,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-06-21": {
+    "date": "2009-06-21",
+    "occasion": "Third Sunday after Pentecost",
+    "proper": 7,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-06-31": {
+    "date": "2009-06-31",
+    "occasion": "Day of Pentecost: Whitsunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-07-05": {
+    "date": "2009-07-05",
+    "occasion": "Fifth Sunday after Pentecost",
+    "proper": 9,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-07-12": {
+    "date": "2009-07-12",
+    "occasion": "Sixth Sunday after Pentecost",
+    "proper": 10,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-07-19": {
+    "date": "2009-07-19",
+    "occasion": "Seventh Sunday after Pentecost",
+    "proper": 11,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-07-28": {
+    "date": "2009-07-28",
+    "occasion": "Fourth Sunday after Pentecost",
+    "proper": 8,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-08-02": {
+    "date": "2009-08-02",
+    "occasion": "Ninth Sunday after Pentecost",
+    "proper": 13,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-08-09": {
+    "date": "2009-08-09",
+    "occasion": "Tenth Sunday after Pentecost",
+    "proper": 14,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-08-16": {
+    "date": "2009-08-16",
+    "occasion": "Eleventh Sunday after Pentecost",
+    "proper": 15,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-08-23": {
+    "date": "2009-08-23",
+    "occasion": "Twelfth Sunday after Pentecost",
+    "proper": 16,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-08-26": {
+    "date": "2009-08-26",
+    "occasion": "Eighth Sunday after Pentecost",
+    "proper": 12,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-09-06": {
+    "date": "2009-09-06",
+    "occasion": "Fourteenth Sunday after Pentecost",
+    "proper": 18,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-09-13": {
+    "date": "2009-09-13",
+    "occasion": "Fifteenth Sunday after Pentecost",
+    "proper": 19,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-09-20": {
+    "date": "2009-09-20",
+    "occasion": "Sixteenth Sunday after Pentecost",
+    "proper": 20,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-09-30": {
+    "date": "2009-09-30",
+    "occasion": "Thirteenth Sunday after Pentecost",
+    "proper": 17,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-10-04": {
+    "date": "2009-10-04",
+    "occasion": "Eighteenth Sunday after Pentecost",
+    "proper": 22,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-10-11": {
+    "date": "2009-10-11",
+    "occasion": "Nineteenth Sunday after Pentecost",
+    "proper": 23,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-10-18": {
+    "date": "2009-10-18",
+    "occasion": "Twentieth Sunday after Pentecost",
+    "proper": 24,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-10-27": {
+    "date": "2009-10-27",
+    "occasion": "Seventeenth Sunday after Pentecost",
+    "proper": 21,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-11-01": {
+    "date": "2009-11-01",
+    "occasion": "All Saints: All Saints  (1): or: All Saints  (2)",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-11-08": {
+    "date": "2009-11-08",
+    "occasion": "Twenty Third Sunday after Pentecost",
+    "proper": 27,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-11-15": {
+    "date": "2009-11-15",
+    "occasion": "Twenty Fourth Sunday after Pentecost",
+    "proper": 28,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-11-22": {
+    "date": "2009-11-22",
+    "occasion": "Last Sunday after Pentecost:: Christ the King",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-11-25": {
+    "date": "2009-11-25",
+    "occasion": "Twenty First Sunday after Pentecost",
+    "proper": 25,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2009-12-06": {
+    "date": "2009-12-06",
+    "occasion": "Second Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2009-12-13": {
+    "date": "2009-12-13",
+    "occasion": "Third Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2009-12-20": {
+    "date": "2009-12-20",
+    "occasion": "Fourth Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2009-12-29": {
+    "date": "2009-12-29",
+    "occasion": "First Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-01-03": {
+    "date": "2010-01-03",
+    "occasion": "Second Sunday after Christmas",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-01-10": {
+    "date": "2010-01-10",
+    "occasion": "First Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-01-17": {
+    "date": "2010-01-17",
+    "occasion": "Second Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-01-24": {
+    "date": "2010-01-24",
+    "occasion": "Third Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-01-27": {
+    "date": "2010-01-27",
+    "occasion": "First Sunday after Christmas",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-02-07": {
+    "date": "2010-02-07",
+    "occasion": "Fifth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-02-14": {
+    "date": "2010-02-14",
+    "occasion": "Last Sunday after Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-02-21": {
+    "date": "2010-02-21",
+    "occasion": "First Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-02-31": {
+    "date": "2010-02-31",
+    "occasion": "Fourth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-03-07": {
+    "date": "2010-03-07",
+    "occasion": "Third Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-03-14": {
+    "date": "2010-03-14",
+    "occasion": "Fourth Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-03-21": {
+    "date": "2010-03-21",
+    "occasion": "Fifth Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-03-28": {
+    "date": "2010-03-28",
+    "occasion": "Second Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-04-04": {
+    "date": "2010-04-04",
+    "occasion": "Easter Day",
+    "proper": null,
+    "service_types": [
+      "Early",
+      "Principal",
+      "Principal",
+      "Evening",
+      "Evening"
+    ],
+    "lectionary_year": "C"
+  },
+  "2010-04-11": {
+    "date": "2010-04-11",
+    "occasion": "Second Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-04-18": {
+    "date": "2010-04-18",
+    "occasion": "Third Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-04-28": {
+    "date": "2010-04-28",
+    "occasion": "Sunday of the Passion:: Palm Sunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-05-02": {
+    "date": "2010-05-02",
+    "occasion": "Fifth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-05-09": {
+    "date": "2010-05-09",
+    "occasion": "Sixth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-05-16": {
+    "date": "2010-05-16",
+    "occasion": "Seventh Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-05-23": {
+    "date": "2010-05-23",
+    "occasion": "Day of Pentecost: Whitsunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-05-25": {
+    "date": "2010-05-25",
+    "occasion": "Fourth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-06-06": {
+    "date": "2010-06-06",
+    "occasion": "Second Sunday after Pentecost",
+    "proper": 5,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-06-13": {
+    "date": "2010-06-13",
+    "occasion": "Third Sunday after Pentecost",
+    "proper": 6,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-06-20": {
+    "date": "2010-06-20",
+    "occasion": "Fourth Sunday after Pentecost",
+    "proper": 7,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-06-30": {
+    "date": "2010-06-30",
+    "occasion": "First Sunday after Pentecost: Trinity Sunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-07-04": {
+    "date": "2010-07-04",
+    "occasion": "Sixth Sunday after Pentecost",
+    "proper": 9,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-07-11": {
+    "date": "2010-07-11",
+    "occasion": "Seventh Sunday after Pentecost",
+    "proper": 10,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-07-18": {
+    "date": "2010-07-18",
+    "occasion": "Eighth Sunday after Pentecost",
+    "proper": 11,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-07-27": {
+    "date": "2010-07-27",
+    "occasion": "Fifth Sunday after Pentecost",
+    "proper": 8,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-08-01": {
+    "date": "2010-08-01",
+    "occasion": "Tenth Sunday after Pentecost",
+    "proper": 13,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-08-08": {
+    "date": "2010-08-08",
+    "occasion": "Eleventh Sunday after Pentecost",
+    "proper": 14,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-08-15": {
+    "date": "2010-08-15",
+    "occasion": "Twelfth Sunday after Pentecost",
+    "proper": 15,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-08-22": {
+    "date": "2010-08-22",
+    "occasion": "Thirteenth Sunday after Pentecost",
+    "proper": 16,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-08-25": {
+    "date": "2010-08-25",
+    "occasion": "Ninth Sunday after Pentecost",
+    "proper": 12,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-09-05": {
+    "date": "2010-09-05",
+    "occasion": "Fifteenth Sunday after Pentecost",
+    "proper": 18,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-09-12": {
+    "date": "2010-09-12",
+    "occasion": "Sixteenth Sunday after Pentecost",
+    "proper": 19,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-09-19": {
+    "date": "2010-09-19",
+    "occasion": "Seventeenth Sunday after Pentecost",
+    "proper": 20,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-09-29": {
+    "date": "2010-09-29",
+    "occasion": "Fourteenth Sunday after Pentecost",
+    "proper": 17,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-10-03": {
+    "date": "2010-10-03",
+    "occasion": "Nineteenth Sunday after Pentecost",
+    "proper": 22,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-10-10": {
+    "date": "2010-10-10",
+    "occasion": "Twentieth Sunday after Pentecost",
+    "proper": 23,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-10-17": {
+    "date": "2010-10-17",
+    "occasion": "Twenty First Sunday after Pentecost",
+    "proper": 24,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-10-24": {
+    "date": "2010-10-24",
+    "occasion": "Twenty Second Sunday after Pentecost",
+    "proper": 25,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-10-26": {
+    "date": "2010-10-26",
+    "occasion": "Eighteenth Sunday after Pentecost",
+    "proper": 21,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-11-07": {
+    "date": "2010-11-07",
+    "occasion": "or: Twenty Fourth Sunday after Pentecost",
+    "proper": 27,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-11-14": {
+    "date": "2010-11-14",
+    "occasion": "Twenty Fifth Sunday after Pentecost",
+    "proper": 28,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-11-21": {
+    "date": "2010-11-21",
+    "occasion": "Last Sunday after Pentecost:: Christ the King",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-11-31": {
+    "date": "2010-11-31",
+    "occasion": "Twenty Third Sunday after Pentecost: Vigil of All Saints",
+    "proper": 26,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2010-12-05": {
+    "date": "2010-12-05",
+    "occasion": "Second Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2010-12-12": {
+    "date": "2010-12-12",
+    "occasion": "Third Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2010-12-19": {
+    "date": "2010-12-19",
+    "occasion": "Fourth Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2010-12-28": {
+    "date": "2010-12-28",
+    "occasion": "First Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-01-02": {
+    "date": "2011-01-02",
+    "occasion": "Second Sunday after Christmas",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-01-09": {
+    "date": "2011-01-09",
+    "occasion": "First Sunday after the Epiphany: The Baptism of Our Lord",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-01-16": {
+    "date": "2011-01-16",
+    "occasion": "Second Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-01-23": {
+    "date": "2011-01-23",
+    "occasion": "Third Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-01-26": {
+    "date": "2011-01-26",
+    "occasion": "First Sunday after Christmas",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-02-06": {
+    "date": "2011-02-06",
+    "occasion": "Fifth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-02-13": {
+    "date": "2011-02-13",
+    "occasion": "Sixth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-02-20": {
+    "date": "2011-02-20",
+    "occasion": "Seventh Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-02-30": {
+    "date": "2011-02-30",
+    "occasion": "Fourth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-03-06": {
+    "date": "2011-03-06",
+    "occasion": "Last Sunday after Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-03-13": {
+    "date": "2011-03-13",
+    "occasion": "First Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-03-20": {
+    "date": "2011-03-20",
+    "occasion": "Second Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-03-27": {
+    "date": "2011-03-27",
+    "occasion": "Eighth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-04-03": {
+    "date": "2011-04-03",
+    "occasion": "Fourth Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-04-10": {
+    "date": "2011-04-10",
+    "occasion": "Fifth Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-04-17": {
+    "date": "2011-04-17",
+    "occasion": "Sunday of the Passion:: Palm Sunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-04-27": {
+    "date": "2011-04-27",
+    "occasion": "Third Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-05-01": {
+    "date": "2011-05-01",
+    "occasion": "Second Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-05-08": {
+    "date": "2011-05-08",
+    "occasion": "Third Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-05-15": {
+    "date": "2011-05-15",
+    "occasion": "Fourth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-05-22": {
+    "date": "2011-05-22",
+    "occasion": "Fifth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-05-24": {
+    "date": "2011-05-24",
+    "occasion": "Easter Day",
+    "proper": null,
+    "service_types": [
+      "Principal",
+      "Evening"
+    ],
+    "lectionary_year": "A"
+  },
+  "2011-06-05": {
+    "date": "2011-06-05",
+    "occasion": "Seventh Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-06-12": {
+    "date": "2011-06-12",
+    "occasion": "Day of Pentecost: Whitsunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-06-19": {
+    "date": "2011-06-19",
+    "occasion": "First Sunday after Pentecost: Trinity Sunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-06-29": {
+    "date": "2011-06-29",
+    "occasion": "Sixth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-07-03": {
+    "date": "2011-07-03",
+    "occasion": "Third Sunday after Pentecost",
+    "proper": 9,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-07-10": {
+    "date": "2011-07-10",
+    "occasion": "Fourth Sunday after Pentecost",
+    "proper": 10,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-07-17": {
+    "date": "2011-07-17",
+    "occasion": "Fifth Sunday after Pentecost",
+    "proper": 11,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-07-24": {
+    "date": "2011-07-24",
+    "occasion": "Sixth Sunday after Pentecost",
+    "proper": 12,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-07-26": {
+    "date": "2011-07-26",
+    "occasion": "Second Sunday after Pentecost",
+    "proper": 8,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-08-07": {
+    "date": "2011-08-07",
+    "occasion": "Eighth Sunday after Pentecost",
+    "proper": 14,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-08-14": {
+    "date": "2011-08-14",
+    "occasion": "Ninth Sunday after Pentecost",
+    "proper": 15,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-08-21": {
+    "date": "2011-08-21",
+    "occasion": "Tenth Sunday after Pentecost",
+    "proper": 16,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-08-31": {
+    "date": "2011-08-31",
+    "occasion": "Seventh Sunday after Pentecost",
+    "proper": 13,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-09-04": {
+    "date": "2011-09-04",
+    "occasion": "Twelfth Sunday after Pentecost",
+    "proper": 18,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-09-11": {
+    "date": "2011-09-11",
+    "occasion": "Thirteenth Sunday after Pentecost",
+    "proper": 19,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-09-18": {
+    "date": "2011-09-18",
+    "occasion": "Fourteenth Sunday after Pentecost",
+    "proper": 20,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-09-28": {
+    "date": "2011-09-28",
+    "occasion": "Eleventh Sunday after Pentecost",
+    "proper": 17,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-10-02": {
+    "date": "2011-10-02",
+    "occasion": "Sixteenth Sunday after Pentecost",
+    "proper": 22,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-10-09": {
+    "date": "2011-10-09",
+    "occasion": "Seventeenth Sunday after Pentecost",
+    "proper": 23,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-10-16": {
+    "date": "2011-10-16",
+    "occasion": "Eighteenth Sunday after Pentecost",
+    "proper": 24,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-10-23": {
+    "date": "2011-10-23",
+    "occasion": "Nineteenth Sunday after Pentecost",
+    "proper": 25,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-10-25": {
+    "date": "2011-10-25",
+    "occasion": "Fifteenth Sunday after Pentecost",
+    "proper": 21,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-11-06": {
+    "date": "2011-11-06",
+    "occasion": "All Saints' (see Nov 1, white): or: Twenty First Sunday after Pentecost",
+    "proper": 27,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-11-13": {
+    "date": "2011-11-13",
+    "occasion": "Twenty Second Sunday after Pentecost",
+    "proper": 28,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-11-20": {
+    "date": "2011-11-20",
+    "occasion": "Last Sunday after Pentecost:: Christ the King",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-11-30": {
+    "date": "2011-11-30",
+    "occasion": "Twentieth Sunday after Pentecost",
+    "proper": 26,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2011-12-04": {
+    "date": "2011-12-04",
+    "occasion": "Second Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2011-12-11": {
+    "date": "2011-12-11",
+    "occasion": "Third Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2011-12-18": {
+    "date": "2011-12-18",
+    "occasion": "Fourth Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2011-12-27": {
+    "date": "2011-12-27",
+    "occasion": "First Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-01-01": {
+    "date": "2012-01-01",
+    "occasion": "The Holy Name",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-01-08": {
+    "date": "2012-01-08",
+    "occasion": "First Sunday after the Epiphany: The Baptism of Our Lord",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-01-15": {
+    "date": "2012-01-15",
+    "occasion": "Second Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-01-22": {
+    "date": "2012-01-22",
+    "occasion": "Third Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-01-25": {
+    "date": "2012-01-25",
+    "occasion": "Christmas Day",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-02-05": {
+    "date": "2012-02-05",
+    "occasion": "Fifth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-02-12": {
+    "date": "2012-02-12",
+    "occasion": "Sixth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-02-19": {
+    "date": "2012-02-19",
+    "occasion": "Last Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-02-29": {
+    "date": "2012-02-29",
+    "occasion": "Fourth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-03-04": {
+    "date": "2012-03-04",
+    "occasion": "Second Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-03-11": {
+    "date": "2012-03-11",
+    "occasion": "Third Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-03-18": {
+    "date": "2012-03-18",
+    "occasion": "Fourth Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-03-26": {
+    "date": "2012-03-26",
+    "occasion": "First Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-04-01": {
+    "date": "2012-04-01",
+    "occasion": "Sunday of the Passion:: Palm Sunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-04-08": {
+    "date": "2012-04-08",
+    "occasion": "Easter Day",
+    "proper": null,
+    "service_types": [
+      "Principal",
+      "Evening"
+    ],
+    "lectionary_year": "B"
+  },
+  "2012-04-15": {
+    "date": "2012-04-15",
+    "occasion": "Second Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-04-22": {
+    "date": "2012-04-22",
+    "occasion": "Third Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-04-25": {
+    "date": "2012-04-25",
+    "occasion": "Fifth Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-05-06": {
+    "date": "2012-05-06",
+    "occasion": "Fifth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-05-13": {
+    "date": "2012-05-13",
+    "occasion": "Sixth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-05-20": {
+    "date": "2012-05-20",
+    "occasion": "Seventh Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-05-29": {
+    "date": "2012-05-29",
+    "occasion": "Fourth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-06-03": {
+    "date": "2012-06-03",
+    "occasion": "First Sunday after Pentecost: Trinity Sunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-06-10": {
+    "date": "2012-06-10",
+    "occasion": "Second Sunday after Pentecost",
+    "proper": 5,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-06-17": {
+    "date": "2012-06-17",
+    "occasion": "Third Sunday after Pentecost",
+    "proper": 6,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-06-27": {
+    "date": "2012-06-27",
+    "occasion": "Day of Pentecost: Whitsunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-07-01": {
+    "date": "2012-07-01",
+    "occasion": "Fifth Sunday after Pentecost",
+    "proper": 8,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-07-08": {
+    "date": "2012-07-08",
+    "occasion": "Sixth Sunday after Pentecost",
+    "proper": 9,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-07-15": {
+    "date": "2012-07-15",
+    "occasion": "Seventh Sunday after Pentecost",
+    "proper": 10,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-07-22": {
+    "date": "2012-07-22",
+    "occasion": "Eighth Sunday after Pentecost",
+    "proper": 11,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-07-24": {
+    "date": "2012-07-24",
+    "occasion": "Fourth Sunday after Pentecost",
+    "proper": 7,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-08-05": {
+    "date": "2012-08-05",
+    "occasion": "Tenth Sunday after Pentecost",
+    "proper": 13,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-08-12": {
+    "date": "2012-08-12",
+    "occasion": "Eleventh Sunday after Pentecost",
+    "proper": 14,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-08-19": {
+    "date": "2012-08-19",
+    "occasion": "Twelfth Sunday after Pentecost",
+    "proper": 15,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-08-29": {
+    "date": "2012-08-29",
+    "occasion": "Ninth Sunday after Pentecost",
+    "proper": 12,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-09-02": {
+    "date": "2012-09-02",
+    "occasion": "Fourteenth Sunday after Pentecost",
+    "proper": 17,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-09-09": {
+    "date": "2012-09-09",
+    "occasion": "Fifteenth Sunday after Pentecost",
+    "proper": 18,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-09-16": {
+    "date": "2012-09-16",
+    "occasion": "Sixteenth Sunday after Pentecost",
+    "proper": 19,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-09-23": {
+    "date": "2012-09-23",
+    "occasion": "Seventeenth Sunday after Pentecost",
+    "proper": 20,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-09-26": {
+    "date": "2012-09-26",
+    "occasion": "Thirteenth Sunday after Pentecost",
+    "proper": 16,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-10-07": {
+    "date": "2012-10-07",
+    "occasion": "Nineteenth Sunday after Pentecost",
+    "proper": 22,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-10-14": {
+    "date": "2012-10-14",
+    "occasion": "Twentieth Sunday after Pentecost",
+    "proper": 23,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-10-21": {
+    "date": "2012-10-21",
+    "occasion": "Twenty First Sunday after Pentecost",
+    "proper": 24,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-10-30": {
+    "date": "2012-10-30",
+    "occasion": "Eighteenth Sunday after Pentecost",
+    "proper": 21,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-11-04": {
+    "date": "2012-11-04",
+    "occasion": "All Saints' (see Nov 1, white): or",
+    "proper": 26,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-11-11": {
+    "date": "2012-11-11",
+    "occasion": "Twenty Fourth Sunday after Pentecost",
+    "proper": 27,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-11-18": {
+    "date": "2012-11-18",
+    "occasion": "Twenty Fifth Sunday after Pentecost",
+    "proper": 28,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-11-28": {
+    "date": "2012-11-28",
+    "occasion": "Twenty Second Sunday after Pentecost",
+    "proper": 25,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2012-12-02": {
+    "date": "2012-12-02",
+    "occasion": "First Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2012-12-09": {
+    "date": "2012-12-09",
+    "occasion": "Second Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2012-12-16": {
+    "date": "2012-12-16",
+    "occasion": "Third Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2012-12-23": {
+    "date": "2012-12-23",
+    "occasion": "Fourth Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2012-12-25": {
+    "date": "2012-12-25",
+    "occasion": "Last Sunday after Pentecost:: Christ the King",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-01-06": {
+    "date": "2013-01-06",
+    "occasion": "The Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-01-13": {
+    "date": "2013-01-13",
+    "occasion": "First Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-01-20": {
+    "date": "2013-01-20",
+    "occasion": "Second Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-01-30": {
+    "date": "2013-01-30",
+    "occasion": "First Sunday after Christmas",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-02-03": {
+    "date": "2013-02-03",
+    "occasion": "Fourth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-02-10": {
+    "date": "2013-02-10",
+    "occasion": "Last Sunday after Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-02-17": {
+    "date": "2013-02-17",
+    "occasion": "First Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-02-27": {
+    "date": "2013-02-27",
+    "occasion": "Third Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-03-03": {
+    "date": "2013-03-03",
+    "occasion": "Third Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-03-10": {
+    "date": "2013-03-10",
+    "occasion": "Fourth Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-03-17": {
+    "date": "2013-03-17",
+    "occasion": "Fifth Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-03-24": {
+    "date": "2013-03-24",
+    "occasion": "Sunday of the Passion:: Palm Sunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-04-07": {
+    "date": "2013-04-07",
+    "occasion": "Second Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-04-14": {
+    "date": "2013-04-14",
+    "occasion": "Third Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-04-21": {
+    "date": "2013-04-21",
+    "occasion": "Fourth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-04-31": {
+    "date": "2013-04-31",
+    "occasion": "Easter Day",
+    "proper": null,
+    "service_types": [
+      "Principal",
+      "Evening"
+    ],
+    "lectionary_year": "C"
+  },
+  "2013-05-05": {
+    "date": "2013-05-05",
+    "occasion": "Sixth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-05-12": {
+    "date": "2013-05-12",
+    "occasion": "Seventh Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-05-19": {
+    "date": "2013-05-19",
+    "occasion": "Day of Pentecost: Whitsunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-05-28": {
+    "date": "2013-05-28",
+    "occasion": "Fifth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-06-02": {
+    "date": "2013-06-02",
+    "occasion": "Second Sunday after Pentecost",
+    "proper": 4,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-06-09": {
+    "date": "2013-06-09",
+    "occasion": "Third Sunday after Pentecost",
+    "proper": 5,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-06-16": {
+    "date": "2013-06-16",
+    "occasion": "Fourth Sunday after Pentecost",
+    "proper": 6,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-06-23": {
+    "date": "2013-06-23",
+    "occasion": "Fifth Sunday after Pentecost",
+    "proper": 7,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-06-26": {
+    "date": "2013-06-26",
+    "occasion": "First Sunday after Pentecost: Trinity Sunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-07-07": {
+    "date": "2013-07-07",
+    "occasion": "Seventh Sunday after Pentecost",
+    "proper": 9,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-07-14": {
+    "date": "2013-07-14",
+    "occasion": "Eighth Sunday after Pentecost",
+    "proper": 10,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-07-21": {
+    "date": "2013-07-21",
+    "occasion": "Ninth Sunday after Pentecost",
+    "proper": 11,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-07-30": {
+    "date": "2013-07-30",
+    "occasion": "Sixth Sunday after Pentecost",
+    "proper": 8,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-08-04": {
+    "date": "2013-08-04",
+    "occasion": "Eleventh Sunday after Pentecost",
+    "proper": 13,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-08-11": {
+    "date": "2013-08-11",
+    "occasion": "Twelfth Sunday after Pentecost",
+    "proper": 14,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-08-18": {
+    "date": "2013-08-18",
+    "occasion": "Thirteenth Sunday after Pentecost",
+    "proper": 15,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-08-28": {
+    "date": "2013-08-28",
+    "occasion": "Tenth Sunday after Pentecost",
+    "proper": 12,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-09-01": {
+    "date": "2013-09-01",
+    "occasion": "Fifteenth Sunday after Pentecost",
+    "proper": 17,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-09-08": {
+    "date": "2013-09-08",
+    "occasion": "Sixteenth Sunday after Pentecost",
+    "proper": 18,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-09-15": {
+    "date": "2013-09-15",
+    "occasion": "Seventeenth Sunday after Pentecost",
+    "proper": 19,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-09-22": {
+    "date": "2013-09-22",
+    "occasion": "Eighteenth Sunday after Pentecost",
+    "proper": 20,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-09-25": {
+    "date": "2013-09-25",
+    "occasion": "Fourteenth Sunday after Pentecost",
+    "proper": 16,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-10-06": {
+    "date": "2013-10-06",
+    "occasion": "Twentieth Sunday after Pentecost",
+    "proper": 22,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-10-13": {
+    "date": "2013-10-13",
+    "occasion": "Twenty First Sunday after Pentecost",
+    "proper": 23,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-10-20": {
+    "date": "2013-10-20",
+    "occasion": "Twenty Second Sunday after Pentecost",
+    "proper": 24,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-10-29": {
+    "date": "2013-10-29",
+    "occasion": "Nineteenth Sunday after Pentecost",
+    "proper": 21,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-11-03": {
+    "date": "2013-11-03",
+    "occasion": "All Saints' (see Nov 1, white): or",
+    "proper": 26,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-11-10": {
+    "date": "2013-11-10",
+    "occasion": "Twenty Fifth Sunday after Pentecost",
+    "proper": 27,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-11-17": {
+    "date": "2013-11-17",
+    "occasion": "Twenty Sixth Sunday after Pentecost",
+    "proper": 28,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-11-27": {
+    "date": "2013-11-27",
+    "occasion": "Twenty Third Sunday after Pentecost",
+    "proper": 25,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2013-12-01": {
+    "date": "2013-12-01",
+    "occasion": "First Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2013-12-08": {
+    "date": "2013-12-08",
+    "occasion": "Second Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2013-12-15": {
+    "date": "2013-12-15",
+    "occasion": "Third Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2013-12-22": {
+    "date": "2013-12-22",
+    "occasion": "Fourth Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2013-12-24": {
+    "date": "2013-12-24",
+    "occasion": "Last Sunday after Pentecost:: Christ the King",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-01-05": {
+    "date": "2014-01-05",
+    "occasion": "Second Sunday after Christmas",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-01-12": {
+    "date": "2014-01-12",
+    "occasion": "First Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-01-19": {
+    "date": "2014-01-19",
+    "occasion": "Second Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-01-29": {
+    "date": "2014-01-29",
+    "occasion": "First Sunday after Christmas",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-02-02": {
+    "date": "2014-02-02",
+    "occasion": "Presentation of Jesus in the Temple",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-02-09": {
+    "date": "2014-02-09",
+    "occasion": "Fifth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-02-16": {
+    "date": "2014-02-16",
+    "occasion": "Sixth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-02-26": {
+    "date": "2014-02-26",
+    "occasion": "Third Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-03-02": {
+    "date": "2014-03-02",
+    "occasion": "Last Sunday after Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-03-09": {
+    "date": "2014-03-09",
+    "occasion": "First Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-03-16": {
+    "date": "2014-03-16",
+    "occasion": "Second Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-03-23": {
+    "date": "2014-03-23",
+    "occasion": "Third Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-04-06": {
+    "date": "2014-04-06",
+    "occasion": "Fifth Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-04-13": {
+    "date": "2014-04-13",
+    "occasion": "Sunday of the Passion:: Palm Sunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-04-20": {
+    "date": "2014-04-20",
+    "occasion": "Easter Day",
+    "proper": null,
+    "service_types": [
+      "Principal",
+      "Evening"
+    ],
+    "lectionary_year": "A"
+  },
+  "2014-04-30": {
+    "date": "2014-04-30",
+    "occasion": "Fourth Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-05-04": {
+    "date": "2014-05-04",
+    "occasion": "Third Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-05-11": {
+    "date": "2014-05-11",
+    "occasion": "Fourth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-05-18": {
+    "date": "2014-05-18",
+    "occasion": "Fifth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-05-27": {
+    "date": "2014-05-27",
+    "occasion": "Second Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-06-01": {
+    "date": "2014-06-01",
+    "occasion": "Seventh Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-06-08": {
+    "date": "2014-06-08",
+    "occasion": "Day of Pentecost: Whitsunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-06-15": {
+    "date": "2014-06-15",
+    "occasion": "First Sunday after Pentecost: Trinity Sunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-06-22": {
+    "date": "2014-06-22",
+    "occasion": "Second Sunday after Pentecost",
+    "proper": 7,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-06-25": {
+    "date": "2014-06-25",
+    "occasion": "Sixth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-07-06": {
+    "date": "2014-07-06",
+    "occasion": "Fourth Sunday after Pentecost",
+    "proper": 9,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-07-13": {
+    "date": "2014-07-13",
+    "occasion": "Fifth Sunday after Pentecost",
+    "proper": 10,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-07-20": {
+    "date": "2014-07-20",
+    "occasion": "Sixth Sunday after Pentecost",
+    "proper": 11,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-07-29": {
+    "date": "2014-07-29",
+    "occasion": "Third Sunday after Pentecost",
+    "proper": 8,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-08-03": {
+    "date": "2014-08-03",
+    "occasion": "Eighth Sunday after Pentecost",
+    "proper": 13,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-08-10": {
+    "date": "2014-08-10",
+    "occasion": "Ninth Sunday after Pentecost",
+    "proper": 14,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-08-17": {
+    "date": "2014-08-17",
+    "occasion": "Tenth Sunday after Pentecost",
+    "proper": 15,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-08-24": {
+    "date": "2014-08-24",
+    "occasion": "Eleventh Sunday after Pentecost",
+    "proper": 16,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-08-27": {
+    "date": "2014-08-27",
+    "occasion": "Seventh Sunday after Pentecost",
+    "proper": 12,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-09-07": {
+    "date": "2014-09-07",
+    "occasion": "Thirteenth Sunday after Pentecost",
+    "proper": 18,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-09-14": {
+    "date": "2014-09-14",
+    "occasion": "Fourteenth Sunday after Pentecost",
+    "proper": 19,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-09-21": {
+    "date": "2014-09-21",
+    "occasion": "Fifteenth Sunday after Pentecost",
+    "proper": 20,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-09-31": {
+    "date": "2014-09-31",
+    "occasion": "Twelfth Sunday after Pentecost",
+    "proper": 17,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-10-05": {
+    "date": "2014-10-05",
+    "occasion": "Seventeenth Sunday after Pentecost",
+    "proper": 22,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-10-12": {
+    "date": "2014-10-12",
+    "occasion": "Eighteenth Sunday after Pentecost",
+    "proper": 23,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-10-19": {
+    "date": "2014-10-19",
+    "occasion": "Nineteenth Sunday after Pentecost",
+    "proper": 24,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-10-28": {
+    "date": "2014-10-28",
+    "occasion": "Sixteenth Sunday after Pentecost",
+    "proper": 21,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-11-02": {
+    "date": "2014-11-02",
+    "occasion": "or: Twenty First Sunday after Pentecost",
+    "proper": 26,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-11-09": {
+    "date": "2014-11-09",
+    "occasion": "Twenty Second Sunday after Pentecost",
+    "proper": 27,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-11-16": {
+    "date": "2014-11-16",
+    "occasion": "Twenty Third Sunday after Pentecost",
+    "proper": 28,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-11-23": {
+    "date": "2014-11-23",
+    "occasion": "Last Sunday after Pentecost:: Christ the King",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-11-26": {
+    "date": "2014-11-26",
+    "occasion": "Twentieth Sunday after Pentecost",
+    "proper": 25,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2014-12-07": {
+    "date": "2014-12-07",
+    "occasion": "Second Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2014-12-14": {
+    "date": "2014-12-14",
+    "occasion": "Third Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2014-12-21": {
+    "date": "2014-12-21",
+    "occasion": "Fourth Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2014-12-30": {
+    "date": "2014-12-30",
+    "occasion": "First Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-01-04": {
+    "date": "2015-01-04",
+    "occasion": "Second Sunday after Christmas",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-01-11": {
+    "date": "2015-01-11",
+    "occasion": "First Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-01-18": {
+    "date": "2015-01-18",
+    "occasion": "Second Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-01-28": {
+    "date": "2015-01-28",
+    "occasion": "First Sunday after Christmas",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-02-01": {
+    "date": "2015-02-01",
+    "occasion": "Fourth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-02-08": {
+    "date": "2015-02-08",
+    "occasion": "Fifth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-02-15": {
+    "date": "2015-02-15",
+    "occasion": "Last Sunday after Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-02-25": {
+    "date": "2015-02-25",
+    "occasion": "Third Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-03-01": {
+    "date": "2015-03-01",
+    "occasion": "Second Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-03-08": {
+    "date": "2015-03-08",
+    "occasion": "Third Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-03-15": {
+    "date": "2015-03-15",
+    "occasion": "Fourth Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-03-22": {
+    "date": "2015-03-22",
+    "occasion": "Fifth Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-04-05": {
+    "date": "2015-04-05",
+    "occasion": "Easter Day",
+    "proper": null,
+    "service_types": [
+      "Principal",
+      "Evening"
+    ],
+    "lectionary_year": "B"
+  },
+  "2015-04-12": {
+    "date": "2015-04-12",
+    "occasion": "Second Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-04-19": {
+    "date": "2015-04-19",
+    "occasion": "Third Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-04-29": {
+    "date": "2015-04-29",
+    "occasion": "Sunday of the Passion:: Palm Sunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-05-03": {
+    "date": "2015-05-03",
+    "occasion": "Fifth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-05-10": {
+    "date": "2015-05-10",
+    "occasion": "Sixth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-05-17": {
+    "date": "2015-05-17",
+    "occasion": "Seventh Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-05-24": {
+    "date": "2015-05-24",
+    "occasion": "Day of Pentecost: Whitsunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-05-26": {
+    "date": "2015-05-26",
+    "occasion": "Fourth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-06-07": {
+    "date": "2015-06-07",
+    "occasion": "Second Sunday after Pentecost",
+    "proper": 5,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-06-14": {
+    "date": "2015-06-14",
+    "occasion": "Third Sunday after Pentecost",
+    "proper": 6,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-06-21": {
+    "date": "2015-06-21",
+    "occasion": "Fourth Sunday after Pentecost",
+    "proper": 7,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-06-31": {
+    "date": "2015-06-31",
+    "occasion": "First Sunday after Pentecost: Trinity Sunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-07-05": {
+    "date": "2015-07-05",
+    "occasion": "Sixth Sunday after Pentecost",
+    "proper": 9,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-07-12": {
+    "date": "2015-07-12",
+    "occasion": "Seventh Sunday after Pentecost",
+    "proper": 10,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-07-19": {
+    "date": "2015-07-19",
+    "occasion": "Eighth Sunday after Pentecost",
+    "proper": 11,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-07-28": {
+    "date": "2015-07-28",
+    "occasion": "Fifth Sunday after Pentecost",
+    "proper": 8,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-08-02": {
+    "date": "2015-08-02",
+    "occasion": "Tenth Sunday after Pentecost",
+    "proper": 13,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-08-09": {
+    "date": "2015-08-09",
+    "occasion": "Eleventh Sunday after Pentecost",
+    "proper": 14,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-08-16": {
+    "date": "2015-08-16",
+    "occasion": "Twelfth Sunday after Pentecost",
+    "proper": 15,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-08-23": {
+    "date": "2015-08-23",
+    "occasion": "Thirteenth Sunday after Pentecost",
+    "proper": 16,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-08-26": {
+    "date": "2015-08-26",
+    "occasion": "Ninth Sunday after Pentecost",
+    "proper": 12,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-09-06": {
+    "date": "2015-09-06",
+    "occasion": "Fifteenth Sunday after Pentecost",
+    "proper": 18,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-09-13": {
+    "date": "2015-09-13",
+    "occasion": "Sixteenth Sunday after Pentecost",
+    "proper": 19,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-09-20": {
+    "date": "2015-09-20",
+    "occasion": "Seventeenth Sunday after Pentecost",
+    "proper": 20,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-09-30": {
+    "date": "2015-09-30",
+    "occasion": "Fourteenth Sunday after Pentecost",
+    "proper": 17,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-10-04": {
+    "date": "2015-10-04",
+    "occasion": "Nineteenth Sunday after Pentecost",
+    "proper": 22,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-10-11": {
+    "date": "2015-10-11",
+    "occasion": "Twentieth Sunday after Pentecost",
+    "proper": 23,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-10-18": {
+    "date": "2015-10-18",
+    "occasion": "Twenty First Sunday after Pentecost",
+    "proper": 24,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-10-27": {
+    "date": "2015-10-27",
+    "occasion": "Eighteenth Sunday after Pentecost",
+    "proper": 21,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-11-01": {
+    "date": "2015-11-01",
+    "occasion": "All Saints",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-11-08": {
+    "date": "2015-11-08",
+    "occasion": "Twenty Fourth Sunday after Pentecost",
+    "proper": 27,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-11-15": {
+    "date": "2015-11-15",
+    "occasion": "Twenty Fifth Sunday after Pentecost",
+    "proper": 28,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-11-22": {
+    "date": "2015-11-22",
+    "occasion": "Last Sunday after Pentecost:: Christ the King",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-11-25": {
+    "date": "2015-11-25",
+    "occasion": "Twenty Second Sunday after Pentecost",
+    "proper": 25,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2015-12-06": {
+    "date": "2015-12-06",
+    "occasion": "Second Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2015-12-13": {
+    "date": "2015-12-13",
+    "occasion": "Third Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2015-12-20": {
+    "date": "2015-12-20",
+    "occasion": "Fourth Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2015-12-29": {
+    "date": "2015-12-29",
+    "occasion": "First Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-01-03": {
+    "date": "2016-01-03",
+    "occasion": "Second Sunday after Christmas",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-01-10": {
+    "date": "2016-01-10",
+    "occasion": "First Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-01-17": {
+    "date": "2016-01-17",
+    "occasion": "Second Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-01-24": {
+    "date": "2016-01-24",
+    "occasion": "Third Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-01-27": {
+    "date": "2016-01-27",
+    "occasion": "First Sunday after Christmas",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-02-07": {
+    "date": "2016-02-07",
+    "occasion": "Last Sunday after Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-02-14": {
+    "date": "2016-02-14",
+    "occasion": "First Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-02-21": {
+    "date": "2016-02-21",
+    "occasion": "Second Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-02-31": {
+    "date": "2016-02-31",
+    "occasion": "Fourth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-03-06": {
+    "date": "2016-03-06",
+    "occasion": "Fourth Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-03-13": {
+    "date": "2016-03-13",
+    "occasion": "Fifth Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-03-20": {
+    "date": "2016-03-20",
+    "occasion": "Sunday of the Passion:: Palm Sunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-03-28": {
+    "date": "2016-03-28",
+    "occasion": "Third Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-04-03": {
+    "date": "2016-04-03",
+    "occasion": "Second Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-04-10": {
+    "date": "2016-04-10",
+    "occasion": "Third Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-04-17": {
+    "date": "2016-04-17",
+    "occasion": "Fourth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-04-27": {
+    "date": "2016-04-27",
+    "occasion": "Easter Day",
+    "proper": null,
+    "service_types": [
+      "Principal",
+      "Evening"
+    ],
+    "lectionary_year": "C"
+  },
+  "2016-05-08": {
+    "date": "2016-05-08",
+    "occasion": "Seventh Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-05-15": {
+    "date": "2016-05-15",
+    "occasion": "Day of Pentecost: Whitsunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-05-22": {
+    "date": "2016-05-22",
+    "occasion": "First Sunday after Pentecost: Trinity Sunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-05-24": {
+    "date": "2016-05-24",
+    "occasion": "Fifth Sunday of Easter: 1Sixth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-06-05": {
+    "date": "2016-06-05",
+    "occasion": "Third Sunday after Pentecost",
+    "proper": 5,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-06-12": {
+    "date": "2016-06-12",
+    "occasion": "Fourth Sunday after Pentecost",
+    "proper": 6,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-06-19": {
+    "date": "2016-06-19",
+    "occasion": "Fifth Sunday after Pentecost",
+    "proper": 7,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-06-29": {
+    "date": "2016-06-29",
+    "occasion": "Second Sunday after Pentecost",
+    "proper": 4,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-07-03": {
+    "date": "2016-07-03",
+    "occasion": "Seventh Sunday after Pentecost",
+    "proper": 9,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-07-10": {
+    "date": "2016-07-10",
+    "occasion": "Eighth Sunday after Pentecost",
+    "proper": 10,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-07-17": {
+    "date": "2016-07-17",
+    "occasion": "Ninth Sunday after Pentecost",
+    "proper": 11,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-07-24": {
+    "date": "2016-07-24",
+    "occasion": "Tenth Sunday after Pentecost",
+    "proper": 12,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-07-26": {
+    "date": "2016-07-26",
+    "occasion": "Sixth Sunday after Pentecost",
+    "proper": 8,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-08-07": {
+    "date": "2016-08-07",
+    "occasion": "Twelfth Sunday after Pentecost",
+    "proper": 14,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-08-14": {
+    "date": "2016-08-14",
+    "occasion": "Thirteenth Sunday after Pentecost",
+    "proper": 15,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-08-21": {
+    "date": "2016-08-21",
+    "occasion": "Fourteenth Sunday after Pentecost",
+    "proper": 16,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-08-31": {
+    "date": "2016-08-31",
+    "occasion": "Eleventh Sunday after Pentecost",
+    "proper": 13,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-09-04": {
+    "date": "2016-09-04",
+    "occasion": "Sixteenth Sunday after Pentecost",
+    "proper": 18,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-09-11": {
+    "date": "2016-09-11",
+    "occasion": "Seventeenth Sunday after Pentecost",
+    "proper": 19,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-09-18": {
+    "date": "2016-09-18",
+    "occasion": "Eighteenth Sunday after Pentecost",
+    "proper": 20,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-09-28": {
+    "date": "2016-09-28",
+    "occasion": "Fifteenth Sunday after Pentecost",
+    "proper": 17,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-10-02": {
+    "date": "2016-10-02",
+    "occasion": "Twentieth Sunday after Pentecost",
+    "proper": 22,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-10-09": {
+    "date": "2016-10-09",
+    "occasion": "Twenty First Sunday after Pentecost",
+    "proper": 23,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-10-16": {
+    "date": "2016-10-16",
+    "occasion": "Twenty Second Sunday after Pentecost",
+    "proper": 24,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-10-23": {
+    "date": "2016-10-23",
+    "occasion": "Twenty Third Sunday after Pentecost",
+    "proper": 25,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-10-25": {
+    "date": "2016-10-25",
+    "occasion": "Nineteenth Sunday after Pentecost",
+    "proper": 21,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-11-06": {
+    "date": "2016-11-06",
+    "occasion": "All Saints' (see Nov 1, white): or: Twenty Fifth Sunday after Pentecost",
+    "proper": 27,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-11-13": {
+    "date": "2016-11-13",
+    "occasion": "Twenty Sixth Sunday after Pentecost",
+    "proper": 28,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-11-20": {
+    "date": "2016-11-20",
+    "occasion": "Last Sunday after Pentecost:: Christ the King",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-11-30": {
+    "date": "2016-11-30",
+    "occasion": "Twenty Fourth Sunday after Pentecost",
+    "proper": 26,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2016-12-04": {
+    "date": "2016-12-04",
+    "occasion": "Second Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2016-12-11": {
+    "date": "2016-12-11",
+    "occasion": "Third Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2016-12-18": {
+    "date": "2016-12-18",
+    "occasion": "Fourth Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2016-12-27": {
+    "date": "2016-12-27",
+    "occasion": "First Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-01-01": {
+    "date": "2017-01-01",
+    "occasion": "The Holy Name",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-01-08": {
+    "date": "2017-01-08",
+    "occasion": "First Sunday after the Epiphany: The Baptism of Our Lord",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-01-15": {
+    "date": "2017-01-15",
+    "occasion": "Second Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-01-22": {
+    "date": "2017-01-22",
+    "occasion": "Third Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-01-25": {
+    "date": "2017-01-25",
+    "occasion": "Christmas Day",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-02-05": {
+    "date": "2017-02-05",
+    "occasion": "Fifth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-02-12": {
+    "date": "2017-02-12",
+    "occasion": "Sixth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-02-19": {
+    "date": "2017-02-19",
+    "occasion": "Seventh Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-02-29": {
+    "date": "2017-02-29",
+    "occasion": "Fourth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-03-05": {
+    "date": "2017-03-05",
+    "occasion": "First Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-03-12": {
+    "date": "2017-03-12",
+    "occasion": "Second Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-03-19": {
+    "date": "2017-03-19",
+    "occasion": "Third Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-03-26": {
+    "date": "2017-03-26",
+    "occasion": "Last Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-04-02": {
+    "date": "2017-04-02",
+    "occasion": "Fifth Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-04-09": {
+    "date": "2017-04-09",
+    "occasion": "Sunday of the Passion:: Palm Sunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-04-16": {
+    "date": "2017-04-16",
+    "occasion": "Easter Day",
+    "proper": null,
+    "service_types": [
+      "Early Service",
+      "Principal Service",
+      "Evening Service"
+    ],
+    "lectionary_year": "A"
+  },
+  "2017-04-23": {
+    "date": "2017-04-23",
+    "occasion": "Second Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-04-26": {
+    "date": "2017-04-26",
+    "occasion": "Fourth Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-05-07": {
+    "date": "2017-05-07",
+    "occasion": "Fourth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-05-14": {
+    "date": "2017-05-14",
+    "occasion": "Fifth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-05-21": {
+    "date": "2017-05-21",
+    "occasion": "Sixth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-05-30": {
+    "date": "2017-05-30",
+    "occasion": "Third Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-06-04": {
+    "date": "2017-06-04",
+    "occasion": "Day of Pentecost: Whitsunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-06-11": {
+    "date": "2017-06-11",
+    "occasion": "First Sunday after Pentecost: Trinity Sunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-06-18": {
+    "date": "2017-06-18",
+    "occasion": "Second Sunday after Pentecost",
+    "proper": 6,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-06-28": {
+    "date": "2017-06-28",
+    "occasion": "Seventh Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-07-02": {
+    "date": "2017-07-02",
+    "occasion": "Fourth Sunday after Pentecost",
+    "proper": 8,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-07-09": {
+    "date": "2017-07-09",
+    "occasion": "Fifth Sunday after Pentecost",
+    "proper": 9,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-07-16": {
+    "date": "2017-07-16",
+    "occasion": "Sixth Sunday after Pentecost",
+    "proper": 10,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-07-23": {
+    "date": "2017-07-23",
+    "occasion": "Seventh Sunday after Pentecost",
+    "proper": 11,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-07-25": {
+    "date": "2017-07-25",
+    "occasion": "Third Sunday after Pentecost",
+    "proper": 7,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-08-06": {
+    "date": "2017-08-06",
+    "occasion": "The Transfiguration",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-08-13": {
+    "date": "2017-08-13",
+    "occasion": "Tenth Sunday after Pentecost",
+    "proper": 14,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-08-20": {
+    "date": "2017-08-20",
+    "occasion": "Eleventh Sunday after Pentecost",
+    "proper": 15,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-08-30": {
+    "date": "2017-08-30",
+    "occasion": "Eighth Sunday after Pentecost",
+    "proper": 12,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-09-03": {
+    "date": "2017-09-03",
+    "occasion": "Thirteenth Sunday after Pentecost",
+    "proper": 17,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-09-10": {
+    "date": "2017-09-10",
+    "occasion": "Fourteenth Sunday after Pentecost",
+    "proper": 18,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-09-17": {
+    "date": "2017-09-17",
+    "occasion": "Fifteenth Sunday after Pentecost",
+    "proper": 19,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-09-27": {
+    "date": "2017-09-27",
+    "occasion": "Twelfth Sunday after Pentecost",
+    "proper": 16,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-10-01": {
+    "date": "2017-10-01",
+    "occasion": "Seventeenth Sunday after Pentecost",
+    "proper": 21,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-10-08": {
+    "date": "2017-10-08",
+    "occasion": "Eighteenth Sunday after Pentecost",
+    "proper": 22,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-10-15": {
+    "date": "2017-10-15",
+    "occasion": "Nineteenth Sunday after Pentecost",
+    "proper": 23,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-10-22": {
+    "date": "2017-10-22",
+    "occasion": "Twentieth Sunday after Pentecost",
+    "proper": 24,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-10-24": {
+    "date": "2017-10-24",
+    "occasion": "Sixteenth Sunday after Pentecost",
+    "proper": 20,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-11-05": {
+    "date": "2017-11-05",
+    "occasion": "or: Twenty Second Sunday after Pentecost",
+    "proper": 26,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-11-12": {
+    "date": "2017-11-12",
+    "occasion": "Twenty Third Sunday after Pentecost",
+    "proper": 27,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-11-19": {
+    "date": "2017-11-19",
+    "occasion": "Twenty Fourth Sunday after Pentecost",
+    "proper": 28,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-11-29": {
+    "date": "2017-11-29",
+    "occasion": "Twenty First Sunday after Pentecost",
+    "proper": 25,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2017-12-03": {
+    "date": "2017-12-03",
+    "occasion": "First Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2017-12-10": {
+    "date": "2017-12-10",
+    "occasion": "Second Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2017-12-17": {
+    "date": "2017-12-17",
+    "occasion": "Third Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2017-12-24": {
+    "date": "2017-12-24",
+    "occasion": "Fourth Sunday of Advent: Christmas Eve",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2017-12-26": {
+    "date": "2017-12-26",
+    "occasion": "Last Sunday after Pentecost:: Christ the King",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-01-07": {
+    "date": "2018-01-07",
+    "occasion": "First Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-01-14": {
+    "date": "2018-01-14",
+    "occasion": "Second Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-01-21": {
+    "date": "2018-01-21",
+    "occasion": "Third Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-01-31": {
+    "date": "2018-01-31",
+    "occasion": "First Sunday after Christmas",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-02-04": {
+    "date": "2018-02-04",
+    "occasion": "Fifth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-02-11": {
+    "date": "2018-02-11",
+    "occasion": "Last Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-02-18": {
+    "date": "2018-02-18",
+    "occasion": "First Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-02-28": {
+    "date": "2018-02-28",
+    "occasion": "Fourth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-03-04": {
+    "date": "2018-03-04",
+    "occasion": "Third Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-03-11": {
+    "date": "2018-03-11",
+    "occasion": "Fourth Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-03-18": {
+    "date": "2018-03-18",
+    "occasion": "Fifth Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-03-25": {
+    "date": "2018-03-25",
+    "occasion": "Second Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-04-01": {
+    "date": "2018-04-01",
+    "occasion": "Easter Day",
+    "proper": null,
+    "service_types": [
+      "Early",
+      "Principal",
+      "Evening"
+    ],
+    "lectionary_year": "B"
+  },
+  "2018-04-08": {
+    "date": "2018-04-08",
+    "occasion": "Second Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-04-15": {
+    "date": "2018-04-15",
+    "occasion": "Third Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-04-22": {
+    "date": "2018-04-22",
+    "occasion": "Fourth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-04-25": {
+    "date": "2018-04-25",
+    "occasion": "Sunday of the Passion:: Palm Sunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-05-06": {
+    "date": "2018-05-06",
+    "occasion": "Sixth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-05-13": {
+    "date": "2018-05-13",
+    "occasion": "Seventh Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-05-20": {
+    "date": "2018-05-20",
+    "occasion": "Day of Pentecost: Whitsunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-05-29": {
+    "date": "2018-05-29",
+    "occasion": "Fifth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-06-03": {
+    "date": "2018-06-03",
+    "occasion": "Second Sunday after Pentecost",
+    "proper": 4,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-06-10": {
+    "date": "2018-06-10",
+    "occasion": "Third Sunday after Pentecost",
+    "proper": 5,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-06-17": {
+    "date": "2018-06-17",
+    "occasion": "Fourth Sunday after Pentecost",
+    "proper": 6,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-06-27": {
+    "date": "2018-06-27",
+    "occasion": "First Sunday after Pentecost: Trinity Sunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-07-01": {
+    "date": "2018-07-01",
+    "occasion": "Sixth Sunday after Pentecost",
+    "proper": 8,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-07-08": {
+    "date": "2018-07-08",
+    "occasion": "Seventh Sunday after Pentecost",
+    "proper": 9,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-07-15": {
+    "date": "2018-07-15",
+    "occasion": "Eighth Sunday after Pentecost",
+    "proper": 10,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-07-22": {
+    "date": "2018-07-22",
+    "occasion": "Ninth Sunday after Pentecost",
+    "proper": 11,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-07-24": {
+    "date": "2018-07-24",
+    "occasion": "Fifth Sunday after Pentecost",
+    "proper": 7,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-08-05": {
+    "date": "2018-08-05",
+    "occasion": "Eleventh Sunday after Pentecost",
+    "proper": 13,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-08-12": {
+    "date": "2018-08-12",
+    "occasion": "Twelfth Sunday after Pentecost",
+    "proper": 14,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-08-19": {
+    "date": "2018-08-19",
+    "occasion": "Thirteenth Sunday after Pentecost",
+    "proper": 15,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-08-29": {
+    "date": "2018-08-29",
+    "occasion": "Tenth Sunday after Pentecost",
+    "proper": 12,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-09-02": {
+    "date": "2018-09-02",
+    "occasion": "Fifteenth Sunday after Pentecost",
+    "proper": 17,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-09-09": {
+    "date": "2018-09-09",
+    "occasion": "Sixteenth Sunday after Pentecost",
+    "proper": 18,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-09-16": {
+    "date": "2018-09-16",
+    "occasion": "Seventeenth Sunday after Pentecost",
+    "proper": 19,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-09-23": {
+    "date": "2018-09-23",
+    "occasion": "Eighteenth Sunday after Pentecost",
+    "proper": 20,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-09-26": {
+    "date": "2018-09-26",
+    "occasion": "Fourteenth Sunday after Pentecost",
+    "proper": 16,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-10-07": {
+    "date": "2018-10-07",
+    "occasion": "Twentieth Sunday after Pentecost",
+    "proper": 22,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-10-14": {
+    "date": "2018-10-14",
+    "occasion": "Twenty First Sunday after Pentecost",
+    "proper": 23,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-10-21": {
+    "date": "2018-10-21",
+    "occasion": "Twenty Second Sunday after Pentecost",
+    "proper": 24,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-10-30": {
+    "date": "2018-10-30",
+    "occasion": "Nineteenth Sunday after Pentecost",
+    "proper": 21,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-11-04": {
+    "date": "2018-11-04",
+    "occasion": "or: Twenty Fourth Sunday after Pentecost",
+    "proper": 26,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-11-11": {
+    "date": "2018-11-11",
+    "occasion": "Twenty Fifth Sunday after Pentecost",
+    "proper": 27,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-11-18": {
+    "date": "2018-11-18",
+    "occasion": "Twenty Sixth Sunday after Pentecost",
+    "proper": 28,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-11-28": {
+    "date": "2018-11-28",
+    "occasion": "Twenty Third Sunday after Pentecost",
+    "proper": 25,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2018-12-02": {
+    "date": "2018-12-02",
+    "occasion": "First Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2018-12-09": {
+    "date": "2018-12-09",
+    "occasion": "Second Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2018-12-16": {
+    "date": "2018-12-16",
+    "occasion": "Third Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2018-12-23": {
+    "date": "2018-12-23",
+    "occasion": "Fourth Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2018-12-25": {
+    "date": "2018-12-25",
+    "occasion": "Last Sunday after Pentecost:: Christ the King",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-01-06": {
+    "date": "2019-01-06",
+    "occasion": "The Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-01-13": {
+    "date": "2019-01-13",
+    "occasion": "First Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-01-20": {
+    "date": "2019-01-20",
+    "occasion": "Second Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-01-30": {
+    "date": "2019-01-30",
+    "occasion": "First Sunday after Christmas",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-02-03": {
+    "date": "2019-02-03",
+    "occasion": "Fourth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-02-10": {
+    "date": "2019-02-10",
+    "occasion": "Fifth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-02-17": {
+    "date": "2019-02-17",
+    "occasion": "Sixth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-02-27": {
+    "date": "2019-02-27",
+    "occasion": "Third Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-03-03": {
+    "date": "2019-03-03",
+    "occasion": "Last Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-03-10": {
+    "date": "2019-03-10",
+    "occasion": "First Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-03-17": {
+    "date": "2019-03-17",
+    "occasion": "Second Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-03-24": {
+    "date": "2019-03-24",
+    "occasion": "Third Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-04-07": {
+    "date": "2019-04-07",
+    "occasion": "Fifth Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-04-14": {
+    "date": "2019-04-14",
+    "occasion": "Sunday of the Passion:: Palm Sunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-04-21": {
+    "date": "2019-04-21",
+    "occasion": "Easter Day",
+    "proper": null,
+    "service_types": [
+      "Early",
+      "Principal",
+      "Evening"
+    ],
+    "lectionary_year": "C"
+  },
+  "2019-04-31": {
+    "date": "2019-04-31",
+    "occasion": "Fourth Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-05-05": {
+    "date": "2019-05-05",
+    "occasion": "Third Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-05-12": {
+    "date": "2019-05-12",
+    "occasion": "Fourth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-05-19": {
+    "date": "2019-05-19",
+    "occasion": "Fifth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-05-28": {
+    "date": "2019-05-28",
+    "occasion": "Second Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-06-02": {
+    "date": "2019-06-02",
+    "occasion": "Seventh Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-06-09": {
+    "date": "2019-06-09",
+    "occasion": "Day of Pentecost: Whitsunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-06-16": {
+    "date": "2019-06-16",
+    "occasion": "First Sunday after Pentecost: Trinity Sunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-06-23": {
+    "date": "2019-06-23",
+    "occasion": "Second Sunday after Pentecost",
+    "proper": 7,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-06-26": {
+    "date": "2019-06-26",
+    "occasion": "Sixth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-07-07": {
+    "date": "2019-07-07",
+    "occasion": "Fourth Sunday after Pentecost",
+    "proper": 9,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-07-14": {
+    "date": "2019-07-14",
+    "occasion": "Fifth Sunday after Pentecost",
+    "proper": 10,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-07-21": {
+    "date": "2019-07-21",
+    "occasion": "Sixth Sunday after Pentecost",
+    "proper": 11,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-07-30": {
+    "date": "2019-07-30",
+    "occasion": "Third Sunday after Pentecost",
+    "proper": 8,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-08-04": {
+    "date": "2019-08-04",
+    "occasion": "Eighth Sunday after Pentecost",
+    "proper": 13,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-08-11": {
+    "date": "2019-08-11",
+    "occasion": "Ninth Sunday after Pentecost",
+    "proper": 14,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-08-18": {
+    "date": "2019-08-18",
+    "occasion": "Tenth Sunday after Pentecost",
+    "proper": 15,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-08-28": {
+    "date": "2019-08-28",
+    "occasion": "Seventh Sunday after Pentecost",
+    "proper": 12,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-09-01": {
+    "date": "2019-09-01",
+    "occasion": "Twelfth Sunday after Pentecost",
+    "proper": 17,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-09-08": {
+    "date": "2019-09-08",
+    "occasion": "Thirteenth Sunday after Pentecost",
+    "proper": 18,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-09-15": {
+    "date": "2019-09-15",
+    "occasion": "Fourteenth Sunday after Pentecost",
+    "proper": 19,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-09-22": {
+    "date": "2019-09-22",
+    "occasion": "Fifteenth Sunday after Pentecost",
+    "proper": 20,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-09-25": {
+    "date": "2019-09-25",
+    "occasion": "Eleventh Sunday after Pentecost",
+    "proper": 16,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-10-06": {
+    "date": "2019-10-06",
+    "occasion": "Seventeenth Sunday after Pentecost",
+    "proper": 22,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-10-13": {
+    "date": "2019-10-13",
+    "occasion": "Eighteenth Sunday after Pentecost",
+    "proper": 23,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-10-20": {
+    "date": "2019-10-20",
+    "occasion": "Nineteenth Sunday after Pentecost",
+    "proper": 24,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-10-29": {
+    "date": "2019-10-29",
+    "occasion": "Sixteenth Sunday after Pentecost",
+    "proper": 21,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-11-03": {
+    "date": "2019-11-03",
+    "occasion": "or: Twenty-First Sunday after Pentecost",
+    "proper": 26,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-11-10": {
+    "date": "2019-11-10",
+    "occasion": "Twenty-Second Sunday after Pentecost",
+    "proper": 27,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-11-17": {
+    "date": "2019-11-17",
+    "occasion": "Twenty-Third Sunday after Pentecost",
+    "proper": 28,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-11-27": {
+    "date": "2019-11-27",
+    "occasion": "Twentieth Sunday after Pentecost",
+    "proper": 25,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2019-12-01": {
+    "date": "2019-12-01",
+    "occasion": "First Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2019-12-08": {
+    "date": "2019-12-08",
+    "occasion": "Second Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2019-12-15": {
+    "date": "2019-12-15",
+    "occasion": "Third Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2019-12-22": {
+    "date": "2019-12-22",
+    "occasion": "Fourth Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2019-12-24": {
+    "date": "2019-12-24",
+    "occasion": "Last Sunday after Pentecost:: Christ the King",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-01-05": {
+    "date": "2020-01-05",
+    "occasion": "Second Sunday after Christmas",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-01-12": {
+    "date": "2020-01-12",
+    "occasion": "First Sunday after the Epiphany: The Baptism of Our Lord",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-01-19": {
+    "date": "2020-01-19",
+    "occasion": "Second Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-01-29": {
+    "date": "2020-01-29",
+    "occasion": "First Sunday after Christmas",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-02-02": {
+    "date": "2020-02-02",
+    "occasion": "Presentation of Jesus in the Temple",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-02-09": {
+    "date": "2020-02-09",
+    "occasion": "Fifth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-02-16": {
+    "date": "2020-02-16",
+    "occasion": "Sixth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-02-26": {
+    "date": "2020-02-26",
+    "occasion": "Third Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-03-01": {
+    "date": "2020-03-01",
+    "occasion": "First Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-03-08": {
+    "date": "2020-03-08",
+    "occasion": "Second Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-03-15": {
+    "date": "2020-03-15",
+    "occasion": "Third Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-03-22": {
+    "date": "2020-03-22",
+    "occasion": "Fourth Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-03-23": {
+    "date": "2020-03-23",
+    "occasion": "Last Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-04-05": {
+    "date": "2020-04-05",
+    "occasion": "Sunday of the Passion:: Palm Sunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-04-12": {
+    "date": "2020-04-12",
+    "occasion": "Easter Day",
+    "proper": null,
+    "service_types": [
+      "Early Service",
+      "Principal Service",
+      "Evening Service"
+    ],
+    "lectionary_year": "A"
+  },
+  "2020-04-19": {
+    "date": "2020-04-19",
+    "occasion": "Second Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-04-29": {
+    "date": "2020-04-29",
+    "occasion": "Fifth Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-05-03": {
+    "date": "2020-05-03",
+    "occasion": "Fourth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-05-10": {
+    "date": "2020-05-10",
+    "occasion": "Fifth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-05-17": {
+    "date": "2020-05-17",
+    "occasion": "Sixth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-05-24": {
+    "date": "2020-05-24",
+    "occasion": "Seventh Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-05-26": {
+    "date": "2020-05-26",
+    "occasion": "Third Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-06-07": {
+    "date": "2020-06-07",
+    "occasion": "First Sunday after Pentecost: Trinity Sunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-06-14": {
+    "date": "2020-06-14",
+    "occasion": "Second Sunday after Pentecost",
+    "proper": 6,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-06-21": {
+    "date": "2020-06-21",
+    "occasion": "Third Sunday after Pentecost",
+    "proper": 7,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-06-31": {
+    "date": "2020-06-31",
+    "occasion": "Day of Pentecost: Whitsunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-07-05": {
+    "date": "2020-07-05",
+    "occasion": "Fifth Sunday after Pentecost",
+    "proper": 9,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-07-12": {
+    "date": "2020-07-12",
+    "occasion": "Sixth Sunday after Pentecost",
+    "proper": 10,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-07-19": {
+    "date": "2020-07-19",
+    "occasion": "Seventh Sunday after Pentecost",
+    "proper": 11,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-07-28": {
+    "date": "2020-07-28",
+    "occasion": "Fourth Sunday after Pentecost",
+    "proper": 8,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-08-02": {
+    "date": "2020-08-02",
+    "occasion": "Ninth Sunday after Pentecost",
+    "proper": 13,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-08-09": {
+    "date": "2020-08-09",
+    "occasion": "Tenth Sunday after Pentecost",
+    "proper": 14,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-08-16": {
+    "date": "2020-08-16",
+    "occasion": "Eleventh Sunday after Pentecost",
+    "proper": 15,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-08-23": {
+    "date": "2020-08-23",
+    "occasion": "Twelfth Sunday after Pentecost",
+    "proper": 16,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-08-26": {
+    "date": "2020-08-26",
+    "occasion": "Eighth Sunday after Pentecost",
+    "proper": 12,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-09-06": {
+    "date": "2020-09-06",
+    "occasion": "Fourteenth Sunday after Pentecost",
+    "proper": 18,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-09-13": {
+    "date": "2020-09-13",
+    "occasion": "Fifteenth Sunday after Pentecost",
+    "proper": 19,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-09-20": {
+    "date": "2020-09-20",
+    "occasion": "Sixteenth Sunday after Pentecost",
+    "proper": 20,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-09-30": {
+    "date": "2020-09-30",
+    "occasion": "Thirteenth Sunday after Pentecost",
+    "proper": 17,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-10-04": {
+    "date": "2020-10-04",
+    "occasion": "Eighteenth Sunday after Pentecost",
+    "proper": 22,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-10-11": {
+    "date": "2020-10-11",
+    "occasion": "Nineteenth Sunday after Pentecost",
+    "proper": 23,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-10-18": {
+    "date": "2020-10-18",
+    "occasion": "Twentieth Sunday after Pentecost",
+    "proper": 24,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-10-27": {
+    "date": "2020-10-27",
+    "occasion": "Seventeenth Sunday after Pentecost",
+    "proper": 21,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-11-01": {
+    "date": "2020-11-01",
+    "occasion": "All Saints",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-11-08": {
+    "date": "2020-11-08",
+    "occasion": "Twenty-Third Sunday after Pentecost",
+    "proper": 27,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-11-15": {
+    "date": "2020-11-15",
+    "occasion": "Twenty-Fourth Sunday after Pentecost",
+    "proper": 28,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-11-22": {
+    "date": "2020-11-22",
+    "occasion": "Last Sunday after Pentecost:: Christ the King",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-11-25": {
+    "date": "2020-11-25",
+    "occasion": "Twenty-First Sunday after Pentecost",
+    "proper": 25,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2020-12-06": {
+    "date": "2020-12-06",
+    "occasion": "Second Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2020-12-13": {
+    "date": "2020-12-13",
+    "occasion": "Third Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2020-12-20": {
+    "date": "2020-12-20",
+    "occasion": "Fourth Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2020-12-29": {
+    "date": "2020-12-29",
+    "occasion": "First Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-01-03": {
+    "date": "2021-01-03",
+    "occasion": "Second Sunday after Christmas",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-01-10": {
+    "date": "2021-01-10",
+    "occasion": "First Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-01-17": {
+    "date": "2021-01-17",
+    "occasion": "Second Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-01-24": {
+    "date": "2021-01-24",
+    "occasion": "Third Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-01-27": {
+    "date": "2021-01-27",
+    "occasion": "First Sunday after Christmas",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-02-07": {
+    "date": "2021-02-07",
+    "occasion": "Fifth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-02-14": {
+    "date": "2021-02-14",
+    "occasion": "Last Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-02-21": {
+    "date": "2021-02-21",
+    "occasion": "First Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-02-31": {
+    "date": "2021-02-31",
+    "occasion": "Fourth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-03-07": {
+    "date": "2021-03-07",
+    "occasion": "Third Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-03-14": {
+    "date": "2021-03-14",
+    "occasion": "Fourth Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-03-21": {
+    "date": "2021-03-21",
+    "occasion": "Fifth Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-03-28": {
+    "date": "2021-03-28",
+    "occasion": "Second Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-04-04": {
+    "date": "2021-04-04",
+    "occasion": "Easter Day",
+    "proper": null,
+    "service_types": [
+      "Early",
+      "Principal",
+      "Evening"
+    ],
+    "lectionary_year": "B"
+  },
+  "2021-04-11": {
+    "date": "2021-04-11",
+    "occasion": "Second Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-04-18": {
+    "date": "2021-04-18",
+    "occasion": "Third Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-04-28": {
+    "date": "2021-04-28",
+    "occasion": "Sunday of the Passion:: Palm Sunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-05-02": {
+    "date": "2021-05-02",
+    "occasion": "Fifth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-05-09": {
+    "date": "2021-05-09",
+    "occasion": "Sixth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-05-16": {
+    "date": "2021-05-16",
+    "occasion": "Seventh Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-05-23": {
+    "date": "2021-05-23",
+    "occasion": "Day of Pentecost: Whitsunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-05-25": {
+    "date": "2021-05-25",
+    "occasion": "Fourth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-06-06": {
+    "date": "2021-06-06",
+    "occasion": "Second Sunday after Pentecost",
+    "proper": 5,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-06-13": {
+    "date": "2021-06-13",
+    "occasion": "Third Sunday after Pentecost",
+    "proper": 6,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-06-20": {
+    "date": "2021-06-20",
+    "occasion": "Fourth Sunday after Pentecost",
+    "proper": 7,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-06-30": {
+    "date": "2021-06-30",
+    "occasion": "First Sunday after Pentecost: Trinity Sunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-07-04": {
+    "date": "2021-07-04",
+    "occasion": "Sixth Sunday after Pentecost",
+    "proper": 9,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-07-11": {
+    "date": "2021-07-11",
+    "occasion": "Seventh Sunday after Pentecost",
+    "proper": 10,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-07-18": {
+    "date": "2021-07-18",
+    "occasion": "Eighth Sunday after Pentecost",
+    "proper": 11,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-07-27": {
+    "date": "2021-07-27",
+    "occasion": "Fifth Sunday after Pentecost",
+    "proper": 8,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-08-01": {
+    "date": "2021-08-01",
+    "occasion": "Tenth Sunday after Pentecost",
+    "proper": 13,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-08-08": {
+    "date": "2021-08-08",
+    "occasion": "Eleventh Sunday after Pentecost",
+    "proper": 14,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-08-15": {
+    "date": "2021-08-15",
+    "occasion": "Twelfth Sunday after Pentecost",
+    "proper": 15,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-08-22": {
+    "date": "2021-08-22",
+    "occasion": "Thirteenth Sunday after Pentecost",
+    "proper": 16,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-08-25": {
+    "date": "2021-08-25",
+    "occasion": "Ninth Sunday after Pentecost",
+    "proper": 12,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-09-05": {
+    "date": "2021-09-05",
+    "occasion": "Fifteenth Sunday after Pentecost",
+    "proper": 18,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-09-12": {
+    "date": "2021-09-12",
+    "occasion": "Sixteenth Sunday after Pentecost",
+    "proper": 19,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-09-19": {
+    "date": "2021-09-19",
+    "occasion": "Seventeenth Sunday after Pentecost",
+    "proper": 20,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-09-29": {
+    "date": "2021-09-29",
+    "occasion": "Fourteenth Sunday after Pentecost",
+    "proper": 17,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-10-03": {
+    "date": "2021-10-03",
+    "occasion": "Nineteenth Sunday after Pentecost",
+    "proper": 22,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-10-10": {
+    "date": "2021-10-10",
+    "occasion": "Twentieth Sunday after Pentecost",
+    "proper": 23,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-10-17": {
+    "date": "2021-10-17",
+    "occasion": "Twenty-First Sunday after Pentecost",
+    "proper": 24,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-10-24": {
+    "date": "2021-10-24",
+    "occasion": "Twenty-Second Sunday after Pentecost",
+    "proper": 25,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-10-26": {
+    "date": "2021-10-26",
+    "occasion": "Eighteenth Sunday after Pentecost",
+    "proper": 21,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-11-07": {
+    "date": "2021-11-07",
+    "occasion": "Twenty=Fourth Sunday after Pentecost",
+    "proper": 27,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-11-14": {
+    "date": "2021-11-14",
+    "occasion": "Twenty-Fifth Sunday after Pentecost",
+    "proper": 28,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-11-21": {
+    "date": "2021-11-21",
+    "occasion": "Last Sunday after Pentecost:: Christ the King",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-11-31": {
+    "date": "2021-11-31",
+    "occasion": "Twenty-Third Sunday after Pentecost",
+    "proper": 26,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2021-12-05": {
+    "date": "2021-12-05",
+    "occasion": "Second Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2021-12-12": {
+    "date": "2021-12-12",
+    "occasion": "Third Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2021-12-19": {
+    "date": "2021-12-19",
+    "occasion": "Fourth Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2021-12-28": {
+    "date": "2021-12-28",
+    "occasion": "First Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-01-02": {
+    "date": "2022-01-02",
+    "occasion": "Second Sunday after Christmas",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-01-09": {
+    "date": "2022-01-09",
+    "occasion": "First Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-01-16": {
+    "date": "2022-01-16",
+    "occasion": "Second Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-01-23": {
+    "date": "2022-01-23",
+    "occasion": "Third Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-01-26": {
+    "date": "2022-01-26",
+    "occasion": "First Sunday after Christmas",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-02-06": {
+    "date": "2022-02-06",
+    "occasion": "Fifth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-02-13": {
+    "date": "2022-02-13",
+    "occasion": "Sixth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-02-20": {
+    "date": "2022-02-20",
+    "occasion": "Seventh Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-02-30": {
+    "date": "2022-02-30",
+    "occasion": "Fourth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-03-06": {
+    "date": "2022-03-06",
+    "occasion": "First Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-03-13": {
+    "date": "2022-03-13",
+    "occasion": "Second Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-03-20": {
+    "date": "2022-03-20",
+    "occasion": "Third Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-03-27": {
+    "date": "2022-03-27",
+    "occasion": "Last Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-04-03": {
+    "date": "2022-04-03",
+    "occasion": "Fifth Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-04-10": {
+    "date": "2022-04-10",
+    "occasion": "Sunday of the Passion:: Palm Sunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-04-17": {
+    "date": "2022-04-17",
+    "occasion": "Easter Day",
+    "proper": null,
+    "service_types": [
+      "Principal",
+      "Evening"
+    ],
+    "lectionary_year": "C"
+  },
+  "2022-04-27": {
+    "date": "2022-04-27",
+    "occasion": "Fourth Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-05-01": {
+    "date": "2022-05-01",
+    "occasion": "Third Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-05-08": {
+    "date": "2022-05-08",
+    "occasion": "Fourth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-05-15": {
+    "date": "2022-05-15",
+    "occasion": "Fifth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-05-22": {
+    "date": "2022-05-22",
+    "occasion": "Sixth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-05-24": {
+    "date": "2022-05-24",
+    "occasion": "Second Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-06-05": {
+    "date": "2022-06-05",
+    "occasion": "Day of Pentecost: Whitsunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-06-12": {
+    "date": "2022-06-12",
+    "occasion": "First Sunday after Pentecost: Trinity Sunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-06-19": {
+    "date": "2022-06-19",
+    "occasion": "Second Sunday after Pentecost",
+    "proper": 7,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-06-29": {
+    "date": "2022-06-29",
+    "occasion": "Seventh Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-07-03": {
+    "date": "2022-07-03",
+    "occasion": "Fourth Sunday after Pentecost",
+    "proper": 9,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-07-10": {
+    "date": "2022-07-10",
+    "occasion": "Fifth Sunday after Pentecost",
+    "proper": 10,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-07-17": {
+    "date": "2022-07-17",
+    "occasion": "Sixth Sunday after Pentecost",
+    "proper": 11,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-07-24": {
+    "date": "2022-07-24",
+    "occasion": "Seventh Sunday after Pentecost",
+    "proper": 12,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-07-26": {
+    "date": "2022-07-26",
+    "occasion": "Third Sunday after Pentecost",
+    "proper": 8,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-08-07": {
+    "date": "2022-08-07",
+    "occasion": "Ninth Sunday after Pentecost",
+    "proper": 14,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-08-14": {
+    "date": "2022-08-14",
+    "occasion": "Tenth Sunday after Pentecost",
+    "proper": 15,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-08-21": {
+    "date": "2022-08-21",
+    "occasion": "Eleventh Sunday after Pentecost",
+    "proper": 16,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-08-31": {
+    "date": "2022-08-31",
+    "occasion": "Eighth Sunday after Pentecost",
+    "proper": 13,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-09-04": {
+    "date": "2022-09-04",
+    "occasion": "Thirteenth Sunday after Pentecost",
+    "proper": 18,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-09-11": {
+    "date": "2022-09-11",
+    "occasion": "Fourteenth Sunday after Pentecost",
+    "proper": 19,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-09-18": {
+    "date": "2022-09-18",
+    "occasion": "Fifteenth Sunday after Pentecost",
+    "proper": 20,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-09-28": {
+    "date": "2022-09-28",
+    "occasion": "Twelth Sunday after Pentecost",
+    "proper": 17,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-10-02": {
+    "date": "2022-10-02",
+    "occasion": "Seventeenth Sunday after Pentecost",
+    "proper": 22,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-10-09": {
+    "date": "2022-10-09",
+    "occasion": "Eighteenth Sunday after Pentecost",
+    "proper": 23,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-10-16": {
+    "date": "2022-10-16",
+    "occasion": "Nineteenth Sunday after Pentecost",
+    "proper": 24,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-10-23": {
+    "date": "2022-10-23",
+    "occasion": "Twentieth Sunday after Pentecost",
+    "proper": 25,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-10-25": {
+    "date": "2022-10-25",
+    "occasion": "Sixteenth Sunday after Pentecost",
+    "proper": 21,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-11-06": {
+    "date": "2022-11-06",
+    "occasion": "All Saints' (see Nov 1, white): or: Twenty-second Sunday after Pentecost",
+    "proper": 27,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-11-13": {
+    "date": "2022-11-13",
+    "occasion": "Twenty-third Sunday after Pentecost",
+    "proper": 28,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-11-20": {
+    "date": "2022-11-20",
+    "occasion": "Last Sunday after Pentecost:: Christ the King",
+    "proper": 29,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-11-30": {
+    "date": "2022-11-30",
+    "occasion": "Twenty-first Sunday after Pentecost",
+    "proper": 26,
+    "service_types": null,
+    "lectionary_year": "C"
+  },
+  "2022-12-04": {
+    "date": "2022-12-04",
+    "occasion": "Second Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2022-12-11": {
+    "date": "2022-12-11",
+    "occasion": "Third Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2022-12-18": {
+    "date": "2022-12-18",
+    "occasion": "Fourth Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2022-12-27": {
+    "date": "2022-12-27",
+    "occasion": "First Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-01-01": {
+    "date": "2023-01-01",
+    "occasion": "The Holy Name",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-01-08": {
+    "date": "2023-01-08",
+    "occasion": "First Sunday after the Epiphany: The Baptism of Our Lord",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-01-15": {
+    "date": "2023-01-15",
+    "occasion": "Second Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-01-22": {
+    "date": "2023-01-22",
+    "occasion": "Third Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-01-25": {
+    "date": "2023-01-25",
+    "occasion": "Christmas Day",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-02-05": {
+    "date": "2023-02-05",
+    "occasion": "Fifth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-02-12": {
+    "date": "2023-02-12",
+    "occasion": "Sixth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-02-19": {
+    "date": "2023-02-19",
+    "occasion": "Last Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-02-29": {
+    "date": "2023-02-29",
+    "occasion": "Fourth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-03-05": {
+    "date": "2023-03-05",
+    "occasion": "Second Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-03-12": {
+    "date": "2023-03-12",
+    "occasion": "Third Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-03-19": {
+    "date": "2023-03-19",
+    "occasion": "Fourth Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-03-26": {
+    "date": "2023-03-26",
+    "occasion": "First Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-04-02": {
+    "date": "2023-04-02",
+    "occasion": "Sunday of the Passion:: Palm Sunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-04-09": {
+    "date": "2023-04-09",
+    "occasion": "Easter Day",
+    "proper": null,
+    "service_types": [
+      "Early Service",
+      "Principal Service",
+      "Evening Service"
+    ],
+    "lectionary_year": "A"
+  },
+  "2023-04-16": {
+    "date": "2023-04-16",
+    "occasion": "Second Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-04-23": {
+    "date": "2023-04-23",
+    "occasion": "Third Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-04-26": {
+    "date": "2023-04-26",
+    "occasion": "Fifth Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-05-07": {
+    "date": "2023-05-07",
+    "occasion": "Fifth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-05-14": {
+    "date": "2023-05-14",
+    "occasion": "Sixth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-05-21": {
+    "date": "2023-05-21",
+    "occasion": "Seventh Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-05-30": {
+    "date": "2023-05-30",
+    "occasion": "Fourth Sunday of Easter",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-06-04": {
+    "date": "2023-06-04",
+    "occasion": "First Sunday after Pentecost: Trinity Sunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-06-11": {
+    "date": "2023-06-11",
+    "occasion": "Second Sunday after Pentecost",
+    "proper": 5,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-06-18": {
+    "date": "2023-06-18",
+    "occasion": "Third Sunday after Pentecost",
+    "proper": 6,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-06-28": {
+    "date": "2023-06-28",
+    "occasion": "Day of Pentecost: Whitsunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-07-02": {
+    "date": "2023-07-02",
+    "occasion": "Fifth Sunday after Pentecost",
+    "proper": 8,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-07-09": {
+    "date": "2023-07-09",
+    "occasion": "Sixth Sunday after Pentecost",
+    "proper": 9,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-07-16": {
+    "date": "2023-07-16",
+    "occasion": "Seventh Sunday after Pentecost",
+    "proper": 10,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-07-23": {
+    "date": "2023-07-23",
+    "occasion": "Eighth Sunday after Pentecost",
+    "proper": 11,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-07-25": {
+    "date": "2023-07-25",
+    "occasion": "Fourth Sunday after Pentecost",
+    "proper": 7,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-08-06": {
+    "date": "2023-08-06",
+    "occasion": "The Transfiguration",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-08-13": {
+    "date": "2023-08-13",
+    "occasion": "Eleventh Sunday after Pentecost",
+    "proper": 14,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-08-20": {
+    "date": "2023-08-20",
+    "occasion": "Twelfth Sunday after Pentecost",
+    "proper": 15,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-08-30": {
+    "date": "2023-08-30",
+    "occasion": "Ninth Sunday after Pentecost",
+    "proper": 12,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-09-03": {
+    "date": "2023-09-03",
+    "occasion": "Fourteenth Sunday after Pentecost",
+    "proper": 17,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-09-10": {
+    "date": "2023-09-10",
+    "occasion": "Fifteenth Sunday after Pentecost",
+    "proper": 18,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-09-17": {
+    "date": "2023-09-17",
+    "occasion": "Sixteenth Sunday after Pentecost",
+    "proper": 19,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-09-27": {
+    "date": "2023-09-27",
+    "occasion": "Thirteenth Sunday after Pentecost",
+    "proper": 16,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-10-01": {
+    "date": "2023-10-01",
+    "occasion": "Eighteenth Sunday after Pentecost",
+    "proper": 21,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-10-08": {
+    "date": "2023-10-08",
+    "occasion": "Nineteenth Sunday after Pentecost",
+    "proper": 22,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-10-15": {
+    "date": "2023-10-15",
+    "occasion": "Twentieth Sunday after Pentecost",
+    "proper": 23,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-10-22": {
+    "date": "2023-10-22",
+    "occasion": "Twenty-First Sunday after Pentecost",
+    "proper": 24,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-10-24": {
+    "date": "2023-10-24",
+    "occasion": "Seventeenth Sunday after Pentecost",
+    "proper": 20,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-11-05": {
+    "date": "2023-11-05",
+    "occasion": "or: Twenty-Third Sunday after Pentecost",
+    "proper": 26,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-11-12": {
+    "date": "2023-11-12",
+    "occasion": "Twenty-Fourth Sunday after Pentecost",
+    "proper": 27,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-11-19": {
+    "date": "2023-11-19",
+    "occasion": "Twenty-Fifth Sunday after Pentecost",
+    "proper": 28,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-11-29": {
+    "date": "2023-11-29",
+    "occasion": "Twenty-Second Sunday after Pentecost",
+    "proper": 25,
+    "service_types": null,
+    "lectionary_year": "A"
+  },
+  "2023-12-03": {
+    "date": "2023-12-03",
+    "occasion": "First Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2023-12-10": {
+    "date": "2023-12-10",
+    "occasion": "Second Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2023-12-17": {
+    "date": "2023-12-17",
+    "occasion": "Third Sunday of Advent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2023-12-24": {
+    "date": "2023-12-24",
+    "occasion": "Fourth Sunday of Advent: Christmas Eve",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2023-12-26": {
+    "date": "2023-12-26",
+    "occasion": "Last Sunday after Pentecost:: Christ the King",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2024-01-07": {
+    "date": "2024-01-07",
+    "occasion": "First Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2024-01-14": {
+    "date": "2024-01-14",
+    "occasion": "Second Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2024-01-21": {
+    "date": "2024-01-21",
+    "occasion": "Third Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2024-01-31": {
+    "date": "2024-01-31",
+    "occasion": "First Sunday after Christmas",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2024-02-04": {
+    "date": "2024-02-04",
+    "occasion": "Fifth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2024-02-11": {
+    "date": "2024-02-11",
+    "occasion": "Last Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2024-02-18": {
+    "date": "2024-02-18",
+    "occasion": "First Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2024-02-28": {
+    "date": "2024-02-28",
+    "occasion": "Fourth Sunday after the Epiphany",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2024-03-03": {
+    "date": "2024-03-03",
+    "occasion": "Third Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2024-03-10": {
+    "date": "2024-03-10",
+    "occasion": "Fourth Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2024-03-17": {
+    "date": "2024-03-17",
+    "occasion": "Fifth Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2024-03-24": {
+    "date": "2024-03-24",
+    "occasion": "Sunday of the Passion:: Palm Sunday",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2024-03-25": {
+    "date": "2024-03-25",
+    "occasion": "Second Sunday in Lent",
+    "proper": null,
+    "service_types": null,
+    "lectionary_year": "B"
+  },
+  "2024-03-31": {
+    "date": "2024-03-31",
+    "occasion": "Easter Day",
+    "proper": null,
+    "service_types": [
+      "Early",
+      "Principal",
+      "Evening"
+    ],
+    "lectionary_year": "B"
+  }
+}
