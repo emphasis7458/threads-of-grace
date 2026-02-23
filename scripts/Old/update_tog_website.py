@@ -11,8 +11,8 @@ This script makes two updates to the website:
 2. Updates meditation counts on by-season.html
 
 Usage:
-    python update_tog_website.py /Users/larry/Desktop/TOG/threads-of-grace-website
-    python update_tog_website.py /Users/larry/Desktop/TOG/threads-of-grace-website --analyze
+    python update_tog_website.py /Users/larry/code/threads-of-grace
+    python update_tog_website.py /Users/larry/code/threads-of-grace --analyze
     
 Options:
     --analyze    Only analyze the structure, don't make changes

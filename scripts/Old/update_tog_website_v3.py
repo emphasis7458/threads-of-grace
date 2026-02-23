@@ -8,8 +8,8 @@ Fixes:
 3. Updates meditation counts in by-season.html
 
 Usage:
-    python update_tog_website_v3.py /Users/larry/Desktop/TOG/threads-of-grace-website --analyze
-    python update_tog_website_v3.py /Users/larry/Desktop/TOG/threads-of-grace-website
+    python update_tog_website_v3.py /Users/larry/code/threads-of-grace --analyze
+    python update_tog_website_v3.py /Users/larry/code/threads-of-grace
 """
 
 import os
