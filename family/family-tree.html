@@ -14,9 +14,7 @@
             text-align: center;
             padding: var(--spacing-2xl) var(--spacing-md) var(--spacing-lg);
             border-bottom: 1px solid var(--soft-gray);
-            animation: fadeIn 1s ease-in;
         }
-
         .tree-header .back-link {
             display: inline-block;
             font-size: 0.95rem;
@@ -24,13 +22,8 @@
             text-decoration: none;
             letter-spacing: 0.05em;
             margin-bottom: var(--spacing-md);
-            transition: color 0.3s ease;
         }
-
-        .tree-header .back-link:hover {
-            color: var(--deep-brown);
-        }
-
+        .tree-header .back-link:hover { color: var(--deep-brown); }
         .tree-title {
             font-family: var(--font-display);
             font-size: 3.5rem;
@@ -39,254 +32,269 @@
             color: var(--deep-brown);
             margin-bottom: var(--spacing-sm);
         }
-
         .tree-subtitle {
             font-size: 1.125rem;
             font-weight: 300;
             font-style: italic;
             color: var(--medium-gray);
-            letter-spacing: 0.02em;
         }
 
-        .tree-controls {
+        /* Downloads bar */
+        .downloads {
             display: flex;
             justify-content: center;
-            align-items: center;
-            gap: 1rem;
-            padding: var(--spacing-md) var(--spacing-md);
+            gap: 1.5rem;
+            padding: var(--spacing-md);
             border-bottom: 1px solid var(--soft-gray);
             flex-wrap: wrap;
         }
-
-        .tree-controls label {
-            font-family: var(--font-body);
+        .downloads a {
             font-size: 0.9rem;
-            color: var(--medium-gray);
-        }
-
-        .tree-controls select {
-            font-family: var(--font-body);
-            font-size: 0.9rem;
+            color: var(--accent-sage);
+            text-decoration: none;
             padding: 0.4rem 0.8rem;
             border: 1px solid var(--soft-gray);
             border-radius: 4px;
-            background: var(--warm-white);
-            color: var(--dark-gray);
-            cursor: pointer;
+            transition: all 0.2s;
         }
-
-        .tree-controls button {
-            font-family: var(--font-body);
-            font-size: 0.85rem;
-            padding: 0.4rem 0.8rem;
-            border: 1px solid var(--soft-gray);
-            border-radius: 4px;
-            background: var(--warm-white);
-            color: var(--dark-gray);
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .tree-controls button:hover {
+        .downloads a:hover {
             background: var(--soft-gray);
             color: var(--deep-brown);
         }
 
-        #tree-container {
+        /* Main layout: sidebar + chart */
+        .tree-app {
+            display: flex;
+            min-height: 80vh;
+        }
+
+        /* Left sidebar: person list */
+        .sidebar {
+            width: 300px;
+            min-width: 260px;
+            border-right: 1px solid var(--soft-gray);
+            display: flex;
+            flex-direction: column;
+            background: var(--warm-white);
+        }
+        .sidebar-search {
+            padding: 0.75rem;
+            border-bottom: 1px solid var(--soft-gray);
+        }
+        .sidebar-search input {
             width: 100%;
-            min-height: 600px;
-            overflow: hidden;
+            padding: 0.5rem 0.75rem;
+            border: 1px solid var(--soft-gray);
+            border-radius: 4px;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            background: var(--cream);
+            color: var(--dark-gray);
+            box-sizing: border-box;
+        }
+        .sidebar-search input::placeholder { color: var(--medium-gray); }
+        .sidebar-list {
+            flex: 1;
+            overflow-y: auto;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .sidebar-list li {
+            padding: 0.6rem 0.75rem;
+            border-bottom: 1px solid rgba(0,0,0,0.04);
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+        .sidebar-list li:hover { background: var(--cream); }
+        .sidebar-list li.active {
+            background: var(--cream);
+            border-left: 3px solid var(--accent-gold);
+        }
+        .sidebar-list .person-name {
+            font-family: var(--font-display);
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--deep-brown);
+        }
+        .sidebar-list .person-dates {
+            font-size: 0.8rem;
+            color: var(--medium-gray);
+            margin-top: 0.1rem;
+        }
+        .sidebar-list .person-male .person-name { color: #4a5568; }
+        .sidebar-list .person-female .person-name { color: #744a5e; }
+
+        /* Right: detail + chart area */
+        .main-area {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+        }
+
+        /* Person detail card */
+        .person-detail {
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid var(--soft-gray);
+            background: var(--cream);
+        }
+        .person-detail h2 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 400;
+            color: var(--deep-brown);
+            margin: 0 0 0.75rem;
+        }
+        .person-detail .nickname {
+            font-size: 1rem;
+            color: var(--medium-gray);
+            font-style: italic;
+            margin-bottom: 0.75rem;
+        }
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 0.75rem 2rem;
+        }
+        .detail-item .label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent-gold);
+        }
+        .detail-item .value {
+            font-size: 0.95rem;
+            color: var(--dark-gray);
+            line-height: 1.4;
+        }
+        .detail-links {
+            margin-top: 0.75rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .detail-links a, .detail-links button {
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            color: var(--accent-sage);
+            background: none;
+            border: 1px solid var(--soft-gray);
+            border-radius: 4px;
+            padding: 0.3rem 0.6rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.15s;
+        }
+        .detail-links a:hover, .detail-links button:hover {
+            background: var(--soft-gray);
+            color: var(--deep-brown);
+        }
+        .detail-notes {
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+            color: var(--medium-gray);
+            font-style: italic;
+            line-height: 1.5;
+            border-top: 1px solid var(--soft-gray);
+            padding-top: 0.75rem;
+        }
+        .no-selection {
+            padding: 3rem 2rem;
+            text-align: center;
+            color: var(--medium-gray);
+            font-style: italic;
+        }
+
+        /* Chart area */
+        .chart-area {
+            flex: 1;
             position: relative;
+            overflow: hidden;
             background: var(--cream);
             cursor: grab;
+            min-height: 400px;
+        }
+        .chart-area:active { cursor: grabbing; }
+        .chart-controls {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            display: flex;
+            gap: 0.35rem;
+            z-index: 10;
+        }
+        .chart-controls button {
+            width: 32px;
+            height: 32px;
+            border: 1px solid var(--soft-gray);
+            border-radius: 4px;
+            background: var(--warm-white);
+            color: var(--dark-gray);
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .chart-controls button:hover {
+            background: var(--soft-gray);
         }
 
-        #tree-container:active {
-            cursor: grabbing;
-        }
-
-        #tree-container svg {
-            width: 100%;
-            height: 100%;
-        }
-
-        /* Tree node styles */
+        /* SVG node styles */
         .node rect {
             stroke-width: 1.5px;
-            rx: 6;
-            ry: 6;
+            rx: 6; ry: 6;
             cursor: pointer;
-            transition: filter 0.2s ease;
         }
-
-        .node rect:hover {
-            filter: brightness(0.95);
-        }
-
-        .node.male rect {
-            fill: #e8edf3;
-            stroke: #8b96a8;
-        }
-
-        .node.female rect {
-            fill: #f3e8ec;
-            stroke: #a88b96;
-        }
-
-        .node.unknown rect {
-            fill: var(--warm-white);
-            stroke: var(--soft-gray);
-        }
-
-        .node.highlight rect {
-            stroke-width: 2.5px;
-            stroke: var(--accent-gold);
-        }
-
+        .node rect:hover { filter: brightness(0.93); }
+        .node.male rect { fill: #e8edf3; stroke: #8b96a8; }
+        .node.female rect { fill: #f3e8ec; stroke: #a88b96; }
+        .node.unknown rect { fill: var(--warm-white); stroke: var(--soft-gray); }
+        .node.selected rect { stroke-width: 2.5px; stroke: var(--accent-gold); }
         .node-name {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 600;
             fill: var(--deep-brown);
         }
-
         .node-dates {
             font-family: 'Crimson Pro', serif;
             font-size: 11px;
             fill: var(--medium-gray);
         }
-
-        .node-note {
-            font-family: 'Crimson Pro', serif;
-            font-size: 10px;
-            fill: var(--medium-gray);
-            font-style: italic;
-        }
-
         .link {
             fill: none;
             stroke: var(--soft-gray);
             stroke-width: 1.5px;
         }
-
         .marriage-link {
             fill: none;
             stroke: var(--accent-gold);
             stroke-width: 1px;
             stroke-dasharray: 4,3;
         }
-
-        /* Detail panel */
-        .detail-panel {
-            position: fixed;
-            top: 0;
-            right: -400px;
-            width: 380px;
-            max-width: 90vw;
-            height: 100vh;
-            background: var(--cream);
-            border-left: 1px solid var(--soft-gray);
-            padding: var(--spacing-xl) var(--spacing-lg);
-            overflow-y: auto;
-            transition: right 0.3s ease;
-            z-index: 100;
-            box-shadow: -4px 0 20px rgba(0,0,0,0.08);
-        }
-
-        .detail-panel.open {
-            right: 0;
-        }
-
-        .detail-panel .close-btn {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: var(--medium-gray);
-            cursor: pointer;
-            padding: 0.25rem;
-            line-height: 1;
-        }
-
-        .detail-panel .close-btn:hover {
-            color: var(--deep-brown);
-        }
-
-        .detail-panel h2 {
-            font-family: var(--font-display);
-            font-size: 1.75rem;
-            font-weight: 400;
-            color: var(--deep-brown);
-            margin-bottom: var(--spacing-md);
-            padding-right: 2rem;
-        }
-
-        .detail-panel .detail-row {
-            margin-bottom: 0.75rem;
-        }
-
-        .detail-panel .detail-label {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--accent-gold);
-            margin-bottom: 0.2rem;
-        }
-
-        .detail-panel .detail-value {
-            font-family: var(--font-body);
-            font-size: 1rem;
-            color: var(--dark-gray);
-            line-height: 1.5;
-        }
-
-        .detail-panel .detail-note {
-            margin-top: var(--spacing-md);
-            padding-top: var(--spacing-md);
-            border-top: 1px solid var(--soft-gray);
+        .gen-label {
+            font-family: 'Crimson Pro', serif;
+            font-size: 11px;
+            fill: var(--medium-gray);
             font-style: italic;
-            color: var(--medium-gray);
-            font-size: 0.95rem;
-            line-height: 1.6;
         }
 
-        .detail-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.2);
-            z-index: 99;
-        }
-
-        .detail-overlay.open {
-            display: block;
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
-            .tree-title {
-                font-size: 2.5rem;
-            }
-
-            .tree-controls {
-                gap: 0.5rem;
-            }
-
-            .detail-panel {
+            .tree-title { font-size: 2.5rem; }
+            .tree-app { flex-direction: column; }
+            .sidebar {
                 width: 100%;
-                max-width: 100vw;
+                max-height: 40vh;
+                border-right: none;
+                border-bottom: 1px solid var(--soft-gray);
             }
+            .chart-area { min-height: 50vh; }
+            .person-detail { padding: 1rem; }
         }
-
         @media (max-width: 480px) {
-            .tree-title {
-                font-size: 2rem;
-            }
+            .tree-title { font-size: 2rem; }
         }
     </style>
 </head>
@@ -313,20 +321,31 @@
         <p class="tree-subtitle">The O&rsquo;Malley line &mdash; Pat Horn&rsquo;s maiden family</p>
     </header>
 
-    <div class="tree-controls">
-        <label for="root-select">Start from:</label>
-        <select id="root-select"></select>
-        <button id="zoom-in-btn">+</button>
-        <button id="zoom-out-btn">&minus;</button>
-        <button id="fit-btn">Fit All</button>
+    <div class="downloads">
+        <a href="media/OMalley-Family-History-Bible-copied-2026-0112.pdf" target="_blank">View Family Bible (PDF)</a>
+        <a href="media/omalley_family.ged" download>Download GEDCOM</a>
+        <a href="media/omalley_family_bible_transcription.md" download>Download Bible Transcription</a>
     </div>
 
-    <div id="tree-container"></div>
-
-    <div class="detail-overlay" id="detail-overlay"></div>
-    <div class="detail-panel" id="detail-panel">
-        <button class="close-btn" id="close-detail">&times;</button>
-        <div id="detail-content"></div>
+    <div class="tree-app">
+        <div class="sidebar">
+            <div class="sidebar-search">
+                <input type="text" id="search" placeholder="Search by name&hellip;">
+            </div>
+            <ul class="sidebar-list" id="person-list"></ul>
+        </div>
+        <div class="main-area">
+            <div id="person-detail">
+                <div class="no-selection">Select a person from the list to view their details and family chart.</div>
+            </div>
+            <div class="chart-area" id="chart-area">
+                <div class="chart-controls">
+                    <button id="zoom-in" title="Zoom in">+</button>
+                    <button id="zoom-out" title="Zoom out">&minus;</button>
+                    <button id="zoom-fit" title="Fit to view">Fit</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <nav class="family-nav">
@@ -355,653 +374,368 @@
     (function() {
         'use strict';
 
-        // =============================================
-        // GEDCOM PARSER
-        // =============================================
+        // --- GEDCOM PARSER ---
         function parseGedcom(text) {
-            var individuals = {};
-            var families = {};
+            var indis = {}, fams = {};
             var lines = text.split('\n');
-
-            var current = null;
-            var subContext = null;
-
+            var cur = null, sub = null;
             for (var i = 0; i < lines.length; i++) {
                 var line = lines[i].replace(/^\s+|\s+$/g, '');
                 if (!line) continue;
-
-                var match = line.match(/^(\d+)\s+(.+)/);
-                if (!match) continue;
-
-                var level = parseInt(match[1]);
-                var rest = match[2];
-
-                if (level === 0) {
-                    subContext = null;
-                    var recordMatch = rest.match(/^@(\w+)@\s+(\w+)/);
-                    if (recordMatch) {
-                        var id = recordMatch[1];
-                        var type = recordMatch[2];
-                        if (type === 'INDI') {
-                            current = { id: id, type: 'INDI', names: [], sex: '', birth: {}, death: {}, burial: {}, notes: [], families_spouse: [], family_child: null, occupation: '' };
-                            individuals[id] = current;
-                        } else if (type === 'FAM') {
-                            current = { id: id, type: 'FAM', husb: null, wife: null, children: [], marriage: {}, notes: [] };
-                            families[id] = current;
-                        } else {
-                            current = null;
-                        }
-                    } else {
-                        current = null;
-                    }
+                var m = line.match(/^(\d+)\s+(.+)/);
+                if (!m) continue;
+                var lv = parseInt(m[1]), rest = m[2];
+                if (lv === 0) {
+                    sub = null;
+                    var rm = rest.match(/^@(\w+)@\s+(\w+)/);
+                    if (rm) {
+                        if (rm[2] === 'INDI') { cur = {id:rm[1],names:[],sex:'',birth:{},death:{},burial:{},notes:[],fams:[],famc:null,occu:''}; indis[rm[1]]=cur; }
+                        else if (rm[2] === 'FAM') { cur = {id:rm[1],husb:null,wife:null,chil:[],marr:{},notes:[]}; fams[rm[1]]=cur; }
+                        else cur = null;
+                    } else cur = null;
                     continue;
                 }
-
-                if (!current) continue;
-
-                var tagMatch = rest.match(/^(\w+)\s*(.*)/);
-                if (!tagMatch) continue;
-
-                var tag = tagMatch[1];
-                var value = tagMatch[2] || '';
-
-                if (current.type === 'INDI') {
-                    if (level === 1) {
-                        subContext = tag;
-                        if (tag === 'NAME') {
-                            var clean = value.replace(/\//g, '').replace(/^\s+|\s+$/g, '');
-                            var surnameMatch = value.match(/\/(.+?)\//);
-                            var surname = surnameMatch ? surnameMatch[1] : '';
-                            current.names.push({ full: clean, surname: surname, type: null });
-                        } else if (tag === 'SEX') {
-                            current.sex = value;
-                        } else if (tag === 'BIRT') {
-                            current.birth = {};
-                        } else if (tag === 'DEAT') {
-                            current.death = {};
-                        } else if (tag === 'BURI') {
-                            current.burial = {};
-                        } else if (tag === 'NOTE') {
-                            current.notes.push(value);
-                        } else if (tag === 'FAMS') {
-                            current.families_spouse.push(value.replace(/@/g, ''));
-                        } else if (tag === 'FAMC') {
-                            current.family_child = value.replace(/@/g, '');
-                        } else if (tag === 'OCCU') {
-                            current.occupation = value;
-                        }
-                    } else if (level === 2) {
-                        if (subContext === 'BIRT') {
-                            if (tag === 'DATE') current.birth.date = value;
-                            if (tag === 'PLAC') current.birth.place = value;
-                        } else if (subContext === 'DEAT') {
-                            if (tag === 'DATE') current.death.date = value;
-                            if (tag === 'PLAC') current.death.place = value;
-                            if (tag === 'NOTE') current.notes.push(value);
-                        } else if (subContext === 'BURI') {
-                            if (tag === 'PLAC') current.burial.place = value;
-                        } else if (subContext === 'NAME' && tag === 'TYPE') {
-                            if (current.names.length > 0) {
-                                current.names[current.names.length - 1].type = value;
-                            }
-                        }
+                if (!cur) continue;
+                var tm = rest.match(/^(\w+)\s*(.*)/);
+                if (!tm) continue;
+                var tag = tm[1], val = tm[2]||'';
+                if (cur.names !== undefined) { // INDI
+                    if (lv===1) {
+                        sub=tag;
+                        if (tag==='NAME') { cur.names.push({full:val.replace(/\//g,'').replace(/^\s+|\s+$/g,''),type:null}); }
+                        else if (tag==='SEX') cur.sex=val;
+                        else if (tag==='BIRT') cur.birth={};
+                        else if (tag==='DEAT') cur.death={};
+                        else if (tag==='BURI') cur.burial={};
+                        else if (tag==='NOTE') cur.notes.push(val);
+                        else if (tag==='FAMS') cur.fams.push(val.replace(/@/g,''));
+                        else if (tag==='FAMC') cur.famc=val.replace(/@/g,'');
+                        else if (tag==='OCCU') cur.occu=val;
+                    } else if (lv===2) {
+                        if (sub==='BIRT') { if (tag==='DATE') cur.birth.date=val; if (tag==='PLAC') cur.birth.place=val; }
+                        else if (sub==='DEAT') { if (tag==='DATE') cur.death.date=val; if (tag==='PLAC') cur.death.place=val; if (tag==='NOTE') cur.notes.push(val); }
+                        else if (sub==='BURI') { if (tag==='PLAC') cur.burial.place=val; }
+                        else if (sub==='NAME' && tag==='TYPE') { if (cur.names.length) cur.names[cur.names.length-1].type=val; }
                     }
-                } else if (current.type === 'FAM') {
-                    if (level === 1) {
-                        subContext = tag;
-                        if (tag === 'HUSB') current.husb = value.replace(/@/g, '');
-                        else if (tag === 'WIFE') current.wife = value.replace(/@/g, '');
-                        else if (tag === 'CHIL') current.children.push(value.replace(/@/g, ''));
-                        else if (tag === 'MARR') current.marriage = {};
-                        else if (tag === 'NOTE') current.notes.push(value);
-                    } else if (level === 2) {
-                        if (subContext === 'MARR') {
-                            if (tag === 'DATE') current.marriage.date = value;
-                            if (tag === 'PLAC') current.marriage.place = value;
-                        }
+                } else { // FAM
+                    if (lv===1) {
+                        sub=tag;
+                        if (tag==='HUSB') cur.husb=val.replace(/@/g,'');
+                        else if (tag==='WIFE') cur.wife=val.replace(/@/g,'');
+                        else if (tag==='CHIL') cur.chil.push(val.replace(/@/g,''));
+                        else if (tag==='MARR') cur.marr={};
+                        else if (tag==='NOTE') cur.notes.push(val);
+                    } else if (lv===2 && sub==='MARR') {
+                        if (tag==='DATE') cur.marr.date=val;
+                        if (tag==='PLAC') cur.marr.place=val;
                     }
                 }
             }
-
-            return { individuals: individuals, families: families };
+            return {indis:indis, fams:fams};
         }
 
-        // =============================================
-        // DISPLAY HELPERS
-        // =============================================
-        function displayName(indi) {
-            if (!indi || !indi.names || indi.names.length === 0) return 'Unknown';
-            var primary = null;
-            for (var i = 0; i < indi.names.length; i++) {
-                if (!indi.names[i].type) { primary = indi.names[i]; break; }
-            }
-            if (!primary) primary = indi.names[0];
-            return primary.full;
+        function dname(indi) {
+            if (!indi||!indi.names.length) return 'Unknown';
+            var p = indi.names.find(function(n){return !n.type;}) || indi.names[0];
+            return p.full;
         }
-
-        function getNickname(indi) {
-            if (!indi || !indi.names) return null;
-            for (var i = 0; i < indi.names.length; i++) {
-                if (indi.names[i].type === 'nickname') return indi.names[i].full;
-            }
-            return null;
+        function nick(indi) {
+            if (!indi) return null;
+            var n = indi.names.find(function(n){return n.type==='nickname';});
+            return n ? n.full : null;
         }
-
-        function dateStr(d) {
-            if (!d || !d.date) return '';
-            return d.date.replace(/^ABT\s*/i, 'c. ');
-        }
-
-        function lifespan(indi) {
-            var b = dateStr(indi.birth);
-            var d = dateStr(indi.death);
-            if (b && d) return b + ' \u2013 ' + d;
-            if (b) return 'b. ' + b;
-            if (d) return 'd. ' + d;
+        function ds(d) { return d&&d.date ? d.date.replace(/^ABT\s*/i,'c. ') : ''; }
+        function lifespan(i) {
+            var b=ds(i.birth), d=ds(i.death);
+            if (b&&d) return b+' \u2013 '+d;
+            if (b) return 'b. '+b;
+            if (d) return 'd. '+d;
             return '';
         }
-
-        // =============================================
-        // LAYOUT ENGINE
-        // =============================================
-        var NODE_W = 180;
-        var NODE_H = 60;
-        var H_GAP = 30;
-        var V_GAP = 70;
-        var COUPLE_GAP = 8;
-
-        function buildTree(data) {
-            var indis = data.individuals;
-            var fams = data.families;
-            var nodes = [];
-            var links = [];
-            var marriageLinks = [];
-            var placed = {};
-            var nodeMap = {};
-
-            // Assign generation levels via BFS from root families
-            var generations = {};
-
-            function assignGen(id, gen) {
-                if (generations[id] !== undefined) return;
-                generations[id] = gen;
-            }
-
-            // Find root families — those where neither spouse has parents in data
-            var rootFams = [];
-            var famKeys = Object.keys(fams);
-            for (var fi = 0; fi < famKeys.length; fi++) {
-                var f = fams[famKeys[fi]];
-                var hPar = f.husb && indis[f.husb] && indis[f.husb].family_child && fams[indis[f.husb].family_child];
-                var wPar = f.wife && indis[f.wife] && indis[f.wife].family_child && fams[indis[f.wife].family_child];
-                if (!hPar && !wPar && (f.husb || f.wife)) {
-                    rootFams.push(f);
-                }
-            }
-
-            // Assign generations starting from root families
-            function assignGensFromFamily(fam, gen) {
-                if (fam.husb) assignGen(fam.husb, gen);
-                if (fam.wife) assignGen(fam.wife, gen);
-                for (var ci = 0; ci < fam.children.length; ci++) {
-                    var cid = fam.children[ci];
-                    assignGen(cid, gen + 1);
-                    var child = indis[cid];
-                    if (child) {
-                        for (var si = 0; si < child.families_spouse.length; si++) {
-                            var sf = fams[child.families_spouse[si]];
-                            if (sf) assignGensFromFamily(sf, gen + 1);
-                        }
-                    }
-                }
-            }
-
-            for (var ri = 0; ri < rootFams.length; ri++) {
-                assignGensFromFamily(rootFams[ri], 0);
-            }
-
-            // Group people by generation
-            var genGroups = {};
-            var allIds = Object.keys(indis);
-            for (var gi = 0; gi < allIds.length; gi++) {
-                var gid = allIds[gi];
-                var gen = generations[gid] !== undefined ? generations[gid] : 99;
-                if (!genGroups[gen]) genGroups[gen] = [];
-                genGroups[gen].push(gid);
-            }
-
-            // Sort generation keys
-            var genKeys = Object.keys(genGroups).map(Number).sort(function(a, b) { return a - b; });
-
-            // Place nodes generation by generation
-            var yOffset = 60;
-            for (var gki = 0; gki < genKeys.length; gki++) {
-                var genKey = genKeys[gki];
-                var people = genGroups[genKey];
-                var xOffset = 60;
-
-                for (var pi = 0; pi < people.length; pi++) {
-                    var pid = people[pi];
-                    if (placed[pid]) continue;
-
-                    var indi = indis[pid];
-                    if (!indi) continue;
-
-                    // Place this person
-                    var node = {
-                        id: pid,
-                        x: xOffset,
-                        y: yOffset,
-                        name: displayName(indi),
-                        nick: getNickname(indi),
-                        dates: lifespan(indi),
-                        sex: indi.sex || ''
-                    };
-                    nodes.push(node);
-                    nodeMap[pid] = node;
-                    placed[pid] = true;
-
-                    // Check if this person has a spouse in this generation that hasn't been placed
-                    for (var sfi = 0; sfi < indi.families_spouse.length; sfi++) {
-                        var fam = fams[indi.families_spouse[sfi]];
-                        if (!fam) continue;
-                        var spouseId = fam.husb === pid ? fam.wife : fam.husb;
-                        if (spouseId && indis[spouseId] && !placed[spouseId]) {
-                            xOffset += NODE_W + COUPLE_GAP;
-                            var spouseNode = {
-                                id: spouseId,
-                                x: xOffset,
-                                y: yOffset,
-                                name: displayName(indis[spouseId]),
-                                nick: getNickname(indis[spouseId]),
-                                dates: lifespan(indis[spouseId]),
-                                sex: indis[spouseId].sex || ''
-                            };
-                            nodes.push(spouseNode);
-                            nodeMap[spouseId] = spouseNode;
-                            placed[spouseId] = true;
-
-                            // Marriage link
-                            marriageLinks.push({
-                                source: { x: node.x + NODE_W, y: node.y + NODE_H / 2 },
-                                target: { x: spouseNode.x, y: spouseNode.y + NODE_H / 2 }
-                            });
-                        }
-                    }
-
-                    xOffset += NODE_W + H_GAP;
-                }
-
-                yOffset += NODE_H + V_GAP;
-            }
-
-            // Draw parent-child links
-            for (var fli = 0; fli < famKeys.length; fli++) {
-                var fam = fams[famKeys[fli]];
-                // Find parent center
-                var parentNodes = [];
-                if (fam.husb && nodeMap[fam.husb]) parentNodes.push(nodeMap[fam.husb]);
-                if (fam.wife && nodeMap[fam.wife]) parentNodes.push(nodeMap[fam.wife]);
-                if (parentNodes.length === 0) continue;
-
-                var pMinX = Infinity, pMaxX = -Infinity, pY = 0;
-                for (var pni = 0; pni < parentNodes.length; pni++) {
-                    pMinX = Math.min(pMinX, parentNodes[pni].x);
-                    pMaxX = Math.max(pMaxX, parentNodes[pni].x + NODE_W);
-                    pY = parentNodes[pni].y;
-                }
-                var parentCenterX = (pMinX + pMaxX) / 2;
-
-                for (var cli = 0; cli < fam.children.length; cli++) {
-                    var childNode = nodeMap[fam.children[cli]];
-                    if (!childNode) continue;
-
-                    links.push({
-                        source: { x: parentCenterX, y: pY + NODE_H },
-                        target: { x: childNode.x + NODE_W / 2, y: childNode.y }
-                    });
-                }
-            }
-
-            return { nodes: nodes, links: links, marriageLinks: marriageLinks };
+        function sortKey(i) {
+            // Sort by birth date if available, then name
+            var d = i.birth && i.birth.date ? i.birth.date : '';
+            var m = d.match(/(\d{4})/);
+            return (m ? m[1] : '9999') + dname(i).toLowerCase();
         }
 
-        // =============================================
-        // RENDERING
-        // =============================================
+        // --- GLOBALS ---
+        var data = null;
+        var selectedId = null;
         var svg, g, zoomBehavior;
-        var container = document.getElementById('tree-container');
-        var statusEl = document.createElement('p');
-        statusEl.style.cssText = 'text-align:center;padding:2rem;color:#8b8985;font-style:italic;';
+        var chartArea = document.getElementById('chart-area');
 
-        function initSVG() {
-            var existing = container.querySelector('svg');
-            if (existing) container.removeChild(existing);
+        // --- SIDEBAR ---
+        function buildSidebar() {
+            var list = document.getElementById('person-list');
+            var ids = Object.keys(data.indis);
+            ids.sort(function(a,b) { return sortKey(data.indis[a]).localeCompare(sortKey(data.indis[b])); });
 
-            var rect = container.getBoundingClientRect();
-            var w = rect.width || 800;
-            var h = Math.max(rect.height, 600);
+            list.innerHTML = '';
+            ids.forEach(function(id) {
+                var indi = data.indis[id];
+                var li = document.createElement('li');
+                li.setAttribute('data-id', id);
+                li.className = indi.sex==='M' ? 'person-male' : indi.sex==='F' ? 'person-female' : '';
+                li.innerHTML = '<div class="person-name">'+dname(indi)+'</div><div class="person-dates">'+lifespan(indi)+'</div>';
+                li.addEventListener('click', function() { selectPerson(id); });
+                list.appendChild(li);
+            });
+        }
 
-            svg = d3.select('#tree-container')
-                .append('svg')
-                .attr('width', w)
-                .attr('height', h);
+        function filterSidebar(query) {
+            var items = document.querySelectorAll('#person-list li');
+            var q = query.toLowerCase();
+            items.forEach(function(li) {
+                var name = li.querySelector('.person-name').textContent.toLowerCase();
+                li.style.display = name.indexOf(q) >= 0 ? '' : 'none';
+            });
+        }
 
+        document.getElementById('search').addEventListener('input', function() {
+            filterSidebar(this.value);
+        });
+
+        // --- DETAIL PANEL ---
+        function showDetail(id) {
+            var el = document.getElementById('person-detail');
+            var indi = data.indis[id];
+            if (!indi) { el.innerHTML = '<div class="no-selection">Person not found.</div>'; return; }
+
+            var html = '<div class="person-detail"><h2>'+dname(indi)+'</h2>';
+            var nk = nick(indi);
+            if (nk) html += '<div class="nickname">&ldquo;'+nk+'&rdquo;</div>';
+
+            html += '<div class="detail-grid">';
+            if (indi.birth.date||indi.birth.place) {
+                html += '<div class="detail-item"><div class="label">Born</div><div class="value">'+(ds(indi.birth)||'')+(indi.birth.place ? '<br>'+indi.birth.place : '')+'</div></div>';
+            }
+            if (indi.death.date||indi.death.place) {
+                html += '<div class="detail-item"><div class="label">Died</div><div class="value">'+(ds(indi.death)||'')+(indi.death.place ? '<br>'+indi.death.place : '')+'</div></div>';
+            }
+            if (indi.burial&&indi.burial.place) {
+                html += '<div class="detail-item"><div class="label">Burial</div><div class="value">'+indi.burial.place+'</div></div>';
+            }
+            if (indi.occu) {
+                html += '<div class="detail-item"><div class="label">Occupation</div><div class="value">'+indi.occu+'</div></div>';
+            }
+            // Spouses
+            indi.fams.forEach(function(fid) {
+                var f = data.fams[fid]; if (!f) return;
+                var sid = f.husb===id ? f.wife : f.husb;
+                if (sid && data.indis[sid]) {
+                    html += '<div class="detail-item"><div class="label">Spouse</div><div class="value"><a href="#" onclick="event.preventDefault();selectPerson(\''+sid+'\')">'+dname(data.indis[sid])+'</a>';
+                    if (f.marr&&f.marr.date) html += '<br>m. '+f.marr.date;
+                    html += '</div></div>';
+                }
+                if (f.chil.length) {
+                    html += '<div class="detail-item"><div class="label">Children</div><div class="value">'+f.chil.map(function(cid){
+                        var c = data.indis[cid];
+                        return c ? '<a href="#" onclick="event.preventDefault();selectPerson(\''+cid+'\')">'+dname(c)+'</a>' : 'Unknown';
+                    }).join('<br>')+'</div></div>';
+                }
+            });
+            // Parents
+            if (indi.famc) {
+                var pf = data.fams[indi.famc];
+                if (pf) {
+                    var parents = [];
+                    if (pf.husb&&data.indis[pf.husb]) parents.push('<a href="#" onclick="event.preventDefault();selectPerson(\''+pf.husb+'\')">'+dname(data.indis[pf.husb])+'</a>');
+                    if (pf.wife&&data.indis[pf.wife]) parents.push('<a href="#" onclick="event.preventDefault();selectPerson(\''+pf.wife+'\')">'+dname(data.indis[pf.wife])+'</a>');
+                    if (parents.length) html += '<div class="detail-item"><div class="label">Parents</div><div class="value">'+parents.join('<br>')+'</div></div>';
+                }
+            }
+            html += '</div>'; // close grid
+
+            // Notes
+            if (indi.notes.length) {
+                html += '<div class="detail-notes">'+indi.notes.join('<br><br>')+'</div>';
+            }
+            html += '</div>';
+            el.innerHTML = html;
+        }
+
+        // --- CHART: centered pedigree/descendant view ---
+        var NW = 190, NH = 56, HGAP = 30, VGAP = 70, CGAP = 10;
+
+        function initChart() {
+            d3.select('#chart-area svg').remove();
+            var r = chartArea.getBoundingClientRect();
+            svg = d3.select('#chart-area').append('svg').attr('width', r.width).attr('height', r.height);
             g = svg.append('g');
-
-            zoomBehavior = d3.zoom()
-                .scaleExtent([0.05, 3])
-                .on('zoom', function(event) {
-                    g.attr('transform', event.transform);
-                });
-
+            zoomBehavior = d3.zoom().scaleExtent([0.15,3]).on('zoom', function(ev){ g.attr('transform',ev.transform); });
             svg.call(zoomBehavior);
         }
 
-        function render(treeData, data) {
+        function drawChart(id) {
+            if (!svg) initChart();
             g.selectAll('*').remove();
 
-            var treeNodes = treeData.nodes;
-            var treeLinks = treeData.links;
-            var mLinks = treeData.marriageLinks;
+            var nodes = [], links = [], mlinks = [];
+            var placed = {};
 
-            if (treeNodes.length === 0) {
-                container.textContent = 'No data to display.';
-                return;
+            // Walk ancestors upward
+            function ancestors(pid, x, y, gen) {
+                if (placed[pid]) return;
+                placed[pid] = true;
+                var indi = data.indis[pid];
+                if (!indi) return;
+                nodes.push({id:pid, x:x, y:y, gen:gen, name:dname(indi), nick:nick(indi), dates:lifespan(indi), sex:indi.sex});
+
+                if (indi.famc) {
+                    var fam = data.fams[indi.famc];
+                    if (fam) {
+                        var py = y - NH - VGAP;
+                        var px = x;
+                        if (fam.husb && data.indis[fam.husb] && !placed[fam.husb]) {
+                            ancestors(fam.husb, px, py, gen-1);
+                        }
+                        if (fam.wife && data.indis[fam.wife] && !placed[fam.wife]) {
+                            var wx = px + NW + CGAP;
+                            ancestors(fam.wife, wx, py, gen-1);
+                            mlinks.push({x1:px+NW, y1:py+NH/2, x2:wx, y2:py+NH/2});
+                            // link to child
+                            var cx2 = px + NW + CGAP/2;
+                            links.push({sx:cx2, sy:py+NH, tx:x+NW/2, ty:y});
+                        } else if (fam.husb && placed[fam.husb]) {
+                            var pn = nodes.find(function(n){return n.id===fam.husb;});
+                            if (pn) links.push({sx:pn.x+NW/2, sy:pn.y+NH, tx:x+NW/2, ty:y});
+                        }
+                    }
+                }
             }
 
-            // Draw parent-child links
-            g.selectAll('.link')
-                .data(treeLinks)
-                .enter()
-                .append('path')
-                .attr('class', 'link')
-                .attr('d', function(d) {
-                    var midY = d.source.y + (d.target.y - d.source.y) * 0.5;
-                    return 'M' + d.source.x + ',' + d.source.y +
-                           ' L' + d.source.x + ',' + midY +
-                           ' L' + d.target.x + ',' + midY +
-                           ' L' + d.target.x + ',' + d.target.y;
+            // Walk descendants downward
+            function descendants(pid, x, y, gen) {
+                var indi = data.indis[pid];
+                if (!indi) return NW;
+
+                if (!placed[pid]) {
+                    placed[pid] = true;
+                    nodes.push({id:pid, x:x, y:y, gen:gen, name:dname(indi), nick:nick(indi), dates:lifespan(indi), sex:indi.sex});
+                }
+
+                var totalW = NW;
+
+                indi.fams.forEach(function(fid) {
+                    var fam = data.fams[fid]; if (!fam) return;
+                    var spid = fam.husb===pid ? fam.wife : fam.husb;
+                    if (spid && data.indis[spid] && !placed[spid]) {
+                        placed[spid] = true;
+                        var sx = x + NW + CGAP;
+                        nodes.push({id:spid, x:sx, y:y, gen:gen, name:dname(data.indis[spid]), nick:nick(data.indis[spid]), dates:lifespan(data.indis[spid]), sex:data.indis[spid].sex});
+                        mlinks.push({x1:x+NW, y1:y+NH/2, x2:sx, y2:y+NH/2});
+                        totalW = NW*2+CGAP;
+                    }
+
+                    if (fam.chil.length) {
+                        var cy = y + NH + VGAP;
+                        var cx = x;
+                        var pcx = x + totalW/2;
+                        fam.chil.forEach(function(cid) {
+                            if (placed[cid]) return;
+                            var cw = descendants(cid, cx, cy, gen+1);
+                            links.push({sx:pcx, sy:y+NH, tx:cx+NW/2, ty:cy});
+                            cx += cw + HGAP;
+                        });
+                    }
                 });
 
-            // Draw marriage links
-            g.selectAll('.marriage-link')
-                .data(mLinks)
-                .enter()
-                .append('line')
-                .attr('class', 'marriage-link')
-                .attr('x1', function(d) { return d.source.x; })
-                .attr('y1', function(d) { return d.source.y; })
-                .attr('x2', function(d) { return d.target.x; })
-                .attr('y2', function(d) { return d.target.y; });
+                return Math.max(totalW, NW);
+            }
+
+            // Start from selected person at center
+            ancestors(id, 400, 300, 0);
+            // Reset placed for the selected person so descendants can build from them
+            // (ancestors already placed them)
+            descendants(id, nodes.find(function(n){return n.id===id;}).x, nodes.find(function(n){return n.id===id;}).y, 0);
+
+            // Draw links
+            g.selectAll('.link').data(links).enter().append('path').attr('class','link')
+                .attr('d', function(d) {
+                    var my = d.sy + (d.ty-d.sy)*0.5;
+                    return 'M'+d.sx+','+d.sy+' L'+d.sx+','+my+' L'+d.tx+','+my+' L'+d.tx+','+d.ty;
+                });
+            g.selectAll('.marriage-link').data(mlinks).enter().append('line').attr('class','marriage-link')
+                .attr('x1',function(d){return d.x1;}).attr('y1',function(d){return d.y1;})
+                .attr('x2',function(d){return d.x2;}).attr('y2',function(d){return d.y2;});
 
             // Draw nodes
-            var nodeGroups = g.selectAll('.node')
-                .data(treeNodes)
-                .enter()
-                .append('g')
+            var ng = g.selectAll('.node').data(nodes).enter().append('g')
                 .attr('class', function(d) {
-                    var cls = 'node';
-                    if (d.sex === 'M') cls += ' male';
-                    else if (d.sex === 'F') cls += ' female';
-                    else cls += ' unknown';
-                    if (d.id === 'I19') cls += ' highlight';
-                    return cls;
+                    var c = 'node';
+                    if (d.sex==='M') c+=' male'; else if (d.sex==='F') c+=' female'; else c+=' unknown';
+                    if (d.id===id) c+=' selected';
+                    return c;
                 })
-                .attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')'; })
-                .on('click', function(event, d) { showDetail(d.id, data); });
+                .attr('transform', function(d){return 'translate('+d.x+','+d.y+')';})
+                .on('click', function(ev,d){ selectPerson(d.id); });
 
-            nodeGroups.append('rect')
-                .attr('width', NODE_W)
-                .attr('height', NODE_H);
+            ng.append('rect').attr('width',NW).attr('height',NH);
+            ng.append('text').attr('class','node-name').attr('x',NW/2).attr('y',22).attr('text-anchor','middle')
+                .text(function(d){ var n=d.nick||d.name; return n.length>24 ? n.substring(0,22)+'\u2026' : n; });
+            ng.append('text').attr('class','node-dates').attr('x',NW/2).attr('y',40).attr('text-anchor','middle')
+                .text(function(d){return d.dates;});
 
-            nodeGroups.append('text')
-                .attr('class', 'node-name')
-                .attr('x', NODE_W / 2)
-                .attr('y', 22)
-                .attr('text-anchor', 'middle')
-                .text(function(d) {
-                    var name = d.nick || d.name;
-                    return name.length > 22 ? name.substring(0, 20) + '\u2026' : name;
-                });
+            // Fit to view
+            fitChart();
+        }
 
-            nodeGroups.append('text')
-                .attr('class', 'node-dates')
-                .attr('x', NODE_W / 2)
-                .attr('y', 40)
-                .attr('text-anchor', 'middle')
-                .text(function(d) { return d.dates; });
-
-            // Fit the SVG
-            var maxX = 0, maxY = 0;
-            treeNodes.forEach(function(n) {
-                maxX = Math.max(maxX, n.x + NODE_W + 60);
-                maxY = Math.max(maxY, n.y + NODE_H + 60);
+        function fitChart() {
+            var ns = g.selectAll('.node').data();
+            if (!ns.length) return;
+            var minX=Infinity,minY=Infinity,maxX=-Infinity,maxY=-Infinity;
+            ns.forEach(function(n){
+                minX=Math.min(minX,n.x); minY=Math.min(minY,n.y);
+                maxX=Math.max(maxX,n.x+NW); maxY=Math.max(maxY,n.y+NH);
             });
-            svg.attr('width', Math.max(maxX, container.clientWidth || 800));
-            svg.attr('height', Math.max(maxY, 600));
+            var r = chartArea.getBoundingClientRect();
+            var pad=40, tw=maxX-minX+pad*2, th=maxY-minY+pad*2;
+            var sc = Math.min(r.width/tw, r.height/th, 1.2);
+            var tx = (r.width - tw*sc)/2 - minX*sc + pad*sc;
+            var ty = (r.height - th*sc)/2 - minY*sc + pad*sc;
+            svg.transition().duration(400).call(zoomBehavior.transform, d3.zoomIdentity.translate(tx,ty).scale(sc));
         }
 
-        function fitAll(treeData) {
-            if (!treeData || !treeData.nodes || treeData.nodes.length === 0) return;
-
-            var nodes = treeData.nodes;
-            var minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
-            nodes.forEach(function(n) {
-                minX = Math.min(minX, n.x);
-                minY = Math.min(minY, n.y);
-                maxX = Math.max(maxX, n.x + NODE_W);
-                maxY = Math.max(maxY, n.y + NODE_H);
+        // --- SELECTION ---
+        window.selectPerson = function(id) {
+            selectedId = id;
+            // Update sidebar highlight
+            document.querySelectorAll('#person-list li').forEach(function(li) {
+                li.classList.toggle('active', li.getAttribute('data-id')===id);
             });
+            // Scroll sidebar item into view
+            var activeLi = document.querySelector('#person-list li.active');
+            if (activeLi) activeLi.scrollIntoView({block:'nearest'});
+            // Show detail
+            showDetail(id);
+            // Draw chart
+            drawChart(id);
+        };
 
-            var rect = container.getBoundingClientRect();
-            var cw = rect.width || 800;
-            var ch = Math.max(rect.height, 600);
-            var pad = 60;
-            var treeW = maxX - minX + pad * 2;
-            var treeH = maxY - minY + pad * 2;
+        // --- CONTROLS ---
+        document.getElementById('zoom-in').addEventListener('click', function(){ svg.transition().duration(200).call(zoomBehavior.scaleBy,1.4); });
+        document.getElementById('zoom-out').addEventListener('click', function(){ svg.transition().duration(200).call(zoomBehavior.scaleBy,0.7); });
+        document.getElementById('zoom-fit').addEventListener('click', fitChart);
 
-            var scale = Math.min(cw / treeW, ch / treeH, 1.2);
-            var tx = (cw - treeW * scale) / 2 - minX * scale + pad * scale;
-            var ty = (ch - treeH * scale) / 2 - minY * scale + pad * scale;
-
-            svg.transition().duration(500).call(
-                zoomBehavior.transform,
-                d3.zoomIdentity.translate(tx, ty).scale(scale)
-            );
-        }
-
-        // =============================================
-        // DETAIL PANEL
-        // =============================================
-        function showDetail(id, data) {
-            var indi = data.individuals[id];
-            if (!indi) return;
-
-            var panel = document.getElementById('detail-panel');
-            var overlay = document.getElementById('detail-overlay');
-            var content = document.getElementById('detail-content');
-
-            var html = '<h2>' + displayName(indi) + '</h2>';
-
-            var nick = getNickname(indi);
-            if (nick) {
-                html += '<div class="detail-row"><div class="detail-label">Also Known As</div><div class="detail-value">' + nick + '</div></div>';
-            }
-
-            if (indi.sex) {
-                html += '<div class="detail-row"><div class="detail-label">Sex</div><div class="detail-value">' + (indi.sex === 'M' ? 'Male' : 'Female') + '</div></div>';
-            }
-
-            if (indi.birth.date || indi.birth.place) {
-                html += '<div class="detail-row"><div class="detail-label">Born</div><div class="detail-value">';
-                if (indi.birth.date) html += dateStr(indi.birth);
-                if (indi.birth.date && indi.birth.place) html += '<br>';
-                if (indi.birth.place) html += indi.birth.place;
-                html += '</div></div>';
-            }
-
-            if (indi.death.date || indi.death.place) {
-                html += '<div class="detail-row"><div class="detail-label">Died</div><div class="detail-value">';
-                if (indi.death.date) html += dateStr(indi.death);
-                if (indi.death.date && indi.death.place) html += '<br>';
-                if (indi.death.place) html += indi.death.place;
-                html += '</div></div>';
-            }
-
-            if (indi.burial && indi.burial.place) {
-                html += '<div class="detail-row"><div class="detail-label">Burial</div><div class="detail-value">' + indi.burial.place + '</div></div>';
-            }
-
-            if (indi.occupation) {
-                html += '<div class="detail-row"><div class="detail-label">Occupation</div><div class="detail-value">' + indi.occupation + '</div></div>';
-            }
-
-            // Spouse info
-            for (var si = 0; si < indi.families_spouse.length; si++) {
-                var famId = indi.families_spouse[si];
-                var fam = data.families[famId];
-                if (!fam) continue;
-                var spouseId = fam.husb === id ? fam.wife : fam.husb;
-                if (spouseId && data.individuals[spouseId]) {
-                    html += '<div class="detail-row"><div class="detail-label">Spouse</div><div class="detail-value">' + displayName(data.individuals[spouseId]);
-                    if (fam.marriage && fam.marriage.date) {
-                        html += '<br>m. ' + fam.marriage.date;
-                    }
-                    html += '</div></div>';
-                }
-
-                if (fam.children.length > 0) {
-                    html += '<div class="detail-row"><div class="detail-label">Children</div><div class="detail-value">';
-                    var childNames = [];
-                    for (var ci = 0; ci < fam.children.length; ci++) {
-                        var c = data.individuals[fam.children[ci]];
-                        childNames.push(c ? displayName(c) : 'Unknown');
-                    }
-                    html += childNames.join('<br>');
-                    html += '</div></div>';
-                }
-            }
-
-            // Parent info
-            if (indi.family_child) {
-                var pfam = data.families[indi.family_child];
-                if (pfam) {
-                    var parents = [];
-                    if (pfam.husb && data.individuals[pfam.husb]) parents.push(displayName(data.individuals[pfam.husb]));
-                    if (pfam.wife && data.individuals[pfam.wife]) parents.push(displayName(data.individuals[pfam.wife]));
-                    if (parents.length > 0) {
-                        html += '<div class="detail-row"><div class="detail-label">Parents</div><div class="detail-value">' + parents.join('<br>') + '</div></div>';
-                    }
-                }
-            }
-
-            // Notes
-            if (indi.notes.length > 0) {
-                html += '<div class="detail-note">' + indi.notes.join('<br><br>') + '</div>';
-            }
-
-            content.innerHTML = html;
-            panel.classList.add('open');
-            overlay.classList.add('open');
-        }
-
-        function closeDetail() {
-            document.getElementById('detail-panel').classList.remove('open');
-            document.getElementById('detail-overlay').classList.remove('open');
-        }
-
-        document.getElementById('close-detail').addEventListener('click', closeDetail);
-        document.getElementById('detail-overlay').addEventListener('click', closeDetail);
-
-        // =============================================
-        // CONTROLS
-        // =============================================
-        document.getElementById('zoom-in-btn').addEventListener('click', function() {
-            svg.transition().duration(300).call(zoomBehavior.scaleBy, 1.3);
-        });
-
-        document.getElementById('zoom-out-btn').addEventListener('click', function() {
-            svg.transition().duration(300).call(zoomBehavior.scaleBy, 0.7);
-        });
-
-        // =============================================
-        // MAIN — load GEDCOM and render
-        // =============================================
-        var globalData = null;
-        var currentTree = null;
-
-        container.appendChild(statusEl);
-        statusEl.textContent = 'Loading family tree\u2026';
-
+        // --- INIT ---
         fetch('media/omalley_family.ged')
-            .then(function(r) {
-                if (!r.ok) throw new Error('Failed to load GEDCOM: ' + r.status + ' ' + r.statusText);
-                return r.text();
+            .then(function(r){ if(!r.ok) throw new Error(r.status); return r.text(); })
+            .then(function(text){
+                data = parseGedcom(text);
+                buildSidebar();
+                initChart();
+                // Start with Pat selected
+                if (data.indis['I19']) selectPerson('I19');
             })
-            .then(function(text) {
-                if (!text || text.length < 10) throw new Error('GEDCOM file is empty or too small (' + text.length + ' bytes)');
-
-                globalData = parseGedcom(text);
-
-                var indiCount = Object.keys(globalData.individuals).length;
-                var famCount = Object.keys(globalData.families).length;
-
-                if (indiCount === 0) throw new Error('GEDCOM parsed but found 0 individuals. File may be malformed.');
-
-                // Remove status message
-                if (statusEl.parentNode) statusEl.parentNode.removeChild(statusEl);
-
-                // Populate the root selector
-                var select = document.getElementById('root-select');
-                var keyPeople = [
-                    { id: 'all', label: 'Everyone (' + indiCount + ' people)' },
-                    { id: 'I19', label: 'Patricia O\'Malley Horn' },
-                    { id: 'I3', label: 'James G. O\'Malley (Granddaddy)' },
-                    { id: 'I14', label: 'Gerald Lawrence O\'Malley (Daddy)' },
-                    { id: 'I1', label: 'Dennis O\'Malley (Ireland)' },
-                    { id: 'I31', label: 'Sherrod Segraves' },
-                    { id: 'I39', label: 'Daniel Cotton' },
-                    { id: 'I5', label: 'James J. Haresign' }
-                ];
-
-                for (var ki = 0; ki < keyPeople.length; ki++) {
-                    var opt = document.createElement('option');
-                    opt.value = keyPeople[ki].id;
-                    opt.textContent = keyPeople[ki].label;
-                    select.appendChild(opt);
-                }
-
-                select.value = 'all';
-                select.addEventListener('change', renderFromSelect);
-
-                initSVG();
-                renderFromSelect();
-            })
-            .catch(function(err) {
-                statusEl.textContent = 'Error: ' + err.message;
-                statusEl.style.color = '#a88b96';
-                console.error('Family tree error:', err);
+            .catch(function(err){
+                document.getElementById('person-detail').innerHTML = '<div class="no-selection">Error loading family tree: '+err.message+'</div>';
             });
 
-        function renderFromSelect() {
-            if (!globalData) return;
-            currentTree = buildTree(globalData);
-            render(currentTree, globalData);
-
-            // Brief delay to let SVG settle, then fit
-            setTimeout(function() { fitAll(currentTree); }, 100);
-        }
-
-        document.getElementById('fit-btn').addEventListener('click', function() {
-            if (currentTree) fitAll(currentTree);
-        });
-
-        window.addEventListener('resize', function() {
-            if (globalData && svg) {
-                var rect = container.getBoundingClientRect();
-                svg.attr('width', rect.width || 800).attr('height', Math.max(rect.height, 600));
-                if (currentTree) fitAll(currentTree);
+        window.addEventListener('resize', function(){
+            if (svg) {
+                var r = chartArea.getBoundingClientRect();
+                svg.attr('width',r.width).attr('height',r.height);
             }
         });
     })();
