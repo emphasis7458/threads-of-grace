@@ -1,0 +1,1096 @@
+0 HEAD
+1 SOUR Claude_AI
+2 VERS 1.0
+2 NAME Claude AI Transcription
+1 DEST GRAMPS
+1 DATE 12 JAN 2026
+1 SUBM @SUBM1@
+1 GEDC
+2 VERS 5.5.1
+2 FORM LINEAGE-LINKED
+1 CHAR UTF-8
+0 @SUBM1@ SUBM
+1 NAME Larry Horn
+1 ADDR 425 Light Street
+2 CONT Dyersburg, TN 38024
+
+0 @I1@ INDI
+1 NAME Dennis /O'Malley/
+1 SEX M
+1 BIRT
+2 PLAC Ireland
+1 DEAT
+2 DATE 1889
+2 NOTE Killed in train wreck
+1 FAMS @F1@
+
+0 @I2@ INDI
+1 NAME Ellen /Sullivan/
+1 SEX F
+1 BIRT
+2 PLAC Ireland
+1 DEAT
+2 DATE 1889
+2 NOTE Killed in train wreck
+1 FAMS @F1@
+
+0 @I3@ INDI
+1 NAME James G. /O'Malley/
+1 SEX M
+1 BIRT
+2 DATE 25 DEC 1880
+1 DEAT
+2 DATE 14 DEC 1941
+1 BURI
+2 PLAC Rural Cemetery, Oswego Center, NY
+1 FAMC @F1@
+1 FAMS @F2@
+
+0 @I4@ INDI
+1 NAME Mary /O'Malley/
+1 SEX F
+1 BIRT
+2 PLAC Ireland
+1 DEAT
+2 DATE 3 JAN 1925
+2 PLAC Tucson, Arizona
+1 NOTE Was a nun
+1 FAMC @F1@
+
+0 @I5@ INDI
+1 NAME James J. /Haresign/
+1 SEX M
+1 BIRT
+2 DATE 20 APR 1849
+2 PLAC England
+1 DEAT
+2 DATE 19 NOV 1909
+2 PLAC Oswego, NY
+1 IMMI
+2 DATE 17 JAN 1850
+2 NOTE Came to America
+1 FAMS @F3@
+
+0 @I6@ INDI
+1 NAME Sarah E. /Patchet/
+1 SEX F
+1 BIRT
+2 DATE 7 JAN 1847
+2 PLAC England
+1 DEAT
+2 DATE 12 JUL 1929
+2 PLAC Oswego, NY
+1 FAMS @F3@
+
+0 @I7@ INDI
+1 NAME John James /Haresign/
+1 SEX M
+1 BIRT
+2 DATE 13 NOV 1878
+1 DEAT
+2 DATE APR 1942
+1 FAMC @F3@
+
+0 @I8@ INDI
+1 NAME Albert VanCott /Haresign/
+1 SEX M
+1 BIRT
+2 DATE 31 JAN 1881
+1 DEAT
+2 DATE 15 JAN 1951
+1 FAMC @F3@
+
+0 @I9@ INDI
+1 NAME Lydia Eliza /Haresign/
+1 SEX F
+1 BIRT
+2 DATE 26 MAR 1883
+1 DEAT
+2 DATE 24 AUG 1950
+1 BURI
+2 PLAC Rural Cemetery, Oswego Center, NY
+1 NOTE Had two children from previous marriage: Thelma LeRoy Andrews and Kenneth LeRoy. Kenneth died of spinal meningitis at age 14. Per O'Malley Family Bible.
+1 FAMC @F3@
+1 FAMS @F2@
+
+0 @I10@ INDI
+1 NAME Enoch Ray /Haresign/
+1 SEX M
+1 BIRT
+2 DATE 5 MAY 1885
+1 FAMC @F3@
+
+0 @I11@ INDI
+1 NAME Ralph Burton /Haresign/
+1 SEX M
+1 BIRT
+2 DATE 26 MAY 1887
+1 DEAT
+2 DATE AUG 1887
+2 NOTE Died 3 months after birth
+1 FAMC @F3@
+
+0 @I12@ INDI
+1 NAME Emma May /Haresign/
+1 SEX F
+1 BIRT
+2 DATE 24 JUN 1890
+1 DEAT
+2 DATE 1891
+2 NOTE Died at 14 months old
+1 FAMC @F3@
+
+0 @I13@ INDI
+1 NAME Clara Belle /Haresign/
+1 SEX F
+1 BIRT
+2 DATE 12 MAY 1893
+1 DEAT
+2 DATE 7 JAN 1987
+1 FAMC @F3@
+
+0 @I14@ INDI
+1 NAME Gerald Lawrence /O'Malley/
+1 SEX M
+1 BIRT
+2 DATE 28 MAR 1915
+2 PLAC Oswego, NY
+1 RELI
+2 DATE 9 APR 1950
+2 NOTE United with Dyersburg Cumberland Presbyterian Church on Easter Sunday
+1 FAMC @F2@
+1 FAMS @F4@
+
+0 @I15@ INDI
+1 NAME Mary Elizabeth /O'Malley/
+1 SEX F
+1 BIRT
+2 DATE 25 MAY 1917
+1 DEAT
+2 DATE 30 MAY 1976
+1 BURI
+2 PLAC Redding, California
+1 FAMC @F2@
+1 FAMS @F5@
+
+0 @I16@ INDI
+1 NAME Arthur James /O'Malley/
+1 SEX M
+1 BIRT
+2 DATE 26 APR 1921
+1 DEAT
+2 DATE 23 FEB 1943
+2 NOTE Died in USAF
+1 FAMC @F2@
+1 FAMS @F6@
+
+0 @I17@ INDI
+1 NAME Millie /O'Malley/
+1 SEX F
+1 BIRT
+2 DATE 3 JAN 1925
+1 FAMC @F2@
+
+0 @I18@ INDI
+1 NAME Emma Ruth /Johnson/
+1 SEX F
+1 BIRT
+2 DATE 24 JAN 1917
+2 PLAC Dyersburg, TN
+1 FAMC @F10@
+1 FAMS @F4@
+
+0 @I19@ INDI
+1 NAME Patricia Elaine /O'Malley/
+1 SEX F
+1 BIRT
+2 DATE 2 APR 1937
+2 PLAC Dyersburg, TN
+1 FAMC @F4@
+1 FAMS @F7@
+
+0 @I20@ INDI
+1 NAME Katherine Anne /O'Malley/
+1 SEX F
+1 BIRT
+2 DATE 28 OCT 1946
+1 FAMC @F4@
+
+0 @I21@ INDI
+1 NAME Claud Robert /Horn/
+1 SEX M
+1 BIRT
+2 DATE 21 JUL 1933
+2 PLAC St. Croix, Virgin Islands
+1 FAMS @F7@
+
+0 @I22@ INDI
+1 NAME Sarah Elizabeth /Horn/
+1 NAME Libby /Horn/
+2 TYPE nickname
+1 SEX F
+1 BIRT
+2 DATE 22 OCT 1961
+1 FAMC @F7@
+
+0 @I23@ INDI
+1 NAME Audrey Ann /Horn/
+1 SEX F
+1 BIRT
+2 DATE 29 MAR 1964
+2 NOTE Easter Sunday
+1 FAMC @F7@
+
+0 @I24@ INDI
+1 NAME Claud Lawrence /Horn/
+1 NAME Larry /Horn/
+2 TYPE nickname
+1 SEX M
+1 BIRT
+2 DATE 10 SEP 1966
+1 FAMC @F7@
+
+0 @I25@ INDI
+1 NAME Fay /Gray/
+1 SEX M
+1 BURI
+2 PLAC Redding, California
+1 FAMS @F5@
+
+0 @I26@ INDI
+1 NAME Betty June /Gray/
+1 SEX F
+1 BIRT
+2 DATE 19 JUN 1939
+1 NOTE Married name ENDRES
+1 FAMC @F5@
+1 FAMS @F31@
+
+0 @I27@ INDI
+1 NAME Joe David /Gray/
+1 SEX M
+1 BIRT
+2 DATE 26 MAR 1941
+1 DEAT
+2 DATE JAN 1986
+2 NOTE Died at age 45
+1 FAMC @F5@
+1 FAMS @F32@
+
+0 @I28@ INDI
+1 NAME Janice Ann /Gray/
+1 SEX F
+1 NOTE Married name Texeira
+1 FAMC @F5@
+1 FAMS @F33@
+
+0 @I29@ INDI
+1 NAME Judy Faye /Gray/
+1 SEX F
+1 NOTE Married name Shirley
+1 FAMC @F5@
+1 FAMS @F34@
+
+0 @I30@ INDI
+1 NAME Virginia Dare /Spence/
+1 SEX F
+1 FAMS @F6@
+
+0 @I31@ INDI
+1 NAME Sherrod /Segraves/
+1 NAME Sherrod /Seagraves/
+2 TYPE also known as
+1 SEX M
+1 BIRT
+2 DATE 1808
+2 PLAC Wake County, North Carolina
+1 DEAT
+2 DATE 1893
+2 PLAC Dyer County, TN
+1 NOTE Family migrated from Wake Co., NC to Henderson Co., TN and Dyer Co., TN. Name spelling varies between Segraves and Seagraves in different documents.
+1 FAMS @F8@
+1 FAMS @F9@
+
+0 @I32@ INDI
+1 NAME Martha /Laws/
+1 SEX F
+1 BIRT
+2 DATE 1814
+1 DEAT
+2 DATE 1879
+1 NOTE First wife of Sherrod Segraves. Marriage likely ended by divorce or separation (not death) since Sherrod's second wife Margaret Neely had children born as early as 1842, while Martha didn't die until 1879.
+1 FAMS @F8@
+
+0 @I33@ INDI
+1 NAME Margaret /Neely/
+1 SEX F
+1 BIRT
+2 DATE 1806
+2 NOTE Birth year may be incorrect. If accurate, Margaret would have been 40 when George W. was born (1846), which is possible but unusual for the era. Consider verifying this date.
+1 DEAT
+2 DATE 1880
+1 NOTE Second wife of Sherrod Segraves
+1 FAMS @F9@
+
+0 @I34@ INDI
+1 NAME Moses /Segraves/
+1 SEX M
+1 BIRT
+2 DATE 1833
+1 DEAT
+2 DATE 1910
+1 FAMC @F8@
+1 FAMS @F11@
+
+0 @I35@ INDI
+1 NAME Nancy Camilia /Segraves/
+1 SEX F
+1 BIRT
+2 DATE 29 SEP 1867
+2 PLAC Henderson County, TN
+1 DEAT
+2 DATE 1946
+1 NOTE Daughter of Moses Segraves
+1 FAMC @F11@
+1 FAMS @F12@
+
+0 @I36@ INDI
+1 NAME George W. /Segraves/
+1 SEX M
+1 BIRT
+2 DATE 1846
+1 DEAT
+2 DATE 1905
+1 FAMC @F9@
+1 FAMS @F13@
+
+0 @I37@ INDI
+1 NAME Eliza Harriet /Enochs/
+1 SEX F
+1 NOTE Research question: Eliza married George W. Segraves, and George's sister Rachel married an Enochs. Eliza may be a sibling of Rachel's husband - two Segraves siblings married two Enochs siblings.
+1 FAMS @F13@
+
+0 @I38@ INDI
+1 NAME Annie May /Segraves/
+1 SEX F
+1 BIRT
+2 DATE ABT 1870
+1 FAMC @F13@
+1 FAMS @F14@
+
+0 @I39@ INDI
+1 NAME Daniel /Cotton/
+1 NAME Dan /Cotton/
+2 TYPE nickname
+1 SEX M
+1 BIRT
+2 DATE 8 OCT 1859
+2 PLAC Dyersburg, TN
+1 DEAT
+2 DATE 26 FEB 1931
+2 PLAC Dyersburg, TN
+1 BURI
+2 PLAC Dyersburg, TN
+1 OCCU Hardware business, real estate dealer, public official
+1 NOTE Per newspaper obituary (Feb 1931) and O'Malley Family Bible: "Dan Cotton, Sr., beloved citizen of Dyersburg, public official and pioneer resident of the county." Was county trustee for several terms, chairman of Dyer county court for two years. His parents were pioneer residents of West Tennessee; his mother was a member of the Clark family who built Dyer county's first log courthouse and furnished the county's first sheriff. Prior to public office he was in the hardware business and later a real estate dealer. Died at home on Miller Street following illness of ten days. Funeral at Cumberland Presbyterian Church. Survived by widow Mrs. Ann Mai Seagraves Cotton, six children, and sister Miss Nell Cotton.
+1 FAMS @F14@
+
+0 @I40@ INDI
+1 NAME George /Cotton/
+1 SEX M
+1 FAMC @F14@
+1 FAMS @F15@
+
+0 @I41@ INDI
+1 NAME Thomas /Cotton/
+1 NAME Tom /Cotton/
+2 TYPE nickname
+1 SEX M
+1 FAMC @F14@
+
+0 @I42@ INDI
+1 NAME Eliza Date /Cotton/
+1 NAME Mama Datie /Cotton/
+2 TYPE nickname
+1 SEX F
+1 FAMC @F14@
+1 FAMS @F10@
+
+0 @I43@ INDI
+1 NAME Emma Lena /Cotton/
+1 SEX F
+1 FAMC @F14@
+1 FAMS @F16@
+
+0 @I44@ INDI
+1 NAME Hattie Mae /Cotton/
+1 NAME Hattie May /Cotton/
+2 TYPE nickname
+1 SEX F
+1 FAMC @F14@
+
+0 @I45@ INDI
+1 NAME Daniel /Cotton/ Jr.
+1 NAME Dan /Cotton/ Jr.
+2 TYPE nickname
+1 SEX M
+1 FAMC @F14@
+
+0 @I46@ INDI
+1 NAME Nell /Cotton/
+1 SEX F
+1 NOTE Sister of Dan Cotton Sr., survived him
+1 FAMC @F17@
+
+0 @I47@ INDI
+1 NAME Lloyd H. /Johnson/
+1 SEX M
+1 FAMS @F10@
+
+0 @I48@ INDI
+1 NAME Lloyd Herman /Johnson/ Jr.
+1 SEX M
+1 FAMC @F10@
+1 FAMS @F18@
+
+0 @I49@ INDI
+1 NAME Lucie /Watson/
+1 SEX F
+1 FAMS @F18@
+
+0 @I50@ INDI
+1 NAME Edward Daniel /Johnson/
+1 NAME Danny /Johnson/
+2 TYPE nickname
+1 SEX M
+1 FAMC @F18@
+1 FAMS @F19@
+
+0 @I51@ INDI
+1 NAME Vicki /Vickers/
+1 SEX F
+1 FAMS @F19@
+
+0 @I52@ INDI
+1 NAME Elizabeth Ruth /Johnson/
+1 SEX F
+1 FAMC @F19@
+
+0 @I53@ INDI
+1 NAME Jared /Johnson/
+1 SEX M
+1 FAMC @F19@
+
+0 @I54@ INDI
+1 NAME Mattie /Simpson/
+1 SEX F
+1 FAMS @F15@
+
+0 @I55@ INDI
+1 NAME Annie Sue /Cotton/
+1 SEX F
+1 FAMC @F15@
+1 FAMS @F20@
+
+0 @I56@ INDI
+1 NAME Albert /Markham/ Jr.
+1 SEX M
+1 FAMS @F20@
+
+0 @I57@ INDI
+1 NAME Albert /Markham/ III
+1 SEX M
+1 FAMC @F20@
+
+0 @I58@ INDI
+1 NAME Howard /Hugo/
+1 SEX M
+1 FAMS @F16@
+
+0 @I59@ INDI
+1 NAME Annie Claire /Hugo/
+1 SEX F
+1 FAMC @F16@
+1 FAMS @F21@
+
+0 @I60@ INDI
+1 NAME Ben /Love/
+1 SEX M
+1 FAMS @F21@
+
+0 @I61@ INDI
+1 NAME Ben Howard /Love/
+1 SEX M
+1 NOTE May be two separate people: Ben and Howard
+1 FAMC @F21@
+
+0 @I62@ INDI
+1 NAME Phil /Love/
+1 SEX M
+1 FAMC @F21@
+
+0 @I63@ INDI
+1 NAME Leigh Ann /Love/
+1 SEX F
+1 FAMC @F21@
+
+0 @I64@ INDI
+1 NAME Mark /Love/
+1 SEX M
+1 FAMC @F21@
+
+0 @I65@ INDI
+1 NAME Sherrod /Segraves/
+1 SEX M
+1 NOTE Son of George W. Segraves
+1 FAMC @F13@
+1 FAMS @F22@
+
+0 @I66@ INDI
+1 NAME Helen /Taylor/
+1 SEX F
+1 FAMS @F22@
+
+0 @I67@ INDI
+1 NAME Taylor /Segraves/
+1 FAMC @F22@
+
+0 @I68@ INDI
+1 NAME Basil /Segraves/
+1 FAMC @F22@
+
+0 @I69@ INDI
+1 NAME Helen /Segraves/
+1 SEX F
+1 FAMC @F22@
+
+0 @I70@ INDI
+1 NAME Virginia /Segraves/
+1 SEX F
+1 FAMC @F22@
+
+0 @I71@ INDI
+1 NAME Alfred /Segraves/
+1 NAME Johnnie /Segraves/
+2 TYPE nickname
+1 SEX M
+1 BIRT
+2 DATE 1871
+1 DEAT
+2 DATE 1921
+1 FAMC @F13@
+1 FAMS @F23@
+
+0 @I72@ INDI
+1 NAME Martha /Segraves/
+1 SEX F
+1 NOTE Married name BLEDSOE
+1 FAMC @F23@
+
+0 @I73@ INDI
+1 NAME Lemuel Anderson /Smith/
+1 NAME L. A. /Smith/
+2 TYPE nickname
+1 SEX M
+1 BIRT
+2 DATE 23 AUG 1861
+2 PLAC Henderson County, TN
+1 FAMS @F12@
+
+0 @I74@ INDI
+1 NAME Felix /Smith/
+1 SEX M
+1 BIRT
+2 DATE 22 MAY 1892
+2 PLAC Henderson County, TN
+1 DEAT
+2 DATE 1967
+1 FAMC @F12@
+1 FAMS @F24@
+
+0 @I75@ INDI
+1 NAME Ervie Lavina /Gibson/
+1 SEX F
+1 BIRT
+2 DATE 24 FEB 1897
+2 PLAC Henderson County, TN
+1 FAMC @F29@
+1 FAMS @F24@
+
+0 @I76@ INDI
+1 NAME Lennie Lee /Smith/
+1 SEX F
+1 BIRT
+2 DATE 14 OCT 1921
+2 PLAC Medon, Madison County, TN
+1 FAMC @F24@
+1 FAMS @F25@
+
+0 @I77@ INDI
+1 NAME Chosley Dare /Walker/
+1 NAME C.D. /Walker/
+2 TYPE nickname
+1 SEX M
+1 BIRT
+2 DATE 23 JUL 1924
+2 PLAC Buchanan, Henry County, TN
+1 FAMS @F25@
+
+0 @I78@ INDI
+1 NAME Johnny Dale /Walker/
+1 NAME Johnny D. /Walker/
+2 TYPE nickname
+1 SEX M
+1 BIRT
+2 DATE 6 JUL 1953
+2 PLAC Chicago, Cook County, IL
+1 ADDR 717 Caledonia St., Paris, TN 38242
+1 NOTE Wrote letter dated December 24, 1980 to Mrs. Gerald L. O'Malley researching Segraves family
+1 FAMC @F25@
+
+0 @I79@ INDI
+1 NAME Dewey /Walker/
+1 SEX M
+1 BIRT
+2 DATE 28 JUL 1899
+2 PLAC Buchanan, Henry County, TN
+1 FAMS @F26@
+
+0 @I80@ INDI
+1 NAME Sudie Belle /McFarland/
+1 SEX F
+1 BIRT
+2 DATE 22 JAN 1897
+2 PLAC Paris, Henry County, TN
+1 FAMS @F26@
+
+0 @I81@ INDI
+1 NAME Mathew Warren /Walker/
+1 SEX M
+1 BIRT
+2 DATE 6 MAR 1863
+2 PLAC Henry County, TN
+1 FAMS @F27@
+
+0 @I82@ INDI
+1 NAME Julia Belle /Clark/
+1 SEX F
+1 BIRT
+2 DATE 12 SEP 1868
+2 PLAC Henry County, TN
+1 FAMS @F27@
+
+0 @I83@ INDI
+1 NAME Edward Newton /McFarland/
+1 SEX M
+1 BIRT
+2 DATE 19 JUN 1867
+2 PLAC Todd County, KY
+1 FAMS @F28@
+
+0 @I84@ INDI
+1 NAME Mary Alice /Pillow/
+1 SEX F
+1 BIRT
+2 DATE 6 JUN 1868
+2 PLAC Henry County, TN
+1 FAMS @F28@
+
+0 @I85@ INDI
+1 NAME Irvin Columbus /Gibson/
+1 SEX M
+1 BIRT
+2 DATE 2 APR 1867
+2 PLAC Carroll County, TN
+1 FAMS @F29@
+
+0 @I86@ INDI
+1 NAME Mary Eliza /Waugh/
+1 SEX F
+1 BIRT
+2 DATE 8 JUL 1869
+2 PLAC Henderson County, TN
+1 FAMS @F29@
+
+0 @I87@ INDI
+1 NAME Ernest /Johnson/
+1 SEX M
+1 NOTE Sibling of Lloyd Herman Johnson
+
+0 @I88@ INDI
+1 NAME Hoyt Herman /Johnson/
+1 SEX M
+1 NOTE Sibling of Lloyd Herman Johnson
+
+0 @I89@ INDI
+1 NAME Allen /Johnson/
+1 SEX M
+1 NOTE Sibling of Lloyd Herman Johnson
+
+0 @F1@ FAM
+1 HUSB @I1@
+1 WIFE @I2@
+1 CHIL @I3@
+1 CHIL @I4@
+1 NOTE Both parents killed in train wreck in 1889. Children brought to Little Falls, NY by their uncle.
+
+0 @F2@ FAM
+1 HUSB @I3@
+1 WIFE @I9@
+1 MARR
+2 DATE 10 SEP 1913
+1 CHIL @I14@
+1 CHIL @I15@
+1 CHIL @I16@
+1 CHIL @I17@
+
+0 @F3@ FAM
+1 HUSB @I5@
+1 WIFE @I6@
+1 MARR
+2 DATE 31 JAN 1872
+1 CHIL @I7@
+1 CHIL @I8@
+1 CHIL @I9@
+1 CHIL @I10@
+1 CHIL @I11@
+1 CHIL @I12@
+1 CHIL @I13@
+
+0 @F4@ FAM
+1 HUSB @I14@
+1 WIFE @I18@
+1 MARR
+2 DATE 28 DEC 1934
+1 CHIL @I19@
+1 CHIL @I20@
+
+0 @F5@ FAM
+1 HUSB @I25@
+1 WIFE @I15@
+1 MARR
+2 DATE 3 JAN 1937
+1 CHIL @I26@
+1 CHIL @I27@
+1 CHIL @I28@
+1 CHIL @I29@
+
+0 @F6@ FAM
+1 HUSB @I16@
+1 WIFE @I30@
+
+0 @F7@ FAM
+1 HUSB @I21@
+1 WIFE @I19@
+1 MARR
+2 DATE 27 AUG 1960
+1 CHIL @I22@
+1 CHIL @I23@
+1 CHIL @I24@
+
+0 @F8@ FAM
+1 HUSB @I31@
+1 WIFE @I32@
+1 NOTE First marriage of Sherrod Segraves
+1 CHIL @I34@
+
+0 @F9@ FAM
+1 HUSB @I31@
+1 WIFE @I33@
+1 NOTE Second marriage of Sherrod Segraves
+1 CHIL @I90@
+1 CHIL @I91@
+1 CHIL @I92@
+1 CHIL @I36@
+
+0 @F10@ FAM
+1 HUSB @I47@
+1 WIFE @I42@
+1 CHIL @I18@
+1 CHIL @I48@
+
+0 @F11@ FAM
+1 HUSB @I34@
+1 CHIL @I35@
+
+0 @F12@ FAM
+1 HUSB @I73@
+1 WIFE @I35@
+1 CHIL @I74@
+
+0 @F13@ FAM
+1 HUSB @I36@
+1 WIFE @I37@
+1 CHIL @I65@
+1 CHIL @I38@
+1 CHIL @I71@
+
+0 @F14@ FAM
+1 HUSB @I39@
+1 WIFE @I38@
+1 MARR
+2 DATE 15 NOV 1888
+2 PLAC Dyer County, TN
+1 CHIL @I40@
+1 CHIL @I41@
+1 CHIL @I42@
+1 CHIL @I43@
+1 CHIL @I44@
+1 CHIL @I45@
+
+0 @F15@ FAM
+1 HUSB @I40@
+1 WIFE @I54@
+1 CHIL @I55@
+
+0 @F16@ FAM
+1 HUSB @I58@
+1 WIFE @I43@
+1 CHIL @I59@
+
+0 @F17@ FAM
+1 NOTE Parents of Dan Cotton Sr. - pioneer residents of West Tennessee
+1 CHIL @I39@
+1 CHIL @I46@
+
+0 @F18@ FAM
+1 HUSB @I48@
+1 WIFE @I49@
+1 CHIL @I50@
+
+0 @F19@ FAM
+1 HUSB @I50@
+1 WIFE @I51@
+1 CHIL @I52@
+1 CHIL @I53@
+
+0 @F20@ FAM
+1 HUSB @I56@
+1 WIFE @I55@
+1 CHIL @I57@
+
+0 @F21@ FAM
+1 HUSB @I60@
+1 WIFE @I59@
+1 CHIL @I61@
+1 CHIL @I62@
+1 CHIL @I63@
+1 CHIL @I64@
+
+0 @F22@ FAM
+1 HUSB @I65@
+1 WIFE @I66@
+1 CHIL @I67@
+1 CHIL @I68@
+1 CHIL @I69@
+1 CHIL @I70@
+
+0 @F23@ FAM
+1 HUSB @I71@
+1 CHIL @I72@
+
+0 @F24@ FAM
+1 HUSB @I74@
+1 WIFE @I75@
+1 MARR
+1 CHIL @I76@
+
+0 @F25@ FAM
+1 HUSB @I77@
+1 WIFE @I76@
+1 CHIL @I78@
+
+0 @F26@ FAM
+1 HUSB @I79@
+1 WIFE @I80@
+1 CHIL @I77@
+
+0 @F27@ FAM
+1 HUSB @I81@
+1 WIFE @I82@
+1 CHIL @I79@
+
+0 @F28@ FAM
+1 HUSB @I83@
+1 WIFE @I84@
+1 CHIL @I80@
+
+0 @F29@ FAM
+1 HUSB @I85@
+1 WIFE @I86@
+1 CHIL @I75@
+
+0 @S1@ SOUR
+1 TITL O'Malley Family Bible
+1 AUTH Various family members
+1 NOTE Contains photographs (Gerald & Mary O'Malley as children, captioned "Gerald 5 yrs old, Mary 3 yr."), letters, newspaper clippings, handwritten family trees on Tube-Tex notepads, church study questions, and Gerald O'Malley's church membership card (Easter Sunday, April 9, 1950). Family history information copied from Thelma's bible by Millie O'Malley. Obituary of Dan Cotton enclosed, sent by Mrs. Ralph A. Baker (Laura Baker) in June 1991.
+
+0 @S2@ SOUR
+1 TITL Letter from Johnny D. Walker
+1 AUTH Johnny D. Walker
+1 DATE 24 DEC 1980
+1 NOTE Letter to Mrs. Gerald L. O'Malley, 425 Light Street, Dyersburg, TN, researching Segraves family connection. Walker is descended from Sherrod Segraves through the Smith line. Was referred by Mrs. A.H. (Martha) Bledsoe. Found in O'Malley Family Bible.
+
+0 @S3@ SOUR
+1 TITL Letter from Millie O'Malley
+1 AUTH Millie O'Malley
+1 DATE 22 AUG 1991
+1 NOTE Letter from Millie E. O'Malley, RR 6 Box 92, Oswego, NY 13126, to Mr. & Mrs. Gerald O'Malley. Enclosed typed family history information copied from Thelma's bible. Note: Millie's document contains two known errors — lists Gerald and Emma Ruth's wedding as 12/28/1936 (correct: 12/28/1934) and Patricia's birth as 4/2/1938 (correct: 4/2/1937). Found in O'Malley Family Bible.
+
+0 @S4@ SOUR
+1 TITL Newspaper Obituary - Dan Cotton
+1 DATE 26 FEB 1931
+1 NOTE Newspaper obituary headlined "DAN COTTON DIES EARLY THURSDAY", dated 2-24-31. Sent to Mrs. Gerald O'Malley by Mrs. Ralph A. Baker (Laura Baker) on June 28, 1991, who found it going through some of Ralph's papers. Funeral home: J. W. Curry and Son. Found in O'Malley Family Bible.
+
+0 @I90@ INDI
+1 NAME E.G. /Segraves/
+1 NOTE No further information available
+1 FAMC @F9@
+
+0 @I91@ INDI
+1 NAME Melissa A. /Segraves/
+2 TYPE birth
+1 NAME Melissa A. /Tarrant/
+2 TYPE married
+1 SEX F
+1 BIRT
+2 DATE 1842
+1 DEAT
+2 DATE 1902
+1 FAMC @F9@
+
+0 @I92@ INDI
+1 NAME Rachel E. /Segraves/
+2 TYPE birth
+1 NAME Rachel E. /Enochs/
+2 TYPE married
+1 SEX F
+1 NOTE Research question: Rachel married an Enochs, and her brother George W. married Eliza Enochs. Likely two Segraves siblings married two Enochs siblings.
+1 FAMC @F9@
+
+0 @I93@ INDI
+1 NAME Thelma /LeRoy/
+1 NAME Thelma /Andrews/
+2 TYPE married
+1 SEX F
+1 DEAT
+2 DATE 1975
+2 NOTE Died Good Friday 1975
+1 NOTE Daughter of Lydia Eliza Haresign from her first marriage. Per O'Malley Family Bible (information copied from Thelma's bible by Millie O'Malley).
+1 FAMS @F30@
+
+0 @I94@ INDI
+1 NAME Kenneth /LeRoy/
+1 SEX M
+1 DEAT
+2 NOTE Died of spinal meningitis at age 14
+1 NOTE Son of Lydia Eliza Haresign from her first marriage. Per O'Malley Family Bible.
+
+0 @I95@ INDI
+1 NAME Kenneth /Andrews/
+1 SEX M
+1 NOTE Son of Thelma LeRoy Andrews. Per O'Malley Family Bible.
+1 FAMC @F30@
+
+0 @I96@ INDI
+1 NAME Leigh /Andrews/
+1 SEX F
+1 NOTE Daughter of Thelma LeRoy Andrews. Per O'Malley Family Bible.
+1 FAMC @F30@
+
+0 @I97@ INDI
+1 NAME Jeanne /Andrews/
+1 SEX F
+1 NOTE Daughter of Thelma LeRoy Andrews. Per O'Malley Family Bible.
+1 FAMC @F30@
+
+0 @F30@ FAM
+1 WIFE @I93@
+1 CHIL @I95@
+1 CHIL @I96@
+1 CHIL @I97@
+1 NOTE Thelma's married name was Andrews. Husband's first name not recorded.
+
+0 @I98@ INDI
+1 NAME Lori /Gray/
+1 SEX F
+1 NOTE Daughter of Betty June Gray Endres. Per O'Malley Family Bible grandchildren list.
+1 FAMC @F31@
+
+0 @I99@ INDI
+1 NAME Kerry /Gray/
+1 NOTE Child of Betty June Gray Endres. Per O'Malley Family Bible grandchildren list.
+1 FAMC @F31@
+
+0 @I100@ INDI
+1 NAME Todd /Gray/
+1 SEX M
+1 NOTE Son of Betty June Gray Endres. Per O'Malley Family Bible grandchildren list.
+1 FAMC @F31@
+
+0 @F31@ FAM
+1 WIFE @I26@
+1 CHIL @I98@
+1 CHIL @I99@
+1 CHIL @I100@
+1 NOTE Betty June Gray married name ENDRES. Per O'Malley Family Bible.
+
+0 @I101@ INDI
+1 NAME Cindi /Gray/
+1 SEX F
+1 NOTE Daughter of Joe David Gray. Per O'Malley Family Bible grandchildren list.
+1 FAMC @F32@
+
+0 @I102@ INDI
+1 NAME Greg /Gray/
+1 SEX M
+1 NOTE Son of Joe David Gray. Per O'Malley Family Bible grandchildren list.
+1 FAMC @F32@
+
+0 @F32@ FAM
+1 HUSB @I27@
+1 CHIL @I101@
+1 CHIL @I102@
+1 NOTE Joe David Gray's family. Per O'Malley Family Bible.
+
+0 @I103@ INDI
+1 NAME Shawn /Texeira/
+1 NOTE Child of Janice Ann Gray Texeira. Per O'Malley Family Bible grandchildren list.
+1 FAMC @F33@
+
+0 @I104@ INDI
+1 NAME Shannon /Texeira/
+1 NOTE Child of Janice Ann Gray Texeira. Per O'Malley Family Bible grandchildren list.
+1 FAMC @F33@
+
+0 @F33@ FAM
+1 WIFE @I28@
+1 CHIL @I103@
+1 CHIL @I104@
+1 NOTE Janice Ann Gray married name Texeira. Per O'Malley Family Bible.
+
+0 @I105@ INDI
+1 NAME Michael /Shirley/
+1 SEX M
+1 NOTE Son of Judy Faye Gray Shirley. Per O'Malley Family Bible grandchildren list.
+1 FAMC @F34@
+
+0 @I106@ INDI
+1 NAME Tiffany /Shirley/
+1 SEX F
+1 NOTE Daughter of Judy Faye Gray Shirley. Per O'Malley Family Bible grandchildren list.
+1 FAMC @F34@
+
+0 @F34@ FAM
+1 WIFE @I29@
+1 CHIL @I105@
+1 CHIL @I106@
+1 NOTE Judy Faye Gray married name Shirley. Per O'Malley Family Bible.
+
+0 @S5@ SOUR
+1 TITL O'Malley Family Bible Transcription
+1 AUTH Larry Horn
+1 DATE 2026
+1 NOTE Full transcription of scanned PDF of family Bible and enclosed documents including photographs, correspondence, family charts on Tube-Tex notepads, Segraves family tree, church membership card, and newspaper obituary of Dan Cotton.
+
+0 TRLR
