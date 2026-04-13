@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family History &mdash; Threads of Grace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../meditation.css">
+    <link rel="stylesheet" href="family.css">
+    <style>
+        /* Stories-specific overrides */
+        .stories-header {
+            text-align: center;
+            padding: var(--spacing-2xl) var(--spacing-md) var(--spacing-lg);
+            border-bottom: 1px solid var(--soft-gray);
+            animation: fadeIn 1s ease-in;
+        }
+
+        .stories-header .back-link {
+            display: inline-block;
+            font-size: 0.95rem;
+            color: var(--accent-sage);
+            text-decoration: none;
+            letter-spacing: 0.05em;
+            margin-bottom: var(--spacing-md);
+            transition: color 0.3s ease;
+        }
+
+        .stories-header .back-link:hover {
+            color: var(--deep-brown);
+        }
+
+        .stories-title {
+            font-family: var(--font-display);
+            font-size: 3.5rem;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            color: var(--deep-brown);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .stories-subtitle {
+            font-size: 1.125rem;
+            font-weight: 300;
+            font-style: italic;
+            color: var(--medium-gray);
+            letter-spacing: 0.02em;
+        }
+
+        .stories-note {
+            max-width: 550px;
+            margin: var(--spacing-lg) auto 0;
+            font-size: 0.95rem;
+            color: var(--medium-gray);
+            line-height: 1.6;
+        }
+
+        /* Table of Contents */
+        .toc {
+            max-width: 500px;
+            margin: var(--spacing-xl) auto;
+            padding: var(--spacing-lg) var(--spacing-md);
+            animation: fadeIn 1s ease-in 0.3s backwards;
+        }
+
+        .toc h2 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--accent-gold);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .toc h3 {
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            font-weight: 400;
+            color: var(--deep-brown);
+            margin-top: var(--spacing-md);
+            margin-bottom: var(--spacing-xs);
+            letter-spacing: 0.05em;
+        }
+
+        .toc ol {
+            list-style: none;
+            counter-reset: story-counter;
+        }
+
+        .toc li {
+            counter-increment: story-counter;
+            margin-bottom: 0.75rem;
+        }
+
+        .toc li a {
+            display: block;
+            padding: 0.4rem 0;
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        .toc li a:hover {
+            color: var(--accent-sage);
+            padding-left: 0.5rem;
+        }
+
+        .toc li a::before {
+            content: counter(story-counter) ". ";
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        /* Section headings between story groups */
+        .family-line {
+            max-width: 650px;
+            margin: 0 auto;
+            padding: var(--spacing-2xl) 0 var(--spacing-md);
+            text-align: center;
+        }
+
+        .family-line h2 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 300;
+            color: var(--accent-gold);
+            letter-spacing: 0.1em;
+        }
+
+        .family-line .line-subtitle {
+            font-size: 1rem;
+            font-style: italic;
+            color: var(--medium-gray);
+            margin-top: var(--spacing-xs);
+        }
+
+        /* Story sections */
+        .story {
+            max-width: 650px;
+            margin: 0 auto;
+            padding: var(--spacing-2xl) 0 var(--spacing-xl);
+            border-bottom: 1px solid var(--soft-gray);
+        }
+
+        .story:last-of-type {
+            border-bottom: none;
+        }
+
+        .story-title {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: var(--deep-brown);
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+            line-height: 1.2;
+        }
+
+        .story p {
+            margin-bottom: var(--spacing-md);
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        .story p:first-of-type::first-letter {
+            font-size: 4em;
+            line-height: 0.8;
+            float: left;
+            margin: 0.05em 0.15em 0 0;
+            font-family: var(--font-display);
+            font-weight: 400;
+            color: var(--accent-gold);
+        }
+
+        .story p em {
+            font-style: italic;
+        }
+
+        /* Audrey/Tom interjection style */
+        .story .aside {
+            font-style: italic;
+            color: var(--medium-gray);
+            border-left: 2px solid var(--soft-gray);
+            padding-left: var(--spacing-md);
+            margin: var(--spacing-md) 0;
+        }
+
+        .story .aside .speaker {
+            font-weight: 600;
+            color: var(--dark-gray);
+            font-style: normal;
+        }
+
+        /* Footer */
+        .stories-footer {
+            text-align: center;
+            padding: var(--spacing-xl) var(--spacing-md);
+            margin-top: var(--spacing-lg);
+            border-top: 1px solid var(--soft-gray);
+            font-size: 0.95rem;
+            color: var(--medium-gray);
+        }
+
+        .stories-footer p {
+            margin-bottom: var(--spacing-xs);
+            text-align: center;
+        }
+
+        .stories-footer a {
+            color: var(--accent-sage);
+            text-decoration: none;
+        }
+
+        .stories-footer a:hover {
+            color: var(--deep-brown);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .stories-title {
+                font-size: 2.5rem;
+            }
+
+            .story-title {
+                font-size: 2rem;
+            }
+
+            .family-line h2 {
+                font-size: 1.75rem;
+            }
+
+            .story p {
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stories-title {
+                font-size: 2rem;
+            }
+
+            .story-title {
+                font-size: 1.75rem;
+            }
+        }
+
+        /* Scroll offset for anchor links */
+        .story[id] {
+            scroll-margin-top: 2rem;
+        }
+
+        .family-line[id] {
+            scroll-margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="grain-overlay"></div>
+
+    <nav class="family-nav">
+        <a href="index.html">Family Home</a>
+        <span class="family-nav-separator">&middot;</span>
+        <a href="stories-mom-told.html">Stories Mom Told</a>
+        <span class="family-nav-separator">&middot;</span>
+        <a href="stories-mom-wrote.html">Stories Mom Wrote</a>
+        <span class="family-nav-separator">&middot;</span>
+        <span class="family-nav-current">Family History</span>
+        <span class="family-nav-separator">&middot;</span>
+        <a href="family-tree.html">Family Tree</a>
+        <span class="family-nav-separator">&middot;</span>
+        <a href="memorial-video.html">Memorial Video</a>
+    </nav>
+
+    <header class="stories-header">
+        <a href="index.html" class="back-link">&larr; Family Home</a>
+        <h1 class="stories-title">Family History</h1>
+        <p class="stories-subtitle">A conversation with Audrey and Tom, October 29, 2024</p>
+        <p class="stories-note">Mom came home from an eye procedure that afternoon, and over supper the three of them sat down to talk through the family lines&mdash;O&rsquo;Malley, Johnson, Horn, and McNabb. These stories are shaped from that conversation, in her voice, with Audrey&rsquo;s and Tom&rsquo;s contributions.</p>
+    </header>
+
+    <div class="container">
+        <div style="max-width: 500px; margin: var(--spacing-lg) auto; text-align: center;">
+            <p style="font-size: 0.9rem; color: var(--medium-gray); margin-bottom: 0.5rem; letter-spacing: 0.05em;">Listen to the original conversation</p>
+            <audio controls preload="none" style="width: 100%;">
+                <source src="media/2024-1029-stories-with-audrey-and-tom/2024-1029-mom-stories-and-family-histoy-with-audrey-and-tom.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <nav class="toc">
+            <h2>Contents</h2>
+
+            <h3>The O&rsquo;Malley Line</h3>
+            <ol>
+                <li><a href="#coming-to-america">Coming to America</a></li>
+                <li><a href="#the-rooming-house">The Rooming House</a></li>
+                <li><a href="#the-mill-moves-south">The Mill Moves South</a></li>
+                <li><a href="#december-eleventh">December Eleventh</a></li>
+                <li><a href="#uncle-arthurs-last-flight">Uncle Arthur&rsquo;s Last Flight</a></li>
+                <li><a href="#the-trip-to-oswego">The Trip to Oswego</a></li>
+                <li><a href="#caring-for-grandmother">Caring for Grandmother</a></li>
+                <li><a href="#ant-mildred">A&rsquo;nt Mildred</a></li>
+                <li><a href="#the-omalley-homeland">The O&rsquo;Malley Homeland</a></li>
+            </ol>
+
+            <h3>The Johnson Line</h3>
+            <ol start="10">
+                <li><a href="#mama-daties-father">Mama Datie&rsquo;s Father</a></li>
+                <li><a href="#uncle-sonny">Uncle Sonny</a></li>
+                <li><a href="#mama-daties-dark-time">Mama Datie&rsquo;s Dark Time</a></li>
+            </ol>
+
+            <h3>The Horn Line</h3>
+            <ol start="13">
+                <li><a href="#from-hoorn-holland">From Hoorn, Holland</a></li>
+                <li><a href="#the-swamp-fox">The Swamp Fox</a></li>
+                <li><a href="#how-the-children-got-their-names">How the Children Got Their Names</a></li>
+                <li><a href="#grandfathers-farm">Grandfather&rsquo;s Farm</a></li>
+                <li><a href="#the-mcnabb-side">The McNabb Side</a></li>
+            </ol>
+
+            <h3>Moments Between</h3>
+            <ol start="18">
+                <li><a href="#cindy-the-beagle">Cindy the Beagle</a></li>
+                <li><a href="#daddy">Daddy</a></li>
+                <li><a href="#granny">Granny</a></li>
+                <li><a href="#toms-blessing">Tom&rsquo;s Blessing</a></li>
+            </ol>
+        </nav>
+
+        <!-- ============================================ -->
+        <!-- THE O'MALLEY LINE                            -->
+        <!-- ============================================ -->
+
+        <div class="family-line" id="omalley-line">
+            <h2>The O&rsquo;Malley Line</h2>
+            <p class="line-subtitle">Irish &mdash; from County Mayo to Oswego to Dyersburg</p>
+        </div>
+
+        <!-- Story 1 -->
+        <article class="story" id="coming-to-america">
+            <h2 class="story-title">Coming to America</h2>
+
+            <p>Granddaddy&rsquo;s parents were killed in a train wreck in Ireland. He was about ten years old, born in 1889 or so, and his sister Mary was with him&mdash;I don&rsquo;t know if she was older or younger. Their Uncle Mark was already in the United States. His name was probably Martin, but they called him Uncle Mark. When word came about the wreck, Uncle Mark went over to Ireland and brought them back to America. It was near the turn of the century.</p>
+
+            <p>And that was the end of Granddaddy&rsquo;s formal education. He never went to school anymore. In those days, a boy just went to work&mdash;whatever he could find, he did.</p>
+
+            <p>His sister Mary became a Catholic nun. She died in Colorado&mdash;Denver, I think&mdash;on the very day A&rsquo;nt Mildred was born. I don&rsquo;t know what order she belonged to. Some things you just never think to ask until it&rsquo;s too late.</p>
+        </article>
+
+        <!-- Story 2 -->
+        <article class="story" id="the-rooming-house">
+            <h2 class="story-title">The Rooming House</h2>
+
+            <p>Grandmother had had a hard life before she ever met Granddaddy. She&rsquo;d been married before and had two children&mdash;a boy who died young and a daughter, my A&rsquo;nt Thelma. Her first husband left somewhere along the way. You know, that happens a lot in families when there&rsquo;s a death of a child&mdash;the marriage disintegrates. So she had to support herself and her children, and somehow she ended up running a rooming house right next door to the train station in Oswego.</p>
+
+            <p>Granddaddy, who had become a hobo along the way, fell off a train and got hurt. I don&rsquo;t know if he broke a leg or what, but they carried him to the rooming house that was right there, and Grandmother nursed him back to health.</p>
+
+            <p>That&rsquo;s how they met. By the time all of that was over, I guess they got married. I don&rsquo;t know the details. But from that beginning came Daddy&mdash;Gerald&mdash;and then A&rsquo;nt Mary, and Uncle Arthur, and A&rsquo;nt Mildred. The whole family.</p>
+        </article>
+
+        <!-- Story 3 -->
+        <article class="story" id="the-mill-moves-south">
+            <h2 class="story-title">The Mill Moves South</h2>
+
+            <p>Granddaddy worked at a textile mill up in Oswego. There was some kind of division in the management&mdash;I don&rsquo;t know the details&mdash;and Mr. Wheeler and his group, Mr. Sykes and some other people, decided to move the mill to Dyersburg, Tennessee. There was plenty of cheap labor and plenty of cotton down there, and it was a cotton spinning mill. They made the brown jersey gloves for camping and work&mdash;every one of those was probably made at Dyersburg Cotton Products. Later they added on, always adding more kinds of fabric, knit backing for blankets and coats and things.</p>
+
+            <p>The whole family came to Dyersburg in 1929. Daddy was fourteen, ready for high school. A&rsquo;nt Mary and Mother were about the same age, and that&rsquo;s how Mother and Daddy met&mdash;the two girls became friends.</p>
+
+            <p>They came before October, which was when the stock market crashed and the Great Depression started. I can&rsquo;t imagine how horrible that must have been. They had just gotten there and gotten started, and then everything fell apart. It must have been very hard on Mr. Wheeler and his people. But the mill kept working through all those years.</p>
+
+            <p>A&rsquo;nt Mary and her beau, Uncle Faye, were the ones who drove Mother and Daddy to Hickman, Kentucky to get married. They borrowed Uncle Faye&rsquo;s father&rsquo;s car for the occasion. In those days, married folks weren&rsquo;t allowed to stay in school, so they kept it secret until just before graduation.</p>
+        </article>
+
+        <!-- Story 4 -->
+        <article class="story" id="december-eleventh">
+            <h2 class="story-title">December Eleventh</h2>
+
+            <p>Granddaddy died on December 11, 1941&mdash;four days after Pearl Harbor. He came in from work that day and sat down in the rocking chair, the one that all of you children were rocked in. They had a big radio, a great big thing that sat on the floor, fancy for the time. He turned it on to listen to the war news.</p>
+
+            <p>Grandmother called him for supper. He didn&rsquo;t come. She went in and he was dead.</p>
+
+            <p>For him, it was a nice way to go. But it was really hard on the family. A&rsquo;nt Mildred was still in high school&mdash;I think she was probably a senior. So Grandmother and A&rsquo;nt Mildred stayed with us until A&rsquo;nt Mildred graduated, and then they went back to Oswego, because all of Grandmother&rsquo;s family was there.</p>
+
+            <p>I was four years old. We didn&rsquo;t have a car, but Granddaddy had a car&mdash;a coupe&mdash;and I suppose that was the one Mother was driving. She got me all cleaned up and dressed and said, &ldquo;Come on, we&rsquo;re going in the car to Grandmother and Granddaddy&rsquo;s. Daddy needs a tie.&rdquo;</p>
+
+            <p>Children didn&rsquo;t ask questions in those days. They just went.</p>
+
+            <p>We drove up out front. The house sat up on a slight little hill. Daddy came walking out and down the slope toward us, and he was crying. Big, sad sobs. He was only twenty-six years old.</p>
+
+            <p>Whatever was going on inside that house, I knew it was not a good thing. They said, &ldquo;Come on, we want to take you inside.&rdquo; And I said no. And I wouldn&rsquo;t go.</p>
+
+            <p>I give them great credit for not making me.</p>
+        </article>
+
+        <!-- Story 5 -->
+        <article class="story" id="uncle-arthurs-last-flight">
+            <h2 class="story-title">Uncle Arthur&rsquo;s Last Flight</h2>
+
+            <p>When the war started, Uncle Arthur immediately wanted to join up, and he did. He went into the Air Force and was getting his training down in Florida. On his last solo night flight, he wrecked and died.</p>
+
+            <p>I&rsquo;ll never forget sitting in that little common area in between the family room and the bedrooms and the bathrooms and the living room&mdash;that little space. There was a tall bookcase, and it had photo albums and things. I was sitting in there one day looking at all the pictures, and Granddaddy came in.</p>
+
+            <p>He sat down with me. He was showing me the pictures of his brother. And he started to cry.</p>
+
+            <p>That was a special moment. My granddaddy, showing me his brother&rsquo;s pictures and crying. Some memories stay with you your whole life, and that is one of mine.</p>
+        </article>
+
+        <!-- Story 6 -->
+        <article class="story" id="the-trip-to-oswego">
+            <h2 class="story-title">The Trip to Oswego</h2>
+
+            <p>In 1947, after Daddy came home from the war and got a car on the GI Bill, we drove up to Oswego to see Grandmother and all the relatives. We stopped at friends&rsquo; houses along the way because there weren&rsquo;t many motels in those days. Mother had a friend who&rsquo;d gone to Ohio with her husband, so we stopped there. And then another friend&mdash;her husband had a comic book collection like you wouldn&rsquo;t believe. More comic books than you&rsquo;d ever seen anywhere. So I loved spending the night there.</p>
+
+            <p>We finally got up to Oswego and stayed at A&rsquo;nt Thelma&rsquo;s. It was Memorial Day, and on Memorial Day everybody went out to Rural Cemetery. People were cleaning up the graves, and then having a picnic. I remember being down by the water, and that&rsquo;s where the picnic was. That&rsquo;s where Granddaddy&rsquo;s grave was. Grandmother is there too now, and A&rsquo;nt Mildred.</p>
+
+            <div class="aside">
+                <p><span class="speaker">Audrey:</span> I was up in Rochester and went over to Oswego with one of my classmates, Ben. We knew the graveyard was there, so we went to find it. We looked and looked and looked. I was ready to give up, but Ben just kept looking, and he found it. Then when Mom and Dad came up to visit, we went over and were able to see the gravesite together.</p>
+            </div>
+
+            <p>It was amazing to find that. It was on that 1947 trip that it became clear Grandmother had what they called &ldquo;hardening of the arteries&rdquo;&mdash;which meant dementia, really. That was when it all started.</p>
+        </article>
+
+        <!-- Story 7 -->
+        <article class="story" id="caring-for-grandmother">
+            <h2 class="story-title">Caring for Grandmother</h2>
+
+            <p>After that trip, Daddy went back up to Oswego and brought Grandmother to Dyersburg. At first she would stay one month at our house and then one month at A&rsquo;nt Mary&rsquo;s house&mdash;she and Uncle Faye had a farm south of town. But when Grandmother got so bad they didn&rsquo;t want to take her back, she stayed with us. That&rsquo;s where she died. I was thirteen.</p>
+
+            <p>Granny took care of her. Changed the sheets, changed the bedding, all of it&mdash;and that was before the days of Depends. Grandmother had had a hard life and was stoic, not touchy-feely. My other grandmother, Mama Datie, was the touchy-feely one. Grandmother was&hellip; not. I guess that&rsquo;s the only thing to say.</p>
+
+            <p>But I had a good relationship with her. When she and A&rsquo;nt Mildred lived with us after Granddaddy died, Grandmother had the radio&mdash;the one Granddaddy had died in front of&mdash;and she listened to the soap operas. I was a little girl, and I would go sit at her knee and listen. I&rsquo;m sure it was a comfort to her, though I had no idea of that at the time. I just thought I was getting a treat.</p>
+
+            <p>My mother would tell a story from Grandmother&rsquo;s last years. Granny, who was a tender-hearted woman and not a yelling person by nature, would get up every morning and pray: &ldquo;Please, God, don&rsquo;t let me yell at my mother today.&rdquo; And by nine o&rsquo;clock she would have already yelled at her.</p>
+
+            <p>Those of us who knew my mother know that she was not a yelling person. But old people are hard to live with. It&rsquo;s one of the things you don&rsquo;t understand until you&rsquo;ve been through it.</p>
+        </article>
+
+        <!-- Story 8 -->
+        <article class="story" id="ant-mildred">
+            <h2 class="story-title">A&rsquo;nt Mildred</h2>
+
+            <p>A&rsquo;nt Mildred was Daddy&rsquo;s youngest sister. After she and Grandmother went back to Oswego, she went to work at the newspaper up there and was quite settled. She never married.</p>
+
+            <p>She came down from New York for Mother and Daddy&rsquo;s fiftieth anniversary. And she treated Daddy like a brother. Now, the rest of us would tiptoe around Daddy, making sure we weren&rsquo;t going to upset the apple cart, keeping everything moving smoothly. But A&rsquo;nt Mildred? She just&mdash;well, what the heck. He&rsquo;s my brother. I don&rsquo;t care.</p>
+
+            <p>She was really a stitch.</p>
+        </article>
+
+        <!-- Story 9 -->
+        <article class="story" id="the-omalley-homeland">
+            <h2 class="story-title">The O&rsquo;Malley Homeland</h2>
+
+            <p>When I went to Ireland, I couldn&rsquo;t visit where Granddaddy was from&mdash;I had no idea where that was. But I went to where the O&rsquo;Malley family came from, on the west coast. It&rsquo;s Clew Bay, and the town is Louisburg, I think. Very near the mountain called Croagh Patrick, where St. Patrick spent Lent. It&rsquo;s a place where people go on pilgrimages.</p>
+
+            <p>They have a museum there for the O&rsquo;Malleys, and the family has a reunion every so often. I brought some material back. Every once in a while on television you&rsquo;ll see people whose name is O&rsquo;Malley&mdash;there&rsquo;s a William O&rsquo;Malley who&rsquo;s a Catholic priest and written books. And right now, Jen O&rsquo;Malley Dillon was running the Harris campaign. She was on television the other day, and I was looking at her face, and it was my face. She didn&rsquo;t look like me. I didn&rsquo;t look like her. But it was like, &ldquo;Oh my goodness, that&rsquo;s my chin. That&rsquo;s my jaw. That&rsquo;s my forehead.&rdquo; It was really funny.</p>
+
+            <div class="aside">
+                <p><span class="speaker">Tom:</span> Because I remember when I was in Ireland, along that whole western coast. It&rsquo;s a beautiful country. Mountainous. And castles all over.</p>
+            </div>
+
+            <p>You know, Grace O&rsquo;Malley, the sixteenth-century Irish pirate who met the first Queen Elizabeth&mdash;that&rsquo;s where she was from. That&rsquo;s our people.</p>
+        </article>
+
+        <!-- ============================================ -->
+        <!-- THE JOHNSON LINE                             -->
+        <!-- ============================================ -->
+
+        <div class="family-line" id="johnson-line">
+            <h2>The Johnson Line</h2>
+            <p class="line-subtitle">Scots-Irish &mdash; down through the Appalachians into West Tennessee</p>
+        </div>
+
+        <!-- Story 10 -->
+        <article class="story" id="mama-daties-father">
+            <h2 class="story-title">Mama Datie&rsquo;s Father</h2>
+
+            <p>Mama Datie&rsquo;s father&mdash;that&rsquo;s my Granny&rsquo;s mother&rsquo;s father&mdash;was one of the two youngest sons in a family of twelve. The oldest brother and that brother&rsquo;s son fought in the Civil War. On the Union side. In Tennessee, that was never talked about. I didn&rsquo;t know it until I was grown.</p>
+
+            <p>Their farm was out from New Bern, about twelve miles from our house. As one of the youngest boys, he did lots of different things. At one time he was a barber. He and Mother moved to Kentucky for a while&mdash;I don&rsquo;t know what he did up there. He came back and became a rural mail carrier, and while he was doing that, he taught Mother how to drive.</p>
+
+            <p>In 1935, when he was forty-four, he got pneumonia. This was before the days of penicillin. Three days later he was dead.</p>
+
+            <p>So Mama Datie was probably about forty, with two children to raise. The post office hired her for something for a little while, but she didn&rsquo;t last too long there. This was before Social Security, so I think her brothers took care of her. Uncle Tom and Uncle Dan never married, and I believe they probably bought her the house she had and made sure she always had food on the table. That&rsquo;s what family did in those days.</p>
+        </article>
+
+        <!-- Story 11 -->
+        <article class="story" id="uncle-sonny">
+            <h2 class="story-title">Uncle Sonny</h2>
+
+            <p>Uncle Sonny&mdash;Mother&rsquo;s brother&mdash;had been plagued by bad asthma his whole life. In those days, people always said, &ldquo;Oh, you need to go to Arizona for dry air.&rdquo; A&rsquo;nt Hattie, one of Mama Datie&rsquo;s sisters, had married a man who had a federal job on the river, something to do with the floods and the levees&mdash;probably the Corps of Engineers. He got transferred to Tucson during the war. (I always imagined as a child that his job had something to do with the Japanese internment camps out there, but I don&rsquo;t know that. What do seven-year-olds know?)</p>
+
+            <p>When Uncle Sonny graduated from high school, they said, &ldquo;You need to go live where A&rsquo;nt Hattie is.&rdquo; And so he and Mama Datie did. One Christmas they sent me a pair of real leather cowboy boots, which thrilled me no end.</p>
+
+            <p>Uncle Sonny eventually married&mdash;when I was in high school. His wife had a son, Danny Johnson. He taught me how to drive, because they were smart enough to know that Daddy and I would never make it through driving lessons together.</p>
+
+            <p>He died of liver cancer when Larry was about two. When you go through the family pictures, you&rsquo;ll see a picture of Uncle Sonny down on his knee with his arm around me at my first birthday. He was just always a part of my life.</p>
+        </article>
+
+        <!-- Story 12 -->
+        <article class="story" id="mama-daties-dark-time">
+            <h2 class="story-title">Mama Datie&rsquo;s Dark Time</h2>
+
+            <p>Mama Datie suffered from depression off and on all her life. When the war started and Uncle Sonny got called up, he brought Mama Datie home on the bus. All the way home, she thought somebody was following them.</p>
+
+            <p>I remember when they came home. I went running to the door. And it was like she didn&rsquo;t care. She didn&rsquo;t know me. She was different, hesitant, afraid.</p>
+
+            <p>In short order, they took her to the state hospital in Bolivar. In those days the state hospitals were like the movie <em>The Snake Pit</em>. She had the electroshock treatment. She was there about two years, I think.</p>
+
+            <p>But she got over it. She came home, probably around 1946, and settled back into her comfortable ways. After we built our new house and moved across town, I would go spend Friday night and Saturday with her. We&rsquo;d make ice cream sundaes before bed and read the <em>Saturday Evening Post</em> out loud to each other.</p>
+
+            <p>Mama Datie died in early November 1961, right after Libby was born at the end of October. I was in Florida and couldn&rsquo;t go to the funeral. In those days they always talked about losing your milk, and we didn&rsquo;t have any money. I was heartbroken not to be there.</p>
+        </article>
+
+        <!-- ============================================ -->
+        <!-- THE HORN LINE                                -->
+        <!-- ============================================ -->
+
+        <div class="family-line" id="horn-line">
+            <h2>The Horn Line</h2>
+            <p class="line-subtitle">Dutch &mdash; from Hoorn, Holland, across the South to Arkansas</p>
+        </div>
+
+        <!-- Story 13 -->
+        <article class="story" id="from-hoorn-holland">
+            <h2 class="story-title">From Hoorn, Holland</h2>
+
+            <p>Horn is Dutch. The first Lloyd Van Vert Horn came over from Hoorn, Holland&mdash;H-O-O-R-N&mdash;a town on the Zuiderzee. When I went on the needlework tour with Mother and Catherine and her needlework people, we went to Amsterdam, and from there we got a bus out to Hoorn and saw it.</p>
+
+            <p>One of the lovely things about Amsterdam&mdash;because there are so many small countries all around it&mdash;is that they speak five languages. You get on the bus and the person directing everybody says, &ldquo;Okay, what languages do we have?&rdquo; And then when she points out something, she repeats it in English, French, German, and whatever else. It was quite welcoming to be able to understand what they were saying.</p>
+
+            <p>That&rsquo;s all in the Horn book. Bob&rsquo;s family kept good records.</p>
+        </article>
+
+        <!-- Story 14 -->
+        <article class="story" id="the-swamp-fox">
+            <h2 class="story-title">The Swamp Fox</h2>
+
+            <p>The Horns came over in the 1700s, because one of the sons of Lloyd Van Vert was in the Revolutionary War. He fought with Francis Marion in South Carolina. Francis Marion was known as the Swamp Fox&mdash;they didn&rsquo;t fight as an army, they were guerrillas. All over South Carolina you&rsquo;ll see Francis Marion and Swamp Fox this and that.</p>
+
+            <p>My suspicion is that one of the Horns at that time married Francis Marion&rsquo;s sister. Because from then on, through all the generations as they came across North Alabama and into Arkansas and Oklahoma, the name Francis Marion appears over and over. Francis, or Marion, or Francis Marion. You see it again and again.</p>
+
+            <p>The first generation would have remembered Francis Marion and what he did in the war. Maybe the second generation would have remembered the stories. But beyond that, I don&rsquo;t think you&rsquo;d carry a name like that through so many generations unless it was family.</p>
+        </article>
+
+        <!-- Story 15 -->
+        <article class="story" id="how-the-children-got-their-names">
+            <h2 class="story-title">How the Children Got Their Names</h2>
+
+            <p>One of the questions that comes up is why everybody goes by a middle name. Well, it started with Bob. The original Claude Horn had a son, Claude Robert, and so they called him Bobby so as not to confuse the two Claudes.</p>
+
+            <p>When Larry was born, we named him for the two grandfathers. Lawrence is my father&rsquo;s middle name&mdash;he was Gerald Lawrence O&rsquo;Malley&mdash;and Claude was for the Horns. But I didn&rsquo;t want to call him Claude because we still had Claude Robert and Claude Horn, and so we called him by his middle name. None of it was a grand plan. It just happened.</p>
+
+            <p>Kelly was Kelly up until she changed from regular school to Montessori. They said, &ldquo;You have to decide what your name is going to be, and it&rsquo;s just going to be that from now on.&rdquo; She said Paige. And everybody went along with it.</p>
+
+            <p>We named all of ours for family people. Sarah was my best friend from high school&mdash;I wore her wedding dress for my wedding. She was pregnant and couldn&rsquo;t come, but her parents came all the way from Dyersburg. Elizabeth was the girl who introduced Bob and me and was my maid of honor. So those were the two people I wanted to honor. For a nickname, at UT they had a nursery school as part of childhood education, and when I did my class there, one of the little children&rsquo;s name was Libby. I liked it, and so that&rsquo;s what we called her.</p>
+
+            <div class="aside">
+                <p><span class="speaker">Tom:</span> And here I thought it was all about Libby glasses&mdash;the tumblers.</p>
+            </div>
+
+            <p>As for Audrey&mdash;Bob had a brother, Jim, four years older. Jim went to UT, met a girl named Audrey from Knoxville, and they married. Jim went into the military and was in Korea. He didn&rsquo;t die there, but he got sick&mdash;a brain tumor they couldn&rsquo;t identify easily. After he got out, they diagnosed it at Walter Reed, and he died. Bob was twenty-six. Jim was thirty.</p>
+
+            <p>When we were looking for girls&rsquo; names in the family, Audrey was as close as we got. And Anne came from my great-grandmother Annie Mae. Catherine was already named for her. Granny called her grandmother Mammy, because Mammy said she wasn&rsquo;t old enough to be a granny.</p>
+        </article>
+
+        <!-- Story 16 -->
+        <article class="story" id="grandfathers-farm">
+            <h2 class="story-title">Grandfather&rsquo;s Farm</h2>
+
+            <p>Grandfather Horn grew up on a farm in Arkansas. There were about six children&mdash;five boys and one girl. His oldest sister was grown and married, and when he&rsquo;d come home from school, he&rsquo;d stop by her house for a piece of pie on his way.</p>
+
+            <p>He became an agriculturalist and worked for the government down in Central America. He had very good teeth because of the fluoride in the water where he grew up. Alcoa&mdash;the Aluminum Company of America&mdash;bought the family farm. I think probably after their father died. There was fluoride associated with the aluminum, apparently.</p>
+
+            <p>One brother did the tree book&mdash;I always think of him as the brainy one in the family. Another brother worked on the railroad. His wife came to visit Grandmother and Grandfather when they lived on Fort Scott Drive. That woman and a younger woman, maybe a niece, still lived in that town in Arkansas. When we went out to see the farm, they had us over for supper one night. They gave us some family quilts.</p>
+
+            <p>I think her name was Catherine.</p>
+        </article>
+
+        <!-- Story 17 -->
+        <article class="story" id="the-mcnabb-side">
+            <h2 class="story-title">The McNabb Side</h2>
+
+            <p>McNabb was Grandmother Horn&rsquo;s maiden name. That&rsquo;s the Scottish part. Her father was a hardware salesman. Her grandfather was a minister from up in Minnesota somewhere who came south to Oklahoma.</p>
+
+            <p>Grandmother was a twin&mdash;Corris and Helen. They had about six siblings total. Her brother Horace had diabetes and died in 1961. A&rsquo;nt Ruth was the youngest and lived in Tennessee; she and Grandmother were very close. The three older ones each had responsibility for one of the younger ones.</p>
+
+            <p>A&rsquo;nt Margaret&rsquo;s son went high up in the military. When we were visiting in Arlington, he was in the newspaper. Her daughter was called Cappy because her father was a captain at the time. And one of the nieces&mdash;Kathy, I think&mdash;ended up in Australia somehow. I don&rsquo;t know how she got over there, but she came to visit Grandmother and Grandfather at Goodwin House once.</p>
+
+            <p>Grandmother took the children to Hammond, Louisiana, to stay with A&rsquo;nt Margaret for a year while Grandfather got settled and found a place to live in Washington. There are whole stretches of family I never knew well. You should have asked me all this ten years ago.</p>
+
+            <div class="aside">
+                <p><span class="speaker">Tom:</span> I told you! Oh, that&rsquo;s right. I didn&rsquo;t know you ten years ago.</p>
+            </div>
+        </article>
+
+        <!-- ============================================ -->
+        <!-- MOMENTS BETWEEN                              -->
+        <!-- ============================================ -->
+
+        <div class="family-line" id="moments-between">
+            <h2>Moments Between</h2>
+            <p class="line-subtitle">Family, in the telling</p>
+        </div>
+
+        <!-- Story 18 -->
+        <article class="story" id="cindy-the-beagle">
+            <h2 class="story-title">Cindy the Beagle</h2>
+
+            <p>Catherine had a black beagle named Cindy. They got her before she had her eyes open&mdash;her mother was killed, I don&rsquo;t remember how&mdash;and they raised her with an eyedropper. She was very special but also possessive. If two family members sat side by side on the sofa watching television, she had to put her nose in between them.</p>
+
+            <p>When they were all coming for Christmas&mdash;Libby was about three months old&mdash;I was in a stew. What was that dog going to do about this baby? When Mother picked up the baby, what would happen?</p>
+
+            <p>They drove up. Libby was lying on her stomach in the playpen. Here comes the dog. She walks over to the playpen. I&rsquo;m going, oh, oh, oh. She looks at Libby for a little bit, turns around, walks away. And that was it. She never bothered anyone holding the baby. Nothing. It was like, &ldquo;Well, she&rsquo;s part of this family. It&rsquo;s okay.&rdquo;</p>
+
+            <p>Isn&rsquo;t it amazing? We worry about so many things that we just don&rsquo;t need to worry about. I wonder how much time in our lives we spend worrying. Oh, heaven forbid.</p>
+        </article>
+
+        <!-- Story 19 -->
+        <article class="story" id="daddy">
+            <h2 class="story-title">Daddy</h2>
+
+            <p>A granddaddy is very different than a daddy. I think he and I did fine when I was little, but when he came home from the war and I was in school, things changed. As an adult, I see him differently than I did at the time. I&rsquo;d come home with a ninety-nine, and he&rsquo;d say, &ldquo;Why don&rsquo;t you have a hundred?&rdquo; It was meant to encourage me to do my best. And joking. But I always took it negatively.</p>
+
+            <p>I always knew he loved me. But I always thought he had a hard way of showing it.</p>
+
+            <div class="aside">
+                <p><span class="speaker">Tom:</span> You look back and you just know in your heart they did the best they could. And you have to forgive them. So many children grow up with an attitude that they can&rsquo;t forgive&mdash;but until you&rsquo;re that parent, raising that child in that situation, you don&rsquo;t realize what they were going through. Parents do the best they can.</p>
+            </div>
+        </article>
+
+        <!-- Story 20 -->
+        <article class="story" id="granny">
+            <h2 class="story-title">Granny</h2>
+
+            <p>As a little child, I was very close to Granny. When Catherine was born&mdash;I was nine&mdash;she didn&rsquo;t have as much time. In their house on Light Street, there was a hall that went all the way to the kitchen. Mother&rsquo;s cedar chest sat in that hall. When she&rsquo;d bring the clothes in from the clothesline, she&rsquo;d pile them there and go through them, putting away what could be put away and ironing what needed ironing.</p>
+
+            <p>Once Catherine was around, it seemed to me like she never got to the end of the pile.</p>
+
+            <p>And then, not long after, Daddy&rsquo;s mother came down from Oswego, and Granny was caring for a one-year-old <em>and</em> her mother-in-law. She was in her thirties. I can imagine not getting that laundry done. She was always making clothes, always the room mother at school. She was always doing for me.</p>
+
+            <p>But the pile never got smaller.</p>
+        </article>
+
+        <!-- Story 21 -->
+        <article class="story" id="toms-blessing">
+            <h2 class="story-title">Tom&rsquo;s Blessing</h2>
+
+            <p>Tom said the blessing before supper that night, and here is part of what he said:</p>
+
+            <div class="aside">
+                <p><span class="speaker">Tom:</span> Father God, we thank you that we&rsquo;ve had this opportunity to go back in the past and to look through the closets and to bring out the family. So many times we hear these stories after people pass. And we have been blessed today to be able to hear them from the lips of Mother Horn. We thank you for this life on this earth that you have given to us. And as we look forward to someday sitting with you at the great banquet table in heaven, sharing more of these stories&mdash;hearing what Moses had to say and Joshua had to say and all the prophets had to say&mdash;and that you will be the ultimate one that will say the blessing at the table.</p>
+            </div>
+
+            <p>They were eating a potato-tomato-hamburger dish seasoned with thyme and Italian stewed tomatoes. Audrey said she&rsquo;d expected it to be heavy, but it was surprisingly light and &ldquo;springy.&rdquo;</p>
+
+            <p>At the end, Tom said they could always have a Part Two.</p>
+
+            <p>&ldquo;I may be dead by then,&rdquo; Mom said.</p>
+
+            <p>&ldquo;Mother, you&rsquo;ve got another ten years to go.&rdquo;</p>
+
+            <p>&ldquo;Please. Don&rsquo;t curse me like that.&rdquo;</p>
+        </article>
+
+        <div class="stories-footer">
+            <p>From a conversation recorded October 29, 2024.</p>
+            <p>Patricia O&rsquo;Malley Horn, Audrey Horn, and Tom.</p>
+        </div>
+    </div>
+
+    <nav class="family-nav">
+        <a href="index.html">Family Home</a>
+        <span class="family-nav-separator">&middot;</span>
+        <a href="stories-mom-told.html">Stories Mom Told</a>
+        <span class="family-nav-separator">&middot;</span>
+        <a href="stories-mom-wrote.html">Stories Mom Wrote</a>
+        <span class="family-nav-separator">&middot;</span>
+        <span class="family-nav-current">Family History</span>
+        <span class="family-nav-separator">&middot;</span>
+        <a href="family-tree.html">Family Tree</a>
+        <span class="family-nav-separator">&middot;</span>
+        <a href="memorial-video.html">Memorial Video</a>
+    </nav>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Patricia O&rsquo;Malley Horn</p>
+            <p class="copyright">&copy; The Horn Family</p>
+        </div>
+    </footer>
+</body>
+</html>

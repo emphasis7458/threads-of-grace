@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories Mom Told — Threads of Grace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../meditation.css">
+    <link rel="stylesheet" href="family.css">
+    <style>
+        /* Stories-specific overrides */
+        .stories-header {
+            text-align: center;
+            padding: var(--spacing-2xl) var(--spacing-md) var(--spacing-lg);
+            border-bottom: 1px solid var(--soft-gray);
+            animation: fadeIn 1s ease-in;
+        }
+
+        .stories-header .back-link {
+            display: inline-block;
+            font-size: 0.95rem;
+            color: var(--accent-sage);
+            text-decoration: none;
+            letter-spacing: 0.05em;
+            margin-bottom: var(--spacing-md);
+            transition: color 0.3s ease;
+        }
+
+        .stories-header .back-link:hover {
+            color: var(--deep-brown);
+        }
+
+        .stories-title {
+            font-family: var(--font-display);
+            font-size: 3.5rem;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            color: var(--deep-brown);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .stories-subtitle {
+            font-size: 1.125rem;
+            font-weight: 300;
+            font-style: italic;
+            color: var(--medium-gray);
+            letter-spacing: 0.02em;
+        }
+
+        /* Table of Contents */
+        .toc {
+            max-width: 500px;
+            margin: var(--spacing-xl) auto;
+            padding: var(--spacing-lg) var(--spacing-md);
+            animation: fadeIn 1s ease-in 0.3s backwards;
+        }
+
+        .toc h2 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--accent-gold);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .toc ol {
+            list-style: none;
+            counter-reset: story-counter;
+        }
+
+        .toc li {
+            counter-increment: story-counter;
+            margin-bottom: 0.75rem;
+        }
+
+        .toc li a {
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-size: 1.125rem;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: baseline;
+            gap: 0.75rem;
+        }
+
+        .toc li a::before {
+            content: counter(story-counter);
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            color: var(--accent-gold);
+            min-width: 1.5rem;
+            text-align: right;
+        }
+
+        .toc li a:hover {
+            color: var(--accent-sage);
+        }
+
+        /* Download bar */
+        .download-bar {
+            text-align: center;
+            padding: var(--spacing-md) 0;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .download-bar a {
+            display: inline-block;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            color: var(--accent-sage);
+            text-decoration: none;
+            letter-spacing: 0.05em;
+            padding: 0.6rem 1.5rem;
+            border: 1px solid var(--soft-gray);
+            transition: all 0.3s ease;
+            margin: 0 0.5rem;
+        }
+
+        .download-bar a:hover {
+            border-color: var(--accent-sage);
+            background: var(--warm-white);
+        }
+
+        /* Companion link */
+        .companion-link {
+            text-align: center;
+            padding: var(--spacing-lg) 0;
+            border-bottom: 1px solid var(--soft-gray);
+        }
+
+        .companion-link a {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            color: var(--accent-sage);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .companion-link a:hover {
+            color: var(--deep-brown);
+        }
+
+        /* Story sections */
+        .story {
+            max-width: 650px;
+            margin: 0 auto;
+            padding: var(--spacing-2xl) 0 var(--spacing-xl);
+            border-bottom: 1px solid var(--soft-gray);
+        }
+
+        .story:last-of-type {
+            border-bottom: none;
+        }
+
+        .story-title {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: var(--deep-brown);
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+            line-height: 1.2;
+        }
+
+        .story p {
+            margin-bottom: var(--spacing-md);
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        .story p:first-of-type::first-letter {
+            font-size: 4em;
+            line-height: 0.8;
+            float: left;
+            margin: 0.05em 0.15em 0 0;
+            font-family: var(--font-display);
+            font-weight: 400;
+            color: var(--accent-gold);
+        }
+
+        .story p em {
+            font-style: italic;
+        }
+
+        /* Special styling for very short final story */
+        .story.story-final p:first-of-type::first-letter {
+            font-size: 4em;
+        }
+
+        /* Footer */
+        .stories-footer {
+            text-align: center;
+            padding: var(--spacing-xl) var(--spacing-md);
+            margin-top: var(--spacing-lg);
+            border-top: 1px solid var(--soft-gray);
+            font-size: 0.95rem;
+            color: var(--medium-gray);
+        }
+
+        .stories-footer p {
+            margin-bottom: var(--spacing-xs);
+            text-align: center;
+        }
+
+        .stories-footer a {
+            color: var(--accent-sage);
+            text-decoration: none;
+        }
+
+        .stories-footer a:hover {
+            color: var(--deep-brown);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .stories-title {
+                font-size: 2.5rem;
+            }
+
+            .story-title {
+                font-size: 2rem;
+            }
+
+            .story p {
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stories-title {
+                font-size: 2rem;
+            }
+
+            .story-title {
+                font-size: 1.75rem;
+            }
+        }
+
+        /* Scroll offset for anchor links */
+        .story[id] {
+            scroll-margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="grain-overlay"></div>
+
+    <nav class="family-nav">
+        <a href="index.html">Family Home</a>
+        <span class="family-nav-separator">&middot;</span>
+        <span class="family-nav-current">Stories Mom Told</span>
+        <span class="family-nav-separator">&middot;</span>
+        <a href="stories-mom-wrote.html">Stories Mom Wrote</a>
+        <span class="family-nav-separator">&middot;</span>
+        <a href="family-history.html">Family History</a>
+        <span class="family-nav-separator">&middot;</span>
+        <a href="family-tree.html">Family Tree</a>
+        <span class="family-nav-separator">&middot;</span>
+        <a href="memorial-video.html">Memorial Video</a>
+    </nav>
+
+    <header class="stories-header">
+        <a href="index.html" class="back-link">&larr; Family Home</a>
+        <h1 class="stories-title">Stories Mom Told</h1>
+        <p class="stories-subtitle">From recorded conversations, shaped into stories in her own words</p>
+    </header>
+
+    <div class="container">
+        <nav class="toc">
+            <h2>Contents</h2>
+            <ol>
+                <li><a href="#the-swing">The Swing</a></li>
+                <li><a href="#summer-at-the-farm">Summer at the Farm</a></li>
+                <li><a href="#uncle-arthurs-alligator">Uncle Arthur's Alligator</a></li>
+                <li><a href="#a-cold-yankee">A Cold Yankee</a></li>
+                <li><a href="#what-granny-did">What Granny Did</a></li>
+                <li><a href="#millsfield">Millsfield</a></li>
+                <li><a href="#how-we-met">How We Met</a></li>
+                <li><a href="#among-the-giants">Among the Giants</a></li>
+                <li><a href="#hug-your-son">Hug Your Son</a></li>
+                <li><a href="#let-god-use-us">Let God Use Us</a></li>
+                <li><a href="#what-i-would-have-done">What I Would Have Done</a></li>
+            </ol>
+        </nav>
+
+        <div class="download-bar">
+            <a href="media/2026-stories-mom.zip" download>Download Original Recordings</a>
+            <a href="stories-mom-told.docx" download>Download as Word Document</a>
+        </div>
+
+        <div class="companion-link">
+            <a href="stories-mom-wrote.html">Read Stories Mom Wrote &rarr;</a>
+        </div>
+
+        <!-- Story 1 -->
+        <article class="story" id="the-swing">
+            <h2 class="story-title">The Swing</h2>
+
+            <p>When I was little, there was a funeral at my great-grandmother's house. The sitting room was on the right side of the front door, and on the left was the formal living room where they held the service.</p>
+
+            <p>The woman who died was a red-headed woman. She was beautiful. She'd died of some kind of stomach trouble&mdash;locked bowels, I think they called it. Mother took me in to see her. Oh, she was lovely. She had the prettiest velvet shroud, pale aqua, and with her red hair she was just lovely, lovely.</p>
+
+            <p>Mother took me outside and put me on the swing. There was a great big swing on a magnolia tree on the side of the house. I just swung and swung. I was happy. And then Mother had to come out and tell me to be quiet. Too much fun at a funeral.</p>
+
+            <p>That same summer&mdash;probably the Fourth of July&mdash;there was a big barbecue over at Pete's Place. All of their people were there, everybody was happy, and there I was again on the swing. I always said after that I didn't want a funeral; I wanted a barbecue. It was only after I was grown that I realized it was the Irish wake kind of thing. It was fun over the years, in my Celtic groups, to see how it all went together.</p>
+
+            <p>There was another time, when I was very small. Granddaddy died on December 11, 1941&mdash;four days after Pearl Harbor. We didn't have a car, but Grandmother did, a coupe. Mother got me all cleaned up and dressed and said, &ldquo;Come on, we're going in the car to Grandmother and Granddaddy's. Daddy needs a tie.&rdquo;</p>
+
+            <p>Children didn't ask questions in those days. They just went.</p>
+
+            <p>We drove up in front of the house, which sat up on a slight little hill. Daddy came walking out and down the slope toward us. He was crying. Big, sad sobs. He was only twenty-six years old.</p>
+
+            <p>Whatever was going on inside that house was not a good thing. They said, &ldquo;Come on, we want to take you inside,&rdquo; and I said, &ldquo;No!&rdquo; And I wouldn't go.</p>
+
+            <p>I give them great credit for not making me. You know, they could have traumatized me for a lifetime. They didn't. That was a lovely, lovely gift from my parents.</p>
+        </article>
+
+        <!-- Story 2 -->
+        <article class="story" id="summer-at-the-farm">
+            <h2 class="story-title">Summer at the Farm</h2>
+
+            <p>In the summers, I would visit with Aunt Mary and Uncle Faye for a couple of weeks out at the farm. My cousin June and I would go walking through the alfalfa fields barefoot. She could do it easily&mdash;she'd been doing it all year. My tender feet weren't so happy about it.</p>
+
+            <p>There was a little store up on the hill, and the road up there was tar. So it burned your feet. By the time I'd walked up that hill and back down again&mdash;in spite of the goodies I bought with my nickel&mdash;my feet were burned on the bottom. I spent the rest of the week in bed. It was misery.</p>
+
+            <p>Aunt Mary always sang around the house&mdash;real songs, or just humming&mdash;while she worked. My mother never sang around the house. I loved that about Aunt Mary.</p>
+
+            <p>We had some friends in town who were renting a house with a lovely little goldfish pool outdoors. One day they came over and wanted to know if I wanted a dog. Well, of course I said yes. That didn't last long. When Daddy got home, we went to show our friends the dog, and their little boy was there&mdash;he was only two. He didn't like the dog one bit. So they had to put the dog outside behind the screen door for the night.</p>
+
+            <p>Well, you can imagine. By morning the dog was gone. Got loose and ran away. Never to be seen again.</p>
+
+            <p>I always knew it was that little boy's fault, because if he could have stayed inside, the dog would have been fine, and I would have had a dog.</p>
+
+            <p>I forgave him long ago.</p>
+        </article>
+
+        <!-- Story 3 -->
+        <article class="story" id="uncle-arthurs-alligator">
+            <h2 class="story-title">Uncle Arthur's Alligator</h2>
+
+            <p>Daddy had a younger brother named Arthur. He was the handsome devil of the family&mdash;I thought he was beautiful, and his wife Virginia was beautiful too. She was a nurse, and in those days you called nurses by their last name, so we all called her Aunt Spence.</p>
+
+            <p>Uncle Arthur went into the Air Force, and when he was in Florida for training, he sent me a present. A little alligator, about so long. A real one. Oh, Lord yes&mdash;a real, live alligator. In those days there weren't any regulations about things like that.</p>
+
+            <p>We put him in the bathtub.</p>
+
+            <p>We kept him at home as long as we could, and when he got too big, they took him over to the mill, which had those huge dye barrels. They put him in one of those, and he lasted years.</p>
+
+            <p>Uncle Arthur died on his last solo test flight before going overseas. February 23, 1943. It always seemed heroic. He never made it to the war.</p>
+        </article>
+
+        <!-- Story 4 -->
+        <article class="story" id="a-cold-yankee">
+            <h2 class="story-title">A Cold Yankee</h2>
+
+            <p>My grandmother&mdash;Daddy's mother&mdash;was what people called a cold Yankee. She was from upstate New York, and compared to all my mother's family, who were sweet and loving and kind and had been in Dyersburg, Tennessee, forever, she seemed distant. She wore an eye patch and pants, and she was getting bald. To a child, she was hard to warm up to.</p>
+
+            <p>It was only after I was grown that I could see&mdash;anybody would have been distant who'd had her life.</p>
+
+            <p>My grandfather, James G. O'Malley, was born on Christmas Day, 1880, in Ireland. When he was nine years old, his parents were killed in a train wreck. He and his little sister Mary were orphaned. An uncle brought them to Little Falls, New York. Mary was taken into a convent&mdash;she became a nun and spent her whole life out West. Grandfather had no more education after that. Before long he was on his own, a hobo. He was maybe ten, maybe fourteen. Nobody really knows.</p>
+
+            <p>My grandmother was Lydia. She'd already had a hard, hard life before she ever met him. She'd been married before and had two children&mdash;a daughter named Thelma and a son named Kenneth. Kenneth died of spinal meningitis when he was fourteen. Her husband ran off and left her. She'd lost an eye. By the time Grandfather came along, she was running a boarding house.</p>
+
+            <p>Somewhere along the way, he was injured getting on or off a train, and she took care of him. With the hands of a good woman, she shaped him up. They married on September 10, 1913. He was thirty-three and she was thirty.</p>
+
+            <p>They had a good life. Three children&mdash;my daddy, Aunt Mary, and Uncle Arthur. All in Dyersburg.</p>
+
+            <p>Then Grandfather died. Four days after Pearl Harbor&mdash;he came home from work that evening, sat down in his rocking chair by the floor radio. Grandmother called him to supper. He didn't answer. He was gone.</p>
+
+            <p>After the war was over, we drove up to New York to see Grandmother&mdash;the whole family, my baby sister Katherine in a wooden box in the back seat, me sitting next to her. We stopped along the way to visit old friends of my parents. One of them was a Marine in full dress uniform who had a thousand years' worth of comic books, so I was happy.</p>
+
+            <p>Not long after, Daddy and Aunt Mary decided to bring Grandmother down to Tennessee. She was in her early sixties by then, and she was pitiful. She'd alternate&mdash;a month with us in Dyersburg, and then a month out at the farm with Aunt Mary and Uncle Faye.</p>
+
+            <p>She was always there, and she was always distant, and I was always surrounded by my mother's warm, loving family right next door. I didn't understand her.</p>
+
+            <p>But when I was older, I could finally pay attention to what her life had been. She'd lost a child. Her first husband ran off. She lost her eye. She built a whole new life with a man whose parents had been killed in a train wreck in Ireland, and then she lost that husband too. And then she lost a son training to be a pilot in the war. And still she kept going. She came all the way from New York to a place where everybody thought she was a cold Yankee, and she stayed.</p>
+
+            <p>I was lucky to have such a strong woman in my life. I just didn't know it then.</p>
+        </article>
+
+        <!-- Story 5 -->
+        <article class="story" id="what-granny-did">
+            <h2 class="story-title">What Granny Did</h2>
+
+            <p>My mother was in her early thirties when they went up to New York to get Daddy's mother. They were still finishing building the house with the mustering-out pay from the war.</p>
+
+            <p>Grandmother's room was where the TV room was, as we knew it growing up. In those days, they didn't have all these incontinence things, so they tore up sheets to make diapers. Every day, Mother had to change her, change the bed, wash the diapers, and hang them up outside. And in the winter, they'd freeze out there on the line. As soon as you brought them inside, they thawed out and were still wet.</p>
+
+            <p>She was thirty years old. She had a baby in diapers. She had a coming-on-twelve-to-thirteen-year-old. And she was caring for her mother-in-law every single day.</p>
+
+            <p>It went on for about three years. Grandmother died in 1950, and they took her back up to New York to bury her.</p>
+
+            <p>How could she not have been depressed? She was. But she knew to get some help. Her doctor&mdash;Dr. Paul&mdash;saved her life, she said. She would walk up there every week and talk to him. She loved Dr. Paul.</p>
+
+            <p>That was a long time before anybody called it therapy. But that's what it was. And it kept her going.</p>
+
+            <p>Life was hard.</p>
+        </article>
+
+        <!-- Story 6 -->
+        <article class="story" id="millsfield">
+            <h2 class="story-title">Millsfield</h2>
+
+            <p>It was the fall, and in Dyer County the schools started early&mdash;maybe in July&mdash;because they got out for cotton picking. Two months off, maybe mid-September to mid-November, something like that. So when I came looking for a teaching position, they were out for cotton picking, and there was an opening at a little school called Millsfield, just a little north of town. It was a two-room schoolhouse. The principal taught the first three grades, and the position that was open was the fourth through the eighth.</p>
+
+            <p>Well, I took that job, and it was a real eye-opener.</p>
+
+            <p>I had maybe five kids in fourth grade, three in fifth, five in sixth, five or six in seventh, and two in eighth&mdash;one boy and one girl. Nobody had an IQ higher than 100. The two eighth graders were in the nineties. The lowest I had was a 54. And out of all of them, there were probably six or seven families&mdash;two of these and three of those and four of the other, all the same last names.</p>
+
+            <p>There was this one poor child. He was clever&mdash;street smarts, though there weren't any streets out there. He was sly and could get away with anything, or he particularly thought so. But he couldn't read. I think he was in the fifth grade. He couldn't write either. He could draw his letters by looking at the ABCs around the wall, but that was it. They had just passed him year after year. There was nothing you could do to intervene. It was sad.</p>
+
+            <p>In the seventh grade, there was this boy bigger than me. There was a paddle in the room, and he said, &ldquo;Well, when are you going to paddle us?&rdquo; And I thought, <em>Oh, Lordy mercy, no way am I picking up a paddle to you.</em> I said something, and he was like, &ldquo;Well, we'll see how that works out.&rdquo;</p>
+
+            <p>The way they told you to teach a class like that was to put on the wall: fourth grade and their assignments, fifth grade and theirs, and so on. While you worked with one group, the rest were supposed to be working on what was on the board. Well, they were used to it. So that sort of worked.</p>
+
+            <p>The mother of one of the children cooked lunch. We had a lot of peanut butter cookies, because peanut butter was one of the free foods for the school. Things like that.</p>
+
+            <p>In the winter, we had wood stoves. We'd started out the year in a great big room, large enough for several classrooms, but when it got cold, the stove couldn't keep up. So we all moved into a room smaller than a living room. The cook came in every so often to put more wood on the fire.</p>
+
+            <p>One day, the clever little kid who couldn't read brought snuff and put it in the stove.</p>
+
+            <p>We had to go outside on a cold winter day. Fortunately, the sun was shining. We got that taken care of and so forth and so on. Just things like that.</p>
+
+            <p>Then one spring afternoon we were having recess, and somebody threw a ball and hit a girl right on her collarbone and broke it. Now, this was a Wednesday, and in those days doctors didn't work on Wednesday afternoons. That was just how it was&mdash;like how today they often don't work on Friday afternoons. In the summer, a lot of places closed on Wednesdays because it was hot, before air conditioning. Stores closed, doctors closed. I don't know if it was connected, but that's what everybody did.</p>
+
+            <p>My mother drove me out to school every morning and came back to pick me up in the afternoon. I had no car. It was probably less than ten miles.</p>
+
+            <p>So what do you do? I took the girl to her doctor in Newbern and he was off. Then I took her back to the hospital in Dyersburg, which was small. When we walked in, I saw this doctor we knew in our family, Dr. Taylor. He'd been a GP and at that point was reading X-rays and so forth. He said, &ldquo;Oh, well, come on in. I'll take care of it.&rdquo; And he did. We got her parents and she was all fine and it all got taken care of.</p>
+
+            <p>But, you know, it was not a good situation. It certainly made me know that if I wanted to teach, I wanted to teach in college. I didn't want any more situations like that.</p>
+
+            <p>There were nice things too. One of the eighth-grade boys later graduated from high school and became a butcher at Kroger's. He would talk to my mother whenever she came in to get her meat&mdash;always ask about me, always tell her what he was up to. That was always nice.</p>
+
+            <p>But it's the hard things that clear you up about what you want. Okay. You can go back to school, but you will get your teacher's certificate and then get your master's degree so you can teach in college. And that's what I did.</p>
+        </article>
+
+        <!-- Story 7 -->
+        <article class="story" id="how-we-met">
+            <h2 class="story-title">How We Met</h2>
+
+            <p>Going back to school meant I needed an extra quarter for student teaching. They sent us out to the mountain towns around Knoxville. I went to Jacksboro&mdash;a mountain town on the Tennessee River, with one of those big TVA lakes.</p>
+
+            <p>One of the things home economics teachers had to do was make home visits, to see what the students' lives were like. A lot of them had pedal sewing machines at home, so you had to be able to use one and work with them on it.</p>
+
+            <p>The English teacher there had an afternoon class that was all boys, and one day in the teacher's lounge she said, &ldquo;I'd like to swap classes with you for a week. You take my boys and teach them to cook a few things, sew on a button, repair a seam.&rdquo;</p>
+
+            <p>Well, I did. That was fun. On the last day&mdash;Friday&mdash;the boys invited the girls over for a tea. We made punch and cookies. They didn't make little tea cookies; they made cookies. That was okay. And that was the day of the prom. The boys&mdash;I'm sure at the instigation of their English teacher&mdash;brought me a corsage. So I went to the prom that night with all the other teachers, and my boys dutifully came over and had dances with me. That was fun.</p>
+
+            <p>When I was getting ready to head out for student teaching that March, there was a week of orientation you had to do in Knoxville first. I'd given up my dorm room, so I stayed with my friend Sam Taylor. Sam was an Episcopalian and spent her whole life over at the Episcopal Student Center.</p>
+
+            <p>I had my car&mdash;a '59 Chevy, aqua, that my grandmother had given me. So that week I could take people out for supper.</p>
+
+            <p>One evening, Sam and I were going to go to Regas, this famous steakhouse in Knoxville. They had these big, thick grilled pork chops that were always my favorite. Sam said this other woman from Memphis was supposed to meet her at the cafeteria, and we'd convince her to come to Regas instead. When the woman showed up, she said, &ldquo;Oh, I asked Bob Horn to join us.&rdquo;</p>
+
+            <p>When he showed up, we told him the plan. Oh, no, no, he couldn't do that. Oh yes, yes, yes. No, no, no. Yes, yes, yes. Well, they convinced him.</p>
+
+            <p>So there we were at Regas. I was having a wedge salad and trying to cut it with my knife, and Bob said, &ldquo;Oh, you can't cut that with your knife.&rdquo; And I said, &ldquo;Well, yes I can.&rdquo; And some other smart remark like, &ldquo;Nobody can eat this without cutting it.&rdquo; We were going back and forth like that all night&mdash;little jabby, smart things. We were both responding to the fun of it.</p>
+
+            <p>Then we went to the movie downtown&mdash;<em>Suddenly Last Summer</em>, with Montgomery Clift and Elizabeth Taylor. It was uncomfortable, being at that movie with some guy you'd never met before. You can't say anything about that movie. Oh my goodness.</p>
+
+            <p>I went back out to Jacksboro after that. But my birthday was coming up, and I was going to go into Knoxville for the weekend and stay with Sam. We were going out to this restaurant near Maryville. When I got there, Sam had invited Bob to come along.</p>
+
+            <p>He brought two birthday presents. One was a little carved wooden frog&mdash;the layers in the wood made the ridges on its back. I kept it for years, sitting in the top of a plant or something, until the water finally got it. The other was a bracelet his brother Jim had gotten in Korea&mdash;silver, with little colored enamel pieces. It was pretty.</p>
+
+            <p>I went back to Jacksboro. Came back another weekend. We kept getting together. One afternoon, I'd picked him up and we'd spent the day together, and when we came back, my roommate was coming in on the bus from Crossville. We picked her up. All three of us were sitting in the front seat, and I was next to Bob, and I put my hand on his knee.</p>
+
+            <p>And I just knew.</p>
+
+            <p>I knew I loved him. I hadn't known him any time&mdash;maybe a month, six weeks, I don't know. But it was just real. It came over me. I just knew it.</p>
+
+            <p>School ended, and Sam and I were going to Williamsburg for a week before summer school started. We both went home, and Sam came up to Dyersburg on the bus and I picked her up. I'd gotten a letter from Bob saying he'd be in Nashville, and he'd be glad to drive us to Knoxville on our way back. He said he'd be our shofar&mdash;the Jewish horn they blow for celebrations. I thought that was something.</p>
+
+            <p>We were going to spend the night at a friend's house in Sequoyah Hills, on the way into the school. I dropped Sam off there, and then took Bob on into town. We had to park the car before I let go of him.</p>
+
+            <p>That's when he asked me to marry him.</p>
+
+            <p>I said yes. We had known each other, what, two months? I don't know.</p>
+
+            <p>Sam and I went to Williamsburg, and that's where I got the sundial. <em>Grow old along with me, the best is yet to be, the last of life for which the first was made.</em> That was Browning. It was always special for us.</p>
+
+            <p>I'd already qualified for graduate school and had an assistantship that would pay for everything&mdash;housing, fees, all of it. My parents wouldn't have to spend a thing. I would have graduated in June of '61. This was 1960. And, well&mdash;this was before birth control pills. If you wanted to have sex, you had to get married. And we wanted to have sex real bad. So we decided we'd better do it before the end of summer.</p>
+
+            <p>Here's how fast it went: I graduated on Thursday. On Friday at one o'clock, I started teaching a third-grade class in Knoxville. Friday night was the rehearsal dinner at a squab farm out from Maryville. Bob's parents had called his sister-in-law Audrey and said, &ldquo;Help!&rdquo; and she said, &ldquo;Oh, I know just the thing.&rdquo; She took care of everything.</p>
+
+            <p>Audrey had been married to Bob's brother Jim, who had died years before. She gave Bob her engagement ring from Jim. He took the diamond and had it reset the way I wanted.</p>
+
+            <p>The priest at the Student Center was on vacation, so he'd found another fellow to do the ceremony. In the premarital counseling, the one question I remember was, &ldquo;How many children do you want to have?&rdquo; I said two&mdash;that's what my family had; that was normal. Bob said four. I said, &ldquo;Four?&rdquo; Anybody looking at that would think we compromised. We ended up with three. Whatever.</p>
+
+            <p>My friend Sarah Lester Smith couldn't come&mdash;she was very pregnant&mdash;but she said, &ldquo;You have to wear my dress.&rdquo; Her mother sent it, and it fit. Sarah's mother said it fit me better than it had fit Sarah.</p>
+
+            <p>Sam was my maid of honor. I said, &ldquo;We're getting married and we need you to do that. Just buy a dress you'd like&mdash;whatever color, doesn't matter, you're the only one.&rdquo;</p>
+
+            <p>The morning of the wedding, Daddy and Bob were upstairs getting dressed, and I was downstairs with Mother and Katherine and Sam. Daddy came down and said, &ldquo;Well, Bob's gone.&rdquo;</p>
+
+            <p>I said, &ldquo;Where'd he go?&rdquo;</p>
+
+            <p>&ldquo;I don't know. He went up the street saying he had to get film for the camera.&rdquo;</p>
+
+            <p>I said, &ldquo;Well, I think he'll be back.&rdquo;</p>
+
+            <p>They'd tied our car to a great big magnolia tree out front and soaped it up good. As we started to drive away and couldn't drive, Bob had to get out and undo the ropes. I had a dress with a big collar, and all the rice in the world came down in it.</p>
+
+            <p>As we drove away down the street, there was a man out working in his yard with a hose. When he saw us coming, he motioned us over and hosed off the soap. So we turned around and went back and waved at everybody.</p>
+
+            <p>We went to this nice little restaurant up on a hill that neither of us had been to before but had always thought looked interesting. We walked in, and there was the dentist and his wife&mdash;friends who'd come to the wedding. They were having dinner. When we got ready to pay the check, they'd already paid it.</p>
+
+            <p>That's how we got started.</p>
+
+            <p>On the Fourth of July, we went home to Dyersburg so he could meet Mother and Daddy. I took him down to the river&mdash;you know, I have to take everybody to the river. It's my place. We sat up on the bank under some trees, and Bob hung his camera on a branch and set the timer, and then he ran back and sat down beside me.</p>
+
+            <p>We thought we knew it all. We didn't know anything.</p>
+
+            <p>He was a special guy.</p>
+        </article>
+
+        <!-- Story 8 -->
+        <article class="story" id="among-the-giants">
+            <h2 class="story-title">Among the Giants</h2>
+
+            <p>Bob was on a business trip to San Francisco, and when he got off work, he picked me up and we went across the Golden Gate Bridge.</p>
+
+            <p>As we were driving, the fog was coming in on little cat feet. That was somebody's poem about fog.</p>
+
+            <p>We must have gotten there late, because there was one last couple coming out as we went in. So there we were, alone in these giant sequoias. All of those huge trees. And the fog.</p>
+
+            <p>It just felt like you were going to see a dinosaur any second, right around the next tree.</p>
+
+            <p>Awe, for sure. That was one of the most wonderful experiences of my life.</p>
+
+            <p>We haven't paid enough attention to the world around us, to nature. We thought it was our task to make it useful. Isn't that pitiful.</p>
+        </article>
+
+        <!-- Story 9 -->
+        <article class="story" id="hug-your-son">
+            <h2 class="story-title">Hug Your Son</h2>
+
+            <p>I was at a church service, and the visiting priest had an Anglican accent. They read the scriptures like they were someplace grand. I thought, <em>Oh, this is going to be useless.</em></p>
+
+            <p>I managed it through the morning. The closing service was the Eucharist, and I was standing in the pew. Maybe we were singing. I don't know.</p>
+
+            <p>I felt this person standing right behind me. His arm reached around me. He hugged me. And he said, &ldquo;Hug your son.&rdquo;</p>
+
+            <p>Clear as a bell.</p>
+
+            <p>When you hear God's word, it doesn't matter what it sounds like. You know it's God's word.</p>
+
+            <p>I knew people would think I was crazy. &ldquo;God told me to hug your son, and I'm going to.&rdquo; And back then, it was crazy&mdash;for everybody. People who said they heard God speak to them usually said outrageous things.</p>
+
+            <p>But God is good and gracious. Always more self-giving than we can ask or imagine.</p>
+        </article>
+
+        <!-- Story 10 -->
+        <article class="story" id="let-god-use-us">
+            <h2 class="story-title">Let God Use Us</h2>
+
+            <p>I was at a women's retreat&mdash;the kind where you share on the first evening and then keep silence until the closing lunch on Sunday.</p>
+
+            <p>Well, you know, I don't talk much, really. But that Friday night, I kept saying more and more about my experience&mdash;the hard times, the challenges with my son. I kept saying another thing and another thing. I thought, <em>I don't ever do this. Why am I doing it tonight?</em> It felt outrageous. I was just saying all these things.</p>
+
+            <p>On Sunday, when it was over, a woman who had been sitting across from me at the table came up and said, &ldquo;That was just what I was going through with my daughter. It was just what I needed to hear.&rdquo;</p>
+
+            <p>If you just let God use us, we don't know what or why. We can't know. He uses it all for our good.</p>
+
+            <p>The important thing is to get out of the way.</p>
+        </article>
+
+        <!-- Story 11 -->
+        <article class="story story-final" id="what-i-would-have-done">
+            <h2 class="story-title">What I Would Have Done</h2>
+
+            <p>If I'd known he was going to die in a week, we wouldn't have taken him to the hospital. We would have just let him be comfortable right there in his own little bed.</p>
+
+            <p>But when they moved him from the hospital to the nursing home, they said, you know, just go through physical therapy, build up his muscles, and he'll be able to do everything and come home. And I thought, okay, maybe six months and we'll be back where we were. Going down, but not dying.</p>
+
+            <p>I surely would have done something different if I'd known he was dying. I feel guilty for not being ready. For not being what he needed.</p>
+
+            <p>And that doesn't go away.</p>
+        </article>
+    </div>
+
+    <div class="container">
+        <div class="companion-link">
+            <a href="stories-mom-wrote.html">Read Stories Mom Wrote &rarr;</a>
+        </div>
+    </div>
+
+    <nav class="family-nav">
+        <a href="index.html">Family Home</a>
+        <span class="family-nav-separator">&middot;</span>
+        <span class="family-nav-current">Stories Mom Told</span>
+        <span class="family-nav-separator">&middot;</span>
+        <a href="stories-mom-wrote.html">Stories Mom Wrote</a>
+        <span class="family-nav-separator">&middot;</span>
+        <a href="family-history.html">Family History</a>
+        <span class="family-nav-separator">&middot;</span>
+        <a href="family-tree.html">Family Tree</a>
+        <span class="family-nav-separator">&middot;</span>
+        <a href="memorial-video.html">Memorial Video</a>
+    </nav>
+
+    <footer class="stories-footer">
+        <p class="copyright">&copy; The Horn Family</p>
+    </footer>
+</body>
+</html>

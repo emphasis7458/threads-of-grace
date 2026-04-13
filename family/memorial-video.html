@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorial Video — Threads of Grace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="family.css">
+    <style>
+        .video-page {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: var(--spacing-2xl) var(--spacing-md);
+            text-align: center;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .video-page h1 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            color: var(--deep-brown);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .video-container {
+            width: 100%;
+            margin-bottom: var(--spacing-md);
+            background: var(--deep-brown);
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(45, 42, 38, 0.15);
+        }
+
+        video {
+            display: block;
+            width: 100%;
+            max-height: 80vh;
+        }
+
+        .download-link {
+            display: inline-block;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: var(--accent-sage);
+            text-decoration: none;
+            letter-spacing: 0.05em;
+            padding: 0.75rem 2rem;
+            border: 1px solid var(--soft-gray);
+            transition: all 0.3s ease;
+        }
+
+        .download-link:hover {
+            border-color: var(--accent-sage);
+            background: var(--warm-white);
+        }
+
+        @media (max-width: 768px) {
+            .video-page h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="grain-overlay"></div>
+
+    <nav class="family-nav">
+        <a href="index.html">Family Home</a>
+        <span class="family-nav-separator">&middot;</span>
+        <a href="stories-mom-told.html">Stories Mom Told</a>
+        <span class="family-nav-separator">&middot;</span>
+        <a href="stories-mom-wrote.html">Stories Mom Wrote</a>
+        <span class="family-nav-separator">&middot;</span>
+        <a href="family-history.html">Family History</a>
+        <span class="family-nav-separator">&middot;</span>
+        <a href="family-tree.html">Family Tree</a>
+        <span class="family-nav-separator">&middot;</span>
+        <span class="family-nav-current">Memorial Video</span>
+    </nav>
+
+    <div class="video-page">
+        <h1>Memorial Video</h1>
+        <div class="video-container">
+            <video controls preload="metadata">
+                <source src="media/2026-0228_horn_pat_memorial.mp4" type="video/mp4">
+                Your browser does not support video playback.
+                Please use the download link below.
+            </video>
+        </div>
+        <a class="download-link" href="media/2026-0228_horn_pat_memorial.mp4" download>Download Video</a>
+    </div>
+
+    <nav class="family-nav">
+        <a href="index.html">Family Home</a>
+        <span class="family-nav-separator">&middot;</span>
+        <a href="stories-mom-told.html">Stories Mom Told</a>
+        <span class="family-nav-separator">&middot;</span>
+        <a href="stories-mom-wrote.html">Stories Mom Wrote</a>
+        <span class="family-nav-separator">&middot;</span>
+        <a href="family-history.html">Family History</a>
+        <span class="family-nav-separator">&middot;</span>
+        <a href="family-tree.html">Family Tree</a>
+        <span class="family-nav-separator">&middot;</span>
+        <span class="family-nav-current">Memorial Video</span>
+    </nav>
+</body>
+</html>

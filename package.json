@@ -1,0 +1,24 @@
+{
+  "name": "threads-of-grace",
+  "version": "1.0.0",
+  "description": "A contemplative website showcasing Pat Horn's spiritual meditations on the Sunday lectionary readings.",
+  "main": "script.js",
+  "private": true,
+  "scripts": {
+    "encrypt-family": "staticrypt family/index.html family/stories-mom-told.html family/stories-mom-wrote.html family/family-history.html family/family-tree.html family/memorial-video.html --remember 30 -t family/password-template.html --template-title 'Horn Family' --template-button 'Enter' --template-instructions 'This area is for family members.' --template-error 'Incorrect password. Please try again.' --template-placeholder 'Family password' -d family --short"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emphasis7458/threads-of-grace.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emphasis7458/threads-of-grace/issues"
+  },
+  "homepage": "https://github.com/emphasis7458/threads-of-grace#readme",
+  "devDependencies": {
+    "staticrypt": "^3.5.4"
+  }
+}

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories Mom Wrote — Threads of Grace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../meditation.css">
+    <link rel="stylesheet" href="family.css">
+    <style>
+        /* Stories collection styles */
+        .stories-header {
+            text-align: center;
+            padding: var(--spacing-2xl) 0 var(--spacing-xl);
+            border-bottom: 1px solid var(--soft-gray);
+        }
+
+        .stories-header h1 {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 300;
+            color: var(--deep-brown);
+            margin-bottom: var(--spacing-sm);
+            letter-spacing: 0.05em;
+        }
+
+        .stories-header .subtitle {
+            font-size: 1.125rem;
+            font-style: italic;
+            color: var(--medium-gray);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* Table of Contents */
+        .toc {
+            max-width: 500px;
+            margin: var(--spacing-xl) auto;
+            padding: var(--spacing-lg) 0;
+            border-bottom: 1px solid var(--soft-gray);
+        }
+
+        .toc h2 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--accent-gold);
+            margin-bottom: var(--spacing-md);
+            text-align: center;
+            letter-spacing: 0.1em;
+        }
+
+        .toc ol {
+            list-style: none;
+            counter-reset: story-counter;
+            padding: 0;
+        }
+
+        .toc li {
+            counter-increment: story-counter;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .toc li a {
+            display: block;
+            padding: 0.4rem 0;
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        .toc li a:hover {
+            color: var(--accent-sage);
+            padding-left: 0.5rem;
+        }
+
+        .toc li a::before {
+            content: counter(story-counter) ".";
+            display: inline-block;
+            width: 2rem;
+            color: var(--accent-gold);
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+        }
+
+        /* Individual stories */
+        .story {
+            max-width: 650px;
+            margin: 0 auto;
+            padding: var(--spacing-2xl) 0 var(--spacing-xl);
+            border-bottom: 1px solid var(--soft-gray);
+        }
+
+        .story:last-of-type {
+            border-bottom: none;
+        }
+
+        .story-title {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 400;
+            color: var(--deep-brown);
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+            line-height: 1.3;
+        }
+
+        .story p {
+            margin-bottom: var(--spacing-md);
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        .story p:first-of-type::first-letter {
+            font-size: 4em;
+            line-height: 0.8;
+            float: left;
+            margin: 0.05em 0.15em 0 0;
+            font-family: var(--font-display);
+            font-weight: 400;
+            color: var(--accent-gold);
+        }
+
+        /* Indented list-style paragraphs */
+        .story .indent {
+            padding-left: 2rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .story .indent:last-of-type {
+            margin-bottom: var(--spacing-md);
+        }
+
+        /* Download section */
+        .download-section {
+            text-align: center;
+            padding: var(--spacing-xl) 0;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .download-section p {
+            color: var(--medium-gray);
+            margin-bottom: var(--spacing-md);
+            font-style: italic;
+        }
+
+        .download-link {
+            display: inline-block;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: var(--accent-sage);
+            text-decoration: none;
+            letter-spacing: 0.05em;
+            padding: 0.75rem 2rem;
+            border: 1px solid var(--soft-gray);
+            transition: all 0.3s ease;
+            margin: 0 0.5rem;
+        }
+
+        .download-link:hover {
+            border-color: var(--accent-sage);
+            background: var(--warm-white);
+        }
+
+        /* Companion link */
+        .companion-link {
+            text-align: center;
+            padding: var(--spacing-lg) 0;
+            border-bottom: 1px solid var(--soft-gray);
+        }
+
+        .companion-link a {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            color: var(--accent-sage);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .companion-link a:hover {
+            color: var(--deep-brown);
+        }
+
+        @media (max-width: 768px) {
+            .stories-header h1 {
+                font-size: 2.25rem;
+            }
+
+            .story-title {
+                font-size: 1.5rem;
+            }
+
+            .story p {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grain-overlay"></div>
+
+    <nav class="family-nav">
+        <a href="index.html">Family Home</a>
+        <span class="family-nav-separator">&middot;</span>
+        <a href="stories-mom-told.html">Stories Mom Told</a>
+        <span class="family-nav-separator">&middot;</span>
+        <span class="family-nav-current">Stories Mom Wrote</span>
+        <span class="family-nav-separator">&middot;</span>
+        <a href="family-history.html">Family History</a>
+        <span class="family-nav-separator">&middot;</span>
+        <a href="family-tree.html">Family Tree</a>
+        <span class="family-nav-separator">&middot;</span>
+        <a href="memorial-video.html">Memorial Video</a>
+    </nav>
+
+    <div class="container">
+        <header class="stories-header">
+            <h1>Stories Mom Wrote</h1>
+            <p class="subtitle">Written reflections on family, childhood, and the journey inward</p>
+        </header>
+
+        <!-- Table of Contents -->
+        <nav class="toc">
+            <h2>Contents</h2>
+            <ol>
+                <li><a href="#where-it-all-began">Where It All Began</a></li>
+                <li><a href="#grandparents">What Were Your Grandparents Like</a></li>
+                <li><a href="#mother">What Was Your Mother Like When You Were a Child</a></li>
+                <li><a href="#daddy">Daddy</a></li>
+                <li><a href="#favorite-toys">My Favorite Toys</a></li>
+                <li><a href="#birthday-cake">The Best Birthday Cake</a></li>
+                <li><a href="#winning-recipe">A Winning Recipe</a></li>
+                <li><a href="#ship-comes-in">When My Ship Comes In</a></li>
+                <li><a href="#farthest-distance">The Farthest Distance&mdash;Inside or Out</a></li>
+                <li><a href="#wish-i-had-known">What I Wish I Had Known</a></li>
+            </ol>
+        </nav>
+
+        <div class="companion-link">
+            <a href="stories-mom-told.html">&larr; Read Stories Mom Told</a>
+        </div>
+
+        <!-- Story 1: Where It All Began -->
+        <article class="story" id="where-it-all-began">
+            <h2 class="story-title">Where It All Began</h2>
+
+            <p>In early 1929 R.H. Wheeler, a textile entrepreneur, picked up stakes in Oswego, New York, and moved his business to Dyersburg, Tennessee in the heart of cotton country. There Dyersburg Cotton Products (DCP), a textile knitting mill, was born and somehow managed to survive the Great Depression which began a few months later. He brought a nucleus of management employees with him, including my grandfather, James A.G. O&rsquo;Malley, and his family&mdash;Grandmother, Lydia Eliza Haresign, and their 4 children, Gerald, Mary, Arthur, and Mildred. Gerald, who became my father, was 14, ready for high school.</p>
+
+            <p>Dyersburg, about 12 miles from the Mississippi River, was and is the county seat of Dyer County. In those days, it was primarily a farming community with all the farm families coming to town on Saturday to catch up with everyone and conduct their business in the shops around the Court House Square. There were the bank, a hotel (with a pool hall in the basement), two hardware stores, three drug stores one of which had a soda fountain, several clothing stores, three movie theaters, a caf&eacute; where men gathered for an early breakfast, an ice cream parlor, a shoe-repair shop, a barber shop, a five and dime store, just about everything anybody could want or need. The domed, brick Court House stood tall in the center of all this activity with its statue of a Civil War soldier in the northeast corner of the Square. DCP was the first industrial enterprise to set up shop in Dyersburg and was the mainstay of the city&rsquo;s economy for more than 20 years, until the 50&rsquo;s when other companies began to see the promise the city had to offer.</p>
+
+            <p>My mother&rsquo;s family had long lived in West Tennessee, settling the area way before serving in the Civil War (on both sides, one of our deep, dark family secrets). Her maternal grandfather had been a local politician; her paternal grandfather a farmer out from Newbern about 15 miles away. Her father worked for the Post Office as a rural delivery mail carrier out in the county where he taught Mother to drive. He was well known for the variety of horns he played in the local band, a trumpet, a saxophone, and a trombone, and had his own following of groupies at every performance. Need I say that all the family women of those years were all busy homemakers?</p>
+
+            <p>My mother, Emma Ruth Johnson, was 12 when the O&rsquo;Malleys moved to town, the same age as Daddy&rsquo;s younger sister, Mary. You, no doubt, can guess the rest, as the two girls soon became good friends. One thing led to another, and on December 28, 1934, when Mother was a senior in high school, she and Daddy eloped to Hickman, Kentucky. A&rsquo;nt Mary and her beau, Fay Gray went along as witnesses and co-conspirators and more importantly to provide the transportation in his father&rsquo;s flivver. In those days, married folks were not allowed to continue in school so they kept the marriage secret from everyone including their parents until just before graduation. On their anniversary every year (for 68 years), Mother delighted to brag about how they fooled everyone who, in the shock of the disclosure, said it would never last.</p>
+
+            <p>Mother&rsquo;s father, Lloyd Herman Johnson, developed pneumonia that summer, and, in those days before the development of penicillin, within three days he was dead. He was 44 years old. The newlyweds moved in with my grandmother, Mama Datie, n&eacute;e Eliza Date Cotton, to help out with the expenses during those depression days. They paid her $3.00 rent every week out of Daddy&rsquo;s meager salary from Dyersburg Cotton Products.</p>
+
+            <p>In January of 1937, the Mississippi River, before the Corps of Engineers had built levees along its length, flooded the farmland west of Dyersburg. Many families were stranded, and the Red Cross sent out an SOS for everyone who had a fishing boat to come to the farmers&rsquo; aid, to rescue them from the rising waters. Since Granddaddy had a boat, he and Daddy answered the call and were gone for several days. Mother, still grieving over the loss of her father and &ldquo;being great with child&rdquo; (I was due two months later), was terrified they had been lost in the flood (remember, that was decades before the advent of the cell phone). She was so distraught the Red Cross had to find Daddy and send him home so she could see that he was all right. He came in, gave her a kiss to reassure her, and headed right back out again. Daddy was proud of the commendation he and Granddaddy received from the Red Cross for their rescue efforts.</p>
+
+            <p>On April 2, 1937, I was born at home, with Dr. Paul Baird and his nurse, Miss Christina Duroni, in attendance. In those days folks only went to the hospital to die. It must have been in the middle of the day because Mother remembered the children from next door were playing ball outside. Mother had picked out a baby chest she wanted for me. It was designed like a chifferobe with drawers on the left and a closet for hanging clothes on the right. Grandmother, knowing that pregnancy in those days was hazardous, didn&rsquo;t think they should buy it before I was born. According to Mother, the first thing she did when I appeared was to send Daddy to the furniture store for the chest. It stood up well, lasting through all my babies, even passing on to our son for his first child.</p>
+        </article>
+
+        <!-- Story 2: What Were Your Grandparents Like -->
+        <article class="story" id="grandparents">
+            <h2 class="story-title">What Were Your Grandparents Like</h2>
+
+            <p>When I was born, I had only three living grandparents. Mother&rsquo;s father, Lloyd Herman Johnson, Sr., had died suddenly two years before I was born. He contracted pneumonia in the days before antibiotics were available and was dead within two days. Daddy Lloyd, as I learned to call him, grew up on a farm outside Newbern, Tennessee, about 12 miles from Dyersburg. He was from a big family; most of his brothers and sisters lived around Newbern when I was growing up. He and my maternal grandmother met at a church revival meeting out in the country, and our family story took off. He played a horn in the Dyersburg City Band and provided music for the Church. By the time I was old enough to attend church, they no longer had a band&mdash;perhaps he had been the guiding light. Mother was a daddy&rsquo;s girl, and Daddy Lloyd frequently took her along on his rural mail delivery route. He taught her to drive when she was 14 to make it easier for him to make his deliveries.</p>
+
+            <p>Mama Datie, Eliza Date Cotton Johnson, was Mother&rsquo;s mother. When Daddy Lloyd died, in order to help out, Mother and Daddy, who were newlyweds, moved in with Mama Datie and Uncle Sonny, Mother&rsquo;s brother who was just going into high school. I was born in her house. Mama Datie too was from a large family: Uncle George, Mama Datie, Uncle Tom, A&rsquo;nt Emma, A&rsquo;nt Hattie, and Uncle Dan. They were an intimate part of my extended family as I was growing up. Mama Datie, I have often said, is where I first experienced unconditional love. She doted on me, and I on her. What a blessing to start out life with your grandmother right there surrounding you with love. She was only in her 40&rsquo;s when her husband died leaving her with a teenaged son to support. The Post Office hired her for some time, and family helped out as they could in those Depression days. She was well known for her baking prowess and made a little income by baking cakes for folks who called on her. My delight was getting to lick the icing pans when she was finished. She had a big garden in the back yard. Every spring she&rsquo;d have a man come with his mule to plow, disc, and harrow to ready the plot for planting. She grew all kinds of vegetables: spring onions, radishes, carrots, peas, beans, tomatoes, corn. She could wring a live chicken&rsquo;s neck and defeather it for cooking. She made delicious grape jelly. I remember the cooked grapes in a cheesecloth bag hanging from a broom handle between two chairs and dripping into a pan beneath. Whenever we could find a blackberry patch we would stop to pick as many as we could, and she would make a delicious cobbler for me. I remember in the summer, she&rsquo;d make lemonade from fresh lemons in a tall green glass pitcher and put it in the &ldquo;ice box&rdquo; to have ready in case company stopped by to visit. She always put lemon slices to float in it. That pitcher is one of my treasures today. She taught me how to embroider, and we enjoyed doing embroidery projects together. She and Uncle Sonny moved to Tucson, Arizona, where A&rsquo;nt Hattie lived, after he graduated from high school hoping the dry air there would help his asthma. One Christmas they sent me a pair of real leather cowboy boots which thrilled me no end. They lived there until Uncle Sonny was drafted into WWII. I missed them terribly while they were gone. I was sure Mama Datie would forget me. I was so excited when they were coming home; I could hardly wait to see her. I rushed to open the door when I heard them on the porch, but she was different, hesitant, afraid. Because of all the difficulties and sadness in her life, she had developed what in those days was known as &ldquo;a nervous breakdown;&rdquo; today we&rsquo;d probably call it depression. As I think about it today, I think her sister Hattie probably died while she was out in Arizona adding to her loneliness. Her doctor sent her to the state mental hospital in Bolivar for what seemed like a long time. It was a difficult time for her and for us as the war took over everything. She came home when she was better and settled into her old comfortable ways. After we built our new house and moved across town, I would come over to spend Friday night and Saturday with her. We&rsquo;d often make ice cream sundaes as a treat before bed and in bed read the <em>Saturday Evening Post</em> out loud to each other. We particularly liked the serials featuring &ldquo;Tugboat Annie.&rdquo; When she got dressed for church, she&rsquo;d put on a corset, stockings rolled up over her knees, old lady shoes, and a dark dress&mdash;black or navy blue. She might wear a pin to brighten it up&mdash;I remember one with little blue and pink enamel flowers. The summer I was getting ready to go to college, Mama Datie suffered another nervous breakdown. She went to a private hospital in Memphis, and I was able to visit her before I went off to school. She quickly rebounded and did pretty well the last few years of her life. Toward the end of her life when she needed care, she moved in with Mother, Daddy and Katherine who was 16 at the time. I&rsquo;m sure her memories of those hard days are different from my long distance ones. Mama Datie was in her 60&rsquo;s when she died, about three weeks after Libby was born. I was heartbroken not to be able to go to her funeral.</p>
+
+            <p>Daddy&rsquo;s parents moved with the family to Dyersburg in the summer of 1929 when the textile mill moved its operations from New York to take advantage of abundant labor and raw materials. Granddaddy, James A.G. O&rsquo;Malley, was born in Ireland. When he was ten years old, his parents were killed in a train wreck. His grandmother and uncle were already in America so his Uncle Mart went over to Ireland to get Granddaddy and his sister, Mary, and bring them back to New York. That was the end of his formal education, and his life from then until he met Grandmother is lost in the mists of time. The story goes that he was a hobo and was injured when he fell off a train near Grandmother&rsquo;s boarding house. He was taken there, and she nursed him back to health. She apparently took him in hand and his wandering days ended; they married and had a family: Daddy&mdash;Gerald, A&rsquo;nt Mary, Uncle Arthur, A&rsquo;nt Mildred. I don&rsquo;t have many stories of their early years in New York. I know Granddaddy was a good swimmer. Daddy would tell the story of how, when the family would go out to Lake Ontario to spend the day picnicking and playing, Granddaddy would dive in and start swimming straight out as soon as they got there and would disappear at the horizon. At the end of the day, you&rsquo;d see a spot appear on the horizon that would get bigger and bigger until you could recognize him swimming home. (I always imagined there must have been an island just over the horizon where he spent the day because I didn&rsquo;t think anyone could swim all day without stopping.) They had a touring car and took family trips around the countryside. I surmise that Granddaddy went to work at the New York textile mill when he and Grandmother got married and that he was such a good worker that Mr. Wheeler chose to bring him to Dyersburg along with the top management. In Dyersburg, he had the reputation of being a happy fellow, always with a smile on his face. He loved to fish and had a boat that came in handy in the Mississippi River flood of 1937. There were no levees along the river at that time. When the river came up so fast, folks who lived in the bottoms were stranded. The Red Cross asked for volunteers who had boats to help rescue them. Granddaddy and Daddy volunteered and spent quite some time bringing folks to higher ground. The Red Cross gave them a certificate praising their heroism and generous spirit. I appeared on the scene a few months later so all the above comes from family stories and my guesswork. There is one special memory that stands out. Granddaddy was a woodworker for fun, and I&rsquo;ve ended up with a couple of his tools&mdash;a large metal square, a small square that has a wooden handle, and what we in my family called &ldquo;the tool&rdquo;&mdash;it is a large, heavy set of pliers that worked for taking off lids, and crushing ice cubes, as well as anything else we didn&rsquo;t have a tool for. Using his tools, he made me a table and chair that he painted blue, and I used it for years. It must have been just the right size for a growing child&mdash;not too big to begin with but large enough to grow with. Granddaddy died suddenly with a heart attack in 1941 when I was four.</p>
+
+            <p>My Grandmother, Lydia Eliza Haresign O&rsquo;Malley, had a hard life. She was married before she married my grandfather and had two children, a son who died of meningitis as a child and a daughter, my A&rsquo;nt Thelma Andrews. Her first husband deserted the family, and Grandmother somehow ended up with a boarding house near the railroad tracks. At some point, a cinder from the railroad hit her in the eye and destroyed it. All my life she wore a bandage over that eye. She was very sensitive about it and didn&rsquo;t like to have her picture taken. She was more a stiff upper lip person than Mother&rsquo;s family who were more tender-hearted. It&rsquo;s not hard to see why. I remember her having Quaker puffed wheat, &ldquo;shot from guns&rdquo; the commercials said, and graham crackers available for snacks. After Granddaddy died, she and A&rsquo;nt Mildred, who was a senior in high school, moved in with us until graduation. I remember Grandmother often liked to listen to the soap operas on the radio. I would sit with her and listen to &ldquo;The Guiding Light,&rdquo; &ldquo;Ma Perkins,&rdquo; &ldquo;Our Gal Sal,&rdquo; and others. After graduation, they moved back to New York to be near Grandmother&rsquo;s family. I didn&rsquo;t see her again until after the war when we got a car and drove up to see her and all of Daddy&rsquo;s extended family. She was aging sadly by then. She had what in those days was called &ldquo;hardening of the arteries,&rdquo; resulting in dementia and incontinence. Daddy brought Grandmother to Dyersburg on the train, and initially she lived with us one month and with A&rsquo;nt Mary and her family, who lived on a farm south of town, for a month. When she became bedridden, she moved in with us permanently. My experience of her last years is one of the reasons I know a CCRC is a gift to the family. Grandmother died of a stroke when I was 13.</p>
+        </article>
+
+        <!-- Story 3: What Was Your Mother Like -->
+        <article class="story" id="mother">
+            <h2 class="story-title">What Was Your Mother Like When You Were a Child</h2>
+
+            <p>Mother was a completely self-giving person her whole life. I have such precious memories of our time together when I was young. I&rsquo;ll share some of them to show what she was like.</p>
+
+            <p>I love thunderstorms today, the power of nature, the excitement of the flash of lightning and the clap of thunder, and I know I owe that to Mother. I didn&rsquo;t find out until I was grown that Mother was terrified of storms. But when I was little, we&rsquo;d sit out on the front porch and watch with anticipation the dark clouds approaching up the hill from the west. We delighted to see the rain dancing on the street, the tree limbs blowing in the wind, and when the rumble of thunder followed a bright streak of lightning, Mother said it was &ldquo;the thunder wagon rolling on top of the clouds.&rdquo; Just imagine what courage that took, what self-giving love inspired her to forget herself to ensure her child didn&rsquo;t grow up with her fear.</p>
+
+            <p>After lunch, Mother would lay down on the bed with me to get me to take a nap. When I woke up, she&rsquo;d give me a bath and get me dressed to go downtown. Since we had no car, we walked everywhere. Mother made it fun, taking time for my amusements along the way. On the way to town, there was a house that had a concrete retaining wall right at the edge of the sidewalk that always called my name. In the beginning, Mother would hold my hand to help me keep my balance as I tried to walk it, and as I grew and got more agile, I knew I could trust her to be there if I were to lose my balance.</p>
+
+            <p>The Courthouse Square downtown had lots of exciting allurements for a child, or perhaps bribes to keep me satisfied while she did her errands. There was a popcorn stand on one corner, a soda fountain at the drugstore for an ice cream cone (Mother always insisted I have a vanilla cone because chocolate would stain my dress when it dripped), and Woolworth&rsquo;s 5 &amp; 10 Cent Store where I could get a new paper doll book or a coloring book and a box of crayons. Mother must have had the patience of Job&mdash;I don&rsquo;t ever remember her being cross with the time it took for me to make my choices.</p>
+
+            <p>My great-grandmother&mdash;my Granny&mdash;lived on a farm four miles outside of town on the opposite side from where we lived. We went out there every Wednesday to have lunch with her and my Grandmother&rsquo;s siblings. One day Mother decided we&rsquo;d walk there. I was probably four or five, and it was quite a distance for little short legs. She kept me entertained pointing out unfamiliar sites along the way&mdash;an old cemetery where Confederate soldiers were buried, the high bridge where we crossed the railroad tracks, a big house where the grandmother of a friend of mine lived, a turkey farm where we stopped to count how many we could see. I think, however, that one trip must have done her in because I don&rsquo;t remember us ever walking out there again.</p>
+
+            <p>Every Sunday we walked to Sunday school at the Cumberland Presbyterian Church downtown. It was located just a block off the Square, on our usual route. We got a flyer each time that had a picture on the front illustrating the Bible story printed inside. On our walk home, Mother would look at the picture and ask me questions about the story. She&rsquo;d explain it to me if I had questions.</p>
+
+            <p>The year I turned six and was looking forward to going to school, Mother walked me to school and back every day that summer so I&rsquo;d be sure to be able to get there and back on my own. There was a boy in my class who lived on my route very close to school. His mother, on the other hand, walked him to and from school every day that first year. I was very glad Mother had been so diligent with me so that I could be secure and take care of myself.</p>
+
+            <p>It didn&rsquo;t snow often in Dyersburg, but whenever it did Mother would get a bowlful of snow and make snow ice cream, and we&rsquo;d sit and gobble it all right down before it melted. I remember one time I was sick with a cold or something and couldn&rsquo;t go out in the snow. Mother sat me by the window in the bedroom while she went outside and made a snowman where I could see it and threw a snowball at the window, making me jump with delight, and of course, she came in with the bowl of snow for our ice cream treat. I always thought she was just being thoughtful of my plight, but after I was grown, she told me that she loved being out in the snow so much she would invent errands to get out in it. Perception is in the eye of the beholder.</p>
+
+            <p>Mother made a lot of my clothes when I was a child. One of our trips to town would be to go to Penney&rsquo;s to get a pattern, fabric, and notions like buttons and thread. Penney&rsquo;s had an exposed pneumatic tube to take your money upstairs to the office and return with your change and receipt. That was always a treat to watch. There&rsquo;s a picture of me wearing a coat with matching leggings that she made out of &ldquo;mill material&rdquo; (knit cotton backing with brushed wool on the outside) from the textile mill where Daddy worked. I can&rsquo;t imagine how difficult and time consuming that was.</p>
+
+            <p>Thread came on wooden spools that Mother saved to blow bubbles with me. We&rsquo;d sit on the top step of the back porch with a small bowl holding a bar of soap and a little water between us. We each had an empty wooden spool which we dipped in the water and rubbed across the soap. Then we&rsquo;d put the dry end of the spool to our lips, blow, and watch a bubble appear on the other end and float away. We laughed a lot as I learned to blow gently and pay attention to which end of the spool had soap on it.</p>
+
+            <p>So, when I was a child, my mother was kind, thoughtful, patient, creative, generous with her time, and most especially loving and caring as she was with everyone her entire 95 years.</p>
+        </article>
+
+        <!-- Story 4: Daddy -->
+        <article class="story" id="daddy">
+            <h2 class="story-title">Daddy</h2>
+
+            <p>Looking back, I can see Daddy, Gerald Lawrence O&rsquo;Malley, was the product of his culture, his generation&mdash;nowadays known as &ldquo;the greatest generation.&rdquo; He was born in 1915 and lived through the First World War, the Roaring Twenties, The Great Depression, WWII, and all the way into the 21st century. Our home definitely had responsibilities divided into traditional masculine and feminine roles. Daddy brought home the bacon and spent his weekends hunting or fishing, and Mother took care of the house and the children.</p>
+
+            <p>In my early years he worked the first shift at the mill from 7:00 a.m. to 3:00 p.m. He usually had a ride to and from work, but I remember one time, he met Mother and me downtown at the Francis Theater to see &ldquo;For Me and My Gal.&rdquo; I don&rsquo;t know if that really was the name of the movie, but I remember that song came from it. In those days adult movie tickets cost thirty-five cents, children&rsquo;s a dime, and a bag of popcorn a nickel, a lot of entertainment for less than a dollar. I don&rsquo;t remember ever going to any other movie with them. When I was older they&rsquo;d drop me off at the theater on Saturday for a western double feature.</p>
+
+            <p>On Saturdays everyone who lived out in the country came to town to take care of business. I remember us parking in front of Reed&rsquo;s Drug Store one Saturday night &ldquo;to watch the people go by.&rdquo; It must have been shortly after Granddaddy had died because we didn&rsquo;t have a car until after WWII. I&rsquo;m guessing we used his car while Grandmother and A&rsquo;nt Mildred were living with us, before selling it. It seemed everyone knew Mother and Daddy and stopped by to say hello. Reed&rsquo;s made their own ice cream, and if you were lucky enough to be there just as it was ready to go to the freezer, you could get a cone of what today would be called soft-serve. Hearing when it was ready was a special treat about parking in front of Reed&rsquo;s.</p>
+
+            <p>Daddy was raised in the Methodist Church and Mother in the Cumberland Presbyterian; he didn&rsquo;t join Mother&rsquo;s church until long after I was grown and had moved away from home. I remember one time we went to the Methodist Church with him, perhaps it was Father&rsquo;s Day. I was struck by its different architecture: the aisles slanted steeply down toward the dais with the pulpit and high above the pulpit at about a second story level was the choir loft. As the service started, the choir processed through two side doors to fill the loft, singing &ldquo;Holy, holy, holy&rdquo;&mdash;I was carried away, thinking it was like angels singing.</p>
+
+            <p>One memory of those early years stands out. Mother had gone somewhere leaving me in Daddy&rsquo;s care&mdash;something never done. I wanted to do something (I have no idea what it was), but Daddy said &ldquo;No.&rdquo; I apparently threatened to run away from home if he didn&rsquo;t let me do it. He still said &ldquo;No,&rdquo; so I got my doll suitcase and went to my little chest of drawers and filled it with what I considered my essentials (who knows what they were). I walked out the front door and started walking toward town. He watched me leave, but before I got to the corner, he came, picked me up, and brought me back home. The amazing thing is that I have no memory of any punishment, and Daddy was very strict. He wouldn&rsquo;t put up with any sass. The thing I do remember is how loved I felt.</p>
+
+            <p>Daddy&rsquo;s brother, Uncle Arthur, joined the Army Air Corps as soon as WWII broke out. He came home on his last leave before he was scheduled to go overseas. After I became an adult Daddy said Uncle Arthur told him he didn&rsquo;t think he&rsquo;d &ldquo;make it,&rdquo; and he didn&rsquo;t. On his last solo night flight before going overseas, he crashed and died in South Carolina. It may be that Daddy suffered something like survivor&rsquo;s guilt because he volunteered for the Navy. At 29, he was too old for the draft, he had a child, and was the only surviving son (remember Private Ryan), all reasons to keep him at home, but not compelling enough for him.</p>
+
+            <p>I remember the dark, cold, early winter morning in 1944 when we went to the Court House Square for him to catch the military bus waiting there. I was six years old. He didn&rsquo;t return home for nearly two long years. He went to San Diego for his training, and while he was there he sent me postcards of Navy ships that I kept in a scrapbook, now long gone. He also sent me a small oblong box of York Peppermint Patties every week. Small wonder they continue to have a special place in my heart.</p>
+
+            <p>He served on a minesweeper, the YMS 243, in the Philippines as a Quartermaster 1st class. It was a harrowing assignment, and when he got out, I think he (probably like every other service person throughout history) seemed to suffer from PTSD, though the disorder hadn&rsquo;t been identified in 1946. One easy example, he would never go to a fireworks display after the war. Some time later, he joined the Veterans of Foreign Wars, and I think being able to share war stories with people who could relate to the horror helped him get over the trauma.</p>
+
+            <p>The war was over in the summer of 1945, but the government couldn&rsquo;t let all the service people go at once to find their way home. We hoped Daddy would be home by Christmas, but when he wasn&rsquo;t, we left the Christmas tree up in the living room with all his presents under it. When we got the word in January that the Navy had shipped him to the Millington Naval Base near Memphis and just when we could pick him up, Mother borrowed one of her uncles&rsquo; cars and off we went. Twenty-three months was a long time for all of us.</p>
+
+            <p>With Daddy&rsquo;s mustering out pay, he bought a black 1946 Chevrolet which we kept for 11 years until I was in college. We also built our house on Light Street. While it was being built, we&rsquo;d go over there in the afternoon after Daddy got off work to see what progress had been made that day and dream about what we&rsquo;d do after we moved in. As we sat on the hill above the driveway, burning trash the workers had left one day, I remember him describing a patio and brick grill he&rsquo;d build. Like so many of our idle dreams, that one never materialized.</p>
+
+            <p>With that brand new car Daddy drove us to New York to see his family and to show us all his old haunts: Lake Erie and Lake Ontario, Niagara Falls, New York City with the Empire State Building, the Radio City Music Hall, the Staten Island Ferry, the Statue of Liberty, and the automat which had individual servings of food behind little glass doors that would open when you deposited your money in the slot. From there he took us to Washington, D.C., where we arrived at rush hour just as everything we wanted to see was closing up. Not to be outdone, we took pictures outside the Capitol, the Washington Monument, and all the other sites on our list.</p>
+
+            <p>Daddy always expected me to do my best in school. If I brought home a &ldquo;100&rdquo; on a test, he&rsquo;d ask why I didn&rsquo;t get &ldquo;105?&rdquo; (no extra credit points in those days) As an adult, I can recognize the humor in his words, but as a child, I felt like I didn&rsquo;t measure up.</p>
+
+            <p>On Sunday afternoons in the summer (in the days before air conditioning and TV), you&rsquo;d find Daddy in the coolest spot he could find in the shade outside with the loudly playing radio tuned to the St. Louis Cardinals baseball game. While that activity didn&rsquo;t appeal to me, it was fun one summer when we went to St. Louis and saw a game for real&mdash;from the very top row of the stands, I think. And in the fall we&rsquo;d go to all the high school football games with Daddy&rsquo;s friends from work.</p>
+
+            <p>When Grandmother came to live with us at the end of her life, Daddy would always change her eye patch for her and sit with her in her bedroom listening to the radio with her. Deep inside he always cared, no matter how hard he tried to hide it.</p>
+        </article>
+
+        <!-- Story 5: My Favorite Toys -->
+        <article class="story" id="favorite-toys">
+            <h2 class="story-title">My Favorite Toys</h2>
+
+            <p>I loved my dolls. I got a new one every Christmas. One I especially remember was an ice skater with ice skates. I expect she came from the era of the Sonja Henie ice skating extravaganzas in the movies. She came in a blue metal trunk. When the trunk was open the doll fit on the left side, and her clothes hung on little hangers on a built-in rod on the other. I think it must have been all the accouterments: the ice skates, the trunk, the little hangers, and the outfits, that captured a spot in my memory because I don&rsquo;t remember the name I gave her. I remember a Betsy-Wetsy doll that could drink water from a bottle and produce a wet diaper. Her name escapes me as well. One year I got a bride doll with red hair. I named her Ann, I remember. My very favorite was a Shirley Temple doll clad in a pink dress with an accordion pleated skirt. She was almost as tall as I was at the time, and I named her Judy. Daddy had been in New York for a training program and brought her home with him&mdash;what a delightful surprise! The Christmas I was in the seventh grade, I got my last doll. I was too old for dolls&mdash;but I really wanted that one. On the &ldquo;Amos and Andy Show&rdquo; someone had a baby named Amosandra. Doll manufacturers got busy and produced a cute little black baby doll for the Christmas market. I just had to have one, but I am still amazed that my parents got a black doll for me&mdash;it was the segregated South, after all. Beatie Joslin, a close family friend, sometimes made doll clothes for me, as did Mama Datie. Mother said it was easier to sew for me, that doll clothes were too tedious. I discovered what she meant when I tried to make doll clothes, to try to set in sleeves in tiny armholes was too frustrating to enjoy. I do remember, however, that Mother made a whole wardrobe of clothes for Katherine&rsquo;s doll one Christmas&mdash;self-giving love in action.</p>
+
+            <p>Paper dolls were also a favorite of mine. They came in thin books with the doll on the cardboard cover that could be punched out and several pages of clothes that had to be cut out with scissors. Mother helped in the early years before I could do it for myself, and we put them in long, flat boxes like the ones men&rsquo;s ties come in at Christmas to keep the various pieces from getting lost. I could play with them for hours, making up stories about their activities. After I started school, friends would sometimes come over and bring their paper dolls, and we&rsquo;d have fun coordinating our separate stories. Make believe, pretending with my dolls and paper dolls provided many happy hours over the years.</p>
+
+            <p>I also enjoyed coloring books. It was always fun to have someone, adult or child, sit beside me coloring on the opposite page, but I could be content with a new book and a new box of crayons for a long time on my own. I was definitely one who tried to stay within the lines, and I liked to completely finish a page before going to another one. That sounds like my Myers Briggs &ldquo;J&rdquo; going for closure at an early age.</p>
+
+            <p>I had a sandbox at the end of the front porch. Every year we&rsquo;d take a washtub to the Mississippi River, fill it with sand, and bring it home to fill the sandbox. That space provided innumerable magic kingdoms until the sand disappeared, as sand does. Then I&rsquo;d have to wait until the next spring for a new load&mdash;an early lesson in delayed gratification. To illustrate my absorption in my play, Mama Datie would tell a story of how once Uncle George, one of her brothers, drove past, and when he saw me playing, he honked at me with his special honk to say hello. My back was to the street, and I waved at the sound without ever looking up from whatever had my attention in the sandbox.</p>
+
+            <p>On Saturday mornings, you&rsquo;d find me sitting on the floor in front of our floor model radio in the living room. At 9:00 a.m. &ldquo;Let&rsquo;s Pretend&rdquo; came on with a different fairy tale every week. I don&rsquo;t know if a radio qualifies as a toy, but listening raptly, I could imagine the story happening right before my eyes. Similarly, no one would call a library or a book a toy, yet they have continued to be a joy for me over the years, a delightful escape from the mundane, everydayness of life. After I learned to read, it was exciting to walk to the library by myself and choose a book to read every week of the summer. The library was about five or six blocks away. In those days it was in a two-story house, and the children&rsquo;s section was on the second floor. It seems I can even now remember the warm, dry, bookish smell of that space in those days before air conditioning.</p>
+
+            <p>According to Mother, Uncle Ernest, one of her father&rsquo;s brothers, said he was amazed at how well I could entertain myself while the adults were visiting. I think it was my active imagination that did the entertaining, carrying me off to another world. &ldquo;Stick cowboys&rdquo; is an example&mdash;a twig would serve as the cowboy or girl and the exposed above-ground roots of a tree (a maple in our front yard, magnolias at Granny&rsquo;s) would serve as the barren badlands you see in the movies. Batteries were never needed for my toys!</p>
+        </article>
+
+        <!-- Story 6: The Best Birthday Cake -->
+        <article class="story" id="birthday-cake">
+            <h2 class="story-title">The Best Birthday Cake</h2>
+
+            <p>Best is a qualitative superlative in the eye of the beholder. In terms of a birthday cake, it could represent deliciousness, quality of workmanship, beauty, but in this beholder&rsquo;s eye, it is the reality of love that qualifies it as an A+. When I was in college, 400 long two-lane roads from home, my mother came through with my best birthday cake. A few weeks before my birthday, I had seen a glorious cake on the cover of <em>Family Circle</em> or <em>Woman&rsquo;s Day.</em> It looked like a basket full of flowers. I wrote my mother about it (no cell phones in those days, and long distance phone calls were prohibitively expensive&mdash;used only for emergencies&mdash;it was a long time ago) and said that&rsquo;s what I wanted for my birthday.</p>
+
+            <p>Now Mother had sent me cakes before&mdash;pound cakes because she had the good sense to know they would travel well in the mail. But she was determined to show she could do it, so she took up the challenge and set to work. The icing around the sides of the cake was applied to look like basket weave. The colored flowers were made separately and placed on the top of the cake. I&rsquo;m sure it looked perfect when she finished. She wrapped it carefully in aluminum foil and put it in the right-sized box stuffed with popcorn to keep it from bouncing around in transit.</p>
+
+            <p>You can guess what it looked like when I opened the box. You could see some of the basket weave design, and the colored icing identified the flowers, but it was a far cry from the magazine cover. The looks, however, didn&rsquo;t deter my suitemates and me from enjoying the yummy cake and licking our fingers as we got the last dribs and drabs of frosting from the aluminum foil.</p>
+
+            <p>For me, the cake testified that I was loved, that I was worth it. How special was that? Definitely the best birthday cake ever!</p>
+        </article>
+
+        <!-- Story 7: A Winning Recipe -->
+        <article class="story" id="winning-recipe">
+            <h2 class="story-title">A Winning Recipe</h2>
+
+            <p>In the early 1960&rsquo;s, the modern homemaker used mixes for everything. There were too many doors opening before her to take time to make something from scratch. Betty Friedan was in her heyday. <em>Better Homes and Gardens</em> had a recipe contest&mdash;who knows what it was called or what the requirements were? The prize was to have the recipe included in a new Gold cookbook they were planning to publish and a copy of said book. That sounded like fun to me.</p>
+
+            <p>I decided to enter a simple dessert recipe I had developed. It was easy to make even with a couple of little ones under foot, and folks seemed to like it. I took a can of fruit pie filling (cherry was Bob&rsquo;s favorite), sprinkled it with a one-layer cake mix&mdash;white or yellow (Jiffy still makes those in case you are interested), and drizzled that with a melted stick of butter. Sometimes I add chopped nuts and/or grated coconut for a change. And then into a 350-degree oven for about one-half an hour or until it was bubbly and brown on top. It could be served warm or cold and especially delicious when topped with a scoop of ice cream on each serving, or a slice of cheddar cheese if it were apple. It could be made ahead for company and popped into the oven to warm while the main dish was being served.</p>
+
+            <p>Imagine my delight when I was notified that my fruit crisp was a winning recipe and my pride when I opened my Gold cookbook and put it on my shelf. It resided there with happy memories until we had to downsize to move into Westminster Oaks, our Continuing Care Retirement Community. Bob thought I should keep it, but my cookbook space was very limited and my priorities have long since changed. After we moved, however, and had friends over for dinner, what did I serve, but my fruit crisp? It is still a winning recipe.</p>
+        </article>
+
+        <!-- Story 8: When My Ship Comes In -->
+        <article class="story" id="ship-comes-in">
+            <h2 class="story-title">When My Ship Comes In</h2>
+
+            <p>When I was a child, and folks talked about what they would do when they &ldquo;got rich,&rdquo; they would use the phrase &ldquo;when my ship comes in.&rdquo; Similarly today people refer to &ldquo;winning the lottery.&rdquo; In my particular family, the phrase we commonly used for our utmost dream was &ldquo;a million dollars and a mink coat.&rdquo; Even to adulthood, when family asked what I wanted for Christmas, I jokingly replied &ldquo;a million dollars and a mink coat.&rdquo;</p>
+
+            <p>What I would have done with such a windfall had &ldquo;my ship come in,&rdquo; would have changed over my lifetime. In my college years, I&rsquo;m sure I would have been delighted to pay for college expenses in order to save my parents&rsquo; sacrificing for my education. It would have been fun to have a mink coat though. In our early married life, we moved a lot and always did it ourselves with the help of U-Haul. It would have been great to have a million dollars to pay for professional movers in those years, saving us a lot of blood, sweat, and tears. Had my ship come in when our children were ready for college, I probably wouldn&rsquo;t have gone to work. In that case I would have missed a lot and wouldn&rsquo;t be the person I am today. No doubt, our retirement venture, our antebellum house in Apalachicola, would have been finished a lot sooner if my ship had come in then, but we would have missed the joy of making it our own. Just a few years ago, I would have been glad to see my ship sailing into view so we could have moved into our retirement community earlier, but we made it without my &ldquo;million dollars and mink coat&rdquo; (in Florida, I couldn&rsquo;t even use the latter).</p>
+
+            <p>At eighty years old, the thought of such a windfall seems irrelevant. There&rsquo;s nothing that I want or need today. Of course, if my ship showed up out of the blue, I&rsquo;m sure I could find some good use for it, some folks to share it with, some special cause that called my name.</p>
+        </article>
+
+        <!-- Story 9: The Farthest Distance -->
+        <article class="story" id="farthest-distance">
+            <h2 class="story-title">The Farthest Distance&mdash;Inside or Out</h2>
+
+            <p>Sometimes the farthest distance I have had to travel hasn&rsquo;t been very far in linear feet. Just walking across the room to say &ldquo;I&rsquo;m sorry,&rdquo; or &ldquo;Please forgive me,&rdquo; has represented many spiritual miles. There was a time when I thought my unrelenting control of a situation would make the difference between life and death until I heard my priest on the phone, and my heart surrendered to the Holy One&mdash;a few steps in physical measurements, but, spiritually, WOW! And then there was walking the labyrinth carrying a large hand-hewn rock from a stone fence representing what was in my way at the time. For me, the rock stood for my Enneagram #3, my Achiever. Responding to the invitation to leave it in the center, I did, and my Achiever was set free. How far was that? While the labyrinth was only 40 feet in diameter, the twists and turns add innumerable linear feet, but nothing in comparison to my inner spiritual journey that continues ever deeper into the center.</p>
+
+            <p>I have had the privilege of making three European trips, one with Mother, Katherine, and a needlepoint group from Dyersburg, and two pilgrimages with the Shalem Institute for Spiritual Formation, one to Assisi and one to Ireland. With my O&rsquo;Malley roots, the one to Ireland touched my heart in many ways but it was the shortest of the three in linear miles. The one to Assisi was about 9000 miles there and back, and the one with the needlepoint group covered about 9500 miles&mdash;the farthest physical distance.</p>
+
+            <p>Mother took a needlepoint class at the local community college and made many lovely pieces over the years. I have a couple of pillows and my most treasured piece, a brick from the Cumberland Church in which I grew up (it was torn down when they built the new church on the 51 bypass). It is covered in an original needlepoint design depicting the church and our family decked out in our Easter finery. What does all that have to do with the &ldquo;farthest distance&rdquo; trip? Well, Mother&rsquo;s teacher was an international traveler, and one day in class, she said, &ldquo;Lawyers take lawyers&rsquo; trips around the world, and doctors take doctors&rsquo; trips, why don&rsquo;t we take a needle work trip?&rdquo; And so it began.</p>
+
+            <p>Class members were encouraged to invite a relative or friend to make up the group. I remember one woman invited her mother, and Mother not only invited Katherine and me to join her, she and Daddy gave us the trips, otherwise we couldn&rsquo;t have afforded to go. Sue, our leader and an experienced traveler, suggested we bring three pantsuits with easily washable tops and two dresses and an all-weather coat (the trip was scheduled for the end of March and the beginning of April so there were sure to be spring showers).</p>
+
+            <p>It must have been the mid-seventies. Libby was in the eighth grade, and her home economics home project was to plan and prepare the family supper for a week. Fortuitously, it was just at the time of our trip, so the family was covered while I was away.</p>
+
+            <p>We went to Paris, Rome, Amsterdam, and London. In each city we spent three days, one for general touring with a city guide, one for focusing on needlework, and one free day to do whatever we wanted. After the first two days, we had an idea about what we wanted to see again or what we wanted to check out that wasn&rsquo;t on the tour&rsquo;s agenda. Different things stand out for me from each city. It was a delight to revisit them in my memory.</p>
+
+            <p>By our last city I was exhausted. I began to see that introverts need to have some time off when they are surrounded by a busy crowd 24/7 for days on end. I&rsquo;m definitely not cut out to be a world traveler, but I&rsquo;m excited to continue my inner journey for as long as it lasts. I know &ldquo;I have miles to go before I sleep.&rdquo;</p>
+        </article>
+
+        <!-- Story 10: What I Wish I Had Known -->
+        <article class="story" id="wish-i-had-known">
+            <h2 class="story-title">What I Wish I Had Known</h2>
+
+            <p>At 20, it didn&rsquo;t occur to me that I had a lot to learn about this life. It has taken me a long time to learn what I wish I had known then. I doubt I was ready to recognize any of these truths at that age; there&rsquo;s something to be said about the wisdom of age. It would have saved a lot of pain if I had known all this earlier.</p>
+
+            <p>Pat, God loves you&mdash;no matter what.</p>
+            <p class="indent">Developing a spiritual practice of some kind will enable you to respond in like manner and deepen your relationship with the Holy One.</p>
+
+            <p>Pat, you are an introvert.</p>
+            <p class="indent">Introverts need to think about what they are going to say before they are willing to speak it out&mdash;get used to it.</p>
+            <p class="indent">Being with people drains the energy of introverts. Plan to have some alone time each day to recharge your batteries.</p>
+
+            <p>Pat, you are an achiever.</p>
+            <p class="indent">However, folks learn more from failure than from achieving.</p>
+            <p class="indent">It&rsquo;s OK to achieve your goals, and it&rsquo;s OK to fail, and it&rsquo;s OK to ask for help.</p>
+
+            <p>Pat, your ego tries to make you think you&rsquo;re OK.</p>
+            <p class="indent">It keeps you in a rut that seems to work for you.</p>
+            <p class="indent">Freedom comes from letting the machinations of the ego go&mdash;just relax and release when you notice it taking over your reactions.</p>
+
+            <p>Pat, accept others as they are.</p>
+            <p class="indent">Be patient, act kindly, show respect. Know they carry the face of Christ for you.</p>
+
+            <p>Pat, creation&mdash;micro&mdash;macro&mdash;and all in between&mdash;has something to tell you.</p>
+            <p class="indent">Pay attention to its lessons about life, death, and new birth, and about its Creator.</p>
+
+            <p>Pat, bidden or unbidden, God is present, indwelling and enfolding.</p>
+        </article>
+
+        <!-- Download section -->
+        <div class="download-section">
+            <p>Download these stories as a document</p>
+            <a class="download-link" href="stories-mom-wrote.docx" download>Download DOCX</a>
+        </div>
+
+        <div class="companion-link">
+            <a href="stories-mom-told.html">&larr; Read Stories Mom Told</a>
+        </div>
+
+        <footer class="site-footer">
+            <p class="copyright">&copy; The Horn Family</p>
+        </footer>
+    </div>
+
+    <nav class="family-nav">
+        <a href="index.html">Family Home</a>
+        <span class="family-nav-separator">&middot;</span>
+        <a href="stories-mom-told.html">Stories Mom Told</a>
+        <span class="family-nav-separator">&middot;</span>
+        <span class="family-nav-current">Stories Mom Wrote</span>
+        <span class="family-nav-separator">&middot;</span>
+        <a href="family-history.html">Family History</a>
+        <span class="family-nav-separator">&middot;</span>
+        <a href="family-tree.html">Family Tree</a>
+        <span class="family-nav-separator">&middot;</span>
+        <a href="memorial-video.html">Memorial Video</a>
+    </nav>
+</body>
+</html>
